@@ -1,0 +1,287 @@
+@import "variable";
+
+@font-face {
+  font-family: 'Calibre';
+  src: url('../assets/fonts/Calibre/Calibre-LightItalic.woff2') format('woff2'),
+  url('../assets/fonts/Calibre/Calibre-LightItalic.woff') format('woff'),
+  url('../assets/fonts/Calibre/Calibre-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: auto;
+}
+@font-face {
+  font-family: 'Calibre';
+  src: url('../assets/fonts/Calibre/Calibre-LightItalic.woff2') format('woff2'),
+  url('../assets/fonts/Calibre/Calibre-LightItalic.woff') format('woff'),
+  url('../assets/fonts/Calibre/Calibre-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: auto;
+}
+@font-face {
+  font-family: 'Calibre';
+  src: url('../assets/fonts/Calibre/Calibre-Regular.woff2') format('woff2'),
+  url('../assets/fonts/Calibre/Calibre-Regular.woff') format('woff'),
+  url('../assets/fonts/Calibre/Calibre-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: auto;
+}
+@font-face {
+  font-family: 'Calibre';
+  src: url('../assets/fonts/Calibre/Calibre-RegularItalic.woff2') format('woff2'),
+  url('../assets/fonts/Calibre/Calibre-RegularItalic.woff') format('woff'),
+  url('../assets/fonts/Calibre/Calibre-RegularItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+  font-display: auto;
+}
+@font-face {
+  font-family: 'Calibre';
+  src: url('../assets/fonts/Calibre/Calibre-Medium.woff2') format('woff2'),
+  url('../assets/fonts/Calibre/Calibre-Medium.woff') format('woff'),
+  url('../assets/fonts/Calibre/Calibre-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: auto;
+}
+@font-face {
+  font-family: 'Calibre';
+  src: url('../assets/fonts/Calibre/Calibre-MediumItalic.woff2') format('woff2'),
+  url('../assets/fonts/Calibre/Calibre-MediumItalic.woff') format('woff'),
+  url('../assets/fonts/Calibre/Calibre-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: auto;
+}
+@font-face {
+  font-family: 'Calibre';
+  src: url('../assets/fonts/Calibre/Calibre-Semibold.woff2') format('woff2'),
+  url('../assets/fonts/Calibre/Calibre-Semibold.woff') format('woff'),
+  url('../assets/fonts/Calibre/Calibre-Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: auto;
+}
+@font-face {
+  font-family: 'Calibre';
+  src: url('../assets/fonts/Calibre/Calibre-SemiboldItalic.woff2') format('woff2'),
+  url('../assets/fonts/Calibre/Calibre-SemiboldItalic.woff') format('woff'),
+  url('../assets/fonts/Calibre/Calibre-SemiboldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+  font-display: auto;
+}
+
+@font-face {
+  font-family: 'SF Mono';
+  src: url('../assets/fonts/SFMono/SFMono-Regular.woff2') format('woff2'),
+  url('../assets/fonts/SFMono/SFMono-Regular.woff') format('woff'),
+  url('../assets/fonts/SFMono/SFMono-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: auto;
+}
+@font-face {
+  font-family: 'SF Mono';
+  src: url('../assets/fonts/SFMono/SFMono-RegularItalic.woff2') format('woff2'),
+  url('../assets/fonts/SFMono/SFMono-RegularItalic.woff') format('woff'),
+  url('../assets/fonts/SFMono/SFMono-RegularItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+  font-display: auto;
+}
+@font-face {
+  font-family: 'SF Mono';
+  src: url('../assets/fonts/SFMono/SFMono-Medium.woff2') format('woff2'),
+  url('../assets/fonts/SFMono/SFMono-Medium.woff') format('woff'),
+  url('../assets/fonts/SFMono/SFMono-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: auto;
+}
+@font-face {
+  font-family: 'SF Mono';
+  src: url('../assets/fonts/SFMono/SFMono-MediumItalic.woff2') format('woff2'),
+  url('../assets/fonts/SFMono/SFMono-MediumItalic.woff') format('woff'),
+  url('../assets/fonts/SFMono/SFMono-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: auto;
+}
+@font-face {
+  font-family: 'SF Mono';
+  src: url('../assets/fonts/SFMono/SFMono-Semibold.woff2') format('woff2'),
+  url('../assets/fonts/SFMono/SFMono-Semibold.woff') format('woff'),
+  url('../assets/fonts/SFMono/SFMono-Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: auto;
+}
+@font-face {
+  font-family: 'SF Mono';
+  src: url('../assets/fonts/SFMono/SFMono-SemiboldItalic.woff2') format('woff2'),
+  url('../assets/fonts/SFMono/SFMono-SemiboldItalic.woff') format('woff'),
+  url('../assets/fonts/SFMono/SFMono-SemiboldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+  font-display: auto;
+}
+
+html {
+  box-sizing: border-box;
+  width: 100%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    background-color:var(--bg-c-navy);
+    color: var(--c-slate);
+    line-height: 1.3;
+    font-family: var(--font-Calibre);
+    font-size:var(--fs-xl);
+    &.hidden {
+      overflow: hidden;
+    }
+    &.blur {
+      overflow: hidden;
+      #root > #content > * {
+        filter: blur(5px) brightness(0.7);
+        transition: var(--transition);
+        pointer-events: none;
+        user-select: none;
+      }
+    }
+}
+
+::selection {
+  background-color: var(--highlight);
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 600;
+  color: var(--c-white);
+  margin: 0 0 10px 0;
+}
+#root {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  grid-template-columns: 100%;
+}
+img {
+  width: 100%;
+  max-width: 100%;
+  vertical-align: middle;
+}
+svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+  vertical-align: middle;
+}
+a {
+  display: inline-block;
+  text-decoration: none;
+  text-decoration-skip-ink: auto;
+  color: inherit;
+  position: relative;
+  transition: var(--transition);
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    color: var(--c-green);
+    outline: 0;
+  }
+}
+button {
+  cursor: pointer;
+  border: 0;
+  border-radius: 0;
+  &:focus,
+  &:active {
+    outline-color: var(--c-blue);
+  }
+}
+input, textarea {
+  border-radius: 0;
+  outline: 0;
+  &:focus {
+    outline: 0;
+  }
+  // &::placeholder {
+
+  // }
+  &:focus,
+  &:active {
+    &::placeholder {
+      opacity: 0.5;
+    }
+  }
+}
+p {
+  margin: 0 0 15px 0;
+}
+ul, ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.gatsby-image-outer-wrapper {
+  height: 100%;
+}
+.fadeup-enter {
+  opacity: 0.01;
+  transform: translateY(20px);
+  transition: opacity 300ms var(--easing), transform 300ms var(--easing);
+}
+.fadeup-enter-active {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: opacity 300ms var(--easing), transform 300ms var(--easing);
+}
+.fadedown-enter {
+  opacity: 0.01;
+  transform: translateY(-20px);
+  transition: opacity 300ms var(--easing), transform 300ms var(--easing);
+}
+.fadedown-enter-active {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: opacity 300ms var(--easing), transform 300ms var(--easing);
+}
+.fade-enter {
+  opacity: 0.01;
+  transition: opacity 1000ms var(--easing);
+}
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 1000ms var(--easing);
+}
+.overline {
+  color: var(--c-green);
+  font-family: var(--font-SFMono);
+  font-size: var(--fs-md);
+  font-weight: normal;
+}
+
+
+.main {
+    width: 100%;
+    counter-reset: section 0;
+    padding: 0px 150px;
+    margin: 0px auto;
+}

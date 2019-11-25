@@ -1,0 +1,8 @@
+export const HOME_STATE_KEY = 'home';
+
+export const NAMESPACE = 'home/';
+
+export const FETCH_USERS = `${NAMESPACE}FETCH_USERS`;
+export const FETCHING_USERS = `${NAMESPACE}FETCHING_USERS`;
+export const FETCH_USERS_SUCCESS = `${NAMESPACE}FETCH_USERS_SUCCESS`;
+export const FETCH_USERS_ERROR = `${NAMESPACE}FETCH_USERS_ERROR`;

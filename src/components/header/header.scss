@@ -1,0 +1,78 @@
+@import "../../styles/variable";
+@import "../../styles/common";
+
+.header {
+  @extend %flexBetween;
+  position: fixed;
+  top: 0;
+  padding: 0px 50px;
+  background-color: var(--bg-c-navy);
+  transition: var(--transition);
+  z-index: 11;
+  height: 100px;
+  filter: none !important;
+  pointer-events: auto !important;
+  user-select: auto !important;
+  width: 100%;
+
+  nav {
+    @extend %flexBetween;
+    position: relative;
+    width: 100%;
+    color: var(--c-light-slate);
+    font-family: var(--font-SFMono);
+    counter-reset: item 0;
+    z-index: 12;
+  }
+}
+
+.logo {
+  @extend %flexCenter;
+  a {
+    display: block;
+    color: var(--c-green);
+    width: 42px;
+    height: 42px;
+    &:hover,
+    &:focus {
+      svg {
+        fill: var(--c-trans-green);
+      }
+    }
+    svg {
+      fill: none;
+      transition: var(--transition);
+      user-select: none;
+    }
+  }
+}
+
+.links {
+  display: flex;
+  align-items: center;
+
+  ol {
+    @extend %flexBetween;
+    li {
+      margin: 0 10px;
+      position: relative;
+      font-size: var(--fs-smish);
+      counter-increment: item 1;
+      &:before {
+        content: '0' counter(item) '.';
+        text-align: right;
+        color: var(--c-green);
+        font-size: var(--fs-xs);
+      }
+      a {
+        padding: 12px 10px;
+      }
+    }
+  }
+}
+
+.resumeButton {
+  @extend %smallButton;
+  margin-left: 10px;
+  font-size: var(--fs-smish);
+}
