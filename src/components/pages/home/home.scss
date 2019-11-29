@@ -138,7 +138,7 @@
 }
 
 // Heading
-.heading {
+.heading, %heading {
   position: relative;
   display: flex;
   align-items: center;
@@ -168,6 +168,26 @@
     margin-left: 20px;
   }
 }
+
+.headingCenter {
+  @extend   %heading;
+  display: block;
+  color:  var(--c-green);
+  font-size:  var(--fs-md);
+  font-family:var(--font-SFMono);
+  font-weight: normal;
+  margin-bottom: 20px;
+  justify-content: center;
+
+  &:before {
+    bottom: 0;
+    font-size: var(--fs-sm);
+  }
+  &:after {
+    display: none;
+  }
+}
+
 
 // Jobs
 .jobTabs {
@@ -298,5 +318,81 @@
   margin: 0 auto 100px;
   a {
     @extend %inlineLink;
+  }
+  .title {
+    margin: 0 0 20px;
+    font-size: 60px;
+  }
+  .bigButton {
+    @extend %bigButton;
+    margin-top: 50px;
+  }
+}
+
+// Work
+.work {
+  h4 {
+    font-size: var(--fs-smish);
+  font-weight: normal;
+  color: var(--c-green);
+  font-family: var(--font-SFMono);
+  margin-top: 10px;
+  padding-top: 0;
+  }
+  h5 {
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0 0 20px;
+    color: var(--c-light-slate);
+  }
+  .description {
+    @extend %boxShadow;
+    position: relative;
+    z-index: 2;
+    padding: 25px;
+    background-color: var(--bg-c-light-navy);
+    color: var(--c-light-slate);
+    font-size: var(--fs-lg);
+    border-radius: 3px;
+    p {
+      margin: 0;
+    }
+    a {
+      @extend %inlineLink;
+    }
+  }
+  .list {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 25px 0 10px;
+    li {
+      font-family: var(--font-SFMono);
+      font-size:var(--fs-smish);
+      color: var(--c-slate);
+      margin-right: 20px;
+      margin-bottom: 7px;
+      white-space: nowrap;
+      &:last-of-type {
+        margin-right: 0;
+      }
+
+    }
+  }
+  .link {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: 10px;
+    margin-left: -10px;
+    color: var(--c-light-slate);
+    a {
+      padding: 10px;
+      svg {
+        width: 22px;
+        height: 22px;
+      }
+    }
   }
 }

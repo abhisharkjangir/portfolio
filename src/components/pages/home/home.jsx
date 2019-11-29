@@ -3,9 +3,10 @@ import React, { useState } from 'react';
 import styles from './home.scss';
 import Section from '../../section';
 import abhishar from '../../../assets/images/abhishar.jpg';
+import Icon from '../../common/icon';
 const Hero = () => {
   return (
-    <Section>
+    <Section id="hero">
       <h1 className={styles.overline}>Hi, my name is</h1>
       <h2 className={styles.title}>Abhishar Jangir.</h2>
       <h3 className={styles.subtitle}>I build things for the web.</h3>
@@ -26,8 +27,10 @@ const Hero = () => {
 };
 
 // eslint-disable-next-line react/prop-types
-const Heading = ({ text }) => {
-  return <h3 className={styles.heading}>{text}</h3>;
+const Heading = ({ text, center }) => {
+  return (
+    <h3 className={center ? styles.headingCenter : styles.heading}>{text}</h3>
+  );
 };
 
 const About = () => {
@@ -42,7 +45,7 @@ const About = () => {
     'NativeScript',
   ];
   return (
-    <Section style={{ position: 'relative' }}>
+    <Section id="about" style={{ position: 'relative' }}>
       <Heading text="About Me" />
       <div className={styles.aboutFlexContainer}>
         <div className={styles.aboutContent}>
@@ -136,7 +139,10 @@ const Jobs = () => {
   const { title, company, url, range, html } = TabList[selectedTab - 1];
 
   return (
-    <Section style={{ position: 'relative', maxWidth: '700px' }}>
+    <Section
+      id="experience"
+      style={{ position: 'relative', maxWidth: '700px' }}
+    >
       <Heading text="Where I've Worked" />
       <div className={styles.jobTabs}>
         <ul>
@@ -180,10 +186,53 @@ const Jobs = () => {
   );
 };
 
+const Work = () => {
+  return (
+    <Section id="work">
+      <Heading text="Some Things I've Built" />
+      <div className={styles.work}>
+        <h4>Featured Project</h4>
+        <h5>OctoProfile</h5>
+        <div className={styles.description}>
+          A nicer look at your GitHub profile and repo stats. Includes data
+          visualizations of your top languages, starred repositories, and sort
+          through your top repos by number of stars, forks, and size.
+        </div>
+        <ul className={styles.list}>
+          <li>Next.js</li>
+          <li>Chart.js</li>
+          <li>GitHub API</li>
+        </ul>
+        <div className={styles.link}>
+          <a
+            href="/"
+            target="_blank"
+            rel="nofollow noopener noreferrer"
+            aria-label="GitHub Link"
+          >
+            <Icon name="github" />
+          </a>
+        </div>
+      </div>
+    </Section>
+  );
+};
+
 const Contact = () => {
   return (
-    <Section>
-      <div className={styles.contact}></div>
+    <Section id="contact">
+      <div className={styles.contact}>
+        <Heading text="What's Next?" center />
+        <h4 className={styles.title}>Get In Touch</h4>
+        <p>
+          Although I&lsquo;m not currently looking for freelance opportunities,
+          my inbox is always open. Whether for a potential project or just to
+          say hi, I&lsquo;ll try my best to answer your email!
+        </p>
+        <a href="/" className={styles.bigButton}>
+          Say Hello
+        </a>
+      </div>
     </Section>
   );
 };
@@ -194,6 +243,7 @@ class Home extends React.PureComponent {
         <Hero />
         <About />
         <Jobs />
+        <Work />
         <Contact />
       </div>
     );
