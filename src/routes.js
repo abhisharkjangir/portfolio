@@ -3,17 +3,14 @@ import React from 'react';
 import universal from 'react-universal-component';
 import { Route, Switch } from 'react-router-dom';
 import universalOptions from './utils/universalOptions';
-import { fetchUsers } from './containers/pages/home/actions';
 
 const Home = universal(
-  import(/* webpackChunkName: "home-page" */ './containers/pages/home/home'),
+  import(/* webpackChunkName: "home-page" */ './containers/pages/home'),
   universalOptions
 );
 
 const Notfound = universal(
-  import(
-    /* webpackChunkName: "notfound-page" */ './components/pages/notfound/notfound'
-  ),
+  import(/* webpackChunkName: "notfound-page" */ './components/pages/notfound'),
   universalOptions
 );
 
@@ -22,7 +19,6 @@ export const RouteList = [
     path: '/',
     component: Home,
     exact: true,
-    fetchRouteData: [fetchUsers],
   },
   {
     component: Notfound,

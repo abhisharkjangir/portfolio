@@ -1,13 +1,17 @@
+import image from '../assets/images/abhishar.jpg';
+const description =
+  'Abhishar Jangir is a software engineer based in Gurgaon, IN, who specializes in developing websites.';
+
 export default {
   default: {
-    title: 'React Go',
-    description: 'A starter kit for react app with all the best practices.',
-    image: 'https://reactgo.abhijangir.me/logo512.png',
+    title: 'Software Engineer',
+    description,
+    image,
     twitter: '@abhishar_jangir',
-    sep: ' - ',
-    siteURL: 'https://reactgo.abhijangir.me',
+    sep: ' | ',
+    siteURL: 'https://abhijangir.me',
     keywords:
-      'react-redux, react starter kit, react redux boilerplate, boilderplate, react server side rendering, react ssr',
+      'Abhishar Jangir, Abhishar, Jangir, Front end developer, reactjs developer, web developer, mern developer, javascript developer, abhisharkjangir,abhishar.jangir',
     facebookAppId: 'XXXXXXXXX',
     updated: new Date().toDateString(),
     published: new Date().toDateString(),
@@ -15,13 +19,13 @@ export default {
   },
   '/': {
     id: 'home',
-    title: 'Home',
-    description: 'Dynamic data rendering from server side.',
+    title: 'Abhishar Jangir',
+    description,
   },
   '/404': {
     pathname: '/404',
     id: 'notfound',
     title: 'Oops! 404',
-    description: 'This is not the web page you are lokking for.',
+    description: 'This is not the web page you are looking for.',
   },
 };
