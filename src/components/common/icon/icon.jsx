@@ -6,9 +6,16 @@ import Instagram from './instagram';
 import Twitter from './twitter';
 import Codepen from './codepen';
 import Logo from './logo';
+import External from './external';
+import Folder from './folder';
+import Location from './location';
+import Fork from './fork';
 
+// eslint-disable-next-line complexity
 const Icon = ({ name }) => {
   switch (name) {
+    case 'fork':
+      return <Fork />;
     case 'logo':
       return <Logo />;
     case 'github':
@@ -21,6 +28,13 @@ const Icon = ({ name }) => {
       return <Twitter />;
     case 'codepen':
       return <Codepen />;
+    case 'external':
+      return <External />;
+    case 'location':
+      return <Location />;
+    case 'folder':
+      return <Folder />;
+
     default:
       return <GitHub />;
   }

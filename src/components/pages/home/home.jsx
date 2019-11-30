@@ -1,8 +1,10 @@
 /* eslint-disable react/no-danger */
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import styles from './home.scss';
 import Section from '../../section';
 import abhishar from '../../../assets/images/abhishar.jpg';
+import featured1 from '../../../assets/images/featured_1.png';
 import Icon from '../../common/icon';
 const Hero = () => {
   return (
@@ -187,33 +189,77 @@ const Jobs = () => {
 };
 
 const Work = () => {
+  const projects = [
+    {
+      title: 'OctoProfile',
+      description:
+        'A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.',
+      tech: ['Next.js', 'Chart.js', 'GitHub API'],
+      links: [
+        {
+          url: '',
+          iconName: 'github',
+        },
+        {
+          url: '',
+          iconName: 'external',
+        },
+      ],
+      image: featured1,
+      type: 'Featured Project',
+    },
+    {
+      title: 'OctoProfile2',
+      description:
+        'A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.',
+      tech: ['Next.js', 'Chart.js', 'GitHub API'],
+      links: [
+        {
+          url: '',
+          iconName: 'github',
+        },
+        {
+          url: '',
+          iconName: 'external',
+        },
+      ],
+      image: featured1,
+      type: 'Featured Project',
+    },
+  ];
+
   return (
     <Section id="work">
       <Heading text="Some Things I've Built" />
-      <div className={styles.work}>
-        <h4>Featured Project</h4>
-        <h5>OctoProfile</h5>
-        <div className={styles.description}>
-          A nicer look at your GitHub profile and repo stats. Includes data
-          visualizations of your top languages, starred repositories, and sort
-          through your top repos by number of stars, forks, and size.
-        </div>
-        <ul className={styles.list}>
-          <li>Next.js</li>
-          <li>Chart.js</li>
-          <li>GitHub API</li>
-        </ul>
-        <div className={styles.link}>
-          <a
-            href="/"
-            target="_blank"
-            rel="nofollow noopener noreferrer"
-            aria-label="GitHub Link"
-          >
-            <Icon name="github" />
+      {projects.map(({ type, title, description, links, image, tech }) => (
+        <div className={styles.work}>
+          <div className={styles.content}>
+            <h4>{type}</h4>
+            <h5>{title}</h5>
+            <div className={styles.description}>{description}</div>
+            <ul className={styles.list}>
+              {tech.map(t => (
+                <li key={t}>{t}</li>
+              ))}
+            </ul>
+            <div className={styles.link}>
+              {links.map(({ url, iconName }) => (
+                <a
+                  href={url}
+                  target="_blank"
+                  rel="nofollow noopener noreferrer"
+                  aria-label="GitHub Link"
+                >
+                  <Icon name={iconName} />
+                </a>
+              ))}
+            </div>
+          </div>
+          <a href="/" className={styles.imgContainer}>
+            <img src={image} className={styles.imgage} alt="" />
           </a>
         </div>
-      </div>
+      ))}
     </Section>
   );
 };
@@ -236,6 +282,206 @@ const Contact = () => {
     </Section>
   );
 };
+
+const Projects = () => {
+  const List = [
+    {
+      name: 'Building a Headless Mobile App CMS From Scratch',
+      description:
+        'Find out how we built a custom headless CMS with Node, Express, and Firebase for a client project at Upstatement',
+      tech: ['node', 'express'],
+      links: [
+        {
+          iconName: 'github',
+          url: '',
+        },
+        {
+          iconName: 'github',
+          url: '',
+        },
+      ],
+    },
+    {
+      name: 'Building a Headless Mobile App CMS From Scratch',
+      description:
+        'Find out how we built a custom headless CMS with Node, Express, and Firebase for a client project at Upstatement',
+      tech: ['node', 'express'],
+      links: [
+        {
+          iconName: 'github',
+          url: '',
+        },
+        {
+          iconName: 'github',
+          url: '',
+        },
+      ],
+    },
+    {
+      name: 'Building a Headless Mobile App CMS From Scratch',
+      description:
+        'Find out how we built a custom headless CMS with Node, Express, and Firebase for a client project at Upstatement',
+      tech: ['node', 'express'],
+      links: [
+        {
+          iconName: 'github',
+          url: '',
+        },
+        {
+          iconName: 'github',
+          url: '',
+        },
+      ],
+    },
+    {
+      name: 'Building a Headless Mobile App CMS From Scratch',
+      description:
+        'Find out how we built a custom headless CMS with Node, Express, and Firebase for a client project at Upstatement',
+      tech: ['node', 'express'],
+      links: [
+        {
+          iconName: 'github',
+          url: '',
+        },
+        {
+          iconName: 'github',
+          url: '',
+        },
+      ],
+    },
+    {
+      name: 'Building a Headless Mobile App CMS From Scratch',
+      description:
+        'Find out how we built a custom headless CMS with Node, Express, and Firebase for a client project at Upstatement',
+      tech: ['node', 'express'],
+      links: [
+        {
+          iconName: 'github',
+          url: '',
+        },
+        {
+          iconName: 'github',
+          url: '',
+        },
+      ],
+    },
+    {
+      name: 'Building a Headless Mobile App CMS From Scratch',
+      description:
+        'Find out how we built a custom headless CMS with Node, Express, and Firebase for a client project at Upstatement Find out how we built a custom headless CMS with Node, Express, and Firebase for a client project at Upstatement',
+      tech: ['node', 'express'],
+      links: [
+        {
+          iconName: 'github',
+          url: '',
+        },
+        {
+          iconName: 'github',
+          url: '',
+        },
+      ],
+    },
+    {
+      name: 'Building a Headless Mobile App CMS From Scratch',
+      description:
+        'Find out how we built a custom headless CMS with Node, Express, and Firebase for a client project at Upstatement',
+      tech: ['node', 'express'],
+      links: [
+        {
+          iconName: 'github',
+          url: '',
+        },
+        {
+          iconName: 'github',
+          url: '',
+        },
+      ],
+    },
+    {
+      name: 'Building a Headless Mobile App CMS From Scratch',
+      description:
+        'Find out how we built a custom headless CMS with Node, Express, and Firebase for a client project at Upstatement',
+      tech: ['node', 'express'],
+      links: [
+        {
+          iconName: 'github',
+          url: '',
+        },
+        {
+          iconName: 'github',
+          url: '',
+        },
+      ],
+    },
+  ];
+  const preSetVal = List.length > 6 ? 6 : List.length;
+  const [count, toggleShow] = useState(preSetVal);
+  const sliceValue = count === preSetVal ? preSetVal : List.length;
+  return (
+    <Section
+      id="projects"
+      style={{ flexDirection: 'column', alignItems: 'flex-start' }}
+    >
+      <div className={styles.Project}>
+        <h4>Other Noteworthy Projects</h4>
+
+        <div className={styles.center}>
+          <Link to="/" className={styles.view}>
+            view the archive
+          </Link>
+        </div>
+
+        <div className={styles.grid}>
+          <div className={styles.projects}>
+            {List.slice(0, sliceValue).map(
+              ({ name, description, tech, links }) => (
+                <div className={styles.project}>
+                  <div className={styles.projectInner}>
+                    <div className={styles.projectHeader}>
+                      <div className={styles.folder}>
+                        <Icon name="folder" />
+                      </div>
+                      <div className={styles.projectLinks}>
+                        {links.map(({ iconName, url }) => (
+                          <a
+                            key={iconName}
+                            href={url}
+                            className={styles.iconLink}
+                          >
+                            <Icon name={iconName} />
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                    <h5 className={styles.projectName}>{name}</h5>
+                    <div className={styles.projectDescription}>
+                      {description}
+                    </div>
+                    <ul className={styles.techList}>
+                      {tech.map(t => (
+                        <li key={t}>{t}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              )
+            )}
+          </div>
+        </div>
+        {List.length > 6 && (
+          <button
+            type="button"
+            onClick={() => toggleShow(count === preSetVal ? 'all' : preSetVal)}
+            className={styles.moreButton}
+          >
+            {count === preSetVal ? 'Show More' : 'Show Less'}
+          </button>
+        )}
+      </div>
+    </Section>
+  );
+};
+
 class Home extends React.PureComponent {
   render() {
     return (
@@ -244,6 +490,7 @@ class Home extends React.PureComponent {
         <About />
         <Jobs />
         <Work />
+        <Projects />
         <Contact />
       </div>
     );

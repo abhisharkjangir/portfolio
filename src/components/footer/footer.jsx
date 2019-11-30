@@ -12,7 +12,7 @@ class Footer extends React.PureComponent {
             <span>Designed & Built by Abhishar Jangir</span>
             <div>
               <span>
-                <Icon name="github" />
+                <Icon name="fork" />
                 <span>400</span>
               </span>
               <span>
