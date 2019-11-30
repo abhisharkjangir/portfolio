@@ -25,7 +25,7 @@ export default {
   '/404': {
     pathname: '/404',
     id: 'notfound',
-    title: 'Oops! 404',
-    description: 'This is not the web page you are looking for.',
+    title: 'oh! no',
+    description: 'There&lsquo;s not much left here for you.',
   },
 };
