@@ -1,0 +1,33 @@
+@import "../../styles/variable";
+@import "../../styles/common";
+
+// Hero
+.overline {
+  color: var(--c-green);
+  margin: 0 0 20px 3px;
+  font-size: var(--fs-md);
+  font-family: var(--font-SFMono);
+  font-weight: normal;
+}
+.title {
+  font-size: 80px;
+  line-height: 1.1;
+  margin: 0;
+}
+.subtitle {
+  font-size: 80px;
+  line-height: 1.1;
+  color: var(--c-slate);
+}
+.description {
+  margin-top: 35px;
+  width: 50%;
+  max-width: 500px;
+  a {
+    @extend %inlineLink;
+  }
+}
+.getintouch {
+  @extend %bigButton;
+  margin-top: 50px;
+}

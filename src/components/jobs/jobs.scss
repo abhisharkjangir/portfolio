@@ -1,0 +1,123 @@
+@import "../../styles/variable";
+@import "../../styles/common";
+
+// Jobs
+.jobTabs {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  ul {
+    display: block;
+    position: relative;
+    width: max-content;
+    z-index: 3;
+    li {
+      button {
+        @extend %link;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        background-color: transparent;
+        height: 42px;
+        padding: 0 20px 2px;
+        transition: var(--transition);
+        border-left: 2px solid var(--c-dark-grey);
+        text-align: left;
+        white-space: nowrap;
+        font-family: var(--font-SFMono);
+        font-size: var(--fs-smish);
+        color: var(--bg-c-light-grey);
+        &:hover,
+        &:focus {
+          background-color: var(--bg-c-light-navy);
+        }
+      }
+    }
+  }
+}
+.buttonActive {
+  color: var(--c-green) !important;
+  border-left: 2px solid var(--c-green) !important;
+}
+.jobContent {
+  position: relative;
+  padding-top: 12px;
+  padding-left: 30px;
+}
+
+.jobTabContent {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  // opacity: ${props => (props.isActive ? 1 : 0)};
+  // z-index: ${props => (props.isActive ? 2 : -1)};
+  // position: ${props => (props.isActive ? 'relative' : 'absolute')};
+  // visibility: ${props => (props.isActive ? 'visible' : 'hidden')};
+  // transition: ${theme.transition};
+  // transition-duration: ${props => (props.isActive ? '0.5s' : '0s')};
+  ul {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    list-style: none;
+    font-size: var(--fs-lg);
+    li {
+      position: relative;
+      padding-left: 30px;
+      margin-bottom: 10px;
+      &:before {
+        content: "▹";
+        position: absolute;
+        left: 0;
+        color: var(--c-green);
+        line-height: var(--fs-xl);
+      }
+    }
+  }
+  a {
+    @extend %inlineLink;
+  }
+}
+
+.jobTitle {
+  color: var(--c-light-slate);
+  font-size: var(--fs-xxl);
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.jobCompany {
+  color: var(--c-green);
+}
+.jobDetail {
+  font-family: var(--font-SFMono);
+  font-size: var(--fs-smish);
+  font-weight: normal;
+  letter-spacing: 0.5px;
+  color: var(--c-light-slate);
+  margin-bottom: 30px;
+  svg {
+    width: 15px;
+  }
+}
+.jobDescription {
+  ul {
+    padding: 0;
+    width: 100%;
+    margin: 0;
+    list-style: none;
+    font-size: var(--fs-lg);
+    li {
+      position: relative;
+      padding-left: 30px;
+      margin-bottom: 10px;
+      &:before {
+        content: "▹";
+        position: absolute;
+        left: 0;
+        color: var(--c-green);
+        line-height: var(--fs-xl);
+      }
+    }
+  }
+}
