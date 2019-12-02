@@ -6,7 +6,9 @@ class Email extends React.PureComponent {
     return (
       <div id="email" className={styles.email}>
         <div>
-          <a href="mailto:abhisharjangir@ymail.com">abhisharjangir@ymail.com</a>
+          <a href="mailto:abhisharjangir@ymail.com?subject=Get In Touch&body=Hello Abhishar,">
+            abhisharjangir@ymail.com
+          </a>
         </div>
       </div>
     );

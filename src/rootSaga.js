@@ -1,7 +1,5 @@
 import { all } from 'redux-saga/effects';
 
-import homeSaga from './containers/pages/home/saga';
-
 const callSagas = sagas => {
   const calledSagaList = [];
   sagas.forEach(saga => {
@@ -11,5 +9,5 @@ const callSagas = sagas => {
 };
 
 export default function* rootSaga() {
-  yield all([...callSagas([homeSaga])]);
+  yield all([...callSagas([])]);
 }

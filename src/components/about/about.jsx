@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Section from '../section';
 import styles from './about.scss';
 import abhishar from '../../assets/images/abhishar.jpg';
@@ -6,13 +7,11 @@ import Heading from '../heading/heading';
 const About = () => {
   const Skills = [
     'JavaScript (ES6+)',
-    'HTML & (S)CSS',
-    'React',
-    'Vue',
+    'HTML5 & (S)CSS',
+    'ReactJS',
     'Node.js',
-    'Express',
-    'GraphQL',
-    'NativeScript',
+    'Webpack',
+    'Redux',
   ];
   return (
     <Section id="about" style={{ position: 'relative' }}>
@@ -20,30 +19,32 @@ const About = () => {
       <div className={styles.aboutFlexContainer}>
         <div className={styles.aboutContent}>
           <p>
-            Hello! I&lsquo;m Abhishar, a software engineer based in Boston, MA
-            who enjoys building things that live on the internet. I develop
-            exceptional websites and web apps that provide intuitive,
-            pixel-perfect user interfaces with efficient and modern backends.
+            Hello! I&lsquo;m Abhishar, a front-end developer based in Gurgaon,
+            India, who is happily witing code for mobile, tablet & desktop
+            websites since 2015.
           </p>
           <p>
-            Shortly after graduating from
+            After my graduation from
             <a
-              href="https://www.ccis.northeastern.edu/"
+              href="https://bkbiet.ac.in/"
               target="_blank"
               rel="nofollow noopener noreferrer"
             >
-              Northeastern University
+              BKBIET, Pilani
             </a>
-            , I joined the engineering team at
+            , I started my career as a web designer and today, after 4+ years,
+            As a front-end developer, I worked on a wide variety of web apps.
+          </p>
+          <p>
+            Currently, as a System Analyst, I&lsquo;m working with
             <a
-              href="https://www.upstatement.com/"
+              href="https://www.bedbathandbeyond.com/"
               target="_blank"
               rel="nofollow noopener noreferrer"
             >
-              Upstatement
+              Bed Bath & Beyond
             </a>
-            where I work on a wide variety of interesting and meaningful
-            projects on a daily basis.
+            .
           </p>
           <p>
             Here are a few technologies I&lsquo;ve been working with recently:
@@ -55,9 +56,9 @@ const About = () => {
           </ul>
         </div>
         <div className={styles.aboutPic}>
-          <a href="/">
-            <img src={abhishar} alt="" />
-          </a>
+          <Link to="/">
+            <img src={abhishar} alt="Abhishar Jangir" />
+          </Link>
         </div>
       </div>
     </Section>

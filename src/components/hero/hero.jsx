@@ -7,16 +7,19 @@ const Hero = () => {
     <Section id="hero">
       <h1 className={styles.overline}>Hi, my name is</h1>
       <h2 className={styles.title}>Abhishar Jangir.</h2>
-      <h3 className={styles.subtitle}>I build things for the web.</h3>
+      <h3 className={styles.subtitle}>I write code for websites.</h3>
       <div className={styles.description}>
         <p>
-          {`I'm a software engineer based in India, MA specializing in building
-          (and occasionally designing) exceptional, high-quality websites and
-          applications.`}
+          I&lsquo;m a front-end developer based in Gurgaon, India, specializing
+          in developing high-quality websites with latest technologies & best
+          practices.
         </p>
       </div>
       <div>
-        <a className={styles.getintouch} href="/">
+        <a
+          className={styles.getintouch}
+          href="mailto:abhisharjangir@ymail.com?subject=Get In Touch&body=Hello Abhishar,"
+        >
           Get In Touch
         </a>
       </div>

@@ -12,7 +12,6 @@ class NotFound extends React.PureComponent {
           <h1 className={styles.title}>
             There&lsquo;s not much left here for you.
           </h1>
-          <p></p>
           <Link to="/" className={styles.bigButton}>
             Go Home
           </Link>

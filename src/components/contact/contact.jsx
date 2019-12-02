@@ -15,7 +15,10 @@ const Contact = () => {
           my inbox is always open. Whether for a potential project or just to
           say hi, I&lsquo;ll try my best to answer your email!
         </p>
-        <a href="/" className={styles.bigButton}>
+        <a
+          href="mailto:abhisharjangir@ymail.com?subject=Get In Touch&body=Hello Abhishar,"
+          className={styles.bigButton}
+        >
           Say Hello
         </a>
       </div>

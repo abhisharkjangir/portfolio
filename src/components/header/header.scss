@@ -9,7 +9,6 @@
   background-color: var(--bg-c-navy);
   transition: var(--transition);
   z-index: 11;
-  height: 100px;
   filter: none !important;
   pointer-events: auto !important;
   user-select: auto !important;
@@ -43,6 +42,12 @@
       fill: none;
       transition: var(--transition);
       user-select: none;
+    }
+    span {
+      position: absolute;
+      position: absolute;
+      top: 8px;
+      left: 15px;
     }
   }
 }

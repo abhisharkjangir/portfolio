@@ -1,55 +1,67 @@
+/* eslint-disable no-shadow */
 /* eslint-disable react/no-danger */
 import React from 'react';
 import Section from '../section';
 import styles from './work.scss';
 import Heading from '../heading/heading';
 import Icon from '../common/icon';
-import featured1 from '../../assets/images/featured_1.png';
+import meuzic from '../../assets/images/meuzic.png';
+import wordbook from '../../assets/images/wordbook.png';
+import nasa from '../../assets/images/nasa.png';
 
 const Work = () => {
   const projects = [
     {
-      title: 'OctoProfile',
+      title: 'Meuzic',
       description:
-        'A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.',
-      tech: ['Next.js', 'Chart.js', 'GitHub API'],
+        'Meuzic is a proressive web app for downloading music in MP3 and MP4 format with create playlist feature without signin/signup.',
+      tech: ['ReactJS', 'Redux', 'SASS', 'NodeJS'],
       links: [
         {
-          url: '',
-          iconName: 'github',
-        },
-        {
-          url: '',
+          url: 'https://meuzic.com',
           iconName: 'external',
         },
       ],
-      image: featured1,
+      image: meuzic,
       type: 'Featured Project',
+      url: 'https://meuzic.com',
     },
     {
-      title: 'OctoProfile2',
+      title: 'Nasa Explorer',
       description:
-        'A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.',
-      tech: ['Next.js', 'Chart.js', 'GitHub API'],
+        'A web app for exploring Epic, Apod & Earth which comsumes Nasa APIs.',
+      tech: ['ReactJS', 'Material UI', 'Nasa APIs'],
       links: [
         {
-          url: '',
-          iconName: 'github',
-        },
-        {
-          url: '',
+          url: 'https://nasa.abhijangir.me',
           iconName: 'external',
         },
       ],
-      image: featured1,
+      image: nasa,
       type: 'Featured Project',
+      url: 'https://nasa.abhijangir.me',
+    },
+    {
+      title: 'Word Book',
+      description:
+        'Word book is a web app for learning daily new english words which have features ie storing favrioute word, google translation, word quiz etc.',
+      tech: ['ReactJS', 'Wordnik API', 'SASS'],
+      links: [
+        {
+          url: 'https://wordbook.abhijangir.me',
+          iconName: 'external',
+        },
+      ],
+      image: wordbook,
+      type: 'Featured Project',
+      url: 'https://wordbook.abhijangir.me',
     },
   ];
 
   return (
     <Section id="work">
       <Heading text="Some Things I've Built" />
-      {projects.map(({ type, title, description, links, image, tech }) => (
+      {projects.map(({ type, title, description, links, image, tech, url }) => (
         <div className={styles.work}>
           <div className={styles.content}>
             <h4>{type}</h4>
@@ -66,15 +78,21 @@ const Work = () => {
                   href={url}
                   target="_blank"
                   rel="nofollow noopener noreferrer"
-                  aria-label="GitHub Link"
+                  aria-label=""
                 >
                   <Icon name={iconName} />
                 </a>
               ))}
             </div>
           </div>
-          <a href="/" className={styles.imgContainer}>
-            <img src={image} className={styles.imgage} alt="" />
+          <a
+            href={url}
+            target="_blank"
+            rel="nofollow noopener noreferrer"
+            aria-label=""
+            className={styles.imgContainer}
+          >
+            <img src={image} className={styles.image} alt="" />
           </a>
         </div>
       ))}

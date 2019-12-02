@@ -4,48 +4,35 @@ import Section from '../section';
 import styles from './jobs.scss';
 import Heading from '../heading/heading';
 
+const TabList = [
+  {
+    company: 'Bed Bath & Beyond',
+    title: ' System Analyst',
+    url: 'https://www.bedbathandbeyond.com',
+    range: 'Oct 2k18 - Present',
+    html:
+      '<ul><li>Create several reusable components in ReactJS.</li><li>Build new features and enhancemnents.</li><li>Communicate with onshore business and design team to collect the requirements.</li><li>Code debugging and bug fixing.</li></ul>',
+  },
+  {
+    company: 'Chimes Group',
+    title: ' Front End Developer',
+    url: 'https://chimesgroup.in/',
+    range: 'Aug 2k16 - Oct 2k18',
+    html:
+      '<ul><li>Worked on different client&lsquo;s websites from scratch i.e Dauble, Dauble Business.</li><li>Build admin dashboard for MuscleMatics.</li><li>Build hybrid andriod & IOS mobile app for dynamic forms to collect client specific information in react native.</li><li>Build react app to draw the construction pipelines on ESRI & LeafLet map.</li></ul>',
+  },
+  {
+    company: 'Medzin',
+    title: ' Front End Developer',
+    url: 'https://chimesgroup.in/',
+    range: 'Nov 2k15 - Jul 2k16',
+    html:
+      '<ul><li>Build company&lsquo;s websites ie Medzin, Medzin Business </li><li>Build dashboard to manage Pharmacies, Doctors, Labs, Medicines & orders.</li></ul>',
+  },
+];
+
 const Jobs = () => {
   const [selectedTab, selectTab] = useState(1);
-  const TabList = [
-    {
-      company: 'Upstatement',
-      title: ' Engineer',
-      url: '',
-      range: 'May 2018 - Present',
-      html:
-        '<ul><li>Write modern, performant, maintainable code for a diverse array of client and internal projects</li><li>Work with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript, TypeScript, Gatsby, React, Craft, Wordpress, Prismic, and Netlify</li><li>Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a daily basis</li></ul>',
-    },
-    {
-      company: 'Scout',
-      title: ' av',
-      url: '',
-      range: '10-13',
-    },
-    {
-      company: 'Apple',
-      title: ' av',
-      url: '',
-      range: '10-13',
-    },
-    {
-      company: 'Scout',
-      title: ' av',
-      url: '',
-      range: '10-13',
-    },
-    {
-      company: 'Starry',
-      title: ' av',
-      url: '',
-      range: '10-13',
-    },
-    {
-      company: 'MullenLowe',
-      title: ' av',
-      url: '',
-      range: '10-13',
-    },
-  ];
   const { title, company, url, range, html } = TabList[selectedTab - 1];
 
   return (

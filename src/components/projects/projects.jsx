@@ -8,130 +8,59 @@ import Icon from '../common/icon';
 const Projects = () => {
   const List = [
     {
-      name: 'Building a Headless Mobile App CMS From Scratch',
-      description:
-        'Find out how we built a custom headless CMS with Node, Express, and Firebase for a client project at Upstatement',
-      tech: ['node', 'express'],
+      name: 'React Go',
+      description: 'A starter kit for react app with all the best practices.',
+      tech: [
+        'react',
+        'redux',
+        'redux-saga',
+        'reselect',
+        'nodejs',
+        'sass',
+        'pwa',
+        'react-universal-component',
+        'server-side-rendering',
+        'seo-friendly',
+      ],
       links: [
         {
           iconName: 'github',
-          url: '',
+          url: 'https://github.com/abhisharkjangir/reactgo',
         },
         {
-          iconName: 'github',
-          url: '',
+          iconName: 'external',
+          url: 'https://reactgo.abhijangir.me',
         },
       ],
     },
     {
-      name: 'Building a Headless Mobile App CMS From Scratch',
+      name: 'Portfolio',
       description:
-        'Find out how we built a custom headless CMS with Node, Express, and Firebase for a client project at Upstatement',
-      tech: ['node', 'express'],
+        'My portfolio website which shows my experience, work and projects.',
+      tech: ['react', 'redux', 'redux-saga', 'reselect', 'nodejs', 'sass'],
       links: [
         {
           iconName: 'github',
-          url: '',
+          url: 'https://github.com/abhisharkjangir/portfolio',
         },
         {
-          iconName: 'github',
-          url: '',
+          iconName: 'external',
+          url: 'https://abhijangir.me',
         },
       ],
     },
     {
-      name: 'Building a Headless Mobile App CMS From Scratch',
-      description:
-        'Find out how we built a custom headless CMS with Node, Express, and Firebase for a client project at Upstatement',
-      tech: ['node', 'express'],
+      name: 'Online Image Editor',
+      description: 'A Image editor which is powered by Adobe Creative SDK.',
+      tech: ['react', 'Creative SDK'],
       links: [
         {
           iconName: 'github',
-          url: '',
+          url: 'https://github.com/abhisharkjangir/react-aviary',
         },
         {
-          iconName: 'github',
-          url: '',
-        },
-      ],
-    },
-    {
-      name: 'Building a Headless Mobile App CMS From Scratch',
-      description:
-        'Find out how we built a custom headless CMS with Node, Express, and Firebase for a client project at Upstatement',
-      tech: ['node', 'express'],
-      links: [
-        {
-          iconName: 'github',
-          url: '',
-        },
-        {
-          iconName: 'github',
-          url: '',
-        },
-      ],
-    },
-    {
-      name: 'Building a Headless Mobile App CMS From Scratch',
-      description:
-        'Find out how we built a custom headless CMS with Node, Express, and Firebase for a client project at Upstatement',
-      tech: ['node', 'express'],
-      links: [
-        {
-          iconName: 'github',
-          url: '',
-        },
-        {
-          iconName: 'github',
-          url: '',
-        },
-      ],
-    },
-    {
-      name: 'Building a Headless Mobile App CMS From Scratch',
-      description:
-        'Find out how we built a custom headless CMS with Node, Express, and Firebase for a client project at Upstatement Find out how we built a custom headless CMS with Node, Express, and Firebase for a client project at Upstatement',
-      tech: ['node', 'express'],
-      links: [
-        {
-          iconName: 'github',
-          url: '',
-        },
-        {
-          iconName: 'github',
-          url: '',
-        },
-      ],
-    },
-    {
-      name: 'Building a Headless Mobile App CMS From Scratch',
-      description:
-        'Find out how we built a custom headless CMS with Node, Express, and Firebase for a client project at Upstatement',
-      tech: ['node', 'express'],
-      links: [
-        {
-          iconName: 'github',
-          url: '',
-        },
-        {
-          iconName: 'github',
-          url: '',
-        },
-      ],
-    },
-    {
-      name: 'Building a Headless Mobile App CMS From Scratch',
-      description:
-        'Find out how we built a custom headless CMS with Node, Express, and Firebase for a client project at Upstatement',
-      tech: ['node', 'express'],
-      links: [
-        {
-          iconName: 'github',
-          url: '',
-        },
-        {
-          iconName: 'github',
-          url: '',
+          iconName: 'external',
+          url: 'https://ie.abhijangir.me',
         },
       ],
     },
@@ -148,9 +77,7 @@ const Projects = () => {
         <h4>Other Noteworthy Projects</h4>
 
         <div className={styles.center}>
-          <Link to="/" className={styles.view}>
-            view the archive
-          </Link>
+          <Link to="/" className={styles.view}></Link>
         </div>
 
         <div className={styles.grid}>
@@ -166,6 +93,9 @@ const Projects = () => {
                       <div className={styles.projectLinks}>
                         {links.map(({ iconName, url }) => (
                           <a
+                            target="_blank"
+                            rel="nofollow noopener noreferrer"
+                            aria-label=""
                             key={iconName}
                             href={url}
                             className={styles.iconLink}

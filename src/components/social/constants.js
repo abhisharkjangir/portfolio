@@ -5,18 +5,14 @@ export const socailList = [
   },
   {
     name: 'linkedin',
-    url: 'https://github.com/abhisharkjangir',
-  },
-  {
-    name: 'codepen',
-    url: 'https://github.com/abhisharkjangir',
+    url: 'https://in.linkedin.com/in/abhishar-jangir',
   },
   {
     name: 'instagram',
-    url: 'https://github.com/abhisharkjangir',
+    url: 'https://www.instagram.com/abhishar.jangir/',
   },
   {
     name: 'twitter',
-    url: 'https://github.com/abhisharkjangir',
+    url: 'https://twitter.com/Abhishar_jangir',
   },
 ];

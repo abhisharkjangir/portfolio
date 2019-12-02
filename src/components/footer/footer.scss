@@ -2,7 +2,7 @@
 @import "../../styles/common";
 
 .footer {
- @extend %flexCenter;
+  @extend %flexCenter;
   flex-direction: column;
   padding: 15px;
   background-color: var(--bg-c-dark-navy);
@@ -10,24 +10,18 @@
   text-align: center;
   height: auto;
   min-height: 70px;
-  // div {
-
-  // }
-
-
 }
-.content {
 
-    color: var(--c-light-slate);
+.content {
+  color: var(--c-light-slate);
   width: 100%;
   max-width: 270px;
-  // margin: 0 auto 10px;
-  margin: 10px 0;
+  margin: 13px 0;
   font-family: var(--font-SFMono);
   font-size: var(--fs-xs);
   line-height: 1;
   a {
-    color:var(--c-light-slate);
+    color: var(--c-light-slate);
     div {
       margin-top: 10px;
       & > span {
@@ -43,5 +37,4 @@
       }
     }
   }
-
 }
