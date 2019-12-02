@@ -1,6 +1,6 @@
 {
-  "name": "reactgo",
-  "description": "reactgo",
+  "name": "portfolio",
+  "description": "Portfolio web app",
   "version": "1.0.0",
   "main": "server/index.js",
   "author": "Abhishar Jangir <abhisharjangir@ymail.com>",

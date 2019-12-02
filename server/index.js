@@ -16,7 +16,7 @@ const env = isProduction ? 'production' : 'development';
 
 const { publicPath } = getClientConfig(env).output;
 const outputPath = getClientConfig(env).output.path;
-const PORT = process.env.PORT || 3005;
+const PORT = process.env.PORT || 7000;
 
 const app = express();
 app.use(compression());
@@ -27,11 +27,11 @@ app.use(cookieParser());
 let isBuilt = false;
 const done = () =>
   !isBuilt &&
-  app.listen(3005, () => {
+  app.listen(PORT, () => {
     isBuilt = true;
     // eslint-disable-next-line no-console
     console.log(
-      `:::::::: ReactGo is runnig at http://localhost:${PORT} ::::::::`
+      `:::::::: Portfolio is runnig at http://localhost:${PORT} ::::::::`
     );
   });
 
