@@ -10,7 +10,7 @@ const Hero = () => {
       <h3 className={styles.subtitle}>I write code for websites.</h3>
       <div className={styles.description}>
         <p>
-          I&lsquo;m a front-end developer based in Gurgaon, India, specializing
+          I&lsquo;m a front-end developer based in Gurugram, India, specializing
           in developing high-quality websites with latest technologies & best
           practices.
         </p>

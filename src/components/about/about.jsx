@@ -20,7 +20,7 @@ const About = () => {
         <div className={styles.aboutContent}>
           <p>
             Hello! I&lsquo;m Abhishar, a front-end developer based in Gurgaon,
-            India, who is happily witing code for mobile, tablet & desktop
+            India, who is happily writing code for mobile, tablet & desktop
             websites since 2015.
           </p>
           <p>
@@ -33,10 +33,10 @@ const About = () => {
               BKBIET, Pilani
             </a>
             , I started my career as a web designer and today, after 4+ years,
-            As a front-end developer, I worked on a wide variety of web apps.
+            as a front-end developer, I worked on a wide variety of web apps.
           </p>
           <p>
-            Currently, as a System Analyst, I&lsquo;m working with
+            Currently, I&lsquo;m working with
             <a
               href="https://www.bedbathandbeyond.com/"
               target="_blank"
