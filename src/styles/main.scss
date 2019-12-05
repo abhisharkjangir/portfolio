@@ -154,15 +154,6 @@ body {
     &.hidden {
       overflow: hidden;
     }
-    &.blur {
-      overflow: hidden;
-      #root > #content > * {
-        filter: blur(5px) brightness(0.7);
-        transition: var(--transition);
-        pointer-events: none;
-        user-select: none;
-      }
-    }
 }
 
 ::selection {
@@ -281,8 +272,47 @@ ul, ol {
 
 
 .main {
-    width: 100%;
-    counter-reset: section 0;
-    padding: 0px 150px;
-    margin: 0px auto;
+  width: 100%;
+  counter-reset: section 0;
+  padding: 0px 150px;
+  margin: 0px auto;
+}
+
+// Media Queries =====================
+@import "./breakpoints";
+@media (max-width: $bigDesktop) {
+
+}
+
+@media (max-width: $desktop) {
+  .main {
+    padding: 0px 100px;
+  }
+}
+
+@media (max-width:$tablet) {
+  .main {
+    padding: 0px 50px;
+  }
+}
+
+@media (max-width: $thone) {
+
+}
+
+@media (max-width: $phablet) {
+  body {
+    font-size: var(--fs-lg);
+  }
+  .main {
+    padding: 0px 25px;
+  }
+}
+
+@media (max-width: $phone) {
+
+}
+
+@media (max-width:$tiny) {
+
 }

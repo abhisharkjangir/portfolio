@@ -1,6 +1,4 @@
-@import "../../styles/variable";
 @import "../../styles/common";
-
 .header {
   @extend %flexBetween;
   position: fixed;
@@ -80,4 +78,92 @@
   @extend %smallButton;
   margin-left: 10px;
   font-size: var(--fs-smish);
+}
+
+
+.hamburger {
+  @extend %flexCenter;
+  overflow: visible;
+  margin: 0 -12px 0 0;
+  padding: 15px;
+  cursor: pointer;
+  transition-timing-function: linear;
+  transition-duration: 0.15s;
+  transition-property: opacity, filter;
+  text-transform: none;
+  color: inherit;
+  border: 0;
+  background-color: transparent;
+  display: none;
+}
+
+.hamburgerBox {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 24px;
+}
+
+.hamburgerInner {
+  background-color: var(--bg-c-green);
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  border-radius: 4px;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transition-duration: 0.22s;
+  transition-property: transform;
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    background-color: var(--bg-c-green);
+    position: absolute;
+    left: auto;
+    right: 0;
+    width: 30px;
+    height: 2px;
+    transition-timing-function: ease;
+    transition-duration: 0.15s;
+    transition-property: transform;
+    border-radius: 4px;
+  }
+}
+
+@import "../../styles/breakpoints";
+
+@media (max-width: $bigDesktop) {
+
+}
+
+@media (max-width: $desktop) {
+  .header {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width:$tablet) {
+  .header {
+    padding: 0 25px;
+  }
+  .links {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+}
+
+@media (max-width: $thone) {
+
+}
+
+@media (max-width: $phone) {
+
+}
+
+@media (max-width:$tiny) {
+
 }

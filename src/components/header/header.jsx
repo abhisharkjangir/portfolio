@@ -1,10 +1,21 @@
+/* eslint-disable react/jsx-closing-tag-location */
+/* eslint-disable jsx-a11y/interactive-supports-focus */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from 'react';
+import Helmet from 'react-helmet';
 import { Link } from 'react-router-dom';
 import styles from './header.scss';
 import Icon from '../common/icon';
 import throttle from '../../utils/throttle';
 import isServer from '../../utils/isServer';
 import resume from '../../assets/resume.pdf';
+import Menu from '../menu';
+
+const hamBefore = `top 0.1s ease-in 0.25s, opacity 0.1s ease-in`;
+const hamBeforeActive = `top 0.1s ease-out, opacity 0.1s ease-out 0.12s`;
+const hamAfter = `bottom 0.1s ease-in 0.25s, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19)`;
+const hamAfterActive = `bottom 0.1s ease-out, transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s`;
+
 const Navigation = [
   {
     name: 'About',
@@ -30,6 +41,7 @@ class Header extends React.PureComponent {
     this.state = {
       scrollDirection: 'none',
       lastScrollTop: 0,
+      isMenuOpen: false,
     };
   }
 
@@ -37,12 +49,18 @@ class Header extends React.PureComponent {
     window.addEventListener('scroll', () => throttle(this.handleScroll()));
   }
 
+  // eslint-disable-next-line react/no-access-state-in-setstate
+  toggleMenu = () => {
+    const { isMenuOpen } = this.state;
+    this.setState({ isMenuOpen: !isMenuOpen });
+  };
+
   handleScroll = () => {
     if (isServer) return;
     const DELTA = 5;
-    const { scrollDirection, lastScrollTop } = this.state;
+    const { scrollDirection, lastScrollTop, isMenuOpen } = this.state;
     const { scrollY, innerHeight } = window;
-    if (Math.abs(lastScrollTop - scrollY) <= DELTA) return;
+    if (Math.abs(lastScrollTop - scrollY) <= DELTA || isMenuOpen) return;
     if (scrollY < DELTA) {
       this.setState({ scrollDirection: 'none' });
     } else if (scrollY > lastScrollTop && scrollY > 100) {
@@ -64,7 +82,41 @@ class Header extends React.PureComponent {
     };
   };
 
+  // eslint-disable-next-line complexity
+  getHamburgerStyle = () => {
+    const { isMenuOpen } = this.state;
+    return (
+      <Helmet>
+        <style>
+          {`
+          .${styles.hamburgerInner}{
+            transition-delay: ${isMenuOpen ? '0.12s' : '0s'};
+            transform: rotate(${isMenuOpen ? '225deg' : '0deg'})!important;
+            transition-timing-function: cubic-bezier(${
+              isMenuOpen ? '0.215, 0.61, 0.355, 1' : '0.55, 0.055, 0.675, 0.19'
+            });
+          }
+          .${styles.hamburgerInner}::before{
+            width:${isMenuOpen ? '100%' : '120%'};
+            top:${isMenuOpen ? '0' : '-10px'};
+            opacity:${isMenuOpen ? '0' : '1'};
+            transition:${isMenuOpen ? hamBeforeActive : hamBefore};
+          }
+          .${styles.hamburgerInner}::after{
+            width:${isMenuOpen ? '100%' : '80%'};
+            bottom:${isMenuOpen ? '0' : '-10px'};
+            transform:rotate(${isMenuOpen ? '-90deg' : '0'});
+            transition:${isMenuOpen ? hamAfterActive : hamAfter};
+          }
+          `}
+        </style>
+      </Helmet>
+    );
+  };
+
   render() {
+    const { isMenuOpen } = this.state;
+
     return (
       <div id="Header" className={styles.header} style={this.getHeaderStyle()}>
         <nav>
@@ -73,6 +125,17 @@ class Header extends React.PureComponent {
               <Icon name="logo" />
               <span>A</span>
             </Link>
+          </div>
+
+          <div
+            role="button"
+            className={styles.hamburger}
+            onClick={() => this.toggleMenu()}
+          >
+            {this.getHamburgerStyle()}
+            <div className={styles.hamburgerBox}>
+              <div className={styles.hamburgerInner}></div>
+            </div>
           </div>
 
           <div className={styles.links}>
@@ -88,6 +151,11 @@ class Header extends React.PureComponent {
             </div>
           </div>
         </nav>
+        <Menu
+          isMenuOpen={isMenuOpen}
+          toggleMenu={this.toggleMenu}
+          links={Navigation}
+        />
       </div>
     );
   }

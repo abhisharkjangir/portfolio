@@ -1,6 +1,4 @@
-@import "../../styles/variable";
 @import "../../styles/common";
-
 
 // Heading
 .heading,
@@ -52,4 +50,55 @@
   &:after {
     display: none;
   }
+}
+
+@import "../../styles/breakpoints";
+@media (max-width: $bigDesktop) {
+
+}
+
+@media (max-width: $desktop) {
+  .heading {
+    &:after {
+      width: 200px;
+    }
+  }
+  .headingCenter {
+    font-size: var(--fs-sm);
+    &:before {
+      font-size: var(--fs-smish);
+    }
+  }
+}
+
+@media (max-width:$tablet) {
+  .heading {
+    font-size: 24px;
+    &:before {
+      font-size: var(--fs-lg);
+    }
+    &:after {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: $thone) {
+  .heading {
+    &:after {
+      margin-left: 10px;
+    }
+  }
+}
+
+@media (max-width: $phablet) {
+
+}
+
+@media (max-width: $phone) {
+
+}
+
+@media (max-width:$tiny) {
+
 }

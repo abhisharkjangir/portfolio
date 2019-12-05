@@ -4,7 +4,7 @@ import styles from './hero.scss';
 
 const Hero = () => {
   return (
-    <Section id="hero">
+    <Section id="hero" className={styles.section}>
       <h1 className={styles.overline}>Hi, my name is</h1>
       <h2 className={styles.title}>Abhishar Jangir.</h2>
       <h3 className={styles.subtitle}>I write code for websites.</h3>

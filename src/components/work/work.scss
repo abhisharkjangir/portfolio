@@ -1,4 +1,3 @@
-@import "../../styles/variable";
 @import "../../styles/common";
 
 // Work
@@ -144,4 +143,87 @@
     mix-blend-mode: multiply;
     filter: grayscale(100%) contrast(1) brightness(90%);
   }
+}
+
+@import "../../styles/breakpoints";
+@media (max-width: $bigDesktop) {
+}
+
+@media (max-width: $desktop) {
+}
+
+@media (max-width: $tablet) {
+  .work {
+    .imgContainer {
+      height: 100%;
+    }
+    h5 {
+      font-size: 24px;
+      a {
+        display: block;
+      }
+    }
+  }
+  .image {
+    object-fit: cover;
+    width: auto;
+    height: 100%;
+    filter: grayscale(100%) contrast(1) brightness(80%);
+  }
+}
+
+@media (max-width: $thone) {
+  .work {
+    margin-bottom: 70px;
+    &:nth-of-type(odd) {
+      .content {
+        grid-column: 1 / -1;
+        padding: 40px 40px 30px;
+      }
+    }
+    .imgContainer {
+      grid-column: 1 / -1 !important;
+      opacity: 0.25;
+    }
+    .description {
+      background-color: transparent;
+      padding: 20px 0;
+      box-shadow: none;
+      &:hover {
+        box-shadow: none;
+      }
+    }
+    .content {
+      grid-column: 1 / -1;
+      padding: 40px 40px 30px;
+      z-index: 5;
+    }
+    h5 {
+      color: var(--c-white);
+    }
+
+    .imgContainer {
+      grid-column: 1 / -1;
+      opacity: 0.25;
+    }
+  }
+}
+
+@media (max-width: $phablet) {
+  .work {
+    &:nth-of-type(odd) {
+      .content {
+        padding: 30px 25px 20px;
+      }
+    }
+    .content {
+      padding: 30px 25px 20px;
+    }
+  }
+}
+
+@media (max-width: $phone) {
+}
+
+@media (max-width: $tiny) {
 }

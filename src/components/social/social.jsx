@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './social.scss';
-import { socailList } from './constants';
+import { socialList } from '../../constants';
 import Icon from '../common/icon';
 
 class Social extends React.PureComponent {
@@ -8,7 +8,7 @@ class Social extends React.PureComponent {
     return (
       <div id="social" className={styles.social}>
         <ul>
-          {socailList.map(({ name, url }) => (
+          {socialList.map(({ name, url }) => (
             <li key={name}>
               <a
                 href={url}

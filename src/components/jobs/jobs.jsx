@@ -42,7 +42,7 @@ const Jobs = () => {
     >
       <Heading text="Where I've Worked" />
       <div className={styles.jobTabs}>
-        <ul>
+        <ul className={styles.tablist}>
           {TabList.map((tab, i) => (
             <li>
               <button

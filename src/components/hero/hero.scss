@@ -1,4 +1,3 @@
-@import "../../styles/variable";
 @import "../../styles/common";
 
 // Hero
@@ -30,4 +29,51 @@
 .getintouch {
   @extend %bigButton;
   margin-top: 50px;
+}
+
+
+@import "../../styles/breakpoints";
+@media (max-width: $bigDesktop) {
+
+}
+
+@media (max-width: $desktop) {
+  .overline {
+    font-size: var(--fs-sm);
+  }
+  .title,.subtitle {
+    font-size: 70px;
+  }
+}
+
+@media (max-width:$tablet) {
+  .overline {
+    font-size: var(--fs-smish);
+  }
+  .title,.subtitle {
+    font-size: 60px;
+  }
+  .section {
+    padding-top: 150px;
+  }
+}
+
+@media (max-width: $thone) {
+
+}
+
+@media (max-width: $phablet) {
+  .title,.subtitle {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: $phone) {
+  .title,.subtitle {
+    font-size: 40px;
+  }
+}
+
+@media (max-width:$tiny) {
+
 }

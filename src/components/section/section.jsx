@@ -2,8 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './section.scss';
 
-const Section = ({ children, style, id }) => {
-  const classNames = styles.section;
+const Section = ({ children, style, id, className }) => {
+  let classNames = '';
+  if (className) {
+    classNames = `${styles.section} ${className}`;
+  } else {
+    classNames = styles.section;
+  }
   return (
     <div id={id} className={classNames} style={style}>
       {children}
@@ -15,11 +20,13 @@ Section.propTypes = {
   children: PropTypes.object.isRequired,
   style: PropTypes.object,
   id: PropTypes.object,
+  className: PropTypes.string,
 };
 
 Section.defaultProps = {
   style: {},
   id: '',
+  className: null,
 };
 
 export default Section;

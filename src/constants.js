@@ -1,4 +1,4 @@
-export const socailList = [
+export const socialList = [
   {
     name: 'github',
     url: 'https://github.com/abhisharkjangir',

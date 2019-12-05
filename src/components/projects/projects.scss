@@ -1,4 +1,3 @@
-@import "../../styles/variable";
 @import "../../styles/common";
 // Projects
 .Project {
@@ -122,4 +121,42 @@
     margin: 100px auto 0;
     display: block;
   }
+}
+
+
+@import "../../styles/breakpoints";
+@media (max-width: $bigDesktop) {
+
+}
+
+@media (max-width: $desktop) {
+  .Project {
+    .grid {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+  }
+}
+
+@media (max-width:$tablet) {
+  .Project {
+    h4 {
+      font-size:24px;
+    }
+  }
+}
+
+@media (max-width: $thone) {
+
+}
+
+@media (max-width: $phablet) {
+
+}
+
+@media (max-width: $phone) {
+
+}
+
+@media (max-width:$tiny) {
+
 }

@@ -1,4 +1,3 @@
-@import "../../styles/variable";
 @import "../../styles/common";
 
 .footer {
@@ -38,3 +37,53 @@
     }
   }
 }
+
+.socialContainer {
+  color: var(--c-light-slate);
+  width: 100%;
+  max-width: 270px;
+  margin: 0 auto 10px;
+  display: none;
+  padding: 0 30px;
+  .list {
+    @extend %flexBetween;
+    padding: 10px;
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+
+@import "../../styles/breakpoints";
+@media (max-width: $bigDesktop) {
+
+}
+
+@media (max-width: $desktop) {
+
+}
+
+@media (max-width:$tablet) {
+  .socialContainer {
+    display: block;
+  }
+}
+
+@media (max-width: $thone) {
+
+}
+
+@media (max-width: $phablet) {
+
+}
+
+@media (max-width: $phone) {
+
+}
+
+@media (max-width:$tiny) {
+
+}
+
