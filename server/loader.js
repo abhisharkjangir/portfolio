@@ -20,6 +20,8 @@ import rootSaga from '../src/rootSaga';
 import { setHelmetInfo } from '../src/containers/common/helmet/actions';
 import Meta from '../src/utils/meta';
 
+const isDev = process.env.NODE_ENV === 'development';
+
 const inlineResource = (resourcePath, encoding = 'utf8') => {
   let resource = '';
 
@@ -33,6 +35,16 @@ const inlineResource = (resourcePath, encoding = 'utf8') => {
   }
   return resource;
 };
+
+const googleAnalyticsScripts = !isDev ? `
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-155127051-1');
+</script> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155127051-1"></script>
+` : ''
+
 
 /*
     A simple helper function to prepare the HTML markup. This loads:
@@ -53,7 +65,7 @@ export const injectHTML = (
     '<div id="root"></div>',
     `<div id="root">${body}</div>${cssHash}<script>window.__PRELOADED_STATE__ = ${state}</script>`
   );
-  data = data.replace('</body>', `${scripts}</body>`);
+  data = data.replace('</body>', `${googleAnalyticsScripts}${scripts}</body>`);
 
   return data;
 };
