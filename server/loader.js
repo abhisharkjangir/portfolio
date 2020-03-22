@@ -36,15 +36,16 @@ const inlineResource = (resourcePath, encoding = 'utf8') => {
   return resource;
 };
 
-const googleAnalyticsScripts = !isDev ? `
+const googleAnalyticsScripts = !isDev
+  ? `
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'UA-155127051-1');
 </script> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155127051-1"></script>
-` : ''
-
+`
+  : '';
 
 /*
     A simple helper function to prepare the HTML markup. This loads:

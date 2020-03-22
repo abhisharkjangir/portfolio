@@ -3,6 +3,7 @@ const path = require('path');
 const webpack = require('webpack');
 const ExtractCssChunks = require('extract-css-chunks-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const WriteFilePlugin = require('write-file-webpack-plugin'); // here so you can see what chunks are built
 const paths = require('./paths');
 
@@ -178,6 +179,15 @@ const getPlugins = isProduction => {
         { from: 'public/logo192.png', to: '' },
         { from: 'public/service-worker.js', to: '' },
       ]),
+      new ImageminPlugin({
+        test: /\.(jpe?g|png|gif|svg|ico)$/i,
+        disable: false, // Disable during development
+        pngquant: {
+          progressive: true,
+          quality: '50',
+        },
+        jpegtran: { progressive: true },
+      }),
       new ExtractCssChunks(),
       new webpack.optimize.ModuleConcatenationPlugin(),
       new webpack.optimize.OccurrenceOrderPlugin(),

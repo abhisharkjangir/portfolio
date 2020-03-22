@@ -45,6 +45,7 @@
     "compression": "^1.7.4",
     "connected-react-router": "6.6.0",
     "cookie-parser": "^1.4.4",
+    "copy-webpack-plugin": "^5.0.5",
     "cross-env": "^5.2.0",
     "css-loader": "^2.1.1",
     "express": "^4.17.1",
@@ -52,6 +53,7 @@
     "extract-css-chunks-webpack-plugin": "^4.5.2",
     "file-loader": "^4.3.0",
     "history": "^4.9.0",
+    "imagemin-webpack-plugin": "^2.4.2",
     "immutable": "^4.0.0-rc.12",
     "node-sass": "^4.12.0",
     "pm2": "^4.1.2",
@@ -75,8 +77,7 @@
     "webpack-flush-chunks": "^2.0.3",
     "webpack-hot-middleware": "^2.25.0",
     "webpack-hot-server-middleware": "^0.6.0",
-    "write-file-webpack-plugin": "^4.5.0",
-    "copy-webpack-plugin": "^5.0.5"
+    "write-file-webpack-plugin": "^4.5.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
