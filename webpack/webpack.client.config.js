@@ -206,6 +206,7 @@ const getPlugins = isProduction => {
       new CopyPlugin([
         { from: 'public/manifest.json', to: 'static/js' },
         { from: 'public/robots.txt', to: '' },
+        { from: 'public/sitemap.xml', to: '' },
         { from: 'public/favicon.ico', to: 'static/assets' },
         { from: 'public/logo512.png', to: 'static/assets' },
         { from: 'public/logo192.png', to: 'static/assets' },
@@ -217,6 +218,7 @@ const getPlugins = isProduction => {
     new CopyPlugin([
       { from: 'public/manifest.json', to: 'static/js' },
       { from: 'public/robots.txt', to: '' },
+      { from: 'public/sitemap.xml', to: '' },
       { from: 'public/favicon.ico', to: 'static/assets' },
       { from: 'public/logo512.png', to: 'static/assets' },
       { from: 'public/logo192.png', to: 'static/assets' },
