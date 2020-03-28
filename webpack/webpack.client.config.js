@@ -5,12 +5,15 @@ const ExtractCssChunks = require('extract-css-chunks-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const WriteFilePlugin = require('write-file-webpack-plugin'); // here so you can see what chunks are built
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const paths = require('./paths');
 
 const getOutput = isProduction => {
   return {
-    filename: isProduction ? '[name].[chunkhash].js' : '[name].js',
-    chunkFilename: isProduction ? '[name].[chunkhash].js' : '[name].chunk.js',
+    filename: isProduction ? 'static/js/[name].[chunkhash].js' : '[name].js',
+    chunkFilename: isProduction
+      ? 'static/js/[name].[chunkhash].js'
+      : '[name].chunk.js',
     path: path.resolve(__dirname, '../build'),
     publicPath: '/',
   };
@@ -56,7 +59,7 @@ const getModule = isProduction => {
             loader: require.resolve('url-loader'),
             options: {
               limit: '10000',
-              name: 'media/[name].[hash:8].[ext]',
+              name: 'static/assets/[name].[hash:8].[ext]',
             },
           },
           {
@@ -132,7 +135,7 @@ const getModule = isProduction => {
               /\.json$/,
             ],
             options: {
-              name: 'media/[name].[hash:8].[ext]',
+              name: 'static/assets/[name].[hash:8].[ext]',
             },
           },
           // ** STOP ** Are you adding a new loader?
@@ -171,14 +174,14 @@ const getResolve = () => {
 const getPlugins = isProduction => {
   if (isProduction) {
     return [
-      new CopyPlugin([
-        { from: 'public/manifest.json', to: '' },
-        { from: 'public/robots.txt', to: '' },
-        { from: 'public/favicon.ico', to: '' },
-        { from: 'public/logo512.png', to: '' },
-        { from: 'public/logo192.png', to: '' },
-        { from: 'public/service-worker.js', to: '' },
-      ]),
+      new BundleAnalyzerPlugin({
+        analyzerMode: 'static',
+        openAnalyzer: false,
+        generateStatsFile: true,
+        reportFilename: 'bundlereport.html',
+        statsFilename: 'bundlestats.json',
+      }),
+
       new ImageminPlugin({
         test: /\.(jpe?g|png|gif|svg|ico)$/i,
         disable: false, // Disable during development
@@ -188,7 +191,10 @@ const getPlugins = isProduction => {
         },
         jpegtran: { progressive: true },
       }),
-      new ExtractCssChunks(),
+      new ExtractCssChunks({
+        filename: 'static/css/[name].[hash:8].css',
+        chunkFilename: 'static/css/[name].[hash:8].css',
+      }),
       new webpack.optimize.ModuleConcatenationPlugin(),
       new webpack.optimize.OccurrenceOrderPlugin(),
       new webpack.DefinePlugin({
@@ -197,16 +203,24 @@ const getPlugins = isProduction => {
         },
       }),
       new webpack.HashedModuleIdsPlugin(), // not needed for strategy to work (just good practice)
+      new CopyPlugin([
+        { from: 'public/manifest.json', to: 'static/js' },
+        { from: 'public/robots.txt', to: '' },
+        { from: 'public/favicon.ico', to: 'static/assets' },
+        { from: 'public/logo512.png', to: 'static/assets' },
+        { from: 'public/logo192.png', to: 'static/assets' },
+        { from: 'public/service-worker.js', to: 'static/js' },
+      ]),
     ];
   }
   return [
     new CopyPlugin([
-      { from: 'public/manifest.json', to: '' },
+      { from: 'public/manifest.json', to: 'static/js' },
       { from: 'public/robots.txt', to: '' },
-      { from: 'public/favicon.ico', to: '' },
-      { from: 'public/logo512.png', to: '' },
-      { from: 'public/logo192.png', to: '' },
-      { from: 'public/service-worker.js', to: '' },
+      { from: 'public/favicon.ico', to: 'static/assets' },
+      { from: 'public/logo512.png', to: 'static/assets' },
+      { from: 'public/logo192.png', to: 'static/assets' },
+      { from: 'public/service-worker.js', to: 'static/js' },
     ]),
     new WriteFilePlugin(),
     new ExtractCssChunks(),
