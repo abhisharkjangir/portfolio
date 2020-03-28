@@ -65,7 +65,7 @@ const getModule = isProduction => {
             loader: require.resolve('url-loader'),
             options: {
               limit: '10000',
-              name: '/media/[name].[hash:8].[ext]',
+              name: 'static/assets/[name].[hash:8].[ext]',
             },
           },
           {
@@ -141,7 +141,7 @@ const getModule = isProduction => {
               /\.json$/,
             ],
             options: {
-              name: '/media/[name].[hash:8].[ext]',
+              name: 'static/assets/[name].[hash:8].[ext]',
             },
           },
           // ** STOP ** Are you adding a new loader?

@@ -24,7 +24,7 @@ const TabList = [
   {
     company: 'Medzin',
     title: ' Front End Developer',
-    url: 'https://chimesgroup.in/',
+    url: 'https://medzin.in/',
     range: 'Nov 2k15 - Jul 2k16',
     html:
       '<ul><li>Build company&lsquo;s websites ie Medzin, Medzin Business </li><li>Build dashboard to manage Pharmacies, Doctors, Labs, Medicines & orders.</li></ul>',

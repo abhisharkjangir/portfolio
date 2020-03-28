@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="shortcut icon" href="/static/assets/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <!-- Tell iOS it's a PWA -->
@@ -15,8 +15,8 @@
     />
     <meta name="robots" content="index, follow">
     <meta name="google-site-verification" content="kAfX-5gs1tx-6PrsstCbL6E32e6f-x6lrN7hUXe9v0A" />
-    <link rel="manifest" href="manifest.json">
-    <link rel="apple-touch-icon" href="logo192.png" />
+    <link rel="manifest" href="/static/js/manifest.json">
+    <link rel="apple-touch-icon" href="/static/assets/logo192.png" />
     <title>Abhishar Jangir</title>
   </head>
   <body>
@@ -25,7 +25,7 @@
      <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', function() {
-          navigator.serviceWorker.register('service-worker.js').then(function(registration) {
+          navigator.serviceWorker.register('static/js/service-worker.js').then(function(registration) {
             // Registration was successful
             console.log('ServiceWorker registration successful with scope: ', registration.scope);
           }, function(err) {
