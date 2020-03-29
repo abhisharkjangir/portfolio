@@ -130,7 +130,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "pre-push":"npm run build && git add . && git commit -m build"
+      "pre-push":"npm run build && git add . && git commit -m production-build"
     }
   }
 }
