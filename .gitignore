@@ -1,7 +1,7 @@
 node_modules
 *.log
-build
-compiledServer
+# build
+# compiledServer
 .vscode
 .idea
 .DS_Store

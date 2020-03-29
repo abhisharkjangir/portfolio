@@ -1,4 +1,5 @@
 /* eslint-disable jsx-a11y/href-no-hash */
+const fs = require('fs');
 const express = require('express');
 const webpack = require('webpack');
 const webpackDevMiddleware = require('webpack-dev-middleware');
@@ -56,11 +57,24 @@ if (DEV) {
         return false;
       }
       const clientStats = stats.toJson().children[0];
-      // eslint-disable-next-line global-require
-      const serverRender = require('../compiledServer/main.js').default;
-      app.use(publicPath, express.static(outputPath));
-      app.use(serverRender({ clientStats }));
-      done();
+
+      fs.writeFile(
+        `${process.cwd()}/build/clientstats.json`,
+        JSON.stringify(clientStats),
+        'utf8',
+        error => {
+          if (error) {
+            // eslint-disable-next-line no-console
+            console.log(error);
+          }
+          // eslint-disable-next-line global-require
+          const serverRender = require('../compiledServer/main.js').default;
+          app.use(publicPath, express.static(outputPath));
+          app.use(serverRender({ clientStats }));
+          done();
+          return false;
+        }
+      );
       return false;
     }
   );
