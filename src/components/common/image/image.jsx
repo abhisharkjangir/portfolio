@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import LazyLoad from 'react-lazyload';
-import './image.scss';
 
 const Image = ({ src, alt, lazy, className, lazyloadOptions }) => {
   if (lazy) {
