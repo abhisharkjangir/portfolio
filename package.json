@@ -121,7 +121,6 @@
   "lint-staged": {
     "linters": {
       "*.js": [
-        "npm run build",
         "prettier --single-quote --semi=false --write",
         "eslint --fix",
         "git add"
@@ -130,7 +129,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged && npm run build && git add ."
     }
   }
 }
