@@ -24,7 +24,9 @@ Image.propTypes = {
 Image.defaultProps = {
   lazy: true,
   alt: '',
-  lazyloadOptions: {},
+  lazyloadOptions: {
+    offset: 100,
+  },
 };
 
 export default Image;
