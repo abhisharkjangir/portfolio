@@ -8,6 +8,7 @@ import Icon from '../common/icon';
 import meuzic from '../../assets/images/meuzic.png';
 import wordbook from '../../assets/images/wordbook.png';
 import nasa from '../../assets/images/nasa.png';
+import Image from '../common/image/image';
 
 const Work = () => {
   const projects = [
@@ -92,7 +93,7 @@ const Work = () => {
             aria-label=""
             className={styles.imgContainer}
           >
-            <img src={image} className={styles.image} alt="" />
+            <Image src={image} className={styles.image} alt="" />
           </a>
         </div>
       ))}

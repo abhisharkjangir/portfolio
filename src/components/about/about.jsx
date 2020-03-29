@@ -4,6 +4,8 @@ import Section from '../section';
 import styles from './about.scss';
 import abhishar from '../../assets/images/abhishar.jpg';
 import Heading from '../heading/heading';
+import Image from '../common/image/image';
+
 const About = () => {
   const Skills = [
     'JavaScript (ES6+)',
@@ -57,7 +59,7 @@ const About = () => {
         </div>
         <div className={styles.aboutPic}>
           <Link to="/">
-            <img src={abhishar} alt="Abhishar Jangir" />
+            <Image src={abhishar} alt="Abhishar Jangir" />
           </Link>
         </div>
       </div>
