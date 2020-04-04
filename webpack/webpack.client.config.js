@@ -212,7 +212,8 @@ const getPlugins = isProduction => {
         { from: 'public/favicon.ico', to: 'static/assets' },
         { from: 'public/logo512.png', to: 'static/assets' },
         { from: 'public/logo192.png', to: 'static/assets' },
-        { from: 'public/service-worker.js', to: 'static/js' },
+        { from: 'public/service-worker.js', to: '' },
+        { from: 'public/asset-manifest.json', to: '' },
       ]),
     ];
   }
@@ -224,7 +225,8 @@ const getPlugins = isProduction => {
       { from: 'public/favicon.ico', to: 'static/assets' },
       { from: 'public/logo512.png', to: 'static/assets' },
       { from: 'public/logo192.png', to: 'static/assets' },
-      { from: 'public/service-worker.js', to: 'static/js' },
+      { from: 'public/service-worker.js', to: '' },
+      { from: 'public/asset-manifest.json', to: '' },
     ]),
     new WriteFilePlugin(),
     new ExtractCssChunks(),

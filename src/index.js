@@ -4,14 +4,8 @@ import { render, hydrate } from 'react-dom';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router/immutable';
 import App from './containers/app';
-import * as serviceWorker from './serviceWorker';
 import createStore from './store';
 import rootSaga from './rootSaga';
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.register();
 
 // Create a store and get back itself and its history object
 const { store, history } = createStore();
