@@ -2,11 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import LazyLoad from 'react-lazyload';
 
+const Placeholder = () => (
+  <div
+    style={{ minHeight: '250px', width: '100%', backgroundColor: '#0a192fb5' }}
+  />
+);
+
 const Image = ({ src, alt, lazy, className, lazyloadOptions }) => {
   if (lazy) {
     return (
       <LazyLoad {...lazyloadOptions} once>
-        <img alt={alt} className={className} src={src} {...lazyloadOptions} />
+        <img alt={alt} className={className} src={src} />
       </LazyLoad>
     );
   }
@@ -26,6 +32,7 @@ Image.defaultProps = {
   alt: '',
   lazyloadOptions: {
     offset: 100,
+    placeholder: <Placeholder />,
   },
 };
 
