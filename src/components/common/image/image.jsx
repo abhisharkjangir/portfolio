@@ -1,12 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import LazyLoad from 'react-lazyload';
+import styles from './image.scss';
 
-const Placeholder = () => (
-  <div
-    style={{ minHeight: '250px', width: '100%', backgroundColor: '#0a192fb5' }}
-  />
-);
+const Placeholder = () => <div className={styles.placeholder} />;
 
 const Image = ({ src, alt, lazy, className, lazyloadOptions }) => {
   if (lazy) {

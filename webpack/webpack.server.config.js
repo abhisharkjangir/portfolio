@@ -10,6 +10,7 @@ const res = p => path.resolve(__dirname, p);
 const nodeModules = res('../node_modules');
 const entry = res('../server/loader.js');
 const output = res('../compiledServer');
+const devOutput = res('../devCompiledServer');
 
 // if you're specifying externals to leave unbundled, you need to tell Webpack
 // to still bundle `react-universal-component`, `webpack-flush-chunks` and
@@ -218,7 +219,7 @@ const getServerConfig = env => {
       : ['babel-polyfill', 'regenerator-runtime/runtime.js', entry],
     externals,
     output: {
-      path: output,
+      path: isProduction ? output : devOutput,
       filename: isProduction ? 'main.js' : '[name].js',
       libraryTarget: 'commonjs2',
     },

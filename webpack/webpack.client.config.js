@@ -14,7 +14,9 @@ const getOutput = isProduction => {
     chunkFilename: isProduction
       ? 'static/js/[name].[chunkhash].js'
       : '[name].chunk.js',
-    path: path.resolve(__dirname, '../build'),
+    path: isProduction
+      ? path.resolve(__dirname, '../build')
+      : path.resolve(__dirname, '../devBuild'),
     publicPath: '/',
   };
 };
