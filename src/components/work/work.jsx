@@ -34,13 +34,13 @@ const Work = () => {
       tech: ['ReactJS', 'Material UI', 'Nasa APIs'],
       links: [
         {
-          url: 'https://nasa.abhijangir.me',
+          url: 'https://nasa.abhisharjangir.com',
           iconName: 'external',
         },
       ],
       image: nasa,
       type: 'Featured Project',
-      url: 'https://nasa.abhijangir.me',
+      url: 'https://nasa.abhisharjangir.com',
     },
     {
       title: 'Word Book',
@@ -49,13 +49,13 @@ const Work = () => {
       tech: ['ReactJS', 'Wordnik API', 'SASS'],
       links: [
         {
-          url: 'https://wordbook.abhijangir.me',
+          url: 'https://wordbook.abhisharjangir.com',
           iconName: 'external',
         },
       ],
       image: wordbook,
       type: 'Featured Project',
-      url: 'https://wordbook.abhijangir.me',
+      url: 'https://wordbook.abhisharjangir.com',
     },
   ];
 

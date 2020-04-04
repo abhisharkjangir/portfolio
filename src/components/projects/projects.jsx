@@ -29,7 +29,7 @@ const Projects = () => {
         },
         {
           iconName: 'external',
-          url: 'https://reactgo.abhijangir.me',
+          url: 'https://reactgo.abhisharjangir.com',
         },
       ],
     },
@@ -45,7 +45,7 @@ const Projects = () => {
         },
         {
           iconName: 'external',
-          url: 'https://abhijangir.me',
+          url: 'https://abhisharjangir.com',
         },
       ],
     },
@@ -60,7 +60,7 @@ const Projects = () => {
         },
         {
           iconName: 'external',
-          url: 'https://ie.abhijangir.me',
+          url: 'https://ie.abhisharjangir.com',
         },
       ],
     },

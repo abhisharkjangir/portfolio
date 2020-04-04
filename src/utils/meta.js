@@ -9,7 +9,7 @@ export default {
     image,
     twitter: '@abhishar_jangir',
     sep: ' | ',
-    siteURL: 'https://abhijangir.me',
+    siteURL: 'https://abhisharjangir.com',
     keywords:
       'Abhishar Jangir, Abhishar, Jangir, Front end developer, reactjs developer, web developer, mern developer, javascript developer, abhisharkjangir,abhishar.jangir',
     facebookAppId: 'XXXXXXXXX',
