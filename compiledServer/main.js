@@ -922,9 +922,9 @@ module.exports = (function(e) {
           'undefined' != typeof reactHotLoaderGlobal &&
             reactHotLoaderGlobal.default.signature
           var i = { PROD: 'prod', STAG: 'stag', LOCAL: 'local' },
-            c = { URL: 'https://abhijangir.me/', env: 'Staging' },
-            u = { URL: 'https://abhijangir.me/', env: 'Production' },
-            l = { URL: 'https://abhijangir.me/', env: 'Local' },
+            c = { URL: 'https://abhisharjangir.com/', env: 'Staging' },
+            u = { URL: 'https://abhisharjangir.com/', env: 'Production' },
+            l = { URL: 'https://abhisharjangir.com/', env: 'Local' },
             s = {},
             d = Object({ NODE_ENV: 'production' }).REACT_APP_ENV,
             _ = {}
@@ -2709,7 +2709,7 @@ module.exports = (function(e) {
                 image: a.a,
                 twitter: '@abhishar_jangir',
                 sep: ' | ',
-                siteURL: 'https://abhijangir.me',
+                siteURL: 'https://abhisharjangir.com',
                 keywords:
                   'Abhishar Jangir, Abhishar, Jangir, Front end developer, reactjs developer, web developer, mern developer, javascript developer, abhisharkjangir,abhishar.jangir',
                 facebookAppId: 'XXXXXXXXX',
@@ -3280,11 +3280,14 @@ module.exports = (function(e) {
                     'A web app for exploring Epic, Apod & Earth which comsumes Nasa APIs.',
                   tech: ['ReactJS', 'Material UI', 'Nasa APIs'],
                   links: [
-                    { url: 'https://nasa.abhijangir.me', iconName: 'external' }
+                    {
+                      url: 'https://nasa.abhisharjangir.com',
+                      iconName: 'external'
+                    }
                   ],
                   image: b.a,
                   type: 'Featured Project',
-                  url: 'https://nasa.abhijangir.me'
+                  url: 'https://nasa.abhisharjangir.com'
                 },
                 {
                   title: 'Word Book',
@@ -3293,13 +3296,13 @@ module.exports = (function(e) {
                   tech: ['ReactJS', 'Wordnik API', 'SASS'],
                   links: [
                     {
-                      url: 'https://wordbook.abhijangir.me',
+                      url: 'https://wordbook.abhisharjangir.com',
                       iconName: 'external'
                     }
                   ],
                   image: p.a,
                   type: 'Featured Project',
-                  url: 'https://wordbook.abhijangir.me'
+                  url: 'https://wordbook.abhisharjangir.com'
                 }
               ]
               return a.a.createElement(
@@ -8126,7 +8129,7 @@ module.exports = (function(e) {
                       },
                       {
                         iconName: 'external',
-                        url: 'https://reactgo.abhijangir.me'
+                        url: 'https://reactgo.abhisharjangir.com'
                       }
                     ]
                   },
@@ -8147,7 +8150,10 @@ module.exports = (function(e) {
                         iconName: 'github',
                         url: 'https://github.com/abhisharkjangir/portfolio'
                       },
-                      { iconName: 'external', url: 'https://abhijangir.me' }
+                      {
+                        iconName: 'external',
+                        url: 'https://abhisharjangir.com'
+                      }
                     ]
                   },
                   {
@@ -8160,7 +8166,10 @@ module.exports = (function(e) {
                         iconName: 'github',
                         url: 'https://github.com/abhisharkjangir/react-aviary'
                       },
-                      { iconName: 'external', url: 'https://ie.abhijangir.me' }
+                      {
+                        iconName: 'external',
+                        url: 'https://ie.abhisharjangir.com'
+                      }
                     ]
                   }
                 ],
