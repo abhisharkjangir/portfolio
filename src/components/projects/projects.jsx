@@ -77,7 +77,7 @@ const Projects = () => {
         <h4>Other Noteworthy Projects</h4>
 
         <div className={styles.center}>
-          <Link to="/" className={styles.view}></Link>
+          <Link to="/" className={styles.view} aria-label="Projects"></Link>
         </div>
 
         <div className={styles.grid}>

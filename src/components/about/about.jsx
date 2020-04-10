@@ -9,11 +9,12 @@ import Image from '../common/image/image';
 const About = () => {
   const Skills = [
     'JavaScript (ES6+)',
-    'HTML5 & (S)CSS',
     'ReactJS',
     'Node.js',
     'Webpack',
     'Redux',
+    'HTML5 & CSS3',
+    'Ba',
   ];
   return (
     <Section id="about" style={{ position: 'relative' }}>
@@ -58,7 +59,7 @@ const About = () => {
           </ul>
         </div>
         <div className={styles.aboutPic}>
-          <Link to="/">
+          <Link to="/" aria-label="Display Picture">
             <Image src={abhishar} alt="Abhishar Jangir" />
           </Link>
         </div>
