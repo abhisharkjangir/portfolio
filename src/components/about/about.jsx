@@ -14,7 +14,6 @@ const About = () => {
     'Webpack',
     'Redux',
     'HTML5 & CSS3',
-    'Ba',
   ];
   return (
     <Section id="about" style={{ position: 'relative' }}>
