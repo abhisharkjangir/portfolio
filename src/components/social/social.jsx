@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './social.scss';
 import { socialList } from '../../constants';
-import Icon from '../common/icon';
+import Icon from '../common/icon/icon';
 
 class Social extends React.PureComponent {
   render() {

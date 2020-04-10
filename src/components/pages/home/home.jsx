@@ -3,10 +3,10 @@ import React from 'react';
 import styles from './home.scss';
 import Hero from '../../hero/hero';
 import About from '../../about/about';
-import Jobs from '../../jobs';
+import Jobs from '../../jobs/jobs';
 import Work from '../../work/work';
 import Projects from '../../projects/projects';
-import Contact from '../../contact';
+import Contact from '../../contact/contact';
 
 class Home extends React.PureComponent {
   render() {

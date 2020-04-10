@@ -1,6 +1,6 @@
 /* eslint-disable react/no-danger */
 import React, { useState } from 'react';
-import Section from '../section';
+import Section from '../section/section';
 import styles from './jobs.scss';
 import Heading from '../heading/heading';
 

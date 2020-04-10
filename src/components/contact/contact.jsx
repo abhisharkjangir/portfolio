@@ -1,6 +1,6 @@
 /* eslint-disable react/no-danger */
 import React from 'react';
-import Section from '../section';
+import Section from '../section/section';
 import styles from './contact.scss';
 import Heading from '../heading/heading';
 

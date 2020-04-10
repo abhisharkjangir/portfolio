@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './notfound.scss';
-import Section from '../../section';
+import Section from '../../section/section';
 import Heading from '../../heading/heading';
 class NotFound extends React.PureComponent {
   render() {

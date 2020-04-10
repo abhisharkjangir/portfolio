@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Section from '../section';
+import Section from '../section/section';
 import styles from './about.scss';
 import abhishar from '../../assets/images/abhishar.jpg';
 import Heading from '../heading/heading';

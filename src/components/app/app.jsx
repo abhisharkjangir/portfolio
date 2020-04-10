@@ -1,11 +1,11 @@
 import React from 'react';
-import Header from '../header';
+import Header from '../header/header';
 import Routes from '../../routes';
 import styles from '../../styles/main.scss';
-import Helmet from '../../containers/common/helmet';
-import Social from '../social';
-import Email from '../email';
-import Footer from '../footer';
+import Helmet from '../../containers/common/helmet/helmet';
+import Social from '../social/social';
+import Email from '../email/email';
+import Footer from '../footer/footer';
 
 class App extends React.PureComponent {
   render() {

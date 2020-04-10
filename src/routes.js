@@ -5,12 +5,14 @@ import { Route, Switch } from 'react-router-dom';
 import universalOptions from './utils/universalOptions';
 
 const Home = universal(
-  import(/* webpackChunkName: "home-page" */ './containers/pages/home'),
+  import(/* webpackChunkName: "home-page" */ './containers/pages/home/home'),
   universalOptions
 );
 
 const Notfound = universal(
-  import(/* webpackChunkName: "notfound-page" */ './components/pages/notfound'),
+  import(
+    /* webpackChunkName: "notfound-page" */ './components/pages/notfound/notfound'
+  ),
   universalOptions
 );
 
