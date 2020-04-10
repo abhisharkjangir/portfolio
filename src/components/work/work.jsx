@@ -79,7 +79,7 @@ const Work = () => {
                   href={url}
                   target="_blank"
                   rel="nofollow noopener noreferrer"
-                  aria-label=""
+                  aria-label={title}
                 >
                   <Icon name={iconName} />
                 </a>
@@ -90,7 +90,7 @@ const Work = () => {
             href={url}
             target="_blank"
             rel="nofollow noopener noreferrer"
-            aria-label=""
+            aria-label={title}
             className={styles.imgContainer}
           >
             <Image src={image} className={styles.image} alt="" />

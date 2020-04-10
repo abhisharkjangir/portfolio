@@ -130,6 +130,7 @@ class Header extends React.PureComponent {
           <div
             role="button"
             className={styles.hamburger}
+            aria-label="Menu"
             onClick={() => this.toggleMenu()}
           >
             {this.getHamburgerStyle()}

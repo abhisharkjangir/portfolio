@@ -95,7 +95,7 @@ const Projects = () => {
                           <a
                             target="_blank"
                             rel="nofollow noopener noreferrer"
-                            aria-label=""
+                            aria-label={name}
                             key={iconName}
                             href={url}
                             className={styles.iconLink}
