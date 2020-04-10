@@ -85,64 +85,6 @@ module.exports = (function(e) {
         main: 'main-main-24UiG'
       }
     },
-  '+MiA':
-    /*!***************************!*\
-  !*** ./src/apis/index.js ***!
-  \***************************/
-    /*! exports provided: default */
-    /*! ModuleConcatenation bailout: Module uses injected variables (module) */ function(
-      e,
-      t,
-      r
-    ) {
-      'use strict'
-      r.r(t),
-        function(e) {
-          var r
-          ;(r =
-            'undefined' != typeof reactHotLoaderGlobal
-              ? reactHotLoaderGlobal.enterModule
-              : void 0) && r(e)
-          'undefined' != typeof reactHotLoaderGlobal &&
-            reactHotLoaderGlobal.default.signature
-          var o,
-            n,
-            a = {},
-            i = function(e) {
-              return (e && a[e]) || ''
-            },
-            c = i
-          ;(t.default = c),
-            (o =
-              'undefined' != typeof reactHotLoaderGlobal
-                ? reactHotLoaderGlobal.default
-                : void 0) &&
-              (o.register(
-                a,
-                'API_ENDPOINTS',
-                'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\apis\\index.js'
-              ),
-              o.register(
-                i,
-                'getApiEndPoint',
-                'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\apis\\index.js'
-              ),
-              o.register(
-                c,
-                'default',
-                'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\apis\\index.js'
-              )),
-            (n =
-              'undefined' != typeof reactHotLoaderGlobal
-                ? reactHotLoaderGlobal.leaveModule
-                : void 0) && n(e)
-        }.call(
-          this,
-          r(
-            /*! ./../../node_modules/webpack/buildin/harmony-module.js */ '3UD+'
-          )(e)
-        )
-    },
   '+pfj':
     /*!*************************************************!*\
   !*** ./src/containers/common/helmet/reducer.js ***!
@@ -340,7 +282,7 @@ module.exports = (function(e) {
               ? e.default
               : e
           })),
-        d =
+        _ =
           ((t.DefaultLoading = function() {
             return i.createElement('div', null, 'Loading...')
           }),
@@ -359,7 +301,7 @@ module.exports = (function(e) {
           (t.resolveExport = function(e, t, r, o, n, a, i) {
             var c =
                 arguments.length > 7 && void 0 !== arguments[7] && arguments[7],
-              u = d(e, t)
+              u = _(e, t)
             if (r && e) {
               var l = 'undefined' == typeof window,
                 s = { isServer: l, isSync: c }
@@ -376,7 +318,7 @@ module.exports = (function(e) {
               ? e[t]
               : s(e)
           })),
-        _ = (t.createElement = function(e, t) {
+        d = (t.createElement = function(e, t) {
           return i.isValidElement(e)
             ? i.cloneElement(e, t)
             : i.createElement(e, t)
@@ -385,10 +327,10 @@ module.exports = (function(e) {
           ((t.createDefaultRender = function(e, t) {
             return function(r, o, a, i) {
               return a
-                ? _(e, r)
+                ? d(e, r)
                 : i
-                ? _(t, n({}, r, { error: i }))
-                : _(o || e, r)
+                ? d(t, n({}, r, { error: i }))
+                : d(o || e, r)
             }
           }),
           (t.callForString = function(e, t) {
@@ -704,8 +646,8 @@ module.exports = (function(e) {
           'undefined' != typeof reactHotLoaderGlobal &&
             reactHotLoaderGlobal.default.signature
           var s,
-            d,
-            _ = function() {
+            _,
+            d = function() {
               return a.a.createElement(
                 i.default,
                 { id: 'contact' },
@@ -738,14 +680,14 @@ module.exports = (function(e) {
                 )
               )
             },
-            f = _
+            f = d
           ;(t.default = f),
             (s =
               'undefined' != typeof reactHotLoaderGlobal
                 ? reactHotLoaderGlobal.default
                 : void 0) &&
               (s.register(
-                _,
+                d,
                 'Contact',
                 'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\components\\contact\\contact.jsx'
               ),
@@ -754,10 +696,10 @@ module.exports = (function(e) {
                 'default',
                 'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\components\\contact\\contact.jsx'
               )),
-            (d =
+            (_ =
               'undefined' != typeof reactHotLoaderGlobal
                 ? reactHotLoaderGlobal.leaveModule
-                : void 0) && d(e)
+                : void 0) && _(e)
         }.call(
           this,
           r(
@@ -852,152 +794,6 @@ module.exports = (function(e) {
           r(
             /*! ./../../../../node_modules/webpack/buildin/harmony-module.js */ '3UD+'
           )(e)
-        )
-    },
-  '20nU':
-    /*!***********************!*\
-  !*** ./src/config.js ***!
-  \***********************/
-    /*! exports provided: default */
-    /*! ModuleConcatenation bailout: Module uses injected variables (module) */ function(
-      e,
-      t,
-      r
-    ) {
-      'use strict'
-      r.r(t),
-        function(e) {
-          var r
-          function o(e, t) {
-            var r = Object.keys(e)
-            if (Object.getOwnPropertySymbols) {
-              var o = Object.getOwnPropertySymbols(e)
-              t &&
-                (o = o.filter(function(t) {
-                  return Object.getOwnPropertyDescriptor(e, t).enumerable
-                })),
-                r.push.apply(r, o)
-            }
-            return r
-          }
-          function n(e) {
-            for (var t = 1; t < arguments.length; t++) {
-              var r = null != arguments[t] ? arguments[t] : {}
-              t % 2
-                ? o(Object(r), !0).forEach(function(t) {
-                    a(e, t, r[t])
-                  })
-                : Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(
-                    e,
-                    Object.getOwnPropertyDescriptors(r)
-                  )
-                : o(Object(r)).forEach(function(t) {
-                    Object.defineProperty(
-                      e,
-                      t,
-                      Object.getOwnPropertyDescriptor(r, t)
-                    )
-                  })
-            }
-            return e
-          }
-          function a(e, t, r) {
-            return (
-              t in e
-                ? Object.defineProperty(e, t, {
-                    value: r,
-                    enumerable: !0,
-                    configurable: !0,
-                    writable: !0
-                  })
-                : (e[t] = r),
-              e
-            )
-          }
-          ;(r =
-            'undefined' != typeof reactHotLoaderGlobal
-              ? reactHotLoaderGlobal.enterModule
-              : void 0) && r(e)
-          'undefined' != typeof reactHotLoaderGlobal &&
-            reactHotLoaderGlobal.default.signature
-          var i = { PROD: 'prod', STAG: 'stag', LOCAL: 'local' },
-            c = { URL: 'https://abhisharjangir.com/', env: 'Staging' },
-            u = { URL: 'https://abhisharjangir.com/', env: 'Production' },
-            l = { URL: 'https://abhisharjangir.com/', env: 'Local' },
-            s = {},
-            d = Object({ NODE_ENV: 'production' }).REACT_APP_ENV,
-            _ = {}
-          switch (d) {
-            case i.PROD:
-              _ = n({}, u, {}, s)
-              break
-            case i.STAG:
-              _ = n({}, c, {}, s)
-              break
-            case i.LOCAL:
-              _ = n({}, l, {}, s)
-              break
-            default:
-              _ = n({}, c, {}, s)
-          }
-          var f,
-            p,
-            m = _
-          ;(t.default = m),
-            (f =
-              'undefined' != typeof reactHotLoaderGlobal
-                ? reactHotLoaderGlobal.default
-                : void 0) &&
-              (f.register(
-                i,
-                'ENV_TYPES',
-                'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\config.js'
-              ),
-              f.register(
-                c,
-                'STAG_ENV',
-                'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\config.js'
-              ),
-              f.register(
-                u,
-                'PROD_ENV',
-                'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\config.js'
-              ),
-              f.register(
-                l,
-                'LOCAL_ENV',
-                'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\config.js'
-              ),
-              f.register(
-                s,
-                'COMMON_ENV',
-                'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\config.js'
-              ),
-              f.register(
-                d,
-                'appEnv',
-                'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\config.js'
-              ),
-              f.register(
-                _,
-                'ENV',
-                'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\config.js'
-              ),
-              f.register(
-                m,
-                'default',
-                'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\config.js'
-              )),
-            (p =
-              'undefined' != typeof reactHotLoaderGlobal
-                ? reactHotLoaderGlobal.leaveModule
-                : void 0) && p(e)
-        }.call(
-          this,
-          r(/*! ./../node_modules/webpack/buildin/harmony-module.js */ '3UD+')(
-            e
-          )
         )
     },
   '24ww':
@@ -1175,8 +971,8 @@ module.exports = (function(e) {
             u = r(/*! react-router-dom */ 'oncg'),
             l = r(/*! ./menu.scss */ 'MJ5s'),
             s = r.n(l),
-            d = r(/*! ../../assets/resume.pdf */ '24ww'),
-            _ = r.n(d)
+            _ = r(/*! ../../assets/resume.pdf */ '24ww'),
+            d = r.n(_)
           ;(o =
             'undefined' != typeof reactHotLoaderGlobal
               ? reactHotLoaderGlobal.enterModule
@@ -1223,7 +1019,7 @@ module.exports = (function(e) {
                     ),
                     a.a.createElement(
                       'a',
-                      { className: s.a.resumeLink, href: _.a },
+                      { className: s.a.resumeLink, href: d.a },
                       'Resume'
                     )
                   )
@@ -1237,8 +1033,8 @@ module.exports = (function(e) {
           }
           var m,
             b,
-            v = p
-          ;(t.default = v),
+            h = p
+          ;(t.default = h),
             (m =
               'undefined' != typeof reactHotLoaderGlobal
                 ? reactHotLoaderGlobal.default
@@ -1254,7 +1050,7 @@ module.exports = (function(e) {
                 'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\components\\menu\\menu.jsx'
               ),
               m.register(
-                v,
+                h,
                 'default',
                 'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\components\\menu\\menu.jsx'
               )),
@@ -1469,15 +1265,15 @@ module.exports = (function(e) {
       }
       var s = (0, o.default)(i.default)
       t.ConnectedRouter = s
-      var d = (0, n.default)(i.default)
-      t.connectRouter = d
-      var _ = (0, a.default)(i.default),
-        f = _.getLocation,
-        p = _.getAction,
-        m = _.getHash,
-        b = _.getSearch,
-        v = _.createMatchSelector
-      ;(t.createMatchSelector = v),
+      var _ = (0, n.default)(i.default)
+      t.connectRouter = _
+      var d = (0, a.default)(i.default),
+        f = d.getLocation,
+        p = d.getAction,
+        m = d.getHash,
+        b = d.getSearch,
+        h = d.createMatchSelector
+      ;(t.createMatchSelector = h),
         (t.getSearch = b),
         (t.getHash = m),
         (t.getAction = p),
@@ -1509,18 +1305,18 @@ module.exports = (function(e) {
       t.default = function(e, t, o, u) {
         var l = t.key,
           s = t.timeout,
-          d = void 0 === s ? 15e3 : s,
-          _ = t.onLoad,
+          _ = void 0 === s ? 15e3 : s,
+          d = t.onLoad,
           f = t.onError,
           p = t.isDynamic,
           m = t.modCache,
           b = t.promCache,
-          v = t.usesBabelPlugin,
-          h = c(p, e, t, o),
-          y = h.chunkName,
-          E = h.path,
-          g = h.resolve,
-          O = h.load
+          h = t.usesBabelPlugin,
+          v = c(p, e, t, o),
+          y = v.chunkName,
+          E = v.path,
+          g = v.resolve,
+          O = v.load
         return {
           requireSync: function(e, t) {
             var o = (0, n.loadFromCache)(y, e, m)
@@ -1533,7 +1329,7 @@ module.exports = (function(e) {
                 var c = (0, n.callForString)(g, e)
                 r.m[c] && (a = (0, n.tryRequire)(c))
               }
-              a && (o = (0, n.resolveExport)(a, l, _, y, e, t, m, !0))
+              a && (o = (0, n.resolveExport)(a, l, d, y, e, t, m, !0))
             }
             return o
           },
@@ -1554,10 +1350,10 @@ module.exports = (function(e) {
                   }
                   o(e)
                 },
-                i = d && setTimeout(a, d),
+                i = _ && setTimeout(a, _),
                 c = function(o) {
                   clearTimeout(i)
-                  var c = (0, n.resolveExport)(o, l, _, y, e, t, m)
+                  var c = (0, n.resolveExport)(o, l, d, y, e, t, m)
                   if (c) return r(c)
                   a(new Error('export not found'))
                 },
@@ -1570,7 +1366,7 @@ module.exports = (function(e) {
             if (n.isServer || n.isTest) {
               if (y) {
                 var r = (0, n.callForString)(y, e)
-                if (v)
+                if (h)
                   (t && !!t.ignoreBabelRename) || (r = r.replace(/\//g, '-'))
                 if ((r && a.add(r), !n.isTest)) return r
               }
@@ -1702,97 +1498,6 @@ module.exports = (function(e) {
       t
     ) {
       e.exports = require('react-dom/server')
-    },
-  '7QCE':
-    /*!************************************************!*\
-  !*** ./src/containers/pages/home/constants.js ***!
-  \************************************************/
-    /*! exports provided: HOME_STATE_KEY, NAMESPACE, FETCH_USERS, FETCHING_USERS, FETCH_USERS_SUCCESS, FETCH_USERS_ERROR */
-    /*! ModuleConcatenation bailout: Module uses injected variables (module) */ function(
-      e,
-      t,
-      r
-    ) {
-      'use strict'
-      r.r(t),
-        function(e) {
-          var o
-          r.d(t, 'HOME_STATE_KEY', function() {
-            return i
-          }),
-            r.d(t, 'NAMESPACE', function() {
-              return c
-            }),
-            r.d(t, 'FETCH_USERS', function() {
-              return u
-            }),
-            r.d(t, 'FETCHING_USERS', function() {
-              return l
-            }),
-            r.d(t, 'FETCH_USERS_SUCCESS', function() {
-              return s
-            }),
-            r.d(t, 'FETCH_USERS_ERROR', function() {
-              return d
-            }),
-            (o =
-              'undefined' != typeof reactHotLoaderGlobal
-                ? reactHotLoaderGlobal.enterModule
-                : void 0) && o(e)
-          'undefined' != typeof reactHotLoaderGlobal &&
-            reactHotLoaderGlobal.default.signature
-          var n,
-            a,
-            i = 'home',
-            c = 'home/',
-            u = ''.concat(c, 'FETCH_USERS'),
-            l = ''.concat(c, 'FETCHING_USERS'),
-            s = ''.concat(c, 'FETCH_USERS_SUCCESS'),
-            d = ''.concat(c, 'FETCH_USERS_ERROR')
-          ;(n =
-            'undefined' != typeof reactHotLoaderGlobal
-              ? reactHotLoaderGlobal.default
-              : void 0) &&
-            (n.register(
-              i,
-              'HOME_STATE_KEY',
-              'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\containers\\pages\\home\\constants.js'
-            ),
-            n.register(
-              c,
-              'NAMESPACE',
-              'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\containers\\pages\\home\\constants.js'
-            ),
-            n.register(
-              u,
-              'FETCH_USERS',
-              'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\containers\\pages\\home\\constants.js'
-            ),
-            n.register(
-              l,
-              'FETCHING_USERS',
-              'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\containers\\pages\\home\\constants.js'
-            ),
-            n.register(
-              s,
-              'FETCH_USERS_SUCCESS',
-              'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\containers\\pages\\home\\constants.js'
-            ),
-            n.register(
-              d,
-              'FETCH_USERS_ERROR',
-              'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\containers\\pages\\home\\constants.js'
-            )),
-            (a =
-              'undefined' != typeof reactHotLoaderGlobal
-                ? reactHotLoaderGlobal.leaveModule
-                : void 0) && a(e)
-        }.call(
-          this,
-          r(
-            /*! ./../../../../node_modules/webpack/buildin/harmony-module.js */ '3UD+'
-          )(e)
-        )
     },
   '7mHa':
     /*!************************************************!*\
@@ -2161,8 +1866,8 @@ module.exports = (function(e) {
                         u = e.published,
                         l = e.updated,
                         s = e.category,
-                        d = e.tags,
-                        _ = e.keywords,
+                        _ = e.tags,
+                        d = e.keywords,
                         f = r
                           ? (r + defaultSep + defaultTitle).substring(0, 60)
                           : defaultTitle,
@@ -2173,7 +1878,7 @@ module.exports = (function(e) {
                           { itemprop: 'description', content: p },
                           { itemprop: 'image', content: m },
                           { name: 'description', content: p },
-                          { name: 'keywords', content: _ || defaultKeywords },
+                          { name: 'keywords', content: d || defaultKeywords },
                           {
                             name: 'twitter:card',
                             content: 'summary_large_image'
@@ -2218,7 +1923,7 @@ module.exports = (function(e) {
                             content: l || defaultUpdated
                           }),
                         s && b.push({ name: 'article:section', content: s }),
-                        d && b.push({ name: 'article:tag', content: d }),
+                        _ && b.push({ name: 'article:tag', content: _ }),
                         b
                       )
                     }
@@ -3175,28 +2880,28 @@ module.exports = (function(e) {
           l(s, 'useLocation{location}\nuseEffect{}', function() {
             return [c.useLocation]
           })
-          var d,
-            _,
+          var _,
+            d,
             f = Object(i.connect)(null, null)(s)
           ;(t.default = f),
-            (d =
+            (_ =
               'undefined' != typeof reactHotLoaderGlobal
                 ? reactHotLoaderGlobal.default
                 : void 0) &&
-              (d.register(
+              (_.register(
                 s,
                 'App',
                 'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\containers\\app\\app.jsx'
               ),
-              d.register(
+              _.register(
                 f,
                 'default',
                 'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\containers\\app\\app.jsx'
               )),
-            (_ =
+            (d =
               'undefined' != typeof reactHotLoaderGlobal
                 ? reactHotLoaderGlobal.leaveModule
-                : void 0) && _(e)
+                : void 0) && d(e)
         }.call(
           this,
           r(
@@ -3247,20 +2952,20 @@ module.exports = (function(e) {
             u = r.n(c),
             l = r(/*! ../heading/heading */ 'vuz3'),
             s = r(/*! ../common/icon */ '0eKw'),
-            d = r(/*! ../../assets/images/meuzic.png */ 'g4yK'),
-            _ = r.n(d),
+            _ = r(/*! ../../assets/images/meuzic.png */ 'g4yK'),
+            d = r.n(_),
             f = r(/*! ../../assets/images/wordbook.png */ 'PN6K'),
             p = r.n(f),
             m = r(/*! ../../assets/images/nasa.png */ '1gEx'),
             b = r.n(m),
-            v = r(/*! ../common/image/image */ 'ujeq')
+            h = r(/*! ../common/image/image */ 'ujeq')
           ;(o =
             'undefined' != typeof reactHotLoaderGlobal
               ? reactHotLoaderGlobal.enterModule
               : void 0) && o(e)
           'undefined' != typeof reactHotLoaderGlobal &&
             reactHotLoaderGlobal.default.signature
-          var h,
+          var v,
             y,
             E = function() {
               var e = [
@@ -3270,7 +2975,7 @@ module.exports = (function(e) {
                     'Meuzic is a proressive web app for downloading music in MP3 and MP4 format with create playlist feature without signin/signup.',
                   tech: ['ReactJS', 'Redux', 'SASS', 'NodeJS'],
                   links: [{ url: 'https://meuzic.com', iconName: 'external' }],
-                  image: _.a,
+                  image: d.a,
                   type: 'Featured Project',
                   url: 'https://meuzic.com'
                 },
@@ -3367,7 +3072,7 @@ module.exports = (function(e) {
                         'aria-label': '',
                         className: u.a.imgContainer
                       },
-                      a.a.createElement(v.default, {
+                      a.a.createElement(h.default, {
                         src: i,
                         className: u.a.image,
                         alt: ''
@@ -3379,16 +3084,16 @@ module.exports = (function(e) {
             },
             g = E
           ;(t.default = g),
-            (h =
+            (v =
               'undefined' != typeof reactHotLoaderGlobal
                 ? reactHotLoaderGlobal.default
                 : void 0) &&
-              (h.register(
+              (v.register(
                 E,
                 'Work',
                 'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\components\\work\\work.jsx'
               ),
-              h.register(
+              v.register(
                 g,
                 'default',
                 'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\components\\work\\work.jsx'
@@ -3534,18 +3239,18 @@ module.exports = (function(e) {
                   : {},
               i = a.render,
               f = a.loading,
-              E = void 0 === f ? d.DefaultLoading : f,
+              E = void 0 === f ? _.DefaultLoading : f,
               g = a.error,
-              O = void 0 === g ? d.DefaultError : g,
-              L = a.minDelay,
-              P = void 0 === L ? 0 : L,
+              O = void 0 === g ? _.DefaultError : g,
+              P = a.minDelay,
+              L = void 0 === P ? 0 : P,
               D = a.alwaysDelay,
               M = void 0 !== D && D,
               C = a.testBabelPlugin,
-              H = void 0 !== C && C,
-              w = a.loadingTransition,
-              k = void 0 === w || w,
-              j = v(a, [
+              w = void 0 !== C && C,
+              H = a.loadingTransition,
+              k = void 0 === H || H,
+              j = h(a, [
                 'render',
                 'loading',
                 'error',
@@ -3554,11 +3259,11 @@ module.exports = (function(e) {
                 'testBabelPlugin',
                 'loadingTransition'
               ]),
-              U = i || (0, d.createDefaultRender)(E, O),
-              R = h || H
+              T = i || (0, _.createDefaultRender)(E, O),
+              A = v || w
             return (
-              (j.isDynamic = R),
-              (j.usesBabelPlugin = h),
+              (j.isDynamic = A),
+              (j.usesBabelPlugin = v),
               (j.modCache = {}),
               (j.promCache = {}),
               (r = t = (function(t) {
@@ -3605,10 +3310,10 @@ module.exports = (function(e) {
                             .then(function(e) {
                               var r = { mod: e, props: t, context: o },
                                 c = new Date() - i
-                              if (c < P)
+                              if (c < L)
                                 return setTimeout(function() {
                                   return a.update(r, n)
-                                }, P - c)
+                                }, L - c)
                               a.update(r, n)
                             })
                             .catch(function(e) {
@@ -3665,7 +3370,7 @@ module.exports = (function(e) {
                           try {
                             u = a(t, r)
                           } catch (e) {
-                            return (0, _.__update)(
+                            return (0, d.__update)(
                               t,
                               { error: e, props: t, context: r },
                               this._initialized
@@ -3675,9 +3380,9 @@ module.exports = (function(e) {
                           var l = n(t)
                           return (
                             r.report && r.report(l),
-                            u || d.isServer
-                              ? (this.handleBefore(!0, !0, d.isServer),
-                                (0, _.__update)(
+                            u || _.isServer
+                              ? (this.handleBefore(!0, !0, _.isServer),
+                                (0, d.__update)(
                                   t,
                                   {
                                     asyncOnly: c,
@@ -3688,7 +3393,7 @@ module.exports = (function(e) {
                                   this._initialized,
                                   !0,
                                   !0,
-                                  d.isServer
+                                  _.isServer
                                 ))
                               : (this.handleBefore(!0, !1),
                                 this.requireAsyncInner(
@@ -3777,7 +3482,7 @@ module.exports = (function(e) {
                         key: 'componentDidUpdate',
                         value: function(t) {
                           var r = this
-                          if (R || this._asyncOnly) {
+                          if (A || this._asyncOnly) {
                             var o = (0, s.default)(e, j, this.props, t),
                               n = o.requireSync,
                               a = o.requireAsync
@@ -3798,7 +3503,7 @@ module.exports = (function(e) {
                                   k && this.update({ mod: null }),
                                   void setTimeout(function() {
                                     return r.update(c, !1, !0)
-                                  }, P)
+                                  }, L)
                                 )
                               this.update(c, !1, !0)
                             }
@@ -3817,11 +3522,11 @@ module.exports = (function(e) {
                           var e = this.props,
                             t = e.isLoading,
                             r = e.error,
-                            o = v(e, ['isLoading', 'error']),
+                            o = h(e, ['isLoading', 'error']),
                             n = this.state,
                             a = n.mod,
                             i = n.error
-                          return U(o, a, t, r || i)
+                          return T(o, a, t, r || i)
                         }
                       }
                     ],
@@ -3855,8 +3560,8 @@ module.exports = (function(e) {
           u = f(r(/*! prop-types */ 'rf6O')),
           l = f(r(/*! hoist-non-react-statics */ '0TPh')),
           s = (r(/*! vm */ 'r5oh'), f(a)),
-          d = r(/*! ./utils */ '09b2'),
-          _ = r(/*! ./helpers */ 'GH1V')
+          _ = r(/*! ./utils */ '09b2'),
+          d = r(/*! ./helpers */ 'GH1V')
         function f(e) {
           return e && e.__esModule ? e : { default: e }
         }
@@ -3890,19 +3595,19 @@ module.exports = (function(e) {
                 ? Object.setPrototypeOf(e, t)
                 : (e.__proto__ = t))
         }
-        function v(e, t) {
+        function h(e, t) {
           var r = {}
           for (var o in e)
             t.indexOf(o) >= 0 ||
               (Object.prototype.hasOwnProperty.call(e, o) && (r[o] = e[o]))
           return r
         }
-        var h = !1,
+        var v = !1,
           y = function() {
             return e.hot && !1
           }
         t.setHasBabelPlugin = function() {
-          h = !0
+          v = !0
         }
       }.call(this, r(/*! ./../../webpack/buildin/module.js */ 'YuTi')(e)))
     },
@@ -4048,10 +3753,10 @@ module.exports = (function(e) {
           ? e.substr(t.length)
           : e
       }
-      function d(e) {
+      function _(e) {
         return '/' === e.charAt(e.length - 1) ? e.slice(0, -1) : e
       }
-      function _(e) {
+      function d(e) {
         var t = e || '/',
           r = '',
           o = '',
@@ -4077,7 +3782,7 @@ module.exports = (function(e) {
       function p(e, t, r, o) {
         var a
         'string' == typeof e
-          ? ((a = _(e)).state = t)
+          ? ((a = d(e)).state = t)
           : (void 0 === (a = c({}, e)).pathname && (a.pathname = ''),
             a.search
               ? '?' !== a.search.charAt(0) && (a.search = '?' + a.search)
@@ -4159,10 +3864,10 @@ module.exports = (function(e) {
         !window.document ||
         !window.document.createElement
       )
-      function v(e, t) {
+      function h(e, t) {
         t(window.confirm(e))
       }
-      function h() {
+      function v() {
         try {
           return window.history.state || {}
         } catch (e) {
@@ -4193,7 +3898,7 @@ module.exports = (function(e) {
       function O(e) {
         window.location.replace(E(window.location.href) + '#' + e)
       }
-      function L(e, t, r) {
+      function P(e, t, r) {
         return Math.min(Math.max(e, t), r)
       }
       ;(t.createBrowserHistory = function(e) {
@@ -4215,12 +3920,12 @@ module.exports = (function(e) {
           n = e,
           a = n.forceRefresh,
           l = void 0 !== a && a,
-          _ = n.getUserConfirmation,
-          y = void 0 === _ ? v : _,
+          d = n.getUserConfirmation,
+          y = void 0 === d ? h : d,
           E = n.keyLength,
           g = void 0 === E ? 6 : E,
-          O = e.basename ? d(u(e.basename)) : ''
-        function L(e) {
+          O = e.basename ? _(u(e.basename)) : ''
+        function P(e) {
           var t = e || {},
             r = t.key,
             o = t.state,
@@ -4228,82 +3933,82 @@ module.exports = (function(e) {
             a = n.pathname + n.search + n.hash
           return O && (a = s(a, O)), p(a, o, r)
         }
-        function P() {
+        function L() {
           return Math.random()
             .toString(36)
             .substr(2, g)
         }
         var D = m()
         function M(e) {
-          c(I, e),
-            (I.length = t.length),
-            D.notifyListeners(I.location, I.action)
+          c(S, e),
+            (S.length = t.length),
+            D.notifyListeners(S.location, S.action)
         }
         function C(e) {
           ;(function(e) {
             return (
               void 0 === e.state && -1 === navigator.userAgent.indexOf('CriOS')
             )
-          })(e) || k(L(e.state))
+          })(e) || k(P(e.state))
         }
-        function H() {
-          k(L(h()))
+        function w() {
+          k(P(v()))
         }
-        var w = !1
+        var H = !1
         function k(e) {
-          w
-            ? ((w = !1), M())
+          H
+            ? ((H = !1), M())
             : D.confirmTransitionTo(e, 'POP', y, function(t) {
                 t
                   ? M({ action: 'POP', location: e })
                   : (function(e) {
-                      var t = I.location,
-                        r = U.indexOf(t.key)
+                      var t = S.location,
+                        r = T.indexOf(t.key)
                       ;-1 === r && (r = 0)
-                      var o = U.indexOf(e.key)
+                      var o = T.indexOf(e.key)
                       ;-1 === o && (o = 0)
                       var n = r - o
-                      n && ((w = !0), T(n))
+                      n && ((H = !0), R(n))
                     })(e)
               })
         }
-        var j = L(h()),
-          U = [j.key]
-        function R(e) {
+        var j = P(v()),
+          T = [j.key]
+        function A(e) {
           return O + f(e)
         }
-        function T(e) {
+        function R(e) {
           t.go(e)
         }
-        var A = 0
+        var U = 0
         function G(e) {
-          1 === (A += e) && 1 === e
+          1 === (U += e) && 1 === e
             ? (window.addEventListener('popstate', C),
-              o && window.addEventListener('hashchange', H))
-            : 0 === A &&
+              o && window.addEventListener('hashchange', w))
+            : 0 === U &&
               (window.removeEventListener('popstate', C),
-              o && window.removeEventListener('hashchange', H))
+              o && window.removeEventListener('hashchange', w))
         }
-        var S = !1,
-          I = {
+        var I = !1,
+          S = {
             length: t.length,
             action: 'POP',
             location: j,
-            createHref: R,
+            createHref: A,
             push: function(e, o) {
-              var n = p(e, o, P(), I.location)
+              var n = p(e, o, L(), S.location)
               D.confirmTransitionTo(n, 'PUSH', y, function(e) {
                 if (e) {
-                  var o = R(n),
+                  var o = A(n),
                     a = n.key,
                     i = n.state
                   if (r)
                     if ((t.pushState({ key: a, state: i }, null, o), l))
                       window.location.href = o
                     else {
-                      var c = U.indexOf(I.location.key),
-                        u = U.slice(0, c + 1)
-                      u.push(n.key), (U = u), M({ action: 'PUSH', location: n })
+                      var c = T.indexOf(S.location.key),
+                        u = T.slice(0, c + 1)
+                      u.push(n.key), (T = u), M({ action: 'PUSH', location: n })
                     }
                   else window.location.href = o
                 }
@@ -4311,37 +4016,37 @@ module.exports = (function(e) {
             },
             replace: function(e, o) {
               var n = 'REPLACE',
-                a = p(e, o, P(), I.location)
+                a = p(e, o, L(), S.location)
               D.confirmTransitionTo(a, n, y, function(e) {
                 if (e) {
-                  var o = R(a),
+                  var o = A(a),
                     i = a.key,
                     c = a.state
                   if (r)
                     if ((t.replaceState({ key: i, state: c }, null, o), l))
                       window.location.replace(o)
                     else {
-                      var u = U.indexOf(I.location.key)
-                      ;-1 !== u && (U[u] = a.key), M({ action: n, location: a })
+                      var u = T.indexOf(S.location.key)
+                      ;-1 !== u && (T[u] = a.key), M({ action: n, location: a })
                     }
                   else window.location.replace(o)
                 }
               })
             },
-            go: T,
+            go: R,
             goBack: function() {
-              T(-1)
+              R(-1)
             },
             goForward: function() {
-              T(1)
+              R(1)
             },
             block: function(e) {
               void 0 === e && (e = !1)
               var t = D.setPrompt(e)
               return (
-                S || (G(1), (S = !0)),
+                I || (G(1), (I = !0)),
                 function() {
-                  return S && ((S = !1), G(-1)), t()
+                  return I && ((I = !1), G(-1)), t()
                 }
               )
             },
@@ -4355,41 +4060,41 @@ module.exports = (function(e) {
               )
             }
           }
-        return I
+        return S
       }),
         (t.createHashHistory = function(e) {
           void 0 === e && (e = {}), b || i(!1)
           var t = window.history,
             r = (window.navigator.userAgent.indexOf('Firefox'), e),
             o = r.getUserConfirmation,
-            n = void 0 === o ? v : o,
+            n = void 0 === o ? h : o,
             a = r.hashType,
             l = void 0 === a ? 'slash' : a,
-            _ = e.basename ? d(u(e.basename)) : '',
-            h = y[l],
-            L = h.encodePath,
-            P = h.decodePath
+            d = e.basename ? _(u(e.basename)) : '',
+            v = y[l],
+            P = v.encodePath,
+            L = v.decodePath
           function D() {
-            var e = P(g())
-            return _ && (e = s(e, _)), p(e)
+            var e = L(g())
+            return d && (e = s(e, d)), p(e)
           }
           var M = m()
           function C(e) {
-            c(x, e),
-              (x.length = t.length),
-              M.notifyListeners(x.location, x.action)
+            c(B, e),
+              (B.length = t.length),
+              M.notifyListeners(B.location, B.action)
           }
-          var H = !1,
-            w = null
+          var w = !1,
+            H = null
           function k() {
             var e = g(),
-              t = L(e)
+              t = P(e)
             if (e !== t) O(t)
             else {
               var r = D(),
-                o = x.location
+                o = B.location
               if (
-                !H &&
+                !w &&
                 (function(e, t) {
                   return (
                     e.pathname === t.pathname &&
@@ -4399,113 +4104,113 @@ module.exports = (function(e) {
                 })(o, r)
               )
                 return
-              if (w === f(r)) return
-              ;(w = null),
+              if (H === f(r)) return
+              ;(H = null),
                 (function(e) {
-                  H
-                    ? ((H = !1), C())
+                  w
+                    ? ((w = !1), C())
                     : M.confirmTransitionTo(e, 'POP', n, function(t) {
                         t
                           ? C({ action: 'POP', location: e })
                           : (function(e) {
-                              var t = x.location,
-                                r = T.lastIndexOf(f(t))
+                              var t = B.location,
+                                r = R.lastIndexOf(f(t))
                               ;-1 === r && (r = 0)
-                              var o = T.lastIndexOf(f(e))
+                              var o = R.lastIndexOf(f(e))
                               ;-1 === o && (o = 0)
                               var n = r - o
-                              n && ((H = !0), A(n))
+                              n && ((w = !0), U(n))
                             })(e)
                       })
                 })(r)
             }
           }
           var j = g(),
-            U = L(j)
-          j !== U && O(U)
-          var R = D(),
-            T = [f(R)]
-          function A(e) {
+            T = P(j)
+          j !== T && O(T)
+          var A = D(),
+            R = [f(A)]
+          function U(e) {
             t.go(e)
           }
           var G = 0
-          function S(e) {
+          function I(e) {
             1 === (G += e) && 1 === e
               ? window.addEventListener('hashchange', k)
               : 0 === G && window.removeEventListener('hashchange', k)
           }
-          var I = !1,
-            x = {
+          var S = !1,
+            B = {
               length: t.length,
               action: 'POP',
-              location: R,
+              location: A,
               createHref: function(e) {
                 var t = document.querySelector('base'),
                   r = ''
                 return (
                   t && t.getAttribute('href') && (r = E(window.location.href)),
-                  r + '#' + L(_ + f(e))
+                  r + '#' + P(d + f(e))
                 )
               },
               push: function(e, t) {
-                var r = p(e, void 0, void 0, x.location)
+                var r = p(e, void 0, void 0, B.location)
                 M.confirmTransitionTo(r, 'PUSH', n, function(e) {
                   if (e) {
                     var t = f(r),
-                      o = L(_ + t)
+                      o = P(d + t)
                     if (g() !== o) {
-                      ;(w = t),
+                      ;(H = t),
                         (function(e) {
                           window.location.hash = e
                         })(o)
-                      var n = T.lastIndexOf(f(x.location)),
-                        a = T.slice(0, n + 1)
-                      a.push(t), (T = a), C({ action: 'PUSH', location: r })
+                      var n = R.lastIndexOf(f(B.location)),
+                        a = R.slice(0, n + 1)
+                      a.push(t), (R = a), C({ action: 'PUSH', location: r })
                     } else C()
                   }
                 })
               },
               replace: function(e, t) {
                 var r = 'REPLACE',
-                  o = p(e, void 0, void 0, x.location)
+                  o = p(e, void 0, void 0, B.location)
                 M.confirmTransitionTo(o, r, n, function(e) {
                   if (e) {
                     var t = f(o),
-                      n = L(_ + t)
-                    g() !== n && ((w = t), O(n))
-                    var a = T.indexOf(f(x.location))
-                    ;-1 !== a && (T[a] = t), C({ action: r, location: o })
+                      n = P(d + t)
+                    g() !== n && ((H = t), O(n))
+                    var a = R.indexOf(f(B.location))
+                    ;-1 !== a && (R[a] = t), C({ action: r, location: o })
                   }
                 })
               },
-              go: A,
+              go: U,
               goBack: function() {
-                A(-1)
+                U(-1)
               },
               goForward: function() {
-                A(1)
+                U(1)
               },
               block: function(e) {
                 void 0 === e && (e = !1)
                 var t = M.setPrompt(e)
                 return (
-                  I || (S(1), (I = !0)),
+                  S || (I(1), (S = !0)),
                   function() {
-                    return I && ((I = !1), S(-1)), t()
+                    return S && ((S = !1), I(-1)), t()
                   }
                 )
               },
               listen: function(e) {
                 var t = M.appendListener(e)
                 return (
-                  S(1),
+                  I(1),
                   function() {
-                    S(-1), t()
+                    I(-1), t()
                   }
                 )
               }
             }
-          return x
+          return B
         }),
         (t.createMemoryHistory = function(e) {
           void 0 === e && (e = {})
@@ -4518,51 +4223,51 @@ module.exports = (function(e) {
             u = t.keyLength,
             l = void 0 === u ? 6 : u,
             s = m()
-          function d(e) {
+          function _(e) {
             c(E, e),
               (E.length = E.entries.length),
               s.notifyListeners(E.location, E.action)
           }
-          function _() {
+          function d() {
             return Math.random()
               .toString(36)
               .substr(2, l)
           }
-          var b = L(i, 0, n.length - 1),
-            v = n.map(function(e) {
-              return p(e, void 0, 'string' == typeof e ? _() : e.key || _())
+          var b = P(i, 0, n.length - 1),
+            h = n.map(function(e) {
+              return p(e, void 0, 'string' == typeof e ? d() : e.key || d())
             }),
-            h = f
+            v = f
           function y(e) {
-            var t = L(E.index + e, 0, E.entries.length - 1),
+            var t = P(E.index + e, 0, E.entries.length - 1),
               o = E.entries[t]
             s.confirmTransitionTo(o, 'POP', r, function(e) {
-              e ? d({ action: 'POP', location: o, index: t }) : d()
+              e ? _({ action: 'POP', location: o, index: t }) : _()
             })
           }
           var E = {
-            length: v.length,
+            length: h.length,
             action: 'POP',
-            location: v[b],
+            location: h[b],
             index: b,
-            entries: v,
-            createHref: h,
+            entries: h,
+            createHref: v,
             push: function(e, t) {
-              var o = p(e, t, _(), E.location)
+              var o = p(e, t, d(), E.location)
               s.confirmTransitionTo(o, 'PUSH', r, function(e) {
                 if (e) {
                   var t = E.index + 1,
                     r = E.entries.slice(0)
                   r.length > t ? r.splice(t, r.length - t, o) : r.push(o),
-                    d({ action: 'PUSH', location: o, index: t, entries: r })
+                    _({ action: 'PUSH', location: o, index: t, entries: r })
                 }
               })
             },
             replace: function(e, t) {
               var o = 'REPLACE',
-                n = p(e, t, _(), E.location)
+                n = p(e, t, d(), E.location)
               s.confirmTransitionTo(n, o, r, function(e) {
-                e && ((E.entries[E.index] = n), d({ action: o, location: n }))
+                e && ((E.entries[E.index] = n), _({ action: o, location: n }))
               })
             },
             go: y,
@@ -4595,7 +4300,7 @@ module.exports = (function(e) {
             a(e.state, t.state)
           )
         }),
-        (t.parsePath = _),
+        (t.parsePath = d),
         (t.createPath = f)
     },
   KNu3:
@@ -4653,7 +4358,7 @@ module.exports = (function(e) {
               })(e, t) ||
               (function(e, t) {
                 if (!e) return
-                if ('string' == typeof e) return d(e, t)
+                if ('string' == typeof e) return _(e, t)
                 var r = Object.prototype.toString.call(e).slice(8, -1)
                 'Object' === r && e.constructor && (r = e.constructor.name)
                 if ('Map' === r || 'Set' === r) return Array.from(r)
@@ -4661,7 +4366,7 @@ module.exports = (function(e) {
                   'Arguments' === r ||
                   /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)
                 )
-                  return d(e, t)
+                  return _(e, t)
               })(e, t) ||
               (function() {
                 throw new TypeError(
@@ -4670,7 +4375,7 @@ module.exports = (function(e) {
               })()
             )
           }
-          function d(e, t) {
+          function _(e, t) {
             ;(null == t || t > e.length) && (t = e.length)
             for (var r = 0, o = new Array(t); r < t; r++) o[r] = e[r]
             return o
@@ -4679,7 +4384,7 @@ module.exports = (function(e) {
             'undefined' != typeof reactHotLoaderGlobal
               ? reactHotLoaderGlobal.enterModule
               : void 0) && o(e)
-          var _ =
+          var d =
               'undefined' != typeof reactHotLoaderGlobal
                 ? reactHotLoaderGlobal.default.signature
                 : function(e) {
@@ -4717,8 +4422,8 @@ module.exports = (function(e) {
                 r = e[1],
                 o = f[t - 1],
                 c = o.title,
-                d = o.company,
-                _ = o.url,
+                _ = o.company,
+                d = o.url,
                 p = o.range,
                 m = o.html
               return a.a.createElement(
@@ -4769,11 +4474,11 @@ module.exports = (function(e) {
                           a.a.createElement(
                             'a',
                             {
-                              href: _,
+                              href: d,
                               target: '_blank',
                               rel: 'nofollow noopener noreferrer'
                             },
-                            d
+                            _
                           )
                         )
                       ),
@@ -4790,11 +4495,11 @@ module.exports = (function(e) {
                 )
               )
             }
-          _(p, 'useState{[selectedTab, selectTab](1)}')
+          d(p, 'useState{[selectedTab, selectTab](1)}')
           var m,
             b,
-            v = p
-          ;(t.default = v),
+            h = p
+          ;(t.default = h),
             (m =
               'undefined' != typeof reactHotLoaderGlobal
                 ? reactHotLoaderGlobal.default
@@ -4810,7 +4515,7 @@ module.exports = (function(e) {
                 'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\components\\jobs\\jobs.jsx'
               ),
               m.register(
-                v,
+                h,
                 'default',
                 'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\components\\jobs\\jobs.jsx'
               )),
@@ -4935,91 +4640,6 @@ module.exports = (function(e) {
     ) {
       e.exports = require('value-equal')
     },
-  LRLl:
-    /*!***********************************************!*\
-  !*** ./src/containers/pages/home/reducers.js ***!
-  \***********************************************/
-    /*! exports provided: default */
-    /*! ModuleConcatenation bailout: Module uses injected variables (module) */ function(
-      e,
-      t,
-      r
-    ) {
-      'use strict'
-      r.r(t),
-        function(e) {
-          var o,
-            n = r(/*! immutable */ 'nuGg'),
-            a = r(/*! ./constants */ '7QCE')
-          ;(o =
-            'undefined' != typeof reactHotLoaderGlobal
-              ? reactHotLoaderGlobal.enterModule
-              : void 0) && o(e)
-          'undefined' != typeof reactHotLoaderGlobal &&
-            reactHotLoaderGlobal.default.signature
-          var i,
-            c,
-            u = Object(n.fromJS)({
-              isfetching: !1,
-              data: Object(n.fromJS)([]),
-              error: null
-            }),
-            l = function() {
-              var e =
-                  arguments.length > 0 && void 0 !== arguments[0]
-                    ? arguments[0]
-                    : u,
-                t = arguments.length > 1 ? arguments[1] : void 0,
-                r = t.type,
-                o = t.data
-              switch (r) {
-                case a.FETCHING_USERS:
-                  return e.set('isFetching', !0)
-                case a.FETCH_USERS_SUCCESS:
-                  return e
-                    .set('isFetching', !1)
-                    .set('data', Object(n.fromJS)(o))
-                case a.FETCH_USERS_ERROR:
-                  return e
-                    .set('isFetching', !1)
-                    .set('data', Object(n.fromJS)([]))
-                    .set('error', o)
-                default:
-                  return e
-              }
-            },
-            s = l
-          ;(t.default = s),
-            (i =
-              'undefined' != typeof reactHotLoaderGlobal
-                ? reactHotLoaderGlobal.default
-                : void 0) &&
-              (i.register(
-                u,
-                'initialState',
-                'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\containers\\pages\\home\\reducers.js'
-              ),
-              i.register(
-                l,
-                'homeReducer',
-                'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\containers\\pages\\home\\reducers.js'
-              ),
-              i.register(
-                s,
-                'default',
-                'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\containers\\pages\\home\\reducers.js'
-              )),
-            (c =
-              'undefined' != typeof reactHotLoaderGlobal
-                ? reactHotLoaderGlobal.leaveModule
-                : void 0) && c(e)
-        }.call(
-          this,
-          r(
-            /*! ./../../../../node_modules/webpack/buildin/harmony-module.js */ '3UD+'
-          )(e)
-        )
-    },
   'LW+Q':
     /*!****************************************!*\
   !*** ./src/components/about/about.jsx ***!
@@ -5041,8 +4661,8 @@ module.exports = (function(e) {
             u = r(/*! ./about.scss */ '2Yea'),
             l = r.n(u),
             s = r(/*! ../../assets/images/abhishar.jpg */ 'SH4R'),
-            d = r.n(s),
-            _ = r(/*! ../heading/heading */ 'vuz3'),
+            _ = r.n(s),
+            d = r(/*! ../heading/heading */ 'vuz3'),
             f = r(/*! ../common/image/image */ 'ujeq')
           ;(o =
             'undefined' != typeof reactHotLoaderGlobal
@@ -5056,7 +4676,7 @@ module.exports = (function(e) {
               return a.a.createElement(
                 c.default,
                 { id: 'about', style: { position: 'relative' } },
-                a.a.createElement(_.default, { text: 'About Me' }),
+                a.a.createElement(d.default, { text: 'About Me' }),
                 a.a.createElement(
                   'div',
                   { className: l.a.aboutFlexContainer },
@@ -5125,7 +4745,7 @@ module.exports = (function(e) {
                       i.Link,
                       { to: '/' },
                       a.a.createElement(f.default, {
-                        src: d.a,
+                        src: _.a,
                         alt: 'Abhishar Jangir'
                       })
                     )
@@ -5133,8 +4753,8 @@ module.exports = (function(e) {
                 )
               )
             },
-            v = b
-          ;(t.default = v),
+            h = b
+          ;(t.default = h),
             (p =
               'undefined' != typeof reactHotLoaderGlobal
                 ? reactHotLoaderGlobal.default
@@ -5145,7 +4765,7 @@ module.exports = (function(e) {
                 'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\components\\about\\about.jsx'
               ),
               p.register(
-                v,
+                h,
                 'default',
                 'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\components\\about\\about.jsx'
               )),
@@ -5159,136 +4779,6 @@ module.exports = (function(e) {
             /*! ./../../../node_modules/webpack/buildin/harmony-module.js */ '3UD+'
           )(e)
         )
-    },
-  LacT:
-    /*!*********************************!*\
-  !*** ./src/utils/apiService.js ***!
-  \*********************************/
-    /*! exports provided: default */
-    /*! ModuleConcatenation bailout: Module uses injected variables (module) */ function(
-      e,
-      t,
-      r
-    ) {
-      'use strict'
-      r.r(t),
-        function(e) {
-          var o,
-            n = r(/*! ./axios */ 'on7z'),
-            a = r(/*! ../apis */ '+MiA')
-          function i(e, t) {
-            var r = Object.keys(e)
-            if (Object.getOwnPropertySymbols) {
-              var o = Object.getOwnPropertySymbols(e)
-              t &&
-                (o = o.filter(function(t) {
-                  return Object.getOwnPropertyDescriptor(e, t).enumerable
-                })),
-                r.push.apply(r, o)
-            }
-            return r
-          }
-          function c(e, t, r) {
-            return (
-              t in e
-                ? Object.defineProperty(e, t, {
-                    value: r,
-                    enumerable: !0,
-                    configurable: !0,
-                    writable: !0
-                  })
-                : (e[t] = r),
-              e
-            )
-          }
-          ;(o =
-            'undefined' != typeof reactHotLoaderGlobal
-              ? reactHotLoaderGlobal.enterModule
-              : void 0) && o(e)
-          'undefined' != typeof reactHotLoaderGlobal &&
-            reactHotLoaderGlobal.default.signature
-          var u,
-            l,
-            s = function(e) {
-              var t = e.method,
-                r = void 0 === t ? 'GET' : t,
-                o = e.url,
-                u = e.data,
-                l = e.appendUrl,
-                s = void 0 === l ? '' : l
-              return (
-                (o = Object(a.default)(o) + s),
-                new Promise(function(e, t) {
-                  Object(n.default)({ url: o, method: r, data: u })
-                    .then(function(t) {
-                      e(
-                        (function(e) {
-                          for (var t = 1; t < arguments.length; t++) {
-                            var r = null != arguments[t] ? arguments[t] : {}
-                            t % 2
-                              ? i(Object(r), !0).forEach(function(t) {
-                                  c(e, t, r[t])
-                                })
-                              : Object.getOwnPropertyDescriptors
-                              ? Object.defineProperties(
-                                  e,
-                                  Object.getOwnPropertyDescriptors(r)
-                                )
-                              : i(Object(r)).forEach(function(t) {
-                                  Object.defineProperty(
-                                    e,
-                                    t,
-                                    Object.getOwnPropertyDescriptor(r, t)
-                                  )
-                                })
-                          }
-                          return e
-                        })({}, t)
-                      )
-                    })
-                    .catch(function(e) {
-                      t(e)
-                    })
-                })
-              )
-            },
-            d = s
-          ;(t.default = d),
-            (u =
-              'undefined' != typeof reactHotLoaderGlobal
-                ? reactHotLoaderGlobal.default
-                : void 0) &&
-              (u.register(
-                s,
-                'apiService',
-                'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\utils\\apiService.js'
-              ),
-              u.register(
-                d,
-                'default',
-                'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\utils\\apiService.js'
-              )),
-            (l =
-              'undefined' != typeof reactHotLoaderGlobal
-                ? reactHotLoaderGlobal.leaveModule
-                : void 0) && l(e)
-        }.call(
-          this,
-          r(
-            /*! ./../../node_modules/webpack/buildin/harmony-module.js */ '3UD+'
-          )(e)
-        )
-    },
-  Lc87:
-    /*!*******************************!*\
-  !*** external "query-string" ***!
-  \*******************************/
-    /*! no static exports found */
-    /*! ModuleConcatenation bailout: Module is not an ECMAScript module */ function(
-      e,
-      t
-    ) {
-      e.exports = require('query-string')
     },
   LeAe:
     /*!**********************************************************************!*\
@@ -5640,7 +5130,7 @@ module.exports = (function(e) {
             reactHotLoaderGlobal.default.signature
           var l,
             s,
-            d = function(e) {
+            _ = function(e) {
               return Object(n.combineReducers)(
                 ((t = { router: Object(i.fromJS)(Object(a.connectRouter)(e)) }),
                 (r = c.HELMET_STATE_KEY),
@@ -5657,19 +5147,19 @@ module.exports = (function(e) {
               )
               var t, r, o
             },
-            _ = d
-          ;(t.default = _),
+            d = _
+          ;(t.default = d),
             (l =
               'undefined' != typeof reactHotLoaderGlobal
                 ? reactHotLoaderGlobal.default
                 : void 0) &&
               (l.register(
-                d,
+                _,
                 'createRootReducer',
                 'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\rootReducer.js'
               ),
               l.register(
-                _,
+                d,
                 'default',
                 'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\rootReducer.js'
               )),
@@ -5734,8 +5224,8 @@ module.exports = (function(e) {
                   : typeof e
               })(e)
       }
-      function d() {
-        return (d =
+      function _() {
+        return (_ =
           Object.assign ||
           function(e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -5746,7 +5236,7 @@ module.exports = (function(e) {
             return e
           }).apply(this, arguments)
       }
-      function _(e, t) {
+      function d(e, t) {
         for (var r = 0; r < t.length; r++) {
           var o = t[r]
           ;(o.enumerable = o.enumerable || !1),
@@ -5801,10 +5291,10 @@ module.exports = (function(e) {
                     u = r.hash,
                     l = a.location,
                     s = l.pathname,
-                    d = l.search,
-                    _ = l.hash
+                    _ = l.search,
+                    d = l.hash
                   'PUSH' !== e.history.action ||
-                    (s === i && d === c && _ === u) ||
+                    (s === i && _ === c && d === u) ||
                     ((o.inTimeTravelling = !0),
                     a.push({ pathname: i, search: c, hash: u }))
                 }))
@@ -5846,8 +5336,8 @@ module.exports = (function(e) {
                     return o.default.createElement(i.Router, { history: t }, r)
                   }
                 }
-              ]) && _(n.prototype, a),
-              c && _(n, c),
+              ]) && d(n.prototype, a),
+              c && d(n, c),
               r
             )
           })(o.PureComponent)
@@ -5871,7 +5361,7 @@ module.exports = (function(e) {
           if (null == t) throw 'Please upgrade to react-redux v6'
           return o.default.createElement(t.Consumer, null, function(t) {
             var n = t.store
-            return o.default.createElement(r, d({ store: n }, e))
+            return o.default.createElement(r, _({ store: n }, e))
           })
         }
         return (
@@ -5914,7 +5404,7 @@ module.exports = (function(e) {
             reactHotLoaderGlobal.default.signature
           var l,
             s,
-            d = function() {
+            _ = function() {
               return a.a.createElement(
                 i.default,
                 { id: 'hero', className: u.a.section },
@@ -5957,19 +5447,19 @@ module.exports = (function(e) {
                 )
               )
             },
-            _ = d
-          ;(t.default = _),
+            d = _
+          ;(t.default = d),
             (l =
               'undefined' != typeof reactHotLoaderGlobal
                 ? reactHotLoaderGlobal.default
                 : void 0) &&
               (l.register(
-                d,
+                _,
                 'Hero',
                 'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\components\\hero\\hero.jsx'
               ),
               l.register(
-                _,
+                d,
                 'default',
                 'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\components\\hero\\hero.jsx'
               )),
@@ -6028,28 +5518,28 @@ module.exports = (function(e) {
             className: c.a.string
           }),
             (s.defaultProps = { style: {}, id: '', className: null })
-          var d,
-            _,
+          var _,
+            d,
             f = s
           ;(t.default = f),
-            (d =
+            (_ =
               'undefined' != typeof reactHotLoaderGlobal
                 ? reactHotLoaderGlobal.default
                 : void 0) &&
-              (d.register(
+              (_.register(
                 s,
                 'Section',
                 'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\components\\section\\section.jsx'
               ),
-              d.register(
+              _.register(
                 f,
                 'default',
                 'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\components\\section\\section.jsx'
               )),
-            (_ =
+            (d =
               'undefined' != typeof reactHotLoaderGlobal
                 ? reactHotLoaderGlobal.leaveModule
-                : void 0) && _(e)
+                : void 0) && d(e)
         }.call(
           this,
           r(
@@ -6068,137 +5558,6 @@ module.exports = (function(e) {
       r
     ) {
       e.exports = r.p + 'static/assets/wordbook.94acf44e.png'
-    },
-  QcoN:
-    /*!*******************************************!*\
-  !*** ./src/containers/pages/home/saga.js ***!
-  \*******************************************/
-    /*! exports provided: default */
-    /*! ModuleConcatenation bailout: Module uses injected variables (module) */ function(
-      e,
-      t,
-      r
-    ) {
-      'use strict'
-      r.r(t),
-        function(e) {
-          var o,
-            n = r(/*! redux-saga/effects */ 'oZtI'),
-            a = r(/*! ./constants */ '7QCE'),
-            i = r(/*! ./actions */ 'jLua'),
-            c = r(/*! ../../../utils/apiService */ 'LacT')
-          ;(o =
-            'undefined' != typeof reactHotLoaderGlobal
-              ? reactHotLoaderGlobal.enterModule
-              : void 0) && o(e)
-          var u = regeneratorRuntime.mark(s),
-            l = regeneratorRuntime.mark(d)
-          'undefined' != typeof reactHotLoaderGlobal &&
-            reactHotLoaderGlobal.default.signature
-          function s() {
-            var e, t
-            return regeneratorRuntime.wrap(
-              function(r) {
-                for (;;)
-                  switch ((r.prev = r.next)) {
-                    case 0:
-                      return (
-                        (r.prev = 0),
-                        (r.next = 3),
-                        Object(n.put)(Object(i.fetchingUsers)())
-                      )
-                    case 3:
-                      return (
-                        (r.next = 5),
-                        Object(n.call)(c.default, {
-                          method: 'GET',
-                          url: 'users'
-                        })
-                      )
-                    case 5:
-                      if (((e = r.sent), (t = e.data), 200 !== e.status)) {
-                        r.next = 12
-                        break
-                      }
-                      return (
-                        (r.next = 11),
-                        Object(n.put)(Object(i.fetchUserSuccess)(t.data))
-                      )
-                    case 11:
-                      return r.abrupt('return', r.sent)
-                    case 12:
-                      return (
-                        (r.next = 14),
-                        Object(n.put)(
-                          Object(i.fetchUserError)('Somthing went wrong!')
-                        )
-                      )
-                    case 14:
-                      return r.abrupt('return', r.sent)
-                    case 17:
-                      return (
-                        (r.prev = 17),
-                        (r.t0 = r.catch(0)),
-                        (r.next = 21),
-                        Object(n.put)(Object(i.fetchUserError)(r.t0))
-                      )
-                    case 21:
-                      return r.abrupt('return', r.sent)
-                    case 22:
-                    case 'end':
-                      return r.stop()
-                  }
-              },
-              u,
-              null,
-              [[0, 17]]
-            )
-          }
-          function d() {
-            return regeneratorRuntime.wrap(function(e) {
-              for (;;)
-                switch ((e.prev = e.next)) {
-                  case 0:
-                    return (e.next = 2), Object(n.takeLatest)(a.FETCH_USERS, s)
-                  case 2:
-                  case 'end':
-                    return e.stop()
-                }
-            }, l)
-          }
-          var _,
-            f,
-            p = d
-          ;(t.default = p),
-            (_ =
-              'undefined' != typeof reactHotLoaderGlobal
-                ? reactHotLoaderGlobal.default
-                : void 0) &&
-              (_.register(
-                s,
-                'fetchUsers',
-                'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\containers\\pages\\home\\saga.js'
-              ),
-              _.register(
-                d,
-                'homeSaga',
-                'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\containers\\pages\\home\\saga.js'
-              ),
-              _.register(
-                p,
-                'default',
-                'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\containers\\pages\\home\\saga.js'
-              )),
-            (f =
-              'undefined' != typeof reactHotLoaderGlobal
-                ? reactHotLoaderGlobal.leaveModule
-                : void 0) && f(e)
-        }.call(
-          this,
-          r(
-            /*! ./../../../../node_modules/webpack/buildin/harmony-module.js */ '3UD+'
-          )(e)
-        )
     },
   QpMV:
     /*!*******************************!*\
@@ -6599,8 +5958,8 @@ module.exports = (function(e) {
               if (i === o.LOCATION_CHANGE) {
                 var l = u.location,
                   s = u.action,
-                  d = u.isFirstRendering
-                return d ? e : r(e, { location: t(c(l)), action: s })
+                  _ = u.isFirstRendering
+                return _ ? e : r(e, { location: t(c(l)), action: s })
               }
               return e
             }
@@ -6631,8 +5990,8 @@ module.exports = (function(e) {
             u = r.n(c),
             l = r(/*! react */ 'cDcd'),
             s = r.n(l),
-            d = r(/*! react-universal-component */ 'Gr0I'),
-            _ = r.n(d),
+            _ = r(/*! react-universal-component */ 'Gr0I'),
+            d = r.n(_),
             f = r(/*! react-router-dom */ 'oncg'),
             p = r(/*! ./utils/universalOptions */ 'vrxZ')
           function m() {
@@ -6654,8 +6013,8 @@ module.exports = (function(e) {
           'undefined' != typeof reactHotLoaderGlobal &&
             reactHotLoaderGlobal.default.signature
           var b,
-            v,
-            h = _()(
+            h,
+            v = d()(
               u()({
                 id: './containers/pages/home',
                 load: function() {
@@ -6679,7 +6038,7 @@ module.exports = (function(e) {
               }),
               p.default
             ),
-            y = _()(
+            y = d()(
               u()({
                 id: './components/pages/notfound',
                 load: function() {
@@ -6703,7 +6062,7 @@ module.exports = (function(e) {
               }),
               p.default
             ),
-            E = [{ path: '/', component: h, exact: !0 }, { component: y }],
+            E = [{ path: '/', component: v, exact: !0 }, { component: y }],
             g = function() {
               return s.a.createElement(
                 f.Switch,
@@ -6719,7 +6078,7 @@ module.exports = (function(e) {
                 ? reactHotLoaderGlobal.default
                 : void 0) &&
               (b.register(
-                h,
+                v,
                 'Home',
                 'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\routes.js'
               ),
@@ -6738,10 +6097,10 @@ module.exports = (function(e) {
                 'default',
                 'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\routes.js'
               )),
-            (v =
+            (h =
               'undefined' != typeof reactHotLoaderGlobal
                 ? reactHotLoaderGlobal.leaveModule
-                : void 0) && v(e)
+                : void 0) && h(e)
         }.call(
           this,
           r(/*! ./../node_modules/webpack/buildin/harmony-module.js */ '3UD+')(
@@ -7649,7 +7008,7 @@ module.exports = (function(e) {
       r.r(t),
         function(e) {
           r.d(t, 'default', function() {
-            return d
+            return _
           })
           var o,
             n = r(/*! redux-saga/effects */ 'oZtI')
@@ -7657,7 +7016,7 @@ module.exports = (function(e) {
             'undefined' != typeof reactHotLoaderGlobal
               ? reactHotLoaderGlobal.enterModule
               : void 0) && o(e)
-          var a = regeneratorRuntime.mark(d)
+          var a = regeneratorRuntime.mark(_)
           function i(e) {
             return (
               (function(e) {
@@ -7707,7 +7066,7 @@ module.exports = (function(e) {
                 t
               )
             }
-          function d() {
+          function _() {
             return regeneratorRuntime.wrap(function(e) {
               for (;;)
                 switch ((e.prev = e.next)) {
@@ -7729,7 +7088,7 @@ module.exports = (function(e) {
               'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\rootSaga.js'
             ),
             u.register(
-              d,
+              _,
               'rootSaga',
               'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\rootSaga.js'
             )),
@@ -7815,88 +7174,6 @@ module.exports = (function(e) {
       })
       'undefined' != typeof reactHotLoaderGlobal &&
         reactHotLoaderGlobal.default.signature
-    },
-  jLua:
-    /*!**********************************************!*\
-  !*** ./src/containers/pages/home/actions.js ***!
-  \**********************************************/
-    /*! exports provided: fetchUsers, fetchingUsers, fetchUserSuccess, fetchUserError */
-    /*! ModuleConcatenation bailout: Module uses injected variables (module) */ function(
-      e,
-      t,
-      r
-    ) {
-      'use strict'
-      r.r(t),
-        function(e) {
-          r.d(t, 'fetchUsers', function() {
-            return c
-          }),
-            r.d(t, 'fetchingUsers', function() {
-              return u
-            }),
-            r.d(t, 'fetchUserSuccess', function() {
-              return l
-            }),
-            r.d(t, 'fetchUserError', function() {
-              return s
-            })
-          var o,
-            n = r(/*! ./constants */ '7QCE')
-          ;(o =
-            'undefined' != typeof reactHotLoaderGlobal
-              ? reactHotLoaderGlobal.enterModule
-              : void 0) && o(e)
-          'undefined' != typeof reactHotLoaderGlobal &&
-            reactHotLoaderGlobal.default.signature
-          var a,
-            i,
-            c = function() {
-              return { type: n.FETCH_USERS }
-            },
-            u = function() {
-              return { type: n.FETCHING_USERS }
-            },
-            l = function(e) {
-              return { type: n.FETCH_USERS_SUCCESS, data: e }
-            },
-            s = function(e) {
-              return { type: n.FETCH_USERS_ERROR, data: e }
-            }
-          ;(a =
-            'undefined' != typeof reactHotLoaderGlobal
-              ? reactHotLoaderGlobal.default
-              : void 0) &&
-            (a.register(
-              c,
-              'fetchUsers',
-              'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\containers\\pages\\home\\actions.js'
-            ),
-            a.register(
-              u,
-              'fetchingUsers',
-              'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\containers\\pages\\home\\actions.js'
-            ),
-            a.register(
-              l,
-              'fetchUserSuccess',
-              'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\containers\\pages\\home\\actions.js'
-            ),
-            a.register(
-              s,
-              'fetchUserError',
-              'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\containers\\pages\\home\\actions.js'
-            )),
-            (i =
-              'undefined' != typeof reactHotLoaderGlobal
-                ? reactHotLoaderGlobal.leaveModule
-                : void 0) && i(e)
-        }.call(
-          this,
-          r(
-            /*! ./../../../../node_modules/webpack/buildin/harmony-module.js */ '3UD+'
-          )(e)
-        )
     },
   jRZC:
     /*!*********************************************!*\
@@ -8037,7 +7314,7 @@ module.exports = (function(e) {
             u = r(/*! ./projects.scss */ 'dzxm'),
             l = r.n(u),
             s = r(/*! ../common/icon */ '0eKw')
-          function d(e, t) {
+          function _(e, t) {
             return (
               (function(e) {
                 if (Array.isArray(e)) return e
@@ -8072,7 +7349,7 @@ module.exports = (function(e) {
               })(e, t) ||
               (function(e, t) {
                 if (!e) return
-                if ('string' == typeof e) return _(e, t)
+                if ('string' == typeof e) return d(e, t)
                 var r = Object.prototype.toString.call(e).slice(8, -1)
                 'Object' === r && e.constructor && (r = e.constructor.name)
                 if ('Map' === r || 'Set' === r) return Array.from(r)
@@ -8080,7 +7357,7 @@ module.exports = (function(e) {
                   'Arguments' === r ||
                   /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)
                 )
-                  return _(e, t)
+                  return d(e, t)
               })(e, t) ||
               (function() {
                 throw new TypeError(
@@ -8089,7 +7366,7 @@ module.exports = (function(e) {
               })()
             )
           }
-          function _(e, t) {
+          function d(e, t) {
             ;(null == t || t > e.length) && (t = e.length)
             for (var r = 0, o = new Array(t); r < t; r++) o[r] = e[r]
             return o
@@ -8174,10 +7451,10 @@ module.exports = (function(e) {
                   }
                 ],
                 t = e.length > 6 ? 6 : e.length,
-                r = d(Object(n.useState)(t), 2),
+                r = _(Object(n.useState)(t), 2),
                 o = r[0],
                 u = r[1],
-                _ = o === t ? t : e.length
+                d = o === t ? t : e.length
               return a.a.createElement(
                 c.default,
                 {
@@ -8199,7 +7476,7 @@ module.exports = (function(e) {
                     a.a.createElement(
                       'div',
                       { className: l.a.projects },
-                      e.slice(0, _).map(function(e) {
+                      e.slice(0, d).map(function(e) {
                         var t = e.name,
                           r = e.description,
                           o = e.tech,
@@ -8279,8 +7556,8 @@ module.exports = (function(e) {
           f(p, 'useState{[count, toggleShow](preSetVal)}')
           var m,
             b,
-            v = p
-          ;(t.default = v),
+            h = p
+          ;(t.default = h),
             (m =
               'undefined' != typeof reactHotLoaderGlobal
                 ? reactHotLoaderGlobal.default
@@ -8291,7 +7568,7 @@ module.exports = (function(e) {
                 'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\components\\projects\\projects.jsx'
               ),
               m.register(
-                v,
+                h,
                 'default',
                 'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\components\\projects\\projects.jsx'
               )),
@@ -8471,7 +7748,7 @@ module.exports = (function(e) {
           function(e) {
             return e
           })
-      function d(e, t, r) {
+      function _(e, t, r) {
         if (!t(e))
           throw ((function(e, t) {
             var r =
@@ -8486,9 +7763,9 @@ module.exports = (function(e) {
           })('error', 'uncaught at check', r),
           new Error(r))
       }
-      var _ = Object.prototype.hasOwnProperty
+      var d = Object.prototype.hasOwnProperty
       function f(e, t) {
-        return p.notUndef(e) && _.call(e, t)
+        return p.notUndef(e) && d.call(e, t)
       }
       var p = {
         undef: function(e) {
@@ -8572,16 +7849,16 @@ module.exports = (function(e) {
       var b = function(e) {
           throw e
         },
-        v = function(e) {
+        h = function(e) {
           return { value: e, done: !0 }
         }
-      function h(e) {
+      function v(e) {
         var t =
             arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : b,
           r =
             arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : '',
           o = arguments[3],
-          n = { name: r, next: e, throw: t, return: v }
+          n = { name: r, next: e, throw: t, return: h }
         return (
           o && (n[i] = !0),
           'undefined' != typeof Symbol &&
@@ -8606,7 +7883,7 @@ module.exports = (function(e) {
         },
         g = { done: !0, value: void 0 },
         O = {}
-      function L(e) {
+      function P(e) {
         return p.channel(e)
           ? 'channel'
           : Array.isArray(e)
@@ -8617,7 +7894,7 @@ module.exports = (function(e) {
             )
           : String(e)
       }
-      function P(e, t) {
+      function L(e, t) {
         var r =
             arguments.length > 2 && void 0 !== arguments[2]
               ? arguments[2]
@@ -8634,7 +7911,7 @@ module.exports = (function(e) {
             u = a[2]
           return (o = u), (n = i) === O ? g : c
         }
-        return h(
+        return v(
           a,
           function(e) {
             return a(null, e)
@@ -8699,14 +7976,14 @@ module.exports = (function(e) {
       }
       Object.assign
       var C = { type: '@@redux-saga/CHANNEL_END' }
-      function H(e, t) {
+      function w(e, t) {
         for (
           var r = arguments.length, o = Array(r > 2 ? r - 2 : 0), n = 2;
           n < r;
           n++
         )
           o[n - 2] = arguments[n]
-        var a = { done: !1, value: A(e) },
+        var a = { done: !1, value: U(e) },
           i = function(e) {
             return { done: !1, value: q.apply(void 0, [t].concat(o, [e])) }
           },
@@ -8714,7 +7991,7 @@ module.exports = (function(e) {
           u = function(e) {
             return (c = e)
           }
-        return P(
+        return L(
           {
             q1: function() {
               return ['q2', a, u]
@@ -8724,35 +8001,35 @@ module.exports = (function(e) {
             }
           },
           'q1',
-          'takeEvery(' + L(e) + ', ' + t.name + ')'
+          'takeEvery(' + P(e) + ', ' + t.name + ')'
         )
       }
-      function w(e, t) {
+      function H(e, t) {
         for (
           var r = arguments.length, o = Array(r > 2 ? r - 2 : 0), n = 2;
           n < r;
           n++
         )
           o[n - 2] = arguments[n]
-        var a = { done: !1, value: A(e) },
+        var a = { done: !1, value: U(e) },
           i = function(e) {
             return { done: !1, value: q.apply(void 0, [t].concat(o, [e])) }
           },
           c = function(e) {
-            return { done: !1, value: V(e) }
+            return { done: !1, value: J(e) }
           },
           u = void 0,
           l = void 0,
           s = function(e) {
             return (u = e)
           },
-          d = function(e) {
+          _ = function(e) {
             return (l = e)
           }
-        return P(
+        return L(
           {
             q1: function() {
-              return ['q2', a, d]
+              return ['q2', a, _]
             },
             q2: function() {
               return l === C ? [O] : u ? ['q3', c(u)] : ['q1', i(l), s]
@@ -8762,7 +8039,7 @@ module.exports = (function(e) {
             }
           },
           'q1',
-          'takeLatest(' + L(e) + ', ' + t.name + ')'
+          'takeLatest(' + P(e) + ', ' + t.name + ')'
         )
       }
       function k(e, t, r) {
@@ -8776,104 +8053,104 @@ module.exports = (function(e) {
           c = void 0,
           u = { done: !1, value: X(t, M(1)) },
           l = function() {
-            return { done: !1, value: A(c) }
+            return { done: !1, value: U(c) }
           },
           s = function(e) {
             return { done: !1, value: q.apply(void 0, [r].concat(n, [e])) }
           },
-          d = { done: !1, value: K(m, e) },
-          _ = function(e) {
+          _ = { done: !1, value: K(m, e) },
+          d = function(e) {
             return (i = e)
           },
           f = function(e) {
             return (c = e)
           }
-        return P(
+        return L(
           {
             q1: function() {
               return ['q2', u, f]
             },
             q2: function() {
-              return ['q3', l(), _]
+              return ['q3', l(), d]
             },
             q3: function() {
               return i === C ? [O] : ['q4', s(i)]
             },
             q4: function() {
-              return ['q2', d]
+              return ['q2', _]
             }
           },
           'q1',
-          'throttle(' + L(t) + ', ' + r.name + ')'
+          'throttle(' + P(t) + ', ' + r.name + ')'
         )
       }
       var j = n('IO'),
-        U = 'TAKE',
-        R =
+        T = 'TAKE',
+        A =
           '\n(HINT: if you are getting this errors in tests, consider using createMockTask from redux-saga/utils)',
-        T = function(e, t) {
+        R = function(e, t) {
           var r
           return ((r = {})[j] = !0), (r[e] = t), r
         }
-      function A() {
+      function U() {
         var e =
           arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : '*'
         if (
           (arguments.length &&
-            d(
+            _(
               arguments[0],
               p.notUndef,
               'take(patternOrChannel): patternOrChannel is undefined'
             ),
           p.pattern(e))
         )
-          return T(U, { pattern: e })
-        if (p.channel(e)) return T(U, { channel: e })
+          return R(T, { pattern: e })
+        if (p.channel(e)) return R(T, { channel: e })
         throw new Error(
           'take(patternOrChannel): argument ' +
             String(e) +
             ' is not valid channel or a valid pattern'
         )
       }
-      A.maybe = function() {
-        var e = A.apply(void 0, arguments)
-        return (e[U].maybe = !0), e
+      U.maybe = function() {
+        var e = U.apply(void 0, arguments)
+        return (e[T].maybe = !0), e
       }
-      var G = y(A.maybe)
-      function S(e, t) {
+      var G = y(U.maybe)
+      function I(e, t) {
         return (
           arguments.length > 1
-            ? (d(
+            ? (_(
                 e,
                 p.notUndef,
                 'put(channel, action): argument channel is undefined'
               ),
-              d(
+              _(
                 e,
                 p.channel,
                 'put(channel, action): argument ' +
                   e +
                   ' is not a valid channel'
               ),
-              d(
+              _(
                 t,
                 p.notUndef,
                 'put(channel, action): argument action is undefined'
               ))
-            : (d(e, p.notUndef, 'put(action): argument action is undefined'),
+            : (_(e, p.notUndef, 'put(action): argument action is undefined'),
               (t = e),
               (e = null)),
-          T('PUT', { channel: e, action: t })
+          R('PUT', { channel: e, action: t })
         )
       }
-      function I(e) {
-        return T('ALL', e)
+      function S(e) {
+        return R('ALL', e)
       }
-      function x(e) {
-        return T('RACE', e)
+      function B(e) {
+        return R('RACE', e)
       }
-      function B(e, t, r) {
-        d(t, p.notUndef, e + ': argument fn is undefined')
+      function x(e, t, r) {
+        _(t, p.notUndef, e + ': argument fn is undefined')
         var o = null
         if (p.array(t)) {
           var n = t
@@ -8884,7 +8161,7 @@ module.exports = (function(e) {
         }
         return (
           o && p.string(t) && p.func(o[t]) && (t = o[t]),
-          d(t, p.func, e + ': argument ' + t + ' is not a function'),
+          _(t, p.func, e + ': argument ' + t + ' is not a function'),
           { context: o, fn: t, args: r }
         )
       }
@@ -8895,12 +8172,12 @@ module.exports = (function(e) {
           o++
         )
           r[o - 1] = arguments[o]
-        return T('CALL', B('call', e, r))
+        return R('CALL', x('call', e, r))
       }
       function W(e, t) {
         var r =
           arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : []
-        return T('CALL', B('apply', { context: e, fn: t }, r))
+        return R('CALL', x('apply', { context: e, fn: t }, r))
       }
       function N(e) {
         for (
@@ -8909,7 +8186,7 @@ module.exports = (function(e) {
           o++
         )
           r[o - 1] = arguments[o]
-        return T('CPS', B('cps', e, r))
+        return R('CPS', x('cps', e, r))
       }
       function q(e) {
         for (
@@ -8918,7 +8195,7 @@ module.exports = (function(e) {
           o++
         )
           r[o - 1] = arguments[o]
-        return T('FORK', B('fork', e, r))
+        return R('FORK', x('fork', e, r))
       }
       function F(e) {
         for (
@@ -8934,44 +8211,44 @@ module.exports = (function(e) {
         for (var e = arguments.length, t = Array(e), r = 0; r < e; r++)
           t[r] = arguments[r]
         if (t.length > 1)
-          return I(
+          return S(
             t.map(function(e) {
               return z(e)
             })
           )
         var o = t[0]
         return (
-          d(o, p.notUndef, 'join(task): argument task is undefined'),
-          d(
+          _(o, p.notUndef, 'join(task): argument task is undefined'),
+          _(
             o,
             p.task,
-            'join(task): argument ' + o + ' is not a valid Task object ' + R
+            'join(task): argument ' + o + ' is not a valid Task object ' + A
           ),
-          T('JOIN', o)
+          R('JOIN', o)
         )
       }
-      function V() {
+      function J() {
         for (var e = arguments.length, t = Array(e), r = 0; r < e; r++)
           t[r] = arguments[r]
         if (t.length > 1)
-          return I(
+          return S(
             t.map(function(e) {
-              return V(e)
+              return J(e)
             })
           )
         var o = t[0]
         return (
           1 === t.length &&
-            (d(o, p.notUndef, 'cancel(task): argument task is undefined'),
-            d(
+            (_(o, p.notUndef, 'cancel(task): argument task is undefined'),
+            _(
               o,
               p.task,
-              'cancel(task): argument ' + o + ' is not a valid Task object ' + R
+              'cancel(task): argument ' + o + ' is not a valid Task object ' + A
             )),
-          T('CANCEL', o || u)
+          R('CANCEL', o || u)
         )
       }
-      function J(e) {
+      function V(e) {
         for (
           var t = arguments.length, r = Array(t > 1 ? t - 1 : 0), o = 1;
           o < t;
@@ -8981,68 +8258,68 @@ module.exports = (function(e) {
         return (
           0 === arguments.length
             ? (e = s)
-            : (d(
+            : (_(
                 e,
                 p.notUndef,
                 'select(selector,[...]): argument selector is undefined'
               ),
-              d(
+              _(
                 e,
                 p.func,
                 'select(selector,[...]): argument ' + e + ' is not a function'
               )),
-          T('SELECT', { selector: e, args: r })
+          R('SELECT', { selector: e, args: r })
         )
       }
       function X(e, t) {
         return (
-          d(
+          _(
             e,
             p.notUndef,
             'actionChannel(pattern,...): argument pattern is undefined'
           ),
           arguments.length > 1 &&
-            (d(
+            (_(
               t,
               p.notUndef,
               'actionChannel(pattern, buffer): argument buffer is undefined'
             ),
-            d(
+            _(
               t,
               p.buffer,
               'actionChannel(pattern, buffer): argument ' +
                 t +
                 ' is not a valid buffer'
             )),
-          T('ACTION_CHANNEL', { pattern: e, buffer: t })
+          R('ACTION_CHANNEL', { pattern: e, buffer: t })
         )
       }
-      function Y() {
-        return T('CANCELLED', {})
+      function Z() {
+        return R('CANCELLED', {})
       }
-      function Z(e) {
+      function Y(e) {
         return (
-          d(
+          _(
             e,
             p.channel,
             'flush(channel): argument ' + e + ' is not valid channel'
           ),
-          T('FLUSH', e)
+          R('FLUSH', e)
         )
       }
       function $(e) {
         return (
-          d(
+          _(
             e,
             p.string,
             'getContext(prop): argument ' + e + ' is not a string'
           ),
-          T('GET_CONTEXT', e)
+          R('GET_CONTEXT', e)
         )
       }
       function Q(e) {
         return (
-          d(
+          _(
             e,
             p.object,
             (function(e, t) {
@@ -9054,7 +8331,7 @@ module.exports = (function(e) {
               )
             })(null, e)
           ),
-          T('SET_CONTEXT', e)
+          R('SET_CONTEXT', e)
         )
       }
       function ee(e, t) {
@@ -9064,7 +8341,7 @@ module.exports = (function(e) {
           n++
         )
           o[n - 2] = arguments[n]
-        return q.apply(void 0, [H, e, t].concat(o))
+        return q.apply(void 0, [w, e, t].concat(o))
       }
       function te(e, t) {
         for (
@@ -9073,7 +8350,7 @@ module.exports = (function(e) {
           n++
         )
           o[n - 2] = arguments[n]
-        return q.apply(void 0, [w, e, t].concat(o))
+        return q.apply(void 0, [H, e, t].concat(o))
       }
       function re(e, t, r) {
         for (
@@ -9084,17 +8361,17 @@ module.exports = (function(e) {
           n[a - 3] = arguments[a]
         return q.apply(void 0, [k, e, t, r].concat(n))
       }
-      ;(S.resolve = function() {
-        var e = S.apply(void 0, arguments)
+      ;(I.resolve = function() {
+        var e = I.apply(void 0, arguments)
         return (e.PUT.resolve = !0), e
       }),
-        (S.sync = y(S.resolve, E('put.sync', 'put.resolve')))
+        (I.sync = y(I.resolve, E('put.sync', 'put.resolve')))
       var oe = function(e) {
         return function(t) {
           return t && t[j] && t[e]
         }
       }
-      oe(U),
+      oe(T),
         oe('PUT'),
         oe('ALL'),
         oe('RACE'),
@@ -9110,19 +8387,19 @@ module.exports = (function(e) {
         oe('GET_CONTEXT'),
         oe('SET_CONTEXT')
       r.d(t, 'take', function() {
-        return A
+        return U
       }),
         r.d(t, 'takem', function() {
           return G
         }),
         r.d(t, 'put', function() {
-          return S
-        }),
-        r.d(t, 'all', function() {
           return I
         }),
+        r.d(t, 'all', function() {
+          return S
+        }),
         r.d(t, 'race', function() {
-          return x
+          return B
         }),
         r.d(t, 'call', function() {
           return K
@@ -9143,19 +8420,19 @@ module.exports = (function(e) {
           return z
         }),
         r.d(t, 'cancel', function() {
-          return V
+          return J
         }),
         r.d(t, 'select', function() {
-          return J
+          return V
         }),
         r.d(t, 'actionChannel', function() {
           return X
         }),
         r.d(t, 'cancelled', function() {
-          return Y
+          return Z
         }),
         r.d(t, 'flush', function() {
-          return Z
+          return Y
         }),
         r.d(t, 'getContext', function() {
           return $
@@ -9172,93 +8449,6 @@ module.exports = (function(e) {
         r.d(t, 'throttle', function() {
           return re
         })
-    },
-  on7z:
-    /*!****************************!*\
-  !*** ./src/utils/axios.js ***!
-  \****************************/
-    /*! exports provided: default */
-    /*! ModuleConcatenation bailout: Module uses injected variables (module) */ function(
-      e,
-      t,
-      r
-    ) {
-      'use strict'
-      r.r(t),
-        function(e) {
-          var o,
-            n = r(/*! axios */ 'zr5I'),
-            a = r.n(n),
-            i = r(/*! query-string */ 'Lc87'),
-            c = r.n(i),
-            u = r(/*! ../config */ '20nU')
-          ;(o =
-            'undefined' != typeof reactHotLoaderGlobal
-              ? reactHotLoaderGlobal.enterModule
-              : void 0) && o(e)
-          'undefined' != typeof reactHotLoaderGlobal &&
-            reactHotLoaderGlobal.default.signature
-          var l,
-            s,
-            d = function(e) {
-              var t = {
-                  baseURL: e || u.default.BASE_URL,
-                  paramsSerializer: function(e) {
-                    return c.a.stringify(e)
-                  }
-                },
-                r = a.a.create(t)
-              return (
-                r.interceptors.request.use(
-                  function(e) {
-                    return e
-                  },
-                  function(e) {
-                    return Promise.reject(e)
-                  }
-                ),
-                r.interceptors.response.use(
-                  function(e) {
-                    return e.data.success, !e.data.success && e.data.message, e
-                  },
-                  function(e) {
-                    return Promise.reject(e)
-                  }
-                ),
-                r
-              )
-            },
-            _ = d(u.default.URL)
-          ;(t.default = _),
-            (l =
-              'undefined' != typeof reactHotLoaderGlobal
-                ? reactHotLoaderGlobal.default
-                : void 0) &&
-              (l.register(
-                'Authentication failed!',
-                'AUTH_FAILED',
-                'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\utils\\axios.js'
-              ),
-              l.register(
-                d,
-                'Axios',
-                'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\utils\\axios.js'
-              ),
-              l.register(
-                _,
-                'default',
-                'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\utils\\axios.js'
-              )),
-            (s =
-              'undefined' != typeof reactHotLoaderGlobal
-                ? reactHotLoaderGlobal.leaveModule
-                : void 0) && s(e)
-        }.call(
-          this,
-          r(
-            /*! ./../../node_modules/webpack/buildin/harmony-module.js */ '3UD+'
-          )(e)
-        )
     },
   oncg:
     /*!***********************************!*\
@@ -9291,9 +8481,9 @@ module.exports = (function(e) {
       }
       t.default = function(e, t, r, n) {
         var a = r.publicPath.replace(/\/$/, ''),
-          d = i(e),
-          _ = e.filter(function(e) {
-            return c(d, e)
+          _ = i(e),
+          d = e.filter(function(e) {
+            return c(_, e)
           }),
           f = t.filter(u),
           p = s(r),
@@ -9302,7 +8492,7 @@ module.exports = (function(e) {
               return o.default.createElement(
                 'span',
                 null,
-                _.map(function(e, t) {
+                d.map(function(e, t) {
                   return o.default.createElement('script', {
                     type: 'text/javascript',
                     src: a + '/' + e,
@@ -9327,15 +8517,17 @@ module.exports = (function(e) {
             },
             js: {
               toString: function() {
-                return _.map(function(e) {
-                  return (
-                    "<script type='text/javascript' src='" +
-                    a +
-                    '/' +
-                    e +
-                    "' defer='defer'></script>"
-                  )
-                }).join('\n')
+                return d
+                  .map(function(e) {
+                    return (
+                      "<script type='text/javascript' src='" +
+                      a +
+                      '/' +
+                      e +
+                      "' defer='defer'></script>"
+                    )
+                  })
+                  .join('\n')
               }
             },
             styles: {
@@ -9361,7 +8553,7 @@ module.exports = (function(e) {
                 return '<style>' + l(f, n) + '</style>'
               }
             },
-            scripts: _,
+            scripts: d,
             stylesheets: f,
             publicPath: a,
             outputPath: n,
@@ -9440,7 +8632,7 @@ module.exports = (function(e) {
     /*!********************************************!*\
   !*** ./src/containers/pages/home/index.js ***!
   \********************************************/
-    /*! exports provided: default, sagas, reducer, homeStateKey, fetchUsers, fetchingUsers, fetchUserSuccess, fetchUserError */
+    /*! exports provided: default */
     /*! ModuleConcatenation bailout: Module is referenced from these modules with unsupported syntax: ./src/routes.js (referenced with import(), require.resolve) */ function(
       e,
       t,
@@ -9451,31 +8643,6 @@ module.exports = (function(e) {
       var o = r(/*! ./home */ 'yQkA')
       r.d(t, 'default', function() {
         return o.default
-      })
-      var n = r(/*! ./actions */ 'jLua')
-      r.d(t, 'fetchUsers', function() {
-        return n.fetchUsers
-      }),
-        r.d(t, 'fetchingUsers', function() {
-          return n.fetchingUsers
-        }),
-        r.d(t, 'fetchUserSuccess', function() {
-          return n.fetchUserSuccess
-        }),
-        r.d(t, 'fetchUserError', function() {
-          return n.fetchUserError
-        })
-      var a = r(/*! ./saga */ 'QcoN')
-      r.d(t, 'sagas', function() {
-        return a.default
-      })
-      var i = r(/*! ./reducers */ 'LRLl')
-      r.d(t, 'reducer', function() {
-        return i.default
-      })
-      var c = r(/*! ./constants */ '7QCE')
-      r.d(t, 'homeStateKey', function() {
-        return c.HOME_STATE_KEY
       })
       'undefined' != typeof reactHotLoaderGlobal &&
         reactHotLoaderGlobal.default.signature
@@ -9627,33 +8794,33 @@ module.exports = (function(e) {
         l = void 0 !== r,
         s = { before: ['bootstrap', 'vendor'], after: ['main'] }
       t.default = function(e, t) {
-        return d(e, l, t)
+        return _(e, l, t)
       }
-      var d = function(e, t) {
+      var _ = function(e, t) {
           var r =
               arguments.length > 2 && void 0 !== arguments[2]
                 ? arguments[2]
                 : {},
             o = r.before || s.before,
             n = function(t, r) {
-              return L(t, e, r)
+              return P(t, e, r)
             },
             c = n(o),
             u = r.chunkNames
               ? n(r.chunkNames, !0)
               : f(r.moduleIds || [], e, r.rootDir, t),
             l = r.after || s.after,
-            d = n(l)
+            _ = n(l)
           return (0, a.default)(
-            [].concat(i(c), i(u), i(d)).filter(y),
-            [].concat(i(c), i(d.reverse()), i(u)).filter(y),
+            [].concat(i(c), i(u), i(_)).filter(y),
+            [].concat(i(c), i(_.reverse()), i(u)).filter(y),
             e,
             r.outputPath
           )
         },
-        _ = function(e, t, r) {
+        d = function(e, t, r) {
           var o = r.chunkNames
-              ? L(r.chunkNames, e)
+              ? P(r.chunkNames, e)
               : f(r.moduleIds || [], e, r.rootDir, t),
             n = r.filter
           if (n) {
@@ -9675,7 +8842,7 @@ module.exports = (function(e) {
             )
           var o = r
           return (
-            (c = c || v(t)),
+            (c = c || h(t)),
             g(
               c,
               e.map(function(e) {
@@ -9685,14 +8852,14 @@ module.exports = (function(e) {
           )
         },
         m = function(e, t) {
-          return (u = u || h(t)), g(u, e)
+          return (u = u || v(t)), g(u, e)
         },
         b = function(e) {
           return e.reduce(function(e, t) {
             return (e[t.id] = t.files), e
           }, {})
         },
-        v = function(e) {
+        h = function(e) {
           var t = e.chunks,
             r = e.modules,
             o = b(t)
@@ -9702,8 +8869,8 @@ module.exports = (function(e) {
             return (e[r] = n.filter(y)), e
           }, {})
         },
-        h = function(e) {
-          var t = v(e)
+        v = function(e) {
+          var t = h(e)
           return e.modules.reduce(function(e, r) {
             var o = r.name
             return (e[r.id] = t[o]), e
@@ -9749,7 +8916,7 @@ module.exports = (function(e) {
             }, [])
             .filter(y)
         },
-        L = function(e, t, r) {
+        P = function(e, t, r) {
           var o,
             n,
             a = (n = t.chunks) ? b(n) : {},
@@ -9769,20 +8936,20 @@ module.exports = (function(e) {
               return e
             })
         }
-      ;(t.flushChunks = d),
+      ;(t.flushChunks = _),
         (t.flushFiles = function(e, t) {
-          return _(e, l, t)
+          return d(e, l, t)
         }),
-        (t.flushFilesPure = _),
+        (t.flushFilesPure = d),
         (t.flush = f),
         (t.flushBabel = p),
         (t.flushWebpack = m),
-        (t.createFilesByPath = v),
-        (t.createFilesByModuleId = h),
+        (t.createFilesByPath = h),
+        (t.createFilesByModuleId = v),
         (t.isUnique = y),
         (t.normalizePath = E),
         (t.concatFilesAtKeys = g),
-        (t.filesFromChunks = L)
+        (t.filesFromChunks = P)
     },
   udBv:
     /*!****************************************************!*\
@@ -10046,9 +9213,9 @@ module.exports = (function(e) {
             u = r(/*! react-lazyload */ 'E4SY'),
             l = r.n(u),
             s = r(/*! ./image.scss */ '7mHa'),
-            d = r.n(s)
-          function _() {
-            return (_ =
+            _ = r.n(s)
+          function d() {
+            return (d =
               Object.assign ||
               function(e) {
                 for (var t = 1; t < arguments.length; t++) {
@@ -10066,7 +9233,7 @@ module.exports = (function(e) {
           'undefined' != typeof reactHotLoaderGlobal &&
             reactHotLoaderGlobal.default.signature
           var f = function() {
-              return a.a.createElement('div', { className: d.a.placeholder })
+              return a.a.createElement('div', { className: _.a.placeholder })
             },
             p = function(e) {
               var t = e.src,
@@ -10077,7 +9244,7 @@ module.exports = (function(e) {
               return o
                 ? a.a.createElement(
                     l.a,
-                    _({}, i, { once: !0 }),
+                    d({}, i, { once: !0 }),
                     a.a.createElement('img', { alt: r, className: n, src: t })
                   )
                 : a.a.createElement('img', { src: t, alt: r, className: n })
@@ -10099,8 +9266,8 @@ module.exports = (function(e) {
             })
           var m,
             b,
-            v = p
-          ;(t.default = v),
+            h = p
+          ;(t.default = h),
             (m =
               'undefined' != typeof reactHotLoaderGlobal
                 ? reactHotLoaderGlobal.default
@@ -10116,7 +9283,7 @@ module.exports = (function(e) {
                 'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\components\\common\\image\\image.jsx'
               ),
               m.register(
-                v,
+                h,
                 'default',
                 'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\components\\common\\image\\image.jsx'
               )),
@@ -10180,8 +9347,8 @@ module.exports = (function(e) {
               error: a.a.createElement(l, null),
               timeout: 15e3
             },
-            d = s
-          ;(t.default = d),
+            _ = s
+          ;(t.default = _),
             (i =
               'undefined' != typeof reactHotLoaderGlobal
                 ? reactHotLoaderGlobal.default
@@ -10202,7 +9369,7 @@ module.exports = (function(e) {
                 'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\utils\\universalOptions.js'
               ),
               i.register(
-                d,
+                _,
                 'default',
                 'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\utils\\universalOptions.js'
               )),
@@ -10252,8 +9419,8 @@ module.exports = (function(e) {
                 t
               )
             },
-            d = s
-          ;(t.default = d),
+            _ = s
+          ;(t.default = _),
             (u =
               'undefined' != typeof reactHotLoaderGlobal
                 ? reactHotLoaderGlobal.default
@@ -10264,7 +9431,7 @@ module.exports = (function(e) {
                 'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\components\\heading\\heading.jsx'
               ),
               u.register(
-                d,
+                _,
                 'default',
                 'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\components\\heading\\heading.jsx'
               )),
@@ -10300,14 +9467,14 @@ module.exports = (function(e) {
             u = r.n(c),
             l = r(/*! immutable */ 'nuGg'),
             s = r(/*! ./utils/isServer */ 'DI/g'),
-            d = r(/*! ./rootReducer */ 'Mqhw')
+            _ = r(/*! ./rootReducer */ 'Mqhw')
           ;(o =
             'undefined' != typeof reactHotLoaderGlobal
               ? reactHotLoaderGlobal.enterModule
               : void 0) && o(e)
           'undefined' != typeof reactHotLoaderGlobal &&
             reactHotLoaderGlobal.default.signature
-          var _,
+          var d,
             f,
             p = function(e) {
               var t = e
@@ -10319,21 +9486,21 @@ module.exports = (function(e) {
                   void 0,
                   [n.applyMiddleware.apply(void 0, o)].concat([])
                 ),
-                _ = s.default ? {} : window.__PRELOADED_STATE__
-              delete _.router, s.default || delete window.__PRELOADED_STATE__
+                d = s.default ? {} : window.__PRELOADED_STATE__
+              delete d.router, s.default || delete window.__PRELOADED_STATE__
               var f = Object(n.createStore)(
-                Object(d.default)(t),
-                Object(l.fromJS)(_),
+                Object(_.default)(t),
+                Object(l.fromJS)(d),
                 c
               )
               return (f.runSaga = r.run), { store: f, history: t }
             }
           ;(t.default = p),
-            (_ =
+            (d =
               'undefined' != typeof reactHotLoaderGlobal
                 ? reactHotLoaderGlobal.default
                 : void 0) &&
-              _.register(
+              d.register(
                 p,
                 'default',
                 'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\store.js'
@@ -10370,23 +9537,23 @@ module.exports = (function(e) {
             u = r(/*! ./github */ 'Uhar'),
             l = r(/*! ./linkedin */ 'c2y3'),
             s = r(/*! ./instagram */ 'KOMj'),
-            d = r(/*! ./twitter */ '1peN'),
-            _ = r(/*! ./codepen */ 'X+Qw'),
+            _ = r(/*! ./twitter */ '1peN'),
+            d = r(/*! ./codepen */ 'X+Qw'),
             f = r(/*! ./logo */ 'oHfu'),
             p = r(/*! ./external */ 'Sy6E'),
             m = r(/*! ./folder */ 'CcSZ'),
             b = r(/*! ./location */ 'pwlD'),
-            v = r(/*! ./fork */ 'MLcn')
+            h = r(/*! ./fork */ 'MLcn')
           ;(o =
             'undefined' != typeof reactHotLoaderGlobal
               ? reactHotLoaderGlobal.enterModule
               : void 0) && o(e)
           'undefined' != typeof reactHotLoaderGlobal &&
             reactHotLoaderGlobal.default.signature
-          var h = function(e) {
+          var v = function(e) {
             switch (e.name) {
               case 'fork':
-                return a.a.createElement(v.default, null)
+                return a.a.createElement(h.default, null)
               case 'logo':
                 return a.a.createElement(f.default, null)
               case 'github':
@@ -10396,9 +9563,9 @@ module.exports = (function(e) {
               case 'instagram':
                 return a.a.createElement(s.default, null)
               case 'twitter':
-                return a.a.createElement(d.default, null)
-              case 'codepen':
                 return a.a.createElement(_.default, null)
+              case 'codepen':
+                return a.a.createElement(d.default, null)
               case 'external':
                 return a.a.createElement(p.default, null)
               case 'location':
@@ -10409,17 +9576,17 @@ module.exports = (function(e) {
                 return a.a.createElement(u.default, null)
             }
           }
-          h.propTypes = { name: c.a.string.isRequired }
+          v.propTypes = { name: c.a.string.isRequired }
           var y,
             E,
-            g = h
+            g = v
           ;(t.default = g),
             (y =
               'undefined' != typeof reactHotLoaderGlobal
                 ? reactHotLoaderGlobal.default
                 : void 0) &&
               (y.register(
-                h,
+                v,
                 'Icon',
                 'C:\\Users\\ba21415\\Desktop\\universal-demo\\src\\components\\common\\icon\\icon.jsx'
               ),
@@ -11174,17 +10341,6 @@ module.exports = (function(e) {
     ) {
       e.exports = require('react-helmet')
     },
-  zr5I:
-    /*!************************!*\
-  !*** external "axios" ***!
-  \************************/
-    /*! no static exports found */
-    /*! ModuleConcatenation bailout: Module is not an ECMAScript module */ function(
-      e,
-      t
-    ) {
-      e.exports = require('axios')
-    },
   zzXv:
     /*!**************************!*\
   !*** ./server/loader.js ***!
@@ -11199,7 +10355,7 @@ module.exports = (function(e) {
       r.r(t),
         function(e) {
           r.d(t, 'injectHTML', function() {
-            return T
+            return R
           })
           var o,
             n = r(/*! fs */ 'mw/K'),
@@ -11209,27 +10365,27 @@ module.exports = (function(e) {
             u = r(/*! react */ 'cDcd'),
             l = r.n(u),
             s = r(/*! react-router-dom */ 'oncg'),
-            d = r(/*! react-dom/server */ '7ITC'),
-            _ = r(/*! react-helmet */ 'zIXN'),
-            f = r.n(_),
+            _ = r(/*! react-dom/server */ '7ITC'),
+            d = r(/*! react-helmet */ 'zIXN'),
+            f = r.n(d),
             p = r(/*! react-redux */ 'h74D'),
             m = r(/*! history/createMemoryHistory */ 'hf+U'),
             b = r.n(m),
-            v = r(/*! react-router */ 'MGin'),
-            h = r(/*! react-universal-component/server */ 'nnsb'),
+            h = r(/*! react-router */ 'MGin'),
+            v = r(/*! react-universal-component/server */ 'nnsb'),
             y = r(/*! webpack-flush-chunks */ 'roNf'),
             E = r.n(y),
             g = r(/*! redux-saga */ '1fKG'),
             O = r(/*! ../src/store */ 'wNa6'),
-            L = r(/*! ../src/containers/app */ 'VLWd'),
-            P = r(/*! ../src/routes */ 'VmXB'),
+            P = r(/*! ../src/containers/app */ 'VLWd'),
+            L = r(/*! ../src/routes */ 'VmXB'),
             D = r(/*! ../src/rootSaga */ 'e4a2'),
             M = r(/*! ../src/containers/common/helmet/actions */ 'MZxF'),
             C = r(/*! ../src/utils/meta */ 'AsVr')
-          function H(e) {
+          function w(e) {
             return (
               (function(e) {
-                if (Array.isArray(e)) return w(e)
+                if (Array.isArray(e)) return H(e)
               })(e) ||
               (function(e) {
                 if (
@@ -11240,7 +10396,7 @@ module.exports = (function(e) {
               })(e) ||
               (function(e, t) {
                 if (!e) return
-                if ('string' == typeof e) return w(e, t)
+                if ('string' == typeof e) return H(e, t)
                 var r = Object.prototype.toString.call(e).slice(8, -1)
                 'Object' === r && e.constructor && (r = e.constructor.name)
                 if ('Map' === r || 'Set' === r) return Array.from(r)
@@ -11248,7 +10404,7 @@ module.exports = (function(e) {
                   'Arguments' === r ||
                   /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)
                 )
-                  return w(e, t)
+                  return H(e, t)
               })(e) ||
               (function() {
                 throw new TypeError(
@@ -11257,7 +10413,7 @@ module.exports = (function(e) {
               })()
             )
           }
-          function w(e, t) {
+          function H(e, t) {
             ;(null == t || t > e.length) && (t = e.length)
             for (var r = 0, o = new Array(t); r < t; r++) o[r] = e[r]
             return o
@@ -11270,7 +10426,7 @@ module.exports = (function(e) {
             reactHotLoaderGlobal.default.signature
           var k,
             j,
-            U = function(e) {
+            T = function(e) {
               var t =
                   arguments.length > 1 && void 0 !== arguments[1]
                     ? arguments[1]
@@ -11289,9 +10445,9 @@ module.exports = (function(e) {
               }
               return r
             },
-            R =
+            A =
               "\n<script>\nwindow.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config', 'UA-155127051-1');\n</script> <script async src=\"https://www.googletagmanager.com/gtag/js?id=UA-155127051-1\"></script>\n",
-            T = function(e, t) {
+            R = function(e, t) {
               var r = t.html,
                 o = t.title,
                 n = t.meta,
@@ -11301,9 +10457,9 @@ module.exports = (function(e) {
                 u = t.state,
                 l = t.style,
                 s = void 0 === l ? '' : l,
-                d = t.cssHash,
-                _ = e
-              return (_ = (_ = (_ = (_ = (_ = _.replace(
+                _ = t.cssHash,
+                d = e
+              return (d = (d = (d = (d = (d = d.replace(
                 '<html>',
                 '<html '.concat(r, '>')
               )).replace(/<title>.*?<\/title>/g, o)).replace(
@@ -11313,11 +10469,11 @@ module.exports = (function(e) {
                 '<div id="root"></div>',
                 '<div id="root">'
                   .concat(a, '</div>')
-                  .concat(d, '<script>window.__PRELOADED_STATE__ = ')
+                  .concat(_, '<script>window.__PRELOADED_STATE__ = ')
                   .concat(u, '</script>')
-              )).replace('</body>', ''.concat(R).concat(c, '</body>')))
+              )).replace('</body>', ''.concat(A).concat(c, '</body>')))
             },
-            A = function(e) {
+            U = function(e) {
               var t = e.clientStats
               return function(e, r) {
                 a.a.readFile(
@@ -11336,17 +10492,17 @@ module.exports = (function(e) {
                       i = Object(O.default)(a).store,
                       c = i.runSaga(D.default),
                       u = {},
-                      _ = []
-                    P.RouteList.some(function(t) {
+                      d = []
+                    L.RouteList.some(function(t) {
                       var r = Object(s.matchPath)(e.path, t)
                       return (
                         r &&
                           t.fetchRouteData &&
-                          (_ = [].concat(H(_), H(t.fetchRouteData))),
+                          (d = [].concat(w(d), w(t.fetchRouteData))),
                         r
                       )
                     }),
-                      _.map(function(e) {
+                      d.map(function(e) {
                         return i.dispatch(e()), e
                       }),
                       C.default[e.url] &&
@@ -11354,14 +10510,14 @@ module.exports = (function(e) {
                       i.dispatch(g.END)
                     try {
                       c.done.then(function() {
-                        var o = Object(d.renderToString)(
+                        var o = Object(_.renderToString)(
                           l.a.createElement(
                             p.Provider,
                             { store: i },
                             l.a.createElement(
-                              v.StaticRouter,
+                              h.StaticRouter,
                               { location: e.url, context: u },
-                              l.a.createElement(L.default, null)
+                              l.a.createElement(P.default, null)
                             )
                           )
                         )
@@ -11369,25 +10525,25 @@ module.exports = (function(e) {
                           r.writeHead(302, { Location: u.url }), r.end()
                         else {
                           var a = f.a.renderStatic(),
-                            c = Object(h.flushChunkNames)(),
+                            c = Object(v.flushChunkNames)(),
                             s = E()(t, { chunkNames: c }),
-                            _ = s.js,
+                            d = s.js,
                             m = s.stylesheets,
                             b = s.cssHash,
                             y = ''
                           m.map(function(e) {
-                            return (y += U(e)), e
+                            return (y += T(e)), e
                           })
                           var g = JSON.stringify(i.getState()).replace(
                               /</g,
                               '\\u003c'
                             ),
-                            O = T(n, {
+                            O = R(n, {
                               html: a.htmlAttributes.toString(),
                               title: a.title.toString(),
                               meta: a.meta.toString(),
                               body: o,
-                              scripts: _,
+                              scripts: d,
                               style: y,
                               state: g,
                               cssHash: b
@@ -11402,7 +10558,7 @@ module.exports = (function(e) {
                 )
               }
             }
-          ;(t.default = A),
+          ;(t.default = U),
             (k =
               'undefined' != typeof reactHotLoaderGlobal
                 ? reactHotLoaderGlobal.default
@@ -11413,22 +10569,22 @@ module.exports = (function(e) {
                 'C:\\Users\\ba21415\\Desktop\\universal-demo\\server\\loader.js'
               ),
               k.register(
-                U,
+                T,
                 'inlineResource',
                 'C:\\Users\\ba21415\\Desktop\\universal-demo\\server\\loader.js'
               ),
               k.register(
-                R,
+                A,
                 'googleAnalyticsScripts',
                 'C:\\Users\\ba21415\\Desktop\\universal-demo\\server\\loader.js'
               ),
               k.register(
-                T,
+                R,
                 'injectHTML',
                 'C:\\Users\\ba21415\\Desktop\\universal-demo\\server\\loader.js'
               ),
               k.register(
-                A,
+                U,
                 'default',
                 'C:\\Users\\ba21415\\Desktop\\universal-demo\\server\\loader.js'
               )),
