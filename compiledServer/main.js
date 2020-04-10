@@ -3049,16 +3049,16 @@ module.exports = (function(e) {
                         { className: u.a.link },
                         n.map(function(e) {
                           var t = e.url,
-                            r = e.iconName
+                            o = e.iconName
                           return a.a.createElement(
                             'a',
                             {
                               href: t,
                               target: '_blank',
                               rel: 'nofollow noopener noreferrer',
-                              'aria-label': ''
+                              'aria-label': r
                             },
-                            a.a.createElement(s.default, { name: r })
+                            a.a.createElement(s.default, { name: o })
                           )
                         })
                       )
@@ -3069,7 +3069,7 @@ module.exports = (function(e) {
                         href: l,
                         target: '_blank',
                         rel: 'nofollow noopener noreferrer',
-                        'aria-label': '',
+                        'aria-label': r,
                         className: u.a.imgContainer
                       },
                       a.a.createElement(h.default, {
@@ -7499,19 +7499,19 @@ module.exports = (function(e) {
                                 'div',
                                 { className: l.a.projectLinks },
                                 n.map(function(e) {
-                                  var t = e.iconName,
-                                    r = e.url
+                                  var r = e.iconName,
+                                    o = e.url
                                   return a.a.createElement(
                                     'a',
                                     {
                                       target: '_blank',
                                       rel: 'nofollow noopener noreferrer',
-                                      'aria-label': '',
-                                      key: t,
-                                      href: r,
+                                      'aria-label': t,
+                                      key: r,
+                                      href: o,
                                       className: l.a.iconLink
                                     },
-                                    a.a.createElement(s.default, { name: t })
+                                    a.a.createElement(s.default, { name: r })
                                   )
                                 })
                               )
@@ -10186,6 +10186,7 @@ module.exports = (function(e) {
                               className:
                                 _header_scss__WEBPACK_IMPORTED_MODULE_3___default
                                   .a.hamburger,
+                              'aria-label': 'Menu',
                               onClick: function() {
                                 return e.toggleMenu()
                               }
