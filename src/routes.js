@@ -9,6 +9,26 @@ const Home = universal(
   universalOptions
 );
 
+const About = universal(
+  import(/* webpackChunkName: "about-page" */ './components/about/about'),
+  universalOptions
+);
+
+const Experience = universal(
+  import(/* webpackChunkName: "experience-page" */ './components/jobs/jobs'),
+  universalOptions
+);
+
+const Work = universal(
+  import(/* webpackChunkName: "work-page" */ './components/work/work'),
+  universalOptions
+);
+
+const Contact = universal(
+  import(/* webpackChunkName: "contact-page" */ './components/contact/contact'),
+  universalOptions
+);
+
 const Notfound = universal(
   import(
     /* webpackChunkName: "notfound-page" */ './components/pages/notfound/notfound'
@@ -20,6 +40,26 @@ export const RouteList = [
   {
     path: '/',
     component: Home,
+    exact: true,
+  },
+  {
+    path: '/about',
+    component: About,
+    exact: true,
+  },
+  {
+    path: '/experience',
+    component: Experience,
+    exact: true,
+  },
+  {
+    path: '/work',
+    component: Work,
+    exact: true,
+  },
+  {
+    path: '/contact',
+    component: Contact,
     exact: true,
   },
   {

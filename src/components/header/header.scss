@@ -50,6 +50,13 @@
   }
 }
 
+.hiddenLinks {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
 .links {
   display: flex;
   align-items: center;

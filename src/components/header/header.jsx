@@ -20,18 +20,22 @@ const Navigation = [
   {
     name: 'About',
     to: '/#about',
+    page: '/about',
   },
   {
     name: 'Experience',
     to: '/#experience',
+    page: '/experience',
   },
   {
     name: 'Work',
     to: '/#work',
+    page: '/work',
   },
   {
     name: 'Contact',
     to: '/#contact',
+    page: '/contact',
   },
 ];
 
@@ -144,6 +148,13 @@ class Header extends React.PureComponent {
               {Navigation.map(({ name, to }) => (
                 <li key={name}>
                   <Link to={to}>{name}</Link>
+                </li>
+              ))}
+            </ol>
+            <ol className={styles.hiddenLinks}>
+              {Navigation.map(({ name, page }) => (
+                <li key={name}>
+                  <Link to={page}>{name}</Link>
                 </li>
               ))}
             </ol>
