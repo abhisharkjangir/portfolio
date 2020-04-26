@@ -22,6 +22,31 @@ export default {
     title: 'Abhishar Jangir',
     description,
   },
+  '/home': {
+    id: 'home',
+    title: 'Home | Abhishar Jangir',
+    description,
+  },
+  '/about': {
+    id: 'about',
+    title: 'About | Abhishar Jangir',
+    description,
+  },
+  '/work': {
+    id: 'work',
+    title: 'Work | Abhishar Jangir',
+    description,
+  },
+  '/contact': {
+    id: 'contact',
+    title: 'Contact | Abhishar Jangir',
+    description,
+  },
+  '/experience': {
+    id: 'experience',
+    title: 'Experience | Abhishar Jangir',
+    description,
+  },
   '/404': {
     pathname: '/404',
     id: 'notfound',
