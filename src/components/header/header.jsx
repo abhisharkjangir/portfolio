@@ -9,7 +9,7 @@ import Icon from '../common/icon/icon';
 import throttle from '../../utils/throttle';
 import isServer from '../../utils/isServer';
 import resume from '../../assets/resume.pdf';
-import Menu from '../menu/menu';
+import MenuAsync from '../menu/menu.async';
 
 const hamBefore = `top 0.1s ease-in 0.25s, opacity 0.1s ease-in`;
 const hamBeforeActive = `top 0.1s ease-out, opacity 0.1s ease-out 0.12s`;
@@ -163,11 +163,13 @@ class Header extends React.PureComponent {
             </div>
           </div>
         </nav>
-        <Menu
-          isMenuOpen={isMenuOpen}
-          toggleMenu={this.toggleMenu}
-          links={Navigation}
-        />
+        {isMenuOpen && (
+          <MenuAsync
+            isMenuOpen={isMenuOpen}
+            toggleMenu={this.toggleMenu}
+            links={Navigation}
+          />
+        )}
       </div>
     );
   }
