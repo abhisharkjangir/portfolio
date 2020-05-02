@@ -232,44 +232,31 @@ ul, ol {
   margin: 0;
   list-style: none;
 }
-.gatsby-image-outer-wrapper {
-  height: 100%;
+
+// Scrollbar ==================
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
 }
-.fadeup-enter {
-  opacity: 0.01;
-  transform: translateY(20px);
-  transition: opacity 300ms var(--easing), transform 300ms var(--easing);
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--bg-c-navy);
 }
-.fadeup-enter-active {
-  opacity: 1;
-  transform: translateY(0px);
-  transition: opacity 300ms var(--easing), transform 300ms var(--easing);
+
+/* Handle */
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb:hover {
+  background: var(--bg-c-green);
+  border-radius: 5px;
 }
-.fadedown-enter {
-  opacity: 0.01;
-  transform: translateY(-20px);
-  transition: opacity 300ms var(--easing), transform 300ms var(--easing);
-}
-.fadedown-enter-active {
-  opacity: 1;
-  transform: translateY(0px);
-  transition: opacity 300ms var(--easing), transform 300ms var(--easing);
-}
-.fade-enter {
-  opacity: 0.01;
-  transition: opacity 1000ms var(--easing);
-}
-.fade-enter-active {
-  opacity: 1;
-  transition: opacity 1000ms var(--easing);
-}
+
 .overline {
   color: var(--c-green);
   font-family: var(--font-SFMono);
   font-size: var(--fs-md);
   font-weight: normal;
 }
-
 
 .main {
   width: 100%;
@@ -280,9 +267,6 @@ ul, ol {
 
 // Media Queries =====================
 @import "./breakpoints";
-@media (max-width: $bigDesktop) {
-
-}
 
 @media (max-width: $desktop) {
   .main {
@@ -296,10 +280,6 @@ ul, ol {
   }
 }
 
-@media (max-width: $thone) {
-
-}
-
 @media (max-width: $phablet) {
   body {
     font-size: var(--fs-lg);
@@ -307,12 +287,4 @@ ul, ol {
   .main {
     padding: 0px 25px;
   }
-}
-
-@media (max-width: $phone) {
-
-}
-
-@media (max-width:$tiny) {
-
 }
