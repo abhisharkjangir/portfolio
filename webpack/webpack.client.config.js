@@ -152,7 +152,7 @@ const getModule = isProduction => {
             loader: 'css-loader',
             options: {
               modules: true,
-              localIdentName: '[name]-[local]-[hash:base64:5]',
+              localIdentName: '[name]-[hash:base64:5]', // To include filename -[name]-[local]-[hash:base64:5]
             },
           },
           {

@@ -158,7 +158,7 @@ const getModule = isProduction => {
             options: {
               modules: true,
               exportOnlyLocals: true,
-              localIdentName: '[name]-[local]-[hash:base64:5]',
+              localIdentName: '[name]-[hash:base64:5]', // To include filename -[name]-[local]-[hash:base64:5]
             },
           },
           {
