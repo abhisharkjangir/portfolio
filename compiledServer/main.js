@@ -3,7 +3,7 @@ module.exports=function(e){var t={};function r(o){if(t[o])return t[o].exports;va
   !*** ./src/styles/main.scss ***!
   \******************************/
 /*! no static exports found */
-/*! ModuleConcatenation bailout: Module is not an ECMAScript module */function(e,t){e.exports={hidden:"main-hidden-206W-",root:"main-root-afOfS",overline:"main-overline-BnxcE",main:"main-main-24UiG"}},"+pfj":
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */function(e,t){e.exports={hidden:"main-206W-",root:"main-afOfS",overline:"main-BnxcE",main:"main-24UiG"}},"+pfj":
 /*!*************************************************!*\
   !*** ./src/containers/common/helmet/reducer.js ***!
   \*************************************************/
@@ -13,12 +13,12 @@ module.exports=function(e){var t={};function r(o){if(t[o])return t[o].exports;va
   !*** ./src/components/section/section.scss ***!
   \*********************************************/
 /*! no static exports found */
-/*! ModuleConcatenation bailout: Module is not an ECMAScript module */function(e,t){e.exports={section:"section-section-1piec",relative:"section-relative-DaTii"}},"/daj":
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */function(e,t){e.exports={section:"section-1piec",relative:"section-DaTii"}},"/daj":
 /*!***************************************!*\
   !*** ./src/components/hero/hero.scss ***!
   \***************************************/
 /*! no static exports found */
-/*! ModuleConcatenation bailout: Module is not an ECMAScript module */function(e,t){e.exports={getintouch:"hero-getintouch-2o5Eq",description:"hero-description-3-s69",overline:"hero-overline-JUqi7",title:"hero-title-18qNz",subtitle:"hero-subtitle-2pYVm",section:"hero-section-2YV69"}},"/xKn":
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */function(e,t){e.exports={getintouch:"hero-2o5Eq",description:"hero-3-s69",overline:"hero-JUqi7",title:"hero-18qNz",subtitle:"hero-2pYVm",section:"hero-2YV69"}},"/xKn":
 /*!********************************************!*\
   !*** ./src/components/menu/menu.async.jsx ***!
   \********************************************/
@@ -73,7 +73,7 @@ module.exports=function(e){var t={};function r(o){if(t[o])return t[o].exports;va
   !*** ./src/components/about/about.scss ***!
   \*****************************************/
 /*! no static exports found */
-/*! ModuleConcatenation bailout: Module is not an ECMAScript module */function(e,t){e.exports={aboutFlexContainer:"about-aboutFlexContainer-3G1og",aboutContent:"about-aboutContent-BEhNe",aboutPic:"about-aboutPic-i7mSP"}},"2ZrK":
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */function(e,t){e.exports={aboutFlexContainer:"about-3G1og",aboutContent:"about-BEhNe",aboutPic:"about-i7mSP"}},"2ZrK":
 /*!******************************************************************************!*\
   !*** ./node_modules/connected-react-router/lib/structure/immutable/index.js ***!
   \******************************************************************************/
@@ -133,7 +133,7 @@ module.exports=function(e){var t={};function r(o){if(t[o])return t[o].exports;va
   !*** ./src/components/common/image/image.scss ***!
   \************************************************/
 /*! no static exports found */
-/*! ModuleConcatenation bailout: Module is not an ECMAScript module */function(e,t){e.exports={placeholder:"image-placeholder-6hSbg"}},"8Vax":
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */function(e,t){e.exports={placeholder:"image-6hSbg"}},"8Vax":
 /*!*********************************!*\
   !*** external "babel-polyfill" ***!
   \*********************************/
@@ -182,7 +182,7 @@ module.exports=function(e){var t={};function r(o){if(t[o])return t[o].exports;va
   !*** ./src/components/social/social.scss ***!
   \*******************************************/
 /*! no static exports found */
-/*! ModuleConcatenation bailout: Module is not an ECMAScript module */function(e,t){e.exports={social:"social-social-1kb9T"}},"DI/g":
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */function(e,t){e.exports={social:"social-1kb9T"}},"DI/g":
 /*!*******************************!*\
   !*** ./src/utils/isServer.js ***!
   \*******************************/
@@ -192,7 +192,7 @@ module.exports=function(e){var t={};function r(o){if(t[o])return t[o].exports;va
   !*** ./src/components/email/email.scss ***!
   \*****************************************/
 /*! no static exports found */
-/*! ModuleConcatenation bailout: Module is not an ECMAScript module */function(e,t){e.exports={email:"email-email-aM3y6"}},DowU:
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */function(e,t){e.exports={email:"email-aM3y6"}},DowU:
 /*!************************************!*\
   !*** ./src/containers/app/app.jsx ***!
   \************************************/
@@ -202,7 +202,7 @@ module.exports=function(e){var t={};function r(o){if(t[o])return t[o].exports;va
   !*** ./src/components/pages/home/home.scss ***!
   \*********************************************/
 /*! no static exports found */
-/*! ModuleConcatenation bailout: Module is not an ECMAScript module */function(e,t){e.exports={home:"home-home-3HeFN"}},E4SY:
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */function(e,t){e.exports={home:"home-3HeFN"}},E4SY:
 /*!*********************************!*\
   !*** external "react-lazyload" ***!
   \*********************************/
@@ -227,7 +227,7 @@ module.exports=function(e){var t={};function r(o){if(t[o])return t[o].exports;va
   !*** ./src/components/header/header.scss ***!
   \*******************************************/
 /*! no static exports found */
-/*! ModuleConcatenation bailout: Module is not an ECMAScript module */function(e,t){e.exports={logo:"header-logo-3xoBS",hamburger:"header-hamburger-K0Oyu",header:"header-header-3v_A5",links:"header-links-2grfC",resumeButton:"header-resumeButton-3xWeO",hiddenLinks:"header-hiddenLinks-Dzkhi",hamburgerBox:"header-hamburgerBox-Bbc6-",hamburgerInner:"header-hamburgerInner-1oAxX"}},HvDf:
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */function(e,t){e.exports={logo:"header-3xoBS",hamburger:"header-K0Oyu",header:"header-3v_A5",links:"header-2grfC",resumeButton:"header-3xWeO",hiddenLinks:"header-Dzkhi",hamburgerBox:"header-Bbc6-",hamburgerInner:"header-1oAxX"}},HvDf:
 /*!***************************************************!*\
   !*** ./src/containers/common/helmet/selectors.js ***!
   \***************************************************/
@@ -282,7 +282,7 @@ module.exports=function(e){var t={};function r(o){if(t[o])return t[o].exports;va
   !*** ./src/components/menu/menu.scss ***!
   \***************************************/
 /*! no static exports found */
-/*! ModuleConcatenation bailout: Module is not an ECMAScript module */function(e,t){e.exports={aside:"menu-aside-27VM7",nav:"menu-nav-zWWEF",resumeLink:"menu-resumeLink-2EkQp",menu:"menu-menu-20yH9"}},MLcn:
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */function(e,t){e.exports={aside:"menu-27VM7",nav:"menu-zWWEF",resumeLink:"menu-2EkQp",menu:"menu-20yH9"}},MLcn:
 /*!*********************************************!*\
   !*** ./src/components/common/icon/fork.jsx ***!
   \*********************************************/
@@ -406,7 +406,7 @@ module.exports=function(e){var t={};function r(o){if(t[o])return t[o].exports;va
   !*** ./src/components/pages/notfound/notfound.scss ***!
   \*****************************************************/
 /*! no static exports found */
-/*! ModuleConcatenation bailout: Module is not an ECMAScript module */function(e,t){e.exports={notfound:"notfound-notfound-1iIks",bigButton:"notfound-bigButton-15nvv",title:"notfound-title-ZtJbw"}},"aP/T":
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */function(e,t){e.exports={notfound:"notfound-1iIks",bigButton:"notfound-15nvv",title:"notfound-ZtJbw"}},"aP/T":
 /*!**************************************************************************!*\
   !*** ./node_modules/connected-react-router/lib/structure/plain/getIn.js ***!
   \**************************************************************************/
@@ -436,7 +436,7 @@ module.exports=function(e){var t={};function r(o){if(t[o])return t[o].exports;va
   !*** ./src/components/projects/projects.scss ***!
   \***********************************************/
 /*! no static exports found */
-/*! ModuleConcatenation bailout: Module is not an ECMAScript module */function(e,t){e.exports={Project:"projects-Project-3H6SM",projectInner:"projects-projectInner-3JfIm",projectHeader:"projects-projectHeader-2XxZE",moreButton:"projects-moreButton-2Beau",view:"projects-view-otPHa",projectDescription:"projects-projectDescription-MUuJJ",center:"projects-center-1dzI2",grid:"projects-grid-37jzh",projects:"projects-projects-DXHVW",project:"projects-project-14HRv",folder:"projects-folder-35lvq",projectLinks:"projects-projectLinks-229pB",iconLink:"projects-iconLink-1zZiv",projectName:"projects-projectName-2ZL7A",techList:"projects-techList-n-6yh"}},e4a2:
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */function(e,t){e.exports={Project:"projects-3H6SM",projectInner:"projects-3JfIm",projectHeader:"projects-2XxZE",moreButton:"projects-2Beau",view:"projects-otPHa",projectDescription:"projects-MUuJJ",center:"projects-1dzI2",grid:"projects-37jzh",projects:"projects-DXHVW",project:"projects-14HRv",folder:"projects-35lvq",projectLinks:"projects-229pB",iconLink:"projects-1zZiv",projectName:"projects-2ZL7A",techList:"projects-n-6yh"}},e4a2:
 /*!*************************!*\
   !*** ./src/rootSaga.js ***!
   \*************************/
@@ -451,7 +451,7 @@ module.exports=function(e){var t={};function r(o){if(t[o])return t[o].exports;va
   !*** ./src/components/work/work.scss ***!
   \***************************************/
 /*! no static exports found */
-/*! ModuleConcatenation bailout: Module is not an ECMAScript module */function(e,t){e.exports={work:"work-work-3ibdt",description:"work-description-2sfNE",imgContainer:"work-imgContainer-2DSYL",content:"work-content-tIXXF",list:"work-list-bUqFT",link:"work-link-2ikrq",image:"work-image-1QacF"}},h74D:
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */function(e,t){e.exports={work:"work-3ibdt",description:"work-2sfNE",imgContainer:"work-2DSYL",content:"work-tIXXF",list:"work-bUqFT",link:"work-2ikrq",image:"work-1QacF"}},h74D:
 /*!******************************!*\
   !*** external "react-redux" ***!
   \******************************/
@@ -466,12 +466,12 @@ module.exports=function(e){var t={};function r(o){if(t[o])return t[o].exports;va
   !*** ./src/components/contact/contact.scss ***!
   \*********************************************/
 /*! no static exports found */
-/*! ModuleConcatenation bailout: Module is not an ECMAScript module */function(e,t){e.exports={contact:"contact-contact-2-wh2",bigButton:"contact-bigButton-27ZNw",title:"contact-title-2wzp-"}},ky7P:
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */function(e,t){e.exports={contact:"contact-2-wh2",bigButton:"contact-27ZNw",title:"contact-2wzp-"}},ky7P:
 /*!*******************************************!*\
   !*** ./src/components/footer/footer.scss ***!
   \*******************************************/
 /*! no static exports found */
-/*! ModuleConcatenation bailout: Module is not an ECMAScript module */function(e,t){e.exports={footer:"footer-footer-1NlzQ",socialContainer:"footer-socialContainer-2l52b",list:"footer-list-1NsNu",content:"footer-content-38teJ"}},lY48:
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */function(e,t){e.exports={footer:"footer-1NlzQ",socialContainer:"footer-2l52b",list:"footer-1NsNu",content:"footer-38teJ"}},lY48:
 /*!***********************************************************************!*\
   !*** ./node_modules/babel-plugin-universal-import/universalImport.js ***!
   \***********************************************************************/
@@ -481,7 +481,7 @@ module.exports=function(e){var t={};function r(o){if(t[o])return t[o].exports;va
   !*** ./src/components/jobs/jobs.scss ***!
   \***************************************/
 /*! no static exports found */
-/*! ModuleConcatenation bailout: Module is not an ECMAScript module */function(e,t){e.exports={jobTabs:"jobs-jobTabs-h5ttz",tablist:"jobs-tablist-vr3cb",jobTabContent:"jobs-jobTabContent-2eCmU",buttonActive:"jobs-buttonActive-1rLqq",jobContent:"jobs-jobContent-1adri",jobTitle:"jobs-jobTitle-J5M4s",jobCompany:"jobs-jobCompany-2__-j",jobDetail:"jobs-jobDetail-TvNn8",jobDescription:"jobs-jobDescription-3gsqZ"}},"mw/K":
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */function(e,t){e.exports={jobTabs:"jobs-h5ttz",tablist:"jobs-vr3cb",jobTabContent:"jobs-2eCmU",buttonActive:"jobs-1rLqq",jobContent:"jobs-1adri",jobTitle:"jobs-J5M4s",jobCompany:"jobs-2__-j",jobDetail:"jobs-TvNn8",jobDescription:"jobs-3gsqZ"}},"mw/K":
 /*!*********************!*\
   !*** external "fs" ***!
   \*********************/
@@ -565,7 +565,7 @@ module.exports=function(e){var t={};function r(o){if(t[o])return t[o].exports;va
   !*** ./src/components/heading/heading.scss ***!
   \*********************************************/
 /*! no static exports found */
-/*! ModuleConcatenation bailout: Module is not an ECMAScript module */function(e,t){e.exports={heading:"heading-heading-3xWQN",headingCenter:"heading-headingCenter-1Dm1Y"}},vrxZ:
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */function(e,t){e.exports={heading:"heading-3xWQN",headingCenter:"heading-1Dm1Y"}},vrxZ:
 /*!***************************************!*\
   !*** ./src/utils/universalOptions.js ***!
   \***************************************/
