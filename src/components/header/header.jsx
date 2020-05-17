@@ -5,7 +5,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { Link } from 'react-router-dom';
 import styles from './header.scss';
-import Icon from '../common/icon/icon';
+import Icon from '../common/icon/icon.async';
 import throttle from '../../utils/throttle';
 import isServer from '../../utils/isServer';
 import resume from '../../assets/resume.pdf';
