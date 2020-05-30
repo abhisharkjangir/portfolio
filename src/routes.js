@@ -3,6 +3,7 @@ import React from 'react';
 import universal from 'react-universal-component';
 import { Route, Switch } from 'react-router-dom';
 import universalOptions from './utils/universalOptions';
+import { fetchPeople, fetchNow } from './containers/pages/iss/actions';
 
 const Home = universal(
   import(/* webpackChunkName: "home-page" */ './containers/pages/home/home'),
@@ -26,6 +27,11 @@ const Work = universal(
 
 const Contact = universal(
   import(/* webpackChunkName: "contact-page" */ './components/contact/contact'),
+  universalOptions
+);
+
+const ISS = universal(
+  import(/* webpackChunkName: "iss-page" */ './containers/pages/iss/iss'),
   universalOptions
 );
 
@@ -61,6 +67,12 @@ export const RouteList = [
     path: '/contact',
     component: Contact,
     exact: true,
+  },
+  {
+    path: '/app/internationl-space-station',
+    component: ISS,
+    exact: true,
+    fetchRouteData: [fetchPeople, fetchNow],
   },
   {
     component: Notfound,

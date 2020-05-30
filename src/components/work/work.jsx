@@ -8,10 +8,26 @@ import Icon from '../common/icon/icon';
 import meuzic from '../../assets/images/meuzic.png';
 import wordbook from '../../assets/images/wordbook.png';
 import nasa from '../../assets/images/nasa.png';
+import iss from '../../assets/images/iss.png';
 import Image from '../common/image/image';
 
 const Work = () => {
   const projects = [
+    {
+      title: 'international Space Station',
+      description:
+        'A simple map visual app for current location of space station, astros in space and pass thorough information.',
+      tech: ['Open Notify APIs', 'Leaflet JS'],
+      image: iss,
+      type: 'Latest Project',
+      url: '/app/international-space-station',
+      links: [
+        {
+          url: '/app/international-space-station',
+          iconName: 'external',
+        },
+      ],
+    },
     {
       title: 'Meuzic',
       description:
@@ -74,16 +90,17 @@ const Work = () => {
               ))}
             </ul>
             <div className={styles.link}>
-              {links.map(({ url, iconName }) => (
-                <a
-                  href={url}
-                  target="_blank"
-                  rel="nofollow noopener noreferrer"
-                  aria-label={title}
-                >
-                  <Icon name={iconName} />
-                </a>
-              ))}
+              {links &&
+                links.map(({ url, iconName }) => (
+                  <a
+                    href={url}
+                    target="_blank"
+                    rel="nofollow noopener noreferrer"
+                    aria-label={title}
+                  >
+                    <Icon name={iconName} />
+                  </a>
+                ))}
             </div>
           </div>
           <a
