@@ -14,7 +14,7 @@ import Image from '../common/image/image';
 const Work = () => {
   const projects = [
     {
-      title: 'international Space Station',
+      title: 'International Space Station',
       description:
         'A simple map visual app for current location of space station, astros in space and pass thorough information.',
       tech: ['Open Notify APIs', 'Leaflet JS'],

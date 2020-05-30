@@ -69,7 +69,7 @@ export const RouteList = [
     exact: true,
   },
   {
-    path: '/app/internationl-space-station',
+    path: '/app/international-space-station',
     component: ISS,
     exact: true,
     fetchRouteData: [fetchPeople, fetchNow],
