@@ -4,7 +4,7 @@ const description =
 
 export default {
   default: {
-    title: 'Software Engineer',
+    title: 'Abhishar Jangir',
     description,
     image,
     twitter: '@abhishar_jangir',
@@ -19,33 +19,40 @@ export default {
   },
   '/': {
     id: 'home',
-    title: 'Abhishar Jangir',
+    title: 'Software Engineer',
     description,
   },
   '/home': {
     id: 'home',
-    title: 'Home | Abhishar Jangir',
+    title: 'Home',
     description,
   },
   '/about': {
     id: 'about',
-    title: 'About | Abhishar Jangir',
+    title: 'About',
     description,
   },
   '/work': {
     id: 'work',
-    title: 'Work | Abhishar Jangir',
+    title: 'Work',
     description,
   },
   '/contact': {
     id: 'contact',
-    title: 'Contact | Abhishar Jangir',
+    title: 'Contact',
     description,
   },
   '/experience': {
     id: 'experience',
-    title: 'Experience | Abhishar Jangir',
+    title: 'Experience',
     description,
+  },
+  '/app/international-space-station': {
+    pathname: '/404',
+    id: 'iss',
+    title: 'International Space Station',
+    description:
+      'Live location of international space station, astros in space station and pass through infomation based on location.',
   },
   '/404': {
     pathname: '/404',

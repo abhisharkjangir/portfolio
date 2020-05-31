@@ -10,6 +10,7 @@ import styles from './iss.scss';
 import { BASEMAPS } from '../../../containers/pages/iss/constants';
 import ss from './ss.svg';
 import userloc from './userloc.svg';
+
 const ssIcon = L.icon({
   iconUrl: ss,
   iconSize: [30, 30],
@@ -168,7 +169,7 @@ class ISS extends React.PureComponent {
             (usercurrentPosition && usercurrentPosition[0]) || 0,
             (usercurrentPosition && usercurrentPosition[1]) || 0,
           ]}
-          style={{ height: 'calc(100vh)' }}
+          style={{ height: '100vh' }}
           zoom={2}
         >
           {this.renderTileLayers()}

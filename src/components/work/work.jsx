@@ -27,6 +27,7 @@ const Work = () => {
           iconName: 'external',
         },
       ],
+      rel: '',
     },
     {
       title: 'Meuzic',
@@ -42,6 +43,7 @@ const Work = () => {
       image: meuzic,
       type: 'Featured Project',
       url: 'https://meuzic.com',
+      rel: 'nofollow noopener noreferrer',
     },
     {
       title: 'Nasa Explorer',
@@ -57,6 +59,7 @@ const Work = () => {
       image: nasa,
       type: 'Featured Project',
       url: 'https://nasa.abhisharjangir.com',
+      rel: 'nofollow noopener noreferrer',
     },
     {
       title: 'Word Book',
@@ -72,48 +75,46 @@ const Work = () => {
       image: wordbook,
       type: 'Featured Project',
       url: 'https://wordbook.abhisharjangir.com',
+      rel: 'nofollow noopener noreferrer',
     },
   ];
 
   return (
     <Section id="work">
       <Heading text="Some Things I've Built" />
-      {projects.map(({ type, title, description, links, image, tech, url }) => (
-        <div className={styles.work}>
-          <div className={styles.content}>
-            <h4>{type}</h4>
-            <h5>{title}</h5>
-            <div className={styles.description}>{description}</div>
-            <ul className={styles.list}>
-              {tech.map(t => (
-                <li key={t}>{t}</li>
-              ))}
-            </ul>
-            <div className={styles.link}>
-              {links &&
-                links.map(({ url, iconName }) => (
-                  <a
-                    href={url}
-                    target="_blank"
-                    rel="nofollow noopener noreferrer"
-                    aria-label={title}
-                  >
-                    <Icon name={iconName} />
-                  </a>
+      {projects.map(
+        ({ type, title, description, links, image, tech, url, rel }) => (
+          <div className={styles.work}>
+            <div className={styles.content}>
+              <h4>{type}</h4>
+              <h5>{title}</h5>
+              <div className={styles.description}>{description}</div>
+              <ul className={styles.list}>
+                {tech.map(t => (
+                  <li key={t}>{t}</li>
                 ))}
+              </ul>
+              <div className={styles.link}>
+                {links &&
+                  links.map(({ url, iconName }) => (
+                    <a href={url} target="_blank" rel={rel} aria-label={title}>
+                      <Icon name={iconName} />
+                    </a>
+                  ))}
+              </div>
             </div>
+            <a
+              href={url}
+              target="_blank"
+              rel={rel}
+              aria-label={title}
+              className={styles.imgContainer}
+            >
+              <Image src={image} className={styles.image} alt="" />
+            </a>
           </div>
-          <a
-            href={url}
-            target="_blank"
-            rel="nofollow noopener noreferrer"
-            aria-label={title}
-            className={styles.imgContainer}
-          >
-            <Image src={image} className={styles.image} alt="" />
-          </a>
-        </div>
-      ))}
+        )
+      )}
     </Section>
   );
 };
