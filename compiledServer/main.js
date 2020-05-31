@@ -528,7 +528,7 @@ module.exports=function(e){var t={};function n(r){if(t[r])return t[r].exports;va
 /*! ModuleConcatenation bailout: Cannot concat with ./src/components/common/icon/icon.jsx (<- Module is referenced from these modules with unsupported syntax: ./src/components/common/icon/icon.async.jsx (referenced with import(), require.resolve)) */
 /*! ModuleConcatenation bailout: Cannot concat with ./src/components/contact/contact.jsx (<- Module is referenced from these modules with unsupported syntax: ./src/routes.js (referenced with import(), require.resolve)) */
 /*! ModuleConcatenation bailout: Cannot concat with ./src/components/jobs/jobs.jsx (<- Module is referenced from these modules with unsupported syntax: ./src/routes.js (referenced with import(), require.resolve)) */
-/*! ModuleConcatenation bailout: Cannot concat with ./src/components/section/section.jsx because of ./src/components/about/about.jsx */
+/*! ModuleConcatenation bailout: Cannot concat with ./src/components/section/section.jsx because of ./src/components/work/work.jsx */
 /*! ModuleConcatenation bailout: Cannot concat with ./src/components/work/work.jsx (<- Module is referenced from these modules with unsupported syntax: ./src/routes.js (referenced with import(), require.resolve)) */
 /*! ModuleConcatenation bailout: Cannot concat with ./src/components/hero/hero.scss (<- Module is not an ECMAScript module) */
 /*! ModuleConcatenation bailout: Cannot concat with ./src/components/pages/home/home.scss (<- Module is not an ECMAScript module) */
