@@ -1,6 +1,6 @@
 const API_ENDPOINTS = {
-  now: '/api/open-notify/iss-now',
-  people: '/api/open-notify/astros',
+  now: 'https://api.abhisharjangir.com/open-notify/iss-now',
+  people: 'https://api.abhisharjangir.com/open-notify/astros',
   pass: 'https://api.abhisharjangir.com/open-notify/pass', // Specify lat,long in Query Params
 };
 
