@@ -171,6 +171,7 @@ class ISS extends React.PureComponent {
           ]}
           style={{ height: '100vh' }}
           zoom={2}
+          minZoom={2}
         >
           {this.renderTileLayers()}
           {this.renderMarker()}

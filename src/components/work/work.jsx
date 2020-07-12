@@ -1,6 +1,7 @@
 /* eslint-disable no-shadow */
 /* eslint-disable react/no-danger */
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Section from '../section/section';
 import styles from './work.scss';
 import Heading from '../heading/heading';
@@ -20,6 +21,7 @@ const Work = () => {
       tech: ['Open Notify APIs', 'Leaflet JS'],
       image: iss,
       type: 'Latest Project',
+      internal: true,
       url: '/app/international-space-station',
       links: [
         {
@@ -83,7 +85,17 @@ const Work = () => {
     <Section id="work">
       <Heading text="Some Things I've Built" />
       {projects.map(
-        ({ type, title, description, links, image, tech, url, rel }) => (
+        ({
+          type,
+          title,
+          description,
+          links,
+          image,
+          tech,
+          url,
+          rel,
+          internal,
+        }) => (
           <div className={styles.work}>
             <div className={styles.content}>
               <h4>{type}</h4>
@@ -97,21 +109,40 @@ const Work = () => {
               <div className={styles.link}>
                 {links &&
                   links.map(({ url, iconName }) => (
-                    <a href={url} target="_blank" rel={rel} aria-label={title}>
-                      <Icon name={iconName} />
-                    </a>
+                    <React.Fragment>
+                      {!internal ? (
+                        <a
+                          href={url}
+                          target="_blank"
+                          rel={rel}
+                          aria-label={title}
+                        >
+                          <Icon name={iconName} />
+                        </a>
+                      ) : (
+                        <Link to={url}>
+                          <Icon name={iconName} />
+                        </Link>
+                      )}
+                    </React.Fragment>
                   ))}
               </div>
             </div>
-            <a
-              href={url}
-              target="_blank"
-              rel={rel}
-              aria-label={title}
-              className={styles.imgContainer}
-            >
-              <Image src={image} className={styles.image} alt="" />
-            </a>
+            {!internal ? (
+              <a
+                href={url}
+                target="_blank"
+                rel={rel}
+                aria-label={title}
+                className={styles.imgContainer}
+              >
+                <Image src={image} className={styles.image} alt={title} />
+              </a>
+            ) : (
+              <Link to={url} className={styles.imgContainer}>
+                <Image src={image} className={styles.image} alt={title} />
+              </Link>
+            )}
           </div>
         )
       )}
