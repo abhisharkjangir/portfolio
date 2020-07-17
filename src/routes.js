@@ -35,6 +35,11 @@ const ISS = universal(
   universalOptions
 );
 
+const Json = universal(
+  import(/* webpackChunkName: "json-page" */ './components/pages/json/Json'),
+  universalOptions
+);
+
 const Notfound = universal(
   import(
     /* webpackChunkName: "notfound-page" */ './components/pages/notfound/notfound'
@@ -73,6 +78,11 @@ export const RouteList = [
     component: ISS,
     exact: true,
     fetchRouteData: [fetchPeople, fetchNow],
+  },
+  {
+    path: '/app/json-key-path-finder',
+    component: Json,
+    exact: true,
   },
   {
     component: Notfound,

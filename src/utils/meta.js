@@ -48,11 +48,22 @@ export default {
     description,
   },
   '/app/international-space-station': {
-    pathname: '/404',
+    pathname: '/app/international-space-station',
     id: 'iss',
     title: 'International Space Station',
+    keywords:
+      'International Space Station, iss, iss current location, iss location, iss astros, location of iss, space station, space station location',
     description:
       'Live location of international space station, astros in space station and pass through infomation based on location.',
+  },
+  '/app/json-key-path-finder': {
+    pathname: '/app/json-key-path-finder',
+    id: 'json',
+    title: 'JSON Key path finder Utility',
+    keywords:
+      'json key path finder, json key path, json key path search, get path of key in json, get path in json',
+    description:
+      'An utility to search path of specified key in the given JSON.',
   },
   '/404': {
     pathname: '/404',
