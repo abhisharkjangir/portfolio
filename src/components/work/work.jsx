@@ -10,6 +10,7 @@ import meuzic from '../../assets/images/meuzic.png';
 import wordbook from '../../assets/images/wordbook.png';
 import nasa from '../../assets/images/nasa.png';
 import iss from '../../assets/images/iss.png';
+import json from '../../assets/images/json.png';
 import Image from '../common/image/image';
 
 const Work = () => {
@@ -26,6 +27,24 @@ const Work = () => {
       links: [
         {
           url: '/app/international-space-station',
+          iconName: 'external',
+        },
+      ],
+      rel: '',
+    },
+
+    {
+      title: 'JSON Key Path Finder',
+      description:
+        'An utility to search path of specified key in the given JSON.',
+      tech: [],
+      image: json,
+      type: 'Latest Project',
+      internal: true,
+      url: '/app/json-key-path-finder',
+      links: [
+        {
+          url: '/app/json-key-path-finder',
           iconName: 'external',
         },
       ],
