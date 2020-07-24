@@ -147,7 +147,7 @@ const getModule = isProduction => {
       {
         test: /\.styl|.(scss|sass)$/,
         use: [
-          ExtractCssChunks.loader,
+          isProduction ? ExtractCssChunks.loader : 'style-loader',
           {
             loader: 'css-loader',
             options: {

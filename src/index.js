@@ -25,10 +25,8 @@ const Application = () => (
 const rootNode = document.getElementById('root');
 
 if (process.env.NODE_ENV === 'development' && module.hot) {
-  module.hot.accept('./containers/app', () => {
-    // eslint-disable-next-line global-require
-    const webApp = require('./containers/app').default; // eslint-ignore-line
-    render(webApp);
+  module.hot.accept('./containers/app/index', () => {
+    render(<Application />, rootNode);
   });
 }
 
