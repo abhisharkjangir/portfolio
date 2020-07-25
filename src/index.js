@@ -6,7 +6,6 @@ import { ConnectedRouter } from 'connected-react-router/immutable';
 import App from './containers/app';
 import createStore from './store';
 import rootSaga from './rootSaga';
-import './styles/common.css';
 
 // Create a store and get back itself and its history object
 const { store, history } = createStore();

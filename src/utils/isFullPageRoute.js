@@ -1,10 +1,5 @@
-const routeListforFullPage = [
-  '/app/international-space-station',
-  '/app/json-key-path-finder',
-];
-
 const isFullPageRoute = location => {
-  return routeListforFullPage.includes(location.pathname);
+  return location && location.pathname.startsWith('/app/');
 };
 
 export default isFullPageRoute;
