@@ -169,6 +169,15 @@ const getModule = isProduction => {
           },
         ],
       },
+      {
+        test: /\.css$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'css-loader',
+          },
+        ],
+      },
     ],
   };
 };

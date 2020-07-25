@@ -1,0 +1,183 @@
+:root {
+
+
+  --font-Calibre:   Calibre, "San Francisco", "SF Pro Text", -apple-system, system-ui, BlinkMacSystemFont, Roboto, "Helvetica Neue", "Segoe UI", Arial, sans-serif;
+  --font-SFMono:    "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
+
+
+  --bg-c-navy:          #0a192f;
+  --bg-c-dark-navy:     #020c1b;
+  --bg-c-light-navy:    #172a45;
+  --bg-c-dark-grey:     #333f58;
+  --bg-c-slate:         #8892b0;
+  --bg-c-light-slate:   #a8b2d1;
+  --bg-c-lightest-slate:#ccd6f6;
+  --bg-c-white:         #e6f1ff;
+  --bg-c-green:         #64ffda;
+  --bg-c-blue:          #71AFFF;
+  --bg-c-trans-green:   rgba(100, 255, 218, 0.07);
+  --bg-c-medium-grey:   #2d3952;
+  --bg-c-shadow-navy:   rgba(2, 12, 27, 0.7);
+  --bg-c-grey:         #d6d6d6;
+
+
+  --c-navy:             #0a192f;
+  --c-dark-navy:        #020c1b;
+  --c-light-navy:       #172a45;
+  --c-dark-grey:        #333f58;
+  --c-slate:            #8892b0;
+  --c-light-slate:      #a8b2d1;
+  --c-lightest-slate:   #ccd6f6;
+  --c-white:            #e6f1ff;
+  --c-green:            #64ffda;
+  --c-blue:             #71AFFF;
+  --c-trans-green:      rgba(100, 255, 218, 0.07);
+  --c-medium-grey:      #2d3952;
+  --c-shadow-navy:      rgba(2, 12, 27, 0.7);
+  --c-pure-white:       #ffffff;
+  --c-grey:             #d6d6d6;
+
+  --transition:   all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  --easing :      cubic-bezier(0.645, 0.045, 0.355, 1);
+
+
+  --fs-xs:    12px;
+  --fs-smish: 13px;
+  --fs-sm:    14px;
+  --fs-md:    16px;
+  --fs-lg:    18px;
+  --fs-xl:    20px;
+  --fs-xxl:   22px;
+  --fs-h3:    32px;
+
+  --highlight: rgba(41, 61, 90, 0.99);
+
+}
+
+@font-face {
+  font-family: 'Calibre';
+  src: url('../assets/fonts/Calibre/Calibre-LightItalic.woff2') format('woff2'),
+  url('../assets/fonts/Calibre/Calibre-LightItalic.woff') format('woff'),
+  url('../assets/fonts/Calibre/Calibre-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Calibre';
+  src: url('../assets/fonts/Calibre/Calibre-LightItalic.woff2') format('woff2'),
+  url('../assets/fonts/Calibre/Calibre-LightItalic.woff') format('woff'),
+  url('../assets/fonts/Calibre/Calibre-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Calibre';
+  src: url('../assets/fonts/Calibre/Calibre-Regular.woff2') format('woff2'),
+  url('../assets/fonts/Calibre/Calibre-Regular.woff') format('woff'),
+  url('../assets/fonts/Calibre/Calibre-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Calibre';
+  src: url('../assets/fonts/Calibre/Calibre-RegularItalic.woff2') format('woff2'),
+  url('../assets/fonts/Calibre/Calibre-RegularItalic.woff') format('woff'),
+  url('../assets/fonts/Calibre/Calibre-RegularItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Calibre';
+  src: url('../assets/fonts/Calibre/Calibre-Medium.woff2') format('woff2'),
+  url('../assets/fonts/Calibre/Calibre-Medium.woff') format('woff'),
+  url('../assets/fonts/Calibre/Calibre-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Calibre';
+  src: url('../assets/fonts/Calibre/Calibre-MediumItalic.woff2') format('woff2'),
+  url('../assets/fonts/Calibre/Calibre-MediumItalic.woff') format('woff'),
+  url('../assets/fonts/Calibre/Calibre-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Calibre';
+  src: url('../assets/fonts/Calibre/Calibre-Semibold.woff2') format('woff2'),
+  url('../assets/fonts/Calibre/Calibre-Semibold.woff') format('woff'),
+  url('../assets/fonts/Calibre/Calibre-Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Calibre';
+  src: url('../assets/fonts/Calibre/Calibre-SemiboldItalic.woff2') format('woff2'),
+  url('../assets/fonts/Calibre/Calibre-SemiboldItalic.woff') format('woff'),
+  url('../assets/fonts/Calibre/Calibre-SemiboldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SF Mono';
+  src: url('../assets/fonts/SFMono/SFMono-Regular.woff2') format('woff2'),
+  url('../assets/fonts/SFMono/SFMono-Regular.woff') format('woff'),
+  url('../assets/fonts/SFMono/SFMono-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SF Mono';
+  src: url('../assets/fonts/SFMono/SFMono-RegularItalic.woff2') format('woff2'),
+  url('../assets/fonts/SFMono/SFMono-RegularItalic.woff') format('woff'),
+  url('../assets/fonts/SFMono/SFMono-RegularItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SF Mono';
+  src: url('../assets/fonts/SFMono/SFMono-Medium.woff2') format('woff2'),
+  url('../assets/fonts/SFMono/SFMono-Medium.woff') format('woff'),
+  url('../assets/fonts/SFMono/SFMono-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SF Mono';
+  src: url('../assets/fonts/SFMono/SFMono-MediumItalic.woff2') format('woff2'),
+  url('../assets/fonts/SFMono/SFMono-MediumItalic.woff') format('woff'),
+  url('../assets/fonts/SFMono/SFMono-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SF Mono';
+  src: url('../assets/fonts/SFMono/SFMono-Semibold.woff2') format('woff2'),
+  url('../assets/fonts/SFMono/SFMono-Semibold.woff') format('woff'),
+  url('../assets/fonts/SFMono/SFMono-Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SF Mono';
+  src: url('../assets/fonts/SFMono/SFMono-SemiboldItalic.woff2') format('woff2'),
+  url('../assets/fonts/SFMono/SFMono-SemiboldItalic.woff') format('woff'),
+  url('../assets/fonts/SFMono/SFMono-SemiboldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}

@@ -163,6 +163,16 @@ const getModule = isProduction => {
           },
         ],
       },
+      {
+        test: /\.css$/,
+        exclude: /node_modules/,
+        use: [
+          isProduction ? ExtractCssChunks.loader : 'style-loader',
+          {
+            loader: 'css-loader',
+          },
+        ],
+      },
     ],
   };
 };
