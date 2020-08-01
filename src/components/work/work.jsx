@@ -57,13 +57,13 @@ const Work = () => {
       tech: ['ReactJS', 'Redux', 'SASS', 'NodeJS'],
       links: [
         {
-          url: 'https://meuzic.com',
+          url: 'https://meuzic.abhisharjangir.com',
           iconName: 'external',
         },
       ],
       image: meuzic,
       type: 'Featured Project',
-      url: 'https://meuzic.com',
+      url: 'https://meuzic.abhisharjangir.com',
       rel: 'nofollow noopener noreferrer',
     },
     {
