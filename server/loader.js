@@ -172,7 +172,7 @@ export default ({ clientStats }) => (req, res) => {
               meta: helmet.meta.toString(),
               body: markup,
               scripts: js,
-              style: inlineCss,
+              style: inlineCss.replace(/\n|\t/g, ''), // Minify ,
               state,
               preloadScripts,
             });
