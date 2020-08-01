@@ -145,13 +145,11 @@ export default ({ clientStats }) => (req, res) => {
             });
 
             // Find Js chunks for preloading... ex: main, vendors
-            let normalscripts = '';
+
             let preloadScripts = '';
             scripts.map(script => {
               if (script.includes('main') || script.includes('vendor')) {
                 preloadScripts += `<link rel="preload" href="${script}" as="script">`;
-              } else {
-                normalscripts += `<script type='text/javascript' defer src="${script}"></script>`;
               }
               return script;
             });
@@ -173,7 +171,7 @@ export default ({ clientStats }) => (req, res) => {
               title: helmet.title.toString(),
               meta: helmet.meta.toString(),
               body: markup,
-              scripts: normalscripts !== '' ? normalscripts : js,
+              scripts: js,
               style: inlineCss,
               state,
               preloadScripts,
