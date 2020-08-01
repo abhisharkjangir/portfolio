@@ -59,17 +59,20 @@ gtag('config', 'UA-155127051-1');
   */
 export const injectHTML = (
   htmlData,
-  { html, title, meta, body, scripts = '', state, style = '', cssHash }
+  { html, title, meta, body, scripts = '', state, style = '', preloadScripts }
 ) => {
   let data = htmlData;
   data = data.replace('<html>', `<html ${html}>`);
   data = data.replace(/<title>.*?<\/title>/g, title);
-  data = data.replace('</head>', `${meta}<style>${style}</style></head>`);
+  data = data.replace(
+    '</head>',
+    `${meta}${preloadScripts}<style>${style}</style></head>`
+  );
   data = data.replace(
     '<div id="root"></div>',
-    `<div id="root">${body}</div>${cssHash}<script>window.__PRELOADED_STATE__ = ${state}</script>`
+    `<div id="root">${body}</div><script>window.__PRELOADED_STATE__ = ${state}</script>`
   );
-  data = data.replace('</body>', `${googleAnalyticsScripts}${scripts}</body>`);
+  data = data.replace('</body>', `${scripts}${googleAnalyticsScripts}</body>`);
 
   return data;
 };
@@ -137,8 +140,20 @@ export default ({ clientStats }) => (req, res) => {
             // We need to tell Helmet to compute the right meta tags, title, and such
             const helmet = Helmet.renderStatic();
             const chunkNames = flushChunkNames();
-            const { js, stylesheets, cssHash } = flushChunks(clientStats, {
+            const { js, stylesheets, scripts } = flushChunks(clientStats, {
               chunkNames,
+            });
+
+            // Find Js chunks for preloading... ex: main, vendors
+            let normalscripts = '';
+            let preloadScripts = '';
+            scripts.map(script => {
+              if (script.includes('main') || script.includes('vendor')) {
+                preloadScripts += `<link rel="preload" href="${script}" as="script">`;
+              } else {
+                normalscripts += `<script type='text/javascript' defer src="${script}"></script>`;
+              }
+              return script;
             });
 
             let inlineCss = '';
@@ -158,10 +173,10 @@ export default ({ clientStats }) => (req, res) => {
               title: helmet.title.toString(),
               meta: helmet.meta.toString(),
               body: markup,
-              scripts: js,
+              scripts: normalscripts !== '' ? normalscripts : js,
               style: inlineCss,
               state,
-              cssHash,
+              preloadScripts,
             });
 
             res.send(html);
