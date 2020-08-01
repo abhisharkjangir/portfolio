@@ -130,6 +130,15 @@ const getModule = isProduction => {
           // In production, they would get copied to the `build` folder.
           // This loader doesn't use a "test" so it will catch all modules
           // that fall through the other loaders.
+
+          // Loading PDF file
+          {
+            test: [/\.pdf$/],
+            loader: require.resolve('file-loader'),
+            options: {
+              name: 'static/assets/[name].[ext]',
+            },
+          },
           {
             loader: require.resolve('file-loader'),
             // Exclude `js` files to keep "css" loader working as it injects

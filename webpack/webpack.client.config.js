@@ -126,6 +126,13 @@ const getModule = isProduction => {
           // This loader doesn't use a "test" so it will catch all modules
           // that fall through the other loaders.
           {
+            test: [/\.pdf$/],
+            loader: require.resolve('file-loader'),
+            options: {
+              name: 'static/assets/[name].[ext]',
+            },
+          },
+          {
             loader: require.resolve('file-loader'),
             // Exclude `js` files to keep "css" loader working as it injects
             // its runtime that would otherwise be processed through "file" loader.
