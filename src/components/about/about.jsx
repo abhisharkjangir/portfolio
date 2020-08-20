@@ -10,7 +10,7 @@ const About = () => {
   const Skills = [
     'JavaScript (ES6+)',
     'ReactJS',
-    'Node.js',
+    'NodeJS',
     'Webpack',
     'Redux',
     'HTML5 & CSS3',

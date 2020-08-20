@@ -6,7 +6,6 @@ import Section from '../section/section';
 import styles from './work.scss';
 import Heading from '../heading/heading';
 import Icon from '../common/icon/icon';
-import meuzic from '../../assets/images/meuzic.png';
 import wordbook from '../../assets/images/wordbook.png';
 import nasa from '../../assets/images/nasa.png';
 import iss from '../../assets/images/iss.png';
@@ -49,22 +48,6 @@ const Work = () => {
         },
       ],
       rel: '',
-    },
-    {
-      title: 'Meuzic',
-      description:
-        'Meuzic is a proressive web app for downloading music in MP3 and MP4 format with create playlist feature without signin/signup.',
-      tech: ['ReactJS', 'Redux', 'SASS', 'NodeJS'],
-      links: [
-        {
-          url: 'https://meuzic.abhisharjangir.com',
-          iconName: 'external',
-        },
-      ],
-      image: meuzic,
-      type: 'Featured Project',
-      url: 'https://meuzic.abhisharjangir.com',
-      rel: 'nofollow noopener noreferrer',
     },
     {
       title: 'Nasa Explorer',

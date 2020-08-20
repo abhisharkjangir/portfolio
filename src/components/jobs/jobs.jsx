@@ -11,7 +11,7 @@ const TabList = [
     url: 'https://www.bedbathandbeyond.com',
     range: 'Oct 2k18 - Present',
     html:
-      '<ul><li>Create several reusable components in ReactJS.</li><li>Build new features and enhancemnents.</li><li>Communicate with onshore business and design team to collect the requirements.</li><li>Code debugging and bug fixing.</li></ul>',
+      '<ul><li>Worked on different features, stories & enhancements in Bed Bath Beyond, Buy Buy Baby e-Commerce websites.</li><li>Worked on performance improvement of websites.</li><li>Created several A/B tests on websites.</li><li>Built several reusable components in React.</li><li>Communicate and collaborate with multi-disciplinary teams of engineers, designers, and stakeholders on a daily basis.</li></ul>',
   },
   {
     company: 'Chimes Group',
@@ -19,7 +19,7 @@ const TabList = [
     url: 'https://chimesgroup.in/',
     range: 'Aug 2k16 - Oct 2k18',
     html:
-      '<ul><li>Worked on different client&lsquo;s websites from scratch i.e Dauble, Dauble Business.</li><li>Build admin dashboard for MuscleMatics.</li><li>Build hybrid andriod & IOS mobile app for dynamic forms to collect client specific information in react native.</li><li>Build react app to draw the construction pipelines on ESRI & LeafLet map.</li></ul>',
+      '<ul><li>Built PipeTrak IT hybrid IOS & Android mobile app in React Native with Dynamic screens from scratch.</li><li>Worked on development of MuscleMatics Dashboard in AngularJS from scratch.</li><li>Built injectable PipeTrak GIS component based app in React, Redux, Leaflet, ESRI Maps.</li><li>Built GEO Transformer in NodeJS to transform different types of JSON in GeoJSON.</li><li>Worked on Dauble & Dauble Business websites in AngularJS from scratch.</li></ul>',
   },
   {
     company: 'Medzin',
@@ -27,7 +27,7 @@ const TabList = [
     url: 'https://medzin.in/',
     range: 'Nov 2k15 - Jul 2k16',
     html:
-      '<ul><li>Build company&lsquo;s websites ie Medzin, Medzin Business </li><li>Build dashboard to manage Pharmacies, Doctors, Labs, Medicines & orders.</li></ul>',
+      '<ul><li>Worked on development of Company’s website & dashboard in AngularJS v1.</li><li>Designed Mobile App Screens for Medzin mobile app.</li></ul>',
   },
 ];
 

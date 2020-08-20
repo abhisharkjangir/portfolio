@@ -5,7 +5,6 @@ import Hero from '../../hero/hero';
 import About from '../../about/about';
 import Jobs from '../../jobs/jobs';
 import Work from '../../work/work';
-import Projects from '../../projects/projects';
 import Contact from '../../contact/contact';
 
 const Home = () => {
@@ -29,7 +28,6 @@ const Home = () => {
       <About />
       <Jobs />
       <Work />
-      <Projects />
       <Contact />
     </div>
   );
