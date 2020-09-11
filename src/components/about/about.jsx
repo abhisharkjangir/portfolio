@@ -10,10 +10,13 @@ const About = () => {
   const Skills = [
     'JavaScript (ES6+)',
     'ReactJS',
-    'NodeJS',
-    'Webpack',
+    'React Native',
     'Redux',
+    'Webpack',
+    'Angular v1',
     'HTML5 & CSS3',
+    'NodeJS',
+    'MongoDB',
   ];
   return (
     <Section id="about" style={{ position: 'relative' }}>
