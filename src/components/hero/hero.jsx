@@ -7,7 +7,9 @@ const Hero = () => {
     <Section id="hero" className={styles.section}>
       <h1 className={styles.overline}>Hi, my name is</h1>
       <h2 className={styles.title}>Abhishar Jangir.</h2>
-      <h3 className={styles.subtitle}>I write code for websites.</h3>
+      <h3 className={styles.subtitle}>
+        I write code for websites & mobile apps.
+      </h3>
       <div className={styles.description}>
         <p>
           I&lsquo;m a front-end developer based in Gurugram, India, specializing
