@@ -9,8 +9,7 @@ import Icon from '../common/icon/icon.async';
 import throttle from '../../utils/throttle';
 import isServer from '../../utils/isServer';
 import MenuAsync from '../menu/menu.async';
-const resume =
-  'https://docs.google.com/document/d/1AkNNwCAyYXPUOAGgPU048_GVOYcmkjDxrNReiu5DOK0/edit?usp=sharing';
+import { resume } from '../../constants';
 
 const hamBefore = `top 0.1s ease-in 0.25s, opacity 0.1s ease-in`;
 const hamBeforeActive = `top 0.1s ease-out, opacity 0.1s ease-out 0.12s`;
@@ -159,9 +158,9 @@ class Header extends React.PureComponent {
                 </li>
               ))}
             </ol>
-            <div className={styles.resumeButton}>
-              <a href={resume}>Resume</a>
-            </div>
+            <a href={resume}>
+              <div className={styles.resumeButton}>Resume</div>
+            </a>
           </div>
         </nav>
         {isMenuOpen && (

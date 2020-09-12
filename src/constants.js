@@ -16,3 +16,6 @@ export const socialList = [
     url: 'https://twitter.com/Abhishar_jangir',
   },
 ];
+
+export const resume =
+  'https://docs.google.com/document/d/1AkNNwCAyYXPUOAGgPU048_GVOYcmkjDxrNReiu5DOK0/edit?usp=sharing';

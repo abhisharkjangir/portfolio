@@ -4,7 +4,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import styles from './menu.scss';
-import resume from '../../assets/resume.pdf';
+import { resume } from '../../constants';
 
 const getMenuStyle = isMenuOpen => {
   return {
