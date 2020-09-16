@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './footer.scss';
 import Icon from '../common/icon/icon';
 import { socialList } from '../../constants';
@@ -26,7 +27,7 @@ class Footer extends React.PureComponent {
           </ul>
         </div>
         <div className={styles.content}>
-          <a href="/" aria-label="github">
+          <Link to="/" aria-label="home">
             <span>Made with &#10084; by Abhishar Jangir</span>
             <div>
               <span>
@@ -34,7 +35,7 @@ class Footer extends React.PureComponent {
                 {date.getFullYear()}
               </span>
             </div>
-          </a>
+          </Link>
         </div>
       </div>
     );
