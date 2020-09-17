@@ -2,6 +2,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const ExtractCssChunks = require('extract-css-chunks-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const WriteFilePlugin = require('write-file-webpack-plugin'); // here so you can see what chunks are built
@@ -193,6 +194,7 @@ const getResolve = () => {
 const getPlugins = isProduction => {
   if (isProduction) {
     return [
+      new CompressionPlugin(),
       new BundleAnalyzerPlugin({
         analyzerMode: 'static',
         openAnalyzer: false,
@@ -200,7 +202,6 @@ const getPlugins = isProduction => {
         reportFilename: 'bundlereport.html',
         statsFilename: 'bundlestats.json',
       }),
-
       new ImageminPlugin({
         test: /\.(jpe?g|png|gif|svg|ico)$/i,
         disable: false, // Disable during development

@@ -3,6 +3,8 @@
 const fs = require('fs');
 const path = require('path');
 const webpack = require('webpack');
+const CompressionPlugin = require('compression-webpack-plugin');
+
 const WriteFilePlugin = require('write-file-webpack-plugin'); // here so you can see what chunks are built
 const paths = require('./paths');
 
@@ -200,6 +202,7 @@ const getResolve = () => {
 const getPlugins = isProduction => {
   if (isProduction) {
     return [
+      new CompressionPlugin(),
       new webpack.optimize.ModuleConcatenationPlugin(),
       new webpack.optimize.OccurrenceOrderPlugin(),
       new webpack.optimize.LimitChunkCountPlugin({
