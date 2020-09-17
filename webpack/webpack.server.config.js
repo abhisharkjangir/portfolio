@@ -253,10 +253,11 @@ const getServerConfig = env => {
       splitChunks: {
         cacheGroups: {
           vendor: {
-            test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
+            test: /[\\/]node_modules[\\/]/,
             name: 'vendors',
             chunks: 'all',
           },
+          chunks: 'all',
         },
       },
     },
