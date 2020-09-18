@@ -149,7 +149,7 @@ export default ({ clientStats }) => (req, res) => {
             let preloadScripts = '';
             scripts.map(script => {
               if (script.includes('main') || script.includes('vendor')) {
-                preloadScripts += `<link rel="preload" href="${script}" as="script">`;
+                preloadScripts += `<link rel="preload" href="/${script}" as="script">`;
               }
               return script;
             });
