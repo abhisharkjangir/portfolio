@@ -5,7 +5,6 @@ import Helmet from 'react-helmet';
 import L from 'leaflet';
 import PropTypes from 'prop-types';
 import { Map, TileLayer, Marker, Polyline } from 'react-leaflet';
-import Moment from 'moment';
 import styles from './iss.scss';
 import { BASEMAPS } from '../../../containers/pages/iss/constants';
 import ss from './ss.svg';
@@ -134,9 +133,9 @@ class ISS extends React.PureComponent {
             <ul>
               {pass.response.map((x, i) => (
                 <li key={x.risetime}>
-                  {`${i + 1}. On ${Moment.unix(x.risetime).format(
-                    'Do MMMM YYYY HH:MM:SS'
-                  )}  in ${x.duration} seconds.`}
+                  {`${i + 1}. On ${new Date(
+                    x.risetime * 1000
+                  ).toString()}  in ${x.duration} seconds.`}
                 </li>
               ))}
             </ul>
