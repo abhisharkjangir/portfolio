@@ -4,6 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const webpack = require('webpack');
 const CompressionPlugin = require('compression-webpack-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 const WriteFilePlugin = require('write-file-webpack-plugin'); // here so you can see what chunks are built
 const paths = require('./paths');
@@ -250,6 +251,7 @@ const getServerConfig = env => {
     plugins: getPlugins(isProduction),
     optimization: {
       minimize: isProduction,
+      minimizer: [new CssMinimizerPlugin()],
       splitChunks: {
         cacheGroups: {
           vendor: {
