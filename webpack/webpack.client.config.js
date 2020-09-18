@@ -286,7 +286,7 @@ const getClientConfig = env => {
         cacheGroups: {
           vendor: {
             test: /[\\/]node_modules[\\/]/,
-            name: 'vendors',
+            name: 'vendor',
             chunks: 'all',
           },
           chunks: 'all',
