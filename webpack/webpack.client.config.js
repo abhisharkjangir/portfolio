@@ -283,7 +283,19 @@ const getClientConfig = env => {
     optimization: {
       minimize: isProduction,
       runtimeChunk: false,
-      minimizer: [new CssMinimizerPlugin()],
+      minimizer: [
+        new CssMinimizerPlugin({
+          sourceMap: true,
+          minimizerOptions: {
+            preset: [
+              'default',
+              {
+                discardComments: { removeAll: true },
+              },
+            ],
+          },
+        }),
+      ],
       splitChunks: {
         cacheGroups: {
           vendor: {

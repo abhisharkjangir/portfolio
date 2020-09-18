@@ -251,7 +251,19 @@ const getServerConfig = env => {
     plugins: getPlugins(isProduction),
     optimization: {
       minimize: isProduction,
-      minimizer: [new CssMinimizerPlugin()],
+      minimizer: [
+        new CssMinimizerPlugin({
+          sourceMap: true,
+          minimizerOptions: {
+            preset: [
+              'default',
+              {
+                discardComments: { removeAll: true },
+              },
+            ],
+          },
+        }),
+      ],
       splitChunks: {
         cacheGroups: {
           vendor: {
