@@ -5,6 +5,7 @@ const ExtractCssChunks = require('extract-css-chunks-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const WriteFilePlugin = require('write-file-webpack-plugin'); // here so you can see what chunks are built
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
@@ -294,6 +295,12 @@ const getClientConfig = env => {
               },
             ],
           },
+        }),
+        new UglifyJsPlugin({
+          cache: true,
+          parallel: true,
+          sourceMap: true,
+          extractComments: 'all',
         }),
       ],
       splitChunks: {

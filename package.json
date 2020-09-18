@@ -82,6 +82,7 @@
     "sass-loader": "7.2.0",
     "style-loader": "^1.2.1",
     "stylus-loader": "^3.0.2",
+    "uglifyjs-webpack-plugin": "^2.2.0",
     "url-loader": "^2.3.0",
     "webpack": "4.33.0",
     "webpack-dev-middleware": "^3.7.0",
