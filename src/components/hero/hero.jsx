@@ -12,9 +12,9 @@ const Hero = () => {
       </h3>
       <div className={styles.description}>
         <p>
-          I&lsquo;m a front-end developer based in Gurugram, India, specializing
-          in developing high-quality websites with latest technologies & best
-          practices.
+          I&lsquo;m a Full Stack developer based in Gurugram, India,
+          specializing in developing high-quality websites with latest
+          technologies & best practices.
         </p>
       </div>
       <div>

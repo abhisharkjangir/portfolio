@@ -15,6 +15,7 @@ const About = () => {
     'Webpack',
     'Angular v1',
     'HTML5 & CSS3',
+    'Bootstrap',
     'NodeJS',
     'MongoDB',
   ];
@@ -24,7 +25,7 @@ const About = () => {
       <div className={styles.aboutFlexContainer}>
         <div className={styles.aboutContent}>
           <p>
-            Hello! I&lsquo;m Abhishar, a front-end developer based in Gurgaon,
+            Hello! I&lsquo;m Abhishar, a Full Stack developer based in Gurugram,
             India, who is happily writing code for mobile, tablet & desktop
             websites since 2015.
           </p>
