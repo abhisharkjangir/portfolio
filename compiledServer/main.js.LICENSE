@@ -1175,7 +1175,7 @@
 
 /*! ModuleConcatenation bailout: Cannot concat with ./src/components/jobs/jobs.jsx (<- Module is referenced from these modules with unsupported syntax: ./src/routes.js (referenced with import(), require.resolve)) */
 
-/*! ModuleConcatenation bailout: Cannot concat with ./src/components/section/section.jsx because of ./src/components/about/about.jsx */
+/*! ModuleConcatenation bailout: Cannot concat with ./src/components/section/section.jsx because of ./src/components/jobs/jobs.jsx */
 
 /*! ModuleConcatenation bailout: Cannot concat with ./src/components/work/work.jsx (<- Module is referenced from these modules with unsupported syntax: ./src/routes.js (referenced with import(), require.resolve)) */
 
