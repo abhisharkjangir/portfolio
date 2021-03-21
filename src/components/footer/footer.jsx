@@ -28,7 +28,11 @@ class Footer extends React.PureComponent {
         </div>
         <div className={styles.content}>
           <Link to="/" aria-label="home">
-            <span>Made with &#10084; by Abhishar Jangir</span>
+            <span>
+              Made with
+              <span className={styles.heart}> &#10084; </span>
+              by Abhishar Jangir
+            </span>
             <div>
               <span>
                 Copyright &copy;

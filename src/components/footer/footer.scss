@@ -55,6 +55,9 @@
   }
 }
 
+.heart {
+  color: red;
+}
 
 @import "../../styles/breakpoints";
 @media (max-width: $bigDesktop) {
