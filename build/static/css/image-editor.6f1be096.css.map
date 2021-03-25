@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/components/pages/imageEditor/imageEditor.scss"],"names":[],"mappings":"AAAA,mBACA,iBACA,qBACA","file":"static/css/image-editor.6f1be096.css","sourcesContent":[".imageEditor-2fWig {\n  min-height: 100vh;\n  background-color: #fff;\n}\n"],"sourceRoot":""}
