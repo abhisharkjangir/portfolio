@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Routes from '../../routes';
-// import '../../styles/bootstrap.css'; // Uncomment if you really want to use bootstrap
+import '../../styles/global.css';
 import Helmet from '../../containers/common/helmet/helmet';
 const App = ({ location }) => {
   return (
