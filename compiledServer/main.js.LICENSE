@@ -487,6 +487,14 @@
   !*** ./src/assets/images/json.png ***!
   \************************************/
 
+/*!**************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/bootstrap/dist/css/bootstrap-grid.css ***!
+  \**************************************************************************************************/
+
+// Module
+
+/*! ../../../css-loader/dist/runtime/api.js */
+
 /*!****************************************************************!*\
   !*** ./node_modules/react-universal-component/dist/helpers.js ***!
   \****************************************************************/
@@ -677,8 +685,6 @@
 /*! ../assets/fonts/SFMono/SFMono-SemiboldItalic.woff */
 
 /*! ../assets/fonts/SFMono/SFMono-SemiboldItalic.ttf */
-
-// Module
 
 /*!******************************!*\
   !*** external "value-equal" ***!
@@ -1101,6 +1107,12 @@
   !*** external "redux" ***!
   \************************/
 
+/*!*******************************!*\
+  !*** ./src/styles/global.css ***!
+  \*******************************/
+
+/*! -!../../node_modules/css-loader/dist/cjs.js!bootstrap/dist/css/bootstrap-grid */
+
 /*!*****************************!*\
   !*** external "prop-types" ***!
   \*****************************/
@@ -1197,7 +1209,7 @@
 
 /*! ModuleConcatenation bailout: Cannot concat with ./src/components/jobs/jobs.jsx (<- Module is referenced from these modules with unsupported syntax: ./src/routes.js (referenced with import(), require.resolve)) */
 
-/*! ModuleConcatenation bailout: Cannot concat with ./src/components/section/section.jsx because of ./src/components/about/about.jsx */
+/*! ModuleConcatenation bailout: Cannot concat with ./src/components/section/section.jsx because of ./src/components/work/work.jsx */
 
 /*! ModuleConcatenation bailout: Cannot concat with ./src/components/work/work.jsx (<- Module is referenced from these modules with unsupported syntax: ./src/routes.js (referenced with import(), require.resolve)) */
 
