@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Routes from '../../routes';
-import '../../styles/global.css';
 import Helmet from '../../containers/common/helmet/helmet';
 const App = ({ location }) => {
   return (
