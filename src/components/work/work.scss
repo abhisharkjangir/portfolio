@@ -131,7 +131,7 @@
       z-index: 3;
       transition: var(--transition);
       background-color: var(--bg-c-navy);
-      mix-blend-mode: screen;
+      mix-blend-mode: var(--blend);
     }
   }
   .image {
@@ -140,7 +140,7 @@
     vertical-align: middle;
     border-radius: 3px;
     position: relative;
-    mix-blend-mode: multiply;
+    // mix-blend-mode: screen;
     filter: grayscale(100%) contrast(1) brightness(90%);
   }
 }

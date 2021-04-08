@@ -59,9 +59,20 @@ gtag('config', 'UA-155127051-1');
   */
 export const injectHTML = (
   htmlData,
-  { html, title, meta, body, scripts = '', state, style = '', preloadScripts }
+  {
+    html,
+    title,
+    meta,
+    body,
+    scripts = '',
+    state,
+    style = '',
+    preloadScripts,
+    theme,
+  }
 ) => {
   let data = htmlData;
+  data = data.replace('<body>', `<body class="${theme}">`);
   data = data.replace('<html>', `<html ${html}>`);
   data = data.replace(/<title>.*?<\/title>/g, title);
   data = data.replace(
@@ -97,7 +108,7 @@ export default ({ clientStats }) => (req, res) => {
       // Create a store (with a memory history) from our current url
       const { store } = createStore(history);
       const saga = store.runSaga(rootSaga);
-
+      let theme;
       const context = {};
       let actions = [];
       RouteList.some(route => {
@@ -118,6 +129,13 @@ export default ({ clientStats }) => (req, res) => {
       if (Meta[req.url]) {
         store.dispatch(setHelmetInfo(Meta[req.url]));
       }
+      // Load theme for dark/light page
+      if (req.path === '/theme/light') theme = 'light';
+      else if (req.path === '/theme/dark') theme = 'dark';
+      else {
+        theme = Math.floor(Math.random() * 10 + 1) % 2 === 0 ? 'dark' : 'light';
+      }
+
       store.dispatch(END);
       try {
         saga.done.then(() => {
@@ -175,6 +193,7 @@ export default ({ clientStats }) => (req, res) => {
               style: inlineCss.replace(/\n|\t/g, ''), // Minify ,
               state,
               preloadScripts,
+              theme,
             });
 
             res.send(html);

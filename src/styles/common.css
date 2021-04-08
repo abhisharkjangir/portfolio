@@ -1,10 +1,41 @@
-:root {
-  --font-Calibre: Calibre, "San Francisco", "SF Pro Text", -apple-system,
-    system-ui, BlinkMacSystemFont, Roboto, "Helvetica Neue", "Segoe UI", Arial,
-    sans-serif;
-  --font-SFMono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono",
-    "Lucida Console", Monaco, monospace;
+.light {
 
+  --bg-c-navy: #F5E6D0;
+  --bg-c-dark-navy: #FDF3E4;
+  --bg-c-light-navy: #E8D5BA;
+  --bg-c-dark-grey: #CCC0A7;
+  --bg-c-slate: #776D4F;
+  --bg-c-light-slate: #574D2E;
+  --bg-c-lightest-slate: #332909;
+  --bg-c-white: #190E00;
+  --bg-c-green: #9B0025;
+  --bg-c-blue: #8E5000;
+  --bg-c-trans-green: rgba(155, 0, 37,0.07);
+  --bg-c-medium-grey: #D2C6AD;
+  --bg-c-shadow-navy: rgba(253, 243, 228,0.7);
+  --bg-c-grey: #292929;
+
+  --c-navy: #F5E6D0;
+  --c-dark-navy: #FDF3E4;
+  --c-light-navy: #E8D5BA;
+  --c-dark-grey: #CCC0A7;
+  --c-slate: #776D4F;
+  --c-light-slate: #574D2E;
+  --c-lightest-slate: #332909;
+  --c-white: #190E00;
+  --c-green: #9B0025;
+  --c-blue: #8E5000;
+  --c-trans-green: rgba(155, 0, 37,0.07);
+  --c-medium-grey: #D2C6AD;
+  --c-shadow-navy: rgba(253, 243, 228,0.7);
+  --c-grey: #292929;
+  --c-pure-white: #000;
+
+  --blend: multiply;
+
+}
+
+.dark {
   --bg-c-navy: #0a192f;
   --bg-c-dark-navy: #020c1b;
   --bg-c-light-navy: #172a45;
@@ -33,8 +64,22 @@
   --c-trans-green: rgba(100, 255, 218, 0.07);
   --c-medium-grey: #2d3952;
   --c-shadow-navy: rgba(2, 12, 27, 0.7);
-  --c-pure-white: #ffffff;
   --c-grey: #d6d6d6;
+  --c-pure-white: #ffffff;
+  --blend: screen;
+}
+
+:root {
+  --font-Calibre: Calibre, "San Francisco", "SF Pro Text", -apple-system,
+    system-ui, BlinkMacSystemFont, Roboto, "Helvetica Neue", "Segoe UI", Arial,
+    sans-serif;
+  --font-SFMono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono",
+    "Lucida Console", Monaco, monospace;
+
+
+
+
+
 
   --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   --easing: cubic-bezier(0.645, 0.045, 0.355, 1);

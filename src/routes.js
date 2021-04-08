@@ -54,8 +54,18 @@ export const RouteList = [
     exact: true,
   },
   {
+    path: '/home',
+    component: Home,
+    exact: true,
+  },
+  {
     path: '/about',
     component: About,
+    exact: true,
+  },
+  {
+    path: '/theme/:theme',
+    component: Home,
     exact: true,
   },
   {
