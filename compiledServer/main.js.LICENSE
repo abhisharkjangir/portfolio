@@ -1209,7 +1209,7 @@
 
 /*! ModuleConcatenation bailout: Cannot concat with ./src/components/jobs/jobs.jsx (<- Module is referenced from these modules with unsupported syntax: ./src/routes.js (referenced with import(), require.resolve)) */
 
-/*! ModuleConcatenation bailout: Cannot concat with ./src/components/section/section.jsx because of ./src/components/work/work.jsx */
+/*! ModuleConcatenation bailout: Cannot concat with ./src/components/section/section.jsx because of ./src/components/about/about.jsx */
 
 /*! ModuleConcatenation bailout: Cannot concat with ./src/components/work/work.jsx (<- Module is referenced from these modules with unsupported syntax: ./src/routes.js (referenced with import(), require.resolve)) */
 
@@ -1253,7 +1253,7 @@
 
 /*! ModuleConcatenation bailout: Cannot concat with ./src/components/social/social.async.jsx (<- Module uses injected variables (__dirname)) */
 
-/*! ModuleConcatenation bailout: Cannot concat with ./src/constants.js because of ./src/components/social/social.jsx */
+/*! ModuleConcatenation bailout: Cannot concat with ./src/constants.js because of ./src/components/footer/footer.jsx */
 
 /*! ModuleConcatenation bailout: Cannot concat with ./src/containers/pages/iss/constants.js because of ./src/routes.js */
 
@@ -1394,6 +1394,8 @@
 // Create a store (with a memory history) from our current url
 
 // Helmet Action to set meta info based on the URL
+
+// Load theme for dark/light page
 
 // If context has a url property, then we need to handle a redirection in Redux Router
 
