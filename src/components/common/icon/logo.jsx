@@ -7,7 +7,7 @@ const Logo = () => (
       <g transform="translate(11.000000, 5.000000)">
         <polygon
           id="Shape"
-          stroke="#64FFDA"
+          stroke="currentColor"
           strokeWidth="5"
           strokeLinecap="round"
           strokeLinejoin="round"
