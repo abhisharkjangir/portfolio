@@ -40,13 +40,6 @@ const Json = universal(
   universalOptions
 );
 
-const ImageEditor = universal(
-  import(
-    /* webpackChunkName: "image-editor" */ './containers/pages/imageEditor/imageEditor'
-  ),
-  universalOptions
-);
-
 const Notfound = universal(
   import(
     /* webpackChunkName: "notfound-page" */ './components/pages/notfound/notfound'
@@ -99,11 +92,6 @@ export const RouteList = [
   {
     path: '/app/json-key-path-finder',
     component: Json,
-    exact: true,
-  },
-  {
-    path: '/app/image-editor',
-    component: ImageEditor,
     exact: true,
   },
   {

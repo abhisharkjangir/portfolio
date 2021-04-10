@@ -12,9 +12,9 @@ const PortfolioApp = ({ location }) => {
   return (
     <div id="PortfolioApp" className={styles.portfolioPortfolioApp}>
       <Header />
-      <div id="main-content" className={styles.main}>
+      <main id="main-content" className={styles.main}>
         <Routes location={location} />
-      </div>
+      </main>
       <Helmet />
       <Social />
       <Email />

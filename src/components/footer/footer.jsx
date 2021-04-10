@@ -9,7 +9,7 @@ class Footer extends React.PureComponent {
     const date = new Date();
 
     return (
-      <div id="Footer" className={styles.footer}>
+      <footer id="Footer" className={styles.footer}>
         <div className={styles.socialContainer}>
           <ul className={styles.list}>
             {socialList.map(({ name, url }) => (
@@ -41,7 +41,7 @@ class Footer extends React.PureComponent {
             </div>
           </Link>
         </div>
-      </div>
+      </footer>
     );
   }
 }

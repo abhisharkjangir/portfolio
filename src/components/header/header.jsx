@@ -122,7 +122,11 @@ class Header extends React.PureComponent {
     const { isMenuOpen } = this.state;
 
     return (
-      <div id="Header" className={styles.header} style={this.getHeaderStyle()}>
+      <header
+        id="Header"
+        className={styles.header}
+        style={this.getHeaderStyle()}
+      >
         <nav>
           <div className={styles.logo}>
             <Link to="/" aria-label="home">
@@ -170,7 +174,7 @@ class Header extends React.PureComponent {
             links={Navigation}
           />
         )}
-      </div>
+      </header>
     );
   }
 }

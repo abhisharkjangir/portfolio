@@ -5,9 +5,9 @@ import Helmet from '../../containers/common/helmet/helmet';
 const App = ({ location }) => {
   return (
     <React.Fragment>
-      <div id="main-content">
+      <main id="main-content">
         <Routes location={location} />
-      </div>
+      </main>
       <Helmet />
     </React.Fragment>
   );
