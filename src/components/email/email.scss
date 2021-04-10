@@ -33,9 +33,6 @@
 }
 
 @import "../../styles/breakpoints";
-@media (max-width: $bigDesktop) {
-
-}
 
 @media (max-width: $desktop) {
   .email {
@@ -47,16 +44,4 @@
   .email {
     display: none;
   }
-}
-
-@media (max-width: $thone) {
-
-}
-
-@media (max-width: $phone) {
-
-}
-
-@media (max-width:$tiny) {
-
 }

@@ -40,9 +40,6 @@
 }
 
 @import "../../styles/breakpoints";
-@media (max-width: $bigDesktop) {
-
-}
 
 @media (max-width: $desktop) {
   .social {
@@ -54,16 +51,4 @@
   .social {
     display: none;
   }
-}
-
-@media (max-width: $thone) {
-
-}
-
-@media (max-width: $phone) {
-
-}
-
-@media (max-width:$tiny) {
-
 }

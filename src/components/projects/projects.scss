@@ -125,9 +125,6 @@
 
 
 @import "../../styles/breakpoints";
-@media (max-width: $bigDesktop) {
-
-}
 
 @media (max-width: $desktop) {
   .Project {
@@ -143,20 +140,4 @@
       font-size:24px;
     }
   }
-}
-
-@media (max-width: $thone) {
-
-}
-
-@media (max-width: $phablet) {
-
-}
-
-@media (max-width: $phone) {
-
-}
-
-@media (max-width:$tiny) {
-
 }

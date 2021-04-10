@@ -53,9 +53,6 @@
 }
 
 @import "../../styles/breakpoints";
-@media (max-width: $bigDesktop) {
-
-}
 
 @media (max-width: $desktop) {
   .heading {
@@ -89,16 +86,4 @@
       margin-left: 10px;
     }
   }
-}
-
-@media (max-width: $phablet) {
-
-}
-
-@media (max-width: $phone) {
-
-}
-
-@media (max-width:$tiny) {
-
 }

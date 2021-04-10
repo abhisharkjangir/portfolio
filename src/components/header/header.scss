@@ -141,10 +141,6 @@
 
 @import "../../styles/breakpoints";
 
-@media (max-width: $bigDesktop) {
-
-}
-
 @media (max-width: $desktop) {
   .header {
     padding: 0 40px;
@@ -161,16 +157,4 @@
   .hamburger {
     display: flex;
   }
-}
-
-@media (max-width: $thone) {
-
-}
-
-@media (max-width: $phone) {
-
-}
-
-@media (max-width:$tiny) {
-
 }

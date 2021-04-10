@@ -4,8 +4,8 @@
   --bg-c-dark-navy: #FDF3E4;
   --bg-c-light-navy: #E8D5BA;
   --bg-c-dark-grey: #CCC0A7;
-  --bg-c-slate: #776D4F;
-  --bg-c-light-slate: #574D2E;
+  --bg-c-slate: #2B2B2B;
+  --bg-c-light-slate: #2B2B2B;
   --bg-c-lightest-slate: #332909;
   --bg-c-white: #190E00;
   --bg-c-green: #9B0025;
@@ -19,8 +19,8 @@
   --c-dark-navy: #FDF3E4;
   --c-light-navy: #E8D5BA;
   --c-dark-grey: #CCC0A7;
-  --c-slate: #776D4F;
-  --c-light-slate: #574D2E;
+  --c-slate: #2B2B2B;
+  --c-light-slate: #2B2B2B;
   --c-lightest-slate: #332909;
   --c-white: #190E00;
   --c-green: #9B0025;
@@ -40,8 +40,8 @@
   --bg-c-dark-navy: #020c1b;
   --bg-c-light-navy: #172a45;
   --bg-c-dark-grey: #333f58;
-  --bg-c-slate: #8892b0;
-  --bg-c-light-slate: #a8b2d1;
+  --bg-c-slate: #d4d4d4;
+  --bg-c-light-slate: #d4d4d4;
   --bg-c-lightest-slate: #ccd6f6;
   --bg-c-white: #e6f1ff;
   --bg-c-green: #64ffda;
@@ -55,8 +55,8 @@
   --c-dark-navy: #020c1b;
   --c-light-navy: #172a45;
   --c-dark-grey: #333f58;
-  --c-slate: #8892b0;
-  --c-light-slate: #a8b2d1;
+  --c-slate: #d4d4d4;
+  --c-light-slate: #d4d4d4;
   --c-lightest-slate: #ccd6f6;
   --c-white: #e6f1ff;
   --c-green: #64ffda;
@@ -76,16 +76,11 @@
   --font-SFMono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono",
     "Lucida Console", Monaco, monospace;
 
-
-
-
-
-
   --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   --easing: cubic-bezier(0.645, 0.045, 0.355, 1);
 
-  --fs-xs: 12px;
-  --fs-smish: 13px;
+  --fs-xs: 15px;
+  --fs-smish: 15px;
   --fs-sm: 14px;
   --fs-md: 16px;
   --fs-lg: 18px;
