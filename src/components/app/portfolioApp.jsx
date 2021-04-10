@@ -10,7 +10,7 @@ import Footer from '../footer/footer.async';
 
 const PortfolioApp = ({ location }) => {
   return (
-    <div id="PortfolioApp" className={styles.portfolioPortfolioApp}>
+    <>
       <Header />
       <main id="main-content" className={styles.main}>
         <Routes location={location} />
@@ -19,7 +19,7 @@ const PortfolioApp = ({ location }) => {
       <Social />
       <Email />
       <Footer />
-    </div>
+    </>
   );
 };
 
