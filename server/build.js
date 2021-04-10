@@ -5,6 +5,7 @@ const webpack = require('webpack');
 const bodyParser = require('body-parser');
 const compression = require('compression');
 const cookieParser = require('cookie-parser');
+const APIRoutes = require('./routes/index');
 const getServerConfig = require('../webpack/webpack.server.config');
 const getClientConfig = require('../webpack/webpack.client.config');
 
@@ -17,6 +18,7 @@ app.use(compression());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use('/a/', APIRoutes);
 
 webpack([getClientConfig('production'), getServerConfig('production')]).run(
   (err, stats) => {

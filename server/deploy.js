@@ -3,6 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const compression = require('compression');
 const cookieParser = require('cookie-parser');
+const APIRoutes = require('./routes/index');
 const getClientConfig = require('../webpack/webpack.client.config');
 const clientStats = require('../build/bundlestats.json');
 const isProduction = process.env.NODE_ENV === 'production';
@@ -17,6 +18,7 @@ app.use(compression());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use('/a/', APIRoutes);
 
 let isBuilt = false;
 const done = () =>

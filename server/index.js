@@ -24,7 +24,7 @@ app.use(compression());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use('/apis/', APIRoutes);
+app.use('/a/', APIRoutes);
 
 let isBuilt = false;
 const done = () =>
