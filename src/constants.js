@@ -1,19 +1,19 @@
 export const socialList = [
   {
     name: 'github',
-    url: 'https://github.com/abhisharkjangir',
+    url: 'https:abhisharjangir.com/apis/redirect/github',
   },
   {
     name: 'linkedin',
-    url: 'https://in.linkedin.com/in/abhishar-jangir',
+    url: 'https:abhisharjangir.com/apis/redirect/linkedin',
   },
   {
     name: 'instagram',
-    url: 'https://www.instagram.com/abhishar.jangir/',
+    url: 'https:abhisharjangir.com/apis/redirect/instagram',
   },
   {
     name: 'twitter',
-    url: 'https://twitter.com/Abhishar_jangir',
+    url: 'https:abhisharjangir.com/apis/redirect/twitter',
   },
 ];
 
