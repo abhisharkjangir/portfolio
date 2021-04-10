@@ -1231,7 +1231,7 @@
 
 /*! ModuleConcatenation bailout: Cannot concat with ./src/components/social/social.async.jsx (<- Module uses injected variables (__dirname)) */
 
-/*! ModuleConcatenation bailout: Cannot concat with ./src/constants.js because of ./src/components/footer/footer.jsx */
+/*! ModuleConcatenation bailout: Cannot concat with ./src/constants.js because of ./src/components/social/social.jsx */
 
 /*! ModuleConcatenation bailout: Cannot concat with ./src/containers/pages/iss/constants.js because of ./src/routes.js */
 
