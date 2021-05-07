@@ -1,3 +1,4 @@
+/* eslint-disable array-callback-return */
 import React from 'react';
 import classnames from 'classnames';
 import styles from './json.scss';
@@ -63,6 +64,28 @@ class ISS extends React.PureComponent {
 
   reset = () => this.setState({ key: '', json: '', paths: [] });
 
+  getValueFromPath = path => {
+    const { json } = this.state;
+    if (!this.isValidJson(json)) return '';
+    let data = { ...JSON.parse(json) };
+    if (path) {
+      path.split('.').map(p => {
+        if (p.includes('[')) {
+          const subPath = p.split('[');
+          data = data[subPath[0]];
+          subPath.shift();
+          subPath.map(sp => {
+            data = data[sp.replace(']', '')];
+          });
+        } else {
+          data = data[p];
+        }
+      });
+      return data;
+    }
+    return '';
+  };
+
   renderPaths = () => {
     const { paths, key } = this.state;
     if (paths && paths.length === 0) return null;
@@ -73,7 +96,9 @@ class ISS extends React.PureComponent {
         </p>
         <ul>
           {paths.length > 0 &&
-            paths.map((path, index) => <li>{`${index + 1}. ${path}`}</li>)}
+            paths.map((path, index) => (
+              <li>{`${index + 1}. ${path}: ${this.getValueFromPath(path)}`}</li>
+            ))}
         </ul>
       </React.Fragment>
     );
