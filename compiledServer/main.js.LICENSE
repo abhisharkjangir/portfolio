@@ -60,17 +60,33 @@
 
 /***/
 
-/*!******************************!*\
-  !*** ./src/styles/main.scss ***!
-  \******************************/
+/*!*****************************************************!*\
+  !*** ./src/components/common/textarea/textarea.jsx ***!
+  \*****************************************************/
 
-/*! no static exports found */
+/*! exports provided: default */
 
-/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/*#__PURE__*/
+
+/* harmony import */
+
+/*! react */
+
+/*! prop-types */
+
+/*! classnames */
+
+/*! ./textarea.scss */
+
+/* harmony default export */
 
 /*!*********************************************!*\
   !*** ./src/components/section/section.scss ***!
   \*********************************************/
+
+/*! no static exports found */
+
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 
 /*!***************************************!*\
   !*** ./src/components/hero/hero.scss ***!
@@ -80,25 +96,17 @@
   !*** ./src/components/menu/menu.async.jsx ***!
   \********************************************/
 
-/*! exports provided: default */
-
 /*! ModuleConcatenation bailout: Module uses injected variables (__dirname) */
 
 /* WEBPACK VAR INJECTION */
 
-/* harmony import */
-
 /*! path */
-
-/*#__PURE__*/
 
 /*! babel-plugin-universal-import/universalImport */
 
 /*! react-universal-component */
 
 /*! ../../utils/universalOptions */
-
-/* harmony default export */
 
 // eslint-disable-next-line extra-rules/no-commented-out-code
 
@@ -117,8 +125,6 @@
 /*!**************************************************************!*\
   !*** ./node_modules/react-universal-component/dist/utils.js ***!
   \**************************************************************/
-
-/*! react */
 
 /*! ./requireById */
 
@@ -147,10 +153,6 @@
   \*************************************************/
 
 // eslint-disable-next-line react/button-has-type
-
-/*! prop-types */
-
-/*! classnames */
 
 /*! ./button.scss */
 
@@ -439,12 +441,6 @@
 
 /*! ./icon */
 
-/*!****************************************************!*\
-  !*** ./src/components/common/textaea/textarea.jsx ***!
-  \****************************************************/
-
-/*! ./textarea.scss */
-
 /*!********************************************************!*\
   !*** ./src/components/pages/json/Json.jsx + 1 modules ***!
   \********************************************************/
@@ -453,7 +449,7 @@
 
 /*! ModuleConcatenation bailout: Cannot concat with ./src/components/common/button/button.jsx because of ./src/components/pages/components/components.jsx */
 
-/*! ModuleConcatenation bailout: Cannot concat with ./src/components/common/textaea/textarea.jsx because of ./src/components/pages/components/components.jsx */
+/*! ModuleConcatenation bailout: Cannot concat with ./src/components/common/textarea/textarea.jsx because of ./src/components/pages/components/components.jsx */
 
 /*! ModuleConcatenation bailout: Cannot concat with ./src/components/pages/json/json.scss (<- Module is not an ECMAScript module) */
 
@@ -589,96 +585,6 @@
 /*! ./jobs.scss */
 
 /* eslint-disable react/no-danger */
-
-/*!*******************************!*\
-  !*** ./src/styles/common.css ***!
-  \*******************************/
-
-/*! ../../node_modules/css-loader/dist/runtime/api.js */
-
-// Imports
-
-/*! ../../node_modules/css-loader/dist/runtime/url-escape.js */
-
-/*! ../assets/fonts/Calibre/Calibre-LightItalic.woff2 */
-
-/*! ../assets/fonts/Calibre/Calibre-LightItalic.woff */
-
-/*! ../assets/fonts/Calibre/Calibre-LightItalic.ttf */
-
-/*! ../assets/fonts/Calibre/Calibre-Regular.woff2 */
-
-/*! ../assets/fonts/Calibre/Calibre-Regular.woff */
-
-/*! ../assets/fonts/Calibre/Calibre-Regular.ttf */
-
-/*! ../assets/fonts/Calibre/Calibre-RegularItalic.woff2 */
-
-/*! ../assets/fonts/Calibre/Calibre-RegularItalic.woff */
-
-/*! ../assets/fonts/Calibre/Calibre-RegularItalic.ttf */
-
-/*! ../assets/fonts/Calibre/Calibre-Medium.woff2 */
-
-/*! ../assets/fonts/Calibre/Calibre-Medium.woff */
-
-/*! ../assets/fonts/Calibre/Calibre-Medium.ttf */
-
-/*! ../assets/fonts/Calibre/Calibre-MediumItalic.woff2 */
-
-/*! ../assets/fonts/Calibre/Calibre-MediumItalic.woff */
-
-/*! ../assets/fonts/Calibre/Calibre-MediumItalic.ttf */
-
-/*! ../assets/fonts/Calibre/Calibre-Semibold.woff2 */
-
-/*! ../assets/fonts/Calibre/Calibre-Semibold.woff */
-
-/*! ../assets/fonts/Calibre/Calibre-Semibold.ttf */
-
-/*! ../assets/fonts/Calibre/Calibre-SemiboldItalic.woff2 */
-
-/*! ../assets/fonts/Calibre/Calibre-SemiboldItalic.woff */
-
-/*! ../assets/fonts/Calibre/Calibre-SemiboldItalic.ttf */
-
-/*! ../assets/fonts/SFMono/SFMono-Regular.woff2 */
-
-/*! ../assets/fonts/SFMono/SFMono-Regular.woff */
-
-/*! ../assets/fonts/SFMono/SFMono-Regular.ttf */
-
-/*! ../assets/fonts/SFMono/SFMono-RegularItalic.woff2 */
-
-/*! ../assets/fonts/SFMono/SFMono-RegularItalic.woff */
-
-/*! ../assets/fonts/SFMono/SFMono-RegularItalic.ttf */
-
-/*! ../assets/fonts/SFMono/SFMono-Medium.woff2 */
-
-/*! ../assets/fonts/SFMono/SFMono-Medium.woff */
-
-/*! ../assets/fonts/SFMono/SFMono-Medium.ttf */
-
-/*! ../assets/fonts/SFMono/SFMono-MediumItalic.woff2 */
-
-/*! ../assets/fonts/SFMono/SFMono-MediumItalic.woff */
-
-/*! ../assets/fonts/SFMono/SFMono-MediumItalic.ttf */
-
-/*! ../assets/fonts/SFMono/SFMono-Semibold.woff2 */
-
-/*! ../assets/fonts/SFMono/SFMono-Semibold.woff */
-
-/*! ../assets/fonts/SFMono/SFMono-Semibold.ttf */
-
-/*! ../assets/fonts/SFMono/SFMono-SemiboldItalic.woff2 */
-
-/*! ../assets/fonts/SFMono/SFMono-SemiboldItalic.woff */
-
-/*! ../assets/fonts/SFMono/SFMono-SemiboldItalic.ttf */
-
-// Module
 
 /*!******************************!*\
   !*** external "value-equal" ***!
@@ -957,6 +863,10 @@
   !*** ./src/assets/fonts/SFMono/SFMono-RegularItalic.ttf ***!
   \**********************************************************/
 
+/*!**********************************************!*\
+  !*** ./src/components/app/portfolioApp.scss ***!
+  \**********************************************/
+
 /*!***********************************************!*\
   !*** ./src/components/projects/projects.scss ***!
   \***********************************************/
@@ -1067,9 +977,9 @@
 
 /*! ModuleConcatenation bailout: Cannot concat with ./src/components/common/icon/icon.jsx (<- Module is referenced from these modules with unsupported syntax: ./src/components/common/icon/icon.async.jsx (referenced with import(), require.resolve)) */
 
-/*! ModuleConcatenation bailout: Cannot concat with ./src/components/common/image/image.jsx because of ./src/components/work/work.jsx */
+/*! ModuleConcatenation bailout: Cannot concat with ./src/components/common/image/image.jsx because of ./src/components/about/about.jsx */
 
-/*! ModuleConcatenation bailout: Cannot concat with ./src/components/common/textaea/textarea.jsx because of ./src/components/pages/json/Json.jsx */
+/*! ModuleConcatenation bailout: Cannot concat with ./src/components/common/textarea/textarea.jsx because of ./src/components/pages/json/Json.jsx */
 
 /*! ModuleConcatenation bailout: Cannot concat with ./src/components/contact/contact.jsx (<- Module is referenced from these modules with unsupported syntax: ./src/routes.js (referenced with import(), require.resolve)) */
 
@@ -1077,7 +987,7 @@
 
 /*! ModuleConcatenation bailout: Cannot concat with ./src/components/footer/footer.jsx (<- Module is referenced from these modules with unsupported syntax: ./src/components/footer/footer.async.jsx (referenced with import(), require.resolve)) */
 
-/*! ModuleConcatenation bailout: Cannot concat with ./src/components/heading/heading.jsx because of ./src/components/pages/notfound/notfound.jsx */
+/*! ModuleConcatenation bailout: Cannot concat with ./src/components/heading/heading.jsx because of ./src/components/jobs/jobs.jsx */
 
 /*! ModuleConcatenation bailout: Cannot concat with ./src/components/hero/hero.jsx because of ./src/containers/pages/home/home.jsx */
 
@@ -1085,7 +995,7 @@
 
 /*! ModuleConcatenation bailout: Cannot concat with ./src/components/menu/menu.jsx (<- Module is referenced from these modules with unsupported syntax: ./src/components/menu/menu.async.jsx (referenced with import(), require.resolve)) */
 
-/*! ModuleConcatenation bailout: Cannot concat with ./src/components/section/section.jsx because of ./src/components/pages/notfound/notfound.jsx */
+/*! ModuleConcatenation bailout: Cannot concat with ./src/components/section/section.jsx because of ./src/components/jobs/jobs.jsx */
 
 /*! ModuleConcatenation bailout: Cannot concat with ./src/components/social/social.jsx (<- Module is referenced from these modules with unsupported syntax: ./src/components/social/social.async.jsx (referenced with import(), require.resolve)) */
 
@@ -1171,6 +1081,92 @@
   !*** ./src/styles/global.css ***!
   \*******************************/
 
+/*! ../../node_modules/css-loader/dist/runtime/api.js */
+
+// Imports
+
+/*! ../../node_modules/css-loader/dist/runtime/url-escape.js */
+
+/*! ../assets/fonts/Calibre/Calibre-LightItalic.woff2 */
+
+/*! ../assets/fonts/Calibre/Calibre-LightItalic.woff */
+
+/*! ../assets/fonts/Calibre/Calibre-LightItalic.ttf */
+
+/*! ../assets/fonts/Calibre/Calibre-Regular.woff2 */
+
+/*! ../assets/fonts/Calibre/Calibre-Regular.woff */
+
+/*! ../assets/fonts/Calibre/Calibre-Regular.ttf */
+
+/*! ../assets/fonts/Calibre/Calibre-RegularItalic.woff2 */
+
+/*! ../assets/fonts/Calibre/Calibre-RegularItalic.woff */
+
+/*! ../assets/fonts/Calibre/Calibre-RegularItalic.ttf */
+
+/*! ../assets/fonts/Calibre/Calibre-Medium.woff2 */
+
+/*! ../assets/fonts/Calibre/Calibre-Medium.woff */
+
+/*! ../assets/fonts/Calibre/Calibre-Medium.ttf */
+
+/*! ../assets/fonts/Calibre/Calibre-MediumItalic.woff2 */
+
+/*! ../assets/fonts/Calibre/Calibre-MediumItalic.woff */
+
+/*! ../assets/fonts/Calibre/Calibre-MediumItalic.ttf */
+
+/*! ../assets/fonts/Calibre/Calibre-Semibold.woff2 */
+
+/*! ../assets/fonts/Calibre/Calibre-Semibold.woff */
+
+/*! ../assets/fonts/Calibre/Calibre-Semibold.ttf */
+
+/*! ../assets/fonts/Calibre/Calibre-SemiboldItalic.woff2 */
+
+/*! ../assets/fonts/Calibre/Calibre-SemiboldItalic.woff */
+
+/*! ../assets/fonts/Calibre/Calibre-SemiboldItalic.ttf */
+
+/*! ../assets/fonts/SFMono/SFMono-Regular.woff2 */
+
+/*! ../assets/fonts/SFMono/SFMono-Regular.woff */
+
+/*! ../assets/fonts/SFMono/SFMono-Regular.ttf */
+
+/*! ../assets/fonts/SFMono/SFMono-RegularItalic.woff2 */
+
+/*! ../assets/fonts/SFMono/SFMono-RegularItalic.woff */
+
+/*! ../assets/fonts/SFMono/SFMono-RegularItalic.ttf */
+
+/*! ../assets/fonts/SFMono/SFMono-Medium.woff2 */
+
+/*! ../assets/fonts/SFMono/SFMono-Medium.woff */
+
+/*! ../assets/fonts/SFMono/SFMono-Medium.ttf */
+
+/*! ../assets/fonts/SFMono/SFMono-MediumItalic.woff2 */
+
+/*! ../assets/fonts/SFMono/SFMono-MediumItalic.woff */
+
+/*! ../assets/fonts/SFMono/SFMono-MediumItalic.ttf */
+
+/*! ../assets/fonts/SFMono/SFMono-Semibold.woff2 */
+
+/*! ../assets/fonts/SFMono/SFMono-Semibold.woff */
+
+/*! ../assets/fonts/SFMono/SFMono-Semibold.ttf */
+
+/*! ../assets/fonts/SFMono/SFMono-SemiboldItalic.woff2 */
+
+/*! ../assets/fonts/SFMono/SFMono-SemiboldItalic.woff */
+
+/*! ../assets/fonts/SFMono/SFMono-SemiboldItalic.ttf */
+
+// Module
+
 /*!*****************************!*\
   !*** external "prop-types" ***!
   \*****************************/
@@ -1194,10 +1190,6 @@
 /*!***********************************************************!*\
   !*** ./src/assets/fonts/Calibre/Calibre-MediumItalic.ttf ***!
   \***********************************************************/
-
-/*!*****************************************************!*\
-  !*** ./src/components/common/textaea/textarea.scss ***!
-  \*****************************************************/
 
 /*!************************************************************!*\
   !*** ./node_modules/css-loader/dist/runtime/url-escape.js ***!
@@ -1275,6 +1267,10 @@
   !*** ./src/assets/fonts/Calibre/Calibre-MediumItalic.woff2 ***!
   \*************************************************************/
 
+/*!******************************************************!*\
+  !*** ./src/components/common/textarea/textarea.scss ***!
+  \******************************************************/
+
 /*!*******************************!*\
   !*** external "react-helmet" ***!
   \*******************************/
@@ -1299,7 +1295,7 @@
 
 /*! ModuleConcatenation bailout: Cannot concat with ./src/components/social/social.async.jsx (<- Module uses injected variables (__dirname)) */
 
-/*! ModuleConcatenation bailout: Cannot concat with ./src/constants.js because of ./src/components/menu/menu.jsx */
+/*! ModuleConcatenation bailout: Cannot concat with ./src/constants.js because of ./src/components/footer/footer.jsx */
 
 /*! ModuleConcatenation bailout: Cannot concat with ./src/containers/pages/iss/constants.js because of ./src/routes.js */
 
@@ -1313,9 +1309,9 @@
 
 /*! ModuleConcatenation bailout: Cannot concat with (webpack)-flush-chunks/dist/flushChunks.js (<- Module is not an ECMAScript module) */
 
-/*! ModuleConcatenation bailout: Cannot concat with ./src/components/header/header.scss (<- Module is not an ECMAScript module) */
+/*! ModuleConcatenation bailout: Cannot concat with ./src/components/app/portfolioApp.scss (<- Module is not an ECMAScript module) */
 
-/*! ModuleConcatenation bailout: Cannot concat with ./src/styles/main.scss (<- Module is not an ECMAScript module) */
+/*! ModuleConcatenation bailout: Cannot concat with ./src/components/header/header.scss (<- Module is not an ECMAScript module) */
 
 /*! ModuleConcatenation bailout: Cannot concat with ./src/assets/images/abhishar.jpg (<- Module is not an ECMAScript module) */
 
