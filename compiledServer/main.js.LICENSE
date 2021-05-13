@@ -142,6 +142,18 @@
 
 /*! ../heading/heading */
 
+/*!*************************************************!*\
+  !*** ./src/components/common/button/button.jsx ***!
+  \*************************************************/
+
+// eslint-disable-next-line react/button-has-type
+
+/*! prop-types */
+
+/*! classnames */
+
+/*! ./button.scss */
+
 /*!*****************************!*\
   !*** external "redux-saga" ***!
   \*****************************/
@@ -193,8 +205,6 @@
   \**************************************/
 
 /*! ModuleConcatenation bailout: Module is referenced from these modules with unsupported syntax: ./src/components/menu/menu.async.jsx (referenced with import(), require.resolve) */
-
-/*! prop-types */
 
 /*! react-router-dom */
 
@@ -429,25 +439,25 @@
 
 /*! ./icon */
 
+/*!****************************************************!*\
+  !*** ./src/components/common/textaea/textarea.jsx ***!
+  \****************************************************/
+
+/*! ./textarea.scss */
+
 /*!********************************************************!*\
-  !*** ./src/components/pages/json/Json.jsx + 4 modules ***!
+  !*** ./src/components/pages/json/Json.jsx + 1 modules ***!
   \********************************************************/
 
-/*! ModuleConcatenation bailout: Cannot concat with ./src/components/common/Input/input.scss (<- Module is not an ECMAScript module) */
+/*! ModuleConcatenation bailout: Cannot concat with ./src/components/common/Input/input.jsx because of ./src/components/pages/components/components.jsx */
 
-/*! ModuleConcatenation bailout: Cannot concat with ./src/components/common/button/button.scss (<- Module is not an ECMAScript module) */
+/*! ModuleConcatenation bailout: Cannot concat with ./src/components/common/button/button.jsx because of ./src/components/pages/components/components.jsx */
 
-/*! ModuleConcatenation bailout: Cannot concat with ./src/components/common/textaea/textarea.scss (<- Module is not an ECMAScript module) */
+/*! ModuleConcatenation bailout: Cannot concat with ./src/components/common/textaea/textarea.jsx because of ./src/components/pages/components/components.jsx */
 
 /*! ModuleConcatenation bailout: Cannot concat with ./src/components/pages/json/json.scss (<- Module is not an ECMAScript module) */
 
 /*! ModuleConcatenation bailout: Cannot concat with external "classnames" (<- Module is not an ECMAScript module) */
-
-// eslint-disable-next-line react/button-has-type
-
-// EXTERNAL MODULE: ./src/components/common/button/button.scss
-
-// EXTERNAL MODULE: ./src/components/common/textaea/textarea.scss
 
 // CONCATENATED MODULE: ./src/components/pages/json/getKeyPath.js
 
@@ -478,6 +488,14 @@
 /*! ./index */
 
 /* eslint class-methods-use-this: ["error", { "exceptMethods": ["__handleAfter"] }] */
+
+/*!*********************************************************!*\
+  !*** ./src/components/pages/components/components.scss ***!
+  \*********************************************************/
+
+/*!**********************************************************!*\
+  !*** ./src/components/common/simpleicon/simpleicon.scss ***!
+  \**********************************************************/
 
 /*!**************************************************************!*\
   !*** ./node_modules/react-universal-component/dist/index.js ***!
@@ -741,6 +759,12 @@
    * This creates uni-directional flow from history->store->router->components.
    */
 
+/*!**************************************!*\
+  !*** ./src/components/hero/hero.jsx ***!
+  \**************************************/
+
+/*! ./hero.scss */
+
 /*!********************************************!*\
   !*** ./src/components/section/section.jsx ***!
   \********************************************/
@@ -750,6 +774,12 @@
 /*!****************************************!*\
   !*** ./src/assets/images/wordbook.png ***!
   \****************************************/
+
+/*!***********************************************!*\
+  !*** ./src/components/common/Input/input.jsx ***!
+  \***********************************************/
+
+/*! ./input.scss */
 
 /*!*******************************!*\
   !*** external "tiny-warning" ***!
@@ -853,6 +883,8 @@
 
 /*! ./components/pages/json/Json */
 
+/*! ./components/pages/components/components */
+
 /*! ./components/pages/notfound/notfound */
 
 // eslint-disable-next-line react/no-array-index-key
@@ -924,6 +956,10 @@
 /*!**********************************************************!*\
   !*** ./src/assets/fonts/SFMono/SFMono-RegularItalic.ttf ***!
   \**********************************************************/
+
+/*!***********************************************!*\
+  !*** ./src/components/projects/projects.scss ***!
+  \***********************************************/
 
 /*!*****************************************************!*\
   !*** ./src/assets/fonts/Calibre/Calibre-Medium.ttf ***!
@@ -1018,6 +1054,56 @@
 /*!****************************************************!*\
   !*** ./src/assets/fonts/SFMono/SFMono-Medium.woff ***!
   \****************************************************/
+
+/*!********************************************************************!*\
+  !*** ./src/components/pages/components/components.jsx + 3 modules ***!
+  \********************************************************************/
+
+/*! ModuleConcatenation bailout: Cannot concat with ./src/components/about/about.jsx (<- Module is referenced from these modules with unsupported syntax: ./src/routes.js (referenced with import(), require.resolve)) */
+
+/*! ModuleConcatenation bailout: Cannot concat with ./src/components/common/Input/input.jsx because of ./src/components/pages/json/Json.jsx */
+
+/*! ModuleConcatenation bailout: Cannot concat with ./src/components/common/button/button.jsx because of ./src/components/pages/json/Json.jsx */
+
+/*! ModuleConcatenation bailout: Cannot concat with ./src/components/common/icon/icon.jsx (<- Module is referenced from these modules with unsupported syntax: ./src/components/common/icon/icon.async.jsx (referenced with import(), require.resolve)) */
+
+/*! ModuleConcatenation bailout: Cannot concat with ./src/components/common/image/image.jsx because of ./src/components/work/work.jsx */
+
+/*! ModuleConcatenation bailout: Cannot concat with ./src/components/common/textaea/textarea.jsx because of ./src/components/pages/json/Json.jsx */
+
+/*! ModuleConcatenation bailout: Cannot concat with ./src/components/contact/contact.jsx (<- Module is referenced from these modules with unsupported syntax: ./src/routes.js (referenced with import(), require.resolve)) */
+
+/*! ModuleConcatenation bailout: Cannot concat with ./src/components/email/email.jsx (<- Module is referenced from these modules with unsupported syntax: ./src/components/email/email.async.jsx (referenced with import(), require.resolve)) */
+
+/*! ModuleConcatenation bailout: Cannot concat with ./src/components/footer/footer.jsx (<- Module is referenced from these modules with unsupported syntax: ./src/components/footer/footer.async.jsx (referenced with import(), require.resolve)) */
+
+/*! ModuleConcatenation bailout: Cannot concat with ./src/components/heading/heading.jsx because of ./src/components/pages/notfound/notfound.jsx */
+
+/*! ModuleConcatenation bailout: Cannot concat with ./src/components/hero/hero.jsx because of ./src/containers/pages/home/home.jsx */
+
+/*! ModuleConcatenation bailout: Cannot concat with ./src/components/jobs/jobs.jsx (<- Module is referenced from these modules with unsupported syntax: ./src/routes.js (referenced with import(), require.resolve)) */
+
+/*! ModuleConcatenation bailout: Cannot concat with ./src/components/menu/menu.jsx (<- Module is referenced from these modules with unsupported syntax: ./src/components/menu/menu.async.jsx (referenced with import(), require.resolve)) */
+
+/*! ModuleConcatenation bailout: Cannot concat with ./src/components/section/section.jsx because of ./src/components/pages/notfound/notfound.jsx */
+
+/*! ModuleConcatenation bailout: Cannot concat with ./src/components/social/social.jsx (<- Module is referenced from these modules with unsupported syntax: ./src/components/social/social.async.jsx (referenced with import(), require.resolve)) */
+
+/*! ModuleConcatenation bailout: Cannot concat with ./src/components/work/work.jsx (<- Module is referenced from these modules with unsupported syntax: ./src/routes.js (referenced with import(), require.resolve)) */
+
+/*! ModuleConcatenation bailout: Cannot concat with ./src/components/common/simpleicon/simpleicon.scss (<- Module is not an ECMAScript module) */
+
+/*! ModuleConcatenation bailout: Cannot concat with ./src/components/pages/components/components.scss (<- Module is not an ECMAScript module) */
+
+/*! ModuleConcatenation bailout: Cannot concat with ./src/components/projects/projects.scss (<- Module is not an ECMAScript module) */
+
+/*! ModuleConcatenation bailout: Cannot concat with external "react-router-dom" (<- Module is not an ECMAScript module) */
+
+// EXTERNAL MODULE: ./src/components/common/button/button.jsx
+
+// EXTERNAL MODULE: ./src/components/footer/footer.jsx
+
+// CONCATENATED MODULE: ./src/components/projects/projects.jsx
 
 /*!***********************************!*\
   !*** external "react-router-dom" ***!
@@ -1172,24 +1258,12 @@
   \************************************************/
 
 /*!********************************************************!*\
-  !*** ./src/containers/pages/home/home.jsx + 2 modules ***!
+  !*** ./src/containers/pages/home/home.jsx + 1 modules ***!
   \********************************************************/
 
-/*! ModuleConcatenation bailout: Cannot concat with ./src/components/about/about.jsx (<- Module is referenced from these modules with unsupported syntax: ./src/routes.js (referenced with import(), require.resolve)) */
-
-/*! ModuleConcatenation bailout: Cannot concat with ./src/components/contact/contact.jsx (<- Module is referenced from these modules with unsupported syntax: ./src/routes.js (referenced with import(), require.resolve)) */
-
-/*! ModuleConcatenation bailout: Cannot concat with ./src/components/jobs/jobs.jsx (<- Module is referenced from these modules with unsupported syntax: ./src/routes.js (referenced with import(), require.resolve)) */
-
-/*! ModuleConcatenation bailout: Cannot concat with ./src/components/section/section.jsx because of ./src/components/jobs/jobs.jsx */
-
-/*! ModuleConcatenation bailout: Cannot concat with ./src/components/work/work.jsx (<- Module is referenced from these modules with unsupported syntax: ./src/routes.js (referenced with import(), require.resolve)) */
-
-/*! ModuleConcatenation bailout: Cannot concat with ./src/components/hero/hero.scss (<- Module is not an ECMAScript module) */
+/*! ModuleConcatenation bailout: Cannot concat with ./src/components/hero/hero.jsx because of ./src/components/pages/components/components.jsx */
 
 /*! ModuleConcatenation bailout: Cannot concat with ./src/components/pages/home/home.scss (<- Module is not an ECMAScript module) */
-
-/*! ModuleConcatenation bailout: Cannot concat with external "react-router-dom" (<- Module is not an ECMAScript module) */
 
 // Scroll into view for hash location
 
@@ -1225,7 +1299,7 @@
 
 /*! ModuleConcatenation bailout: Cannot concat with ./src/components/social/social.async.jsx (<- Module uses injected variables (__dirname)) */
 
-/*! ModuleConcatenation bailout: Cannot concat with ./src/constants.js because of ./src/components/social/social.jsx */
+/*! ModuleConcatenation bailout: Cannot concat with ./src/constants.js because of ./src/components/menu/menu.jsx */
 
 /*! ModuleConcatenation bailout: Cannot concat with ./src/containers/pages/iss/constants.js because of ./src/routes.js */
 
