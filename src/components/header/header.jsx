@@ -149,16 +149,11 @@ class Header extends React.PureComponent {
 
           <div className={styles.links}>
             <ol>
-              {Navigation.map(({ name, to }) => (
+              {Navigation.map(({ name, to, page }) => (
                 <li key={name}>
-                  <Link to={to}>{name}</Link>
-                </li>
-              ))}
-            </ol>
-            <ol className={styles.hiddenLinks}>
-              {Navigation.map(({ name, page }) => (
-                <li key={name}>
-                  <Link to={page}>{name}</Link>
+                  <Link to={() => (typeof window !== 'undefined' ? to : page)}>
+                    {name}
+                  </Link>
                 </li>
               ))}
             </ol>
