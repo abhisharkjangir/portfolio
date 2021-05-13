@@ -40,6 +40,13 @@ const Json = universal(
   universalOptions
 );
 
+const Comoponents = universal(
+  import(
+    /* webpackChunkName: "comoponents-page" */ './components/pages/components/components'
+  ),
+  universalOptions
+);
+
 const Notfound = universal(
   import(
     /* webpackChunkName: "notfound-page" */ './components/pages/notfound/notfound'
@@ -92,6 +99,11 @@ export const RouteList = [
   {
     path: '/app/json-key-path-finder',
     component: Json,
+    exact: true,
+  },
+  {
+    path: '/components',
+    component: Comoponents,
     exact: true,
   },
   {
