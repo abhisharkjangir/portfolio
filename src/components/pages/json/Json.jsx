@@ -4,7 +4,7 @@ import classnames from 'classnames';
 import styles from './json.scss';
 import Input from '../../common/Input/input';
 import Button from '../../common/button/button';
-import Textarea from '../../common/textaea/textarea';
+import Textarea from '../../common/textarea/textarea';
 import getKeyPath from './getKeyPath';
 
 class ISS extends React.PureComponent {

@@ -10,7 +10,7 @@ import Heading from '../../common/heading/heading';
 import Button from '../../common/button/button';
 import Image from '../../common/image/image';
 import Input from '../../common/Input/input';
-import Textarea from '../../common/textaea/textarea';
+import Textarea from '../../common/textarea/textarea';
 import SimpleIcon from '../../common/simpleicon/simpleicon';
 import Footer from '../../footer/footer';
 import SectionHeading from '../../heading/heading';
