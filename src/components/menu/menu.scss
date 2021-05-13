@@ -1,4 +1,4 @@
-@import "../../styles/common";
+@import "../../styles/portfolio/common";
 
 .menu {
   position: fixed;
@@ -63,7 +63,7 @@
   width: max-content;
 }
 
-@import "../../styles/breakpoints";
+@import "../../styles/portfolio/breakpoints";
 
 @media (max-width:$tablet) {
   .menu {

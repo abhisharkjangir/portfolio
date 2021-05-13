@@ -1,4 +1,4 @@
-@import "../../styles/common";
+@import "../../styles/portfolio/common";
 
 .footer {
   @extend %flexCenter;
@@ -59,7 +59,7 @@
   color: red;
 }
 
-@import "../../styles/breakpoints";
+@import "../../styles/portfolio/breakpoints";
 
 @media (max-width:$tablet) {
   .socialContainer {

@@ -1,4 +1,4 @@
-@import "../../styles/common";
+@import "../../styles/portfolio/common";
 // Contact
 .contact {
   text-align: center;
@@ -17,7 +17,7 @@
   }
 }
 
-@import "../../styles/breakpoints";
+@import "../../styles/portfolio/breakpoints";
 
 @media (max-width: $desktop) {
   .contact {

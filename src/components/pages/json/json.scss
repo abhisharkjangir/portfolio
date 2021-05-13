@@ -1,6 +1,3 @@
-
-@import "../../../styles/common";
-
 .json {
   display: flex;
 
@@ -52,7 +49,7 @@
     margin: 0 auto;
 
     .flex {
-      @extend %flex;
+      display: flex;
     }
 
     .button {

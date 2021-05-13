@@ -74,7 +74,7 @@ ul, ol {
   list-style: none;
 }
 // Media Queries =====================
-@import "./breakpoints";
+@import "../../styles/portfolio/breakpoints";
 
 @media (max-width: $desktop) {
   .main {

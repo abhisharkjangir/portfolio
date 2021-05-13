@@ -1,4 +1,4 @@
-@import "../../styles/common";
+@import "../../styles/portfolio/common";
 .header {
   @extend %flexBetween;
   position: fixed;
@@ -139,7 +139,7 @@
   }
 }
 
-@import "../../styles/breakpoints";
+@import "../../styles/portfolio/breakpoints";
 
 @media (max-width: $desktop) {
   .header {

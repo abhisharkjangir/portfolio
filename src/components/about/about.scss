@@ -1,4 +1,4 @@
-@import "../../styles/common";
+@import "../../styles/portfolio/common";
 
 // About
 .aboutFlexContainer {
@@ -95,7 +95,7 @@
   }
 }
 
-@import "../../styles/breakpoints";
+@import "../../styles/portfolio/breakpoints";
 @media (max-width: $bigDesktop) {
 
 }

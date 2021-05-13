@@ -1,4 +1,4 @@
-@import "../../styles/common";
+@import "../../styles/portfolio/common";
 
 // Work
 .work {
@@ -144,7 +144,7 @@
   }
 }
 
-@import "../../styles/breakpoints";
+@import "../../styles/portfolio/breakpoints";
 @media (max-width: $tablet) {
   .work {
     .imgContainer {
