@@ -171,6 +171,9 @@ const getModule = isProduction => {
           {
             loader: 'sass-loader',
           },
+          {
+            loader: 'postcss-loader',
+          },
         ],
       },
       {
@@ -180,6 +183,9 @@ const getModule = isProduction => {
           isProduction ? ExtractCssChunks.loader : 'style-loader',
           {
             loader: 'css-loader',
+          },
+          {
+            loader: 'postcss-loader',
           },
         ],
       },

@@ -1,3 +1,7 @@
+/* @tailwind base; */
+/* @tailwind components; */
+@tailwind utilities;
+
 .light {
 
   --bg-c-navy: #F5E6D0;
