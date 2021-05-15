@@ -179,6 +179,9 @@ const getModule = isProduction => {
           {
             loader: 'sass-loader',
           },
+          {
+            loader: 'postcss-loader',
+          },
         ],
       },
       {
@@ -187,6 +190,9 @@ const getModule = isProduction => {
         use: [
           {
             loader: 'css-loader',
+          },
+          {
+            loader: 'postcss-loader',
           },
         ],
       },
