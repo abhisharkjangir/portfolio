@@ -1,5 +1,3 @@
-/* eslint-disable no-shadow */
-/* eslint-disable react/no-danger */
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Section from '../section/section';
@@ -11,6 +9,7 @@ import nasa from '../../assets/images/nasa.png';
 import iss from '../../assets/images/iss.png';
 import json from '../../assets/images/json.png';
 import Image from '../common/image/image';
+import PrimaryLink from '../common/PrimaryLink/PrimaryLink';
 
 const Work = () => {
   const projects = [
@@ -110,19 +109,19 @@ const Work = () => {
               </ul>
               <div className={styles.link}>
                 {links &&
-                  links.map(({ url, iconName }) => (
+                  links.map(({ linkurl, iconName }) => (
                     <React.Fragment>
                       {!internal ? (
-                        <a
-                          href={url}
+                        <PrimaryLink
+                          href={linkurl}
                           target="_blank"
                           rel={rel}
                           aria-label={title}
                         >
                           <Icon name={iconName} />
-                        </a>
+                        </PrimaryLink>
                       ) : (
-                        <Link to={url}>
+                        <Link to={linkurl}>
                           <Icon name={iconName} />
                         </Link>
                       )}
@@ -131,7 +130,7 @@ const Work = () => {
               </div>
             </div>
             {!internal ? (
-              <a
+              <PrimaryLink
                 href={url}
                 target="_blank"
                 rel={rel}
@@ -139,7 +138,7 @@ const Work = () => {
                 className={styles.imgContainer}
               >
                 <Image src={image} className={styles.image} alt={title} />
-              </a>
+              </PrimaryLink>
             ) : (
               <Link to={url} className={styles.imgContainer}>
                 <Image src={image} className={styles.image} alt={title} />

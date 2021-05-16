@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import styles from './notfound.scss';
 import Section from '../../section/section';
 import Heading from '../../heading/heading';
+import PrimaryLink from '../../common/PrimaryLink/PrimaryLink';
 class NotFound extends React.PureComponent {
   render() {
     return (
@@ -12,9 +12,9 @@ class NotFound extends React.PureComponent {
           <h1 className={styles.title}>
             There&lsquo;s not much left here for you.
           </h1>
-          <Link to="/" className={styles.bigButton}>
+          <PrimaryLink href="/" className={styles.bigButton}>
             Go Home
-          </Link>
+          </PrimaryLink>
         </div>
       </Section>
     );

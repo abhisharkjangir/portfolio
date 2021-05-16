@@ -1,4 +1,5 @@
 import React from 'react';
+import PrimaryLink from '../common/PrimaryLink/PrimaryLink';
 import Section from '../section/section';
 import styles from './hero.scss';
 
@@ -18,12 +19,12 @@ const Hero = () => {
         </p>
       </div>
       <div>
-        <a
+        <PrimaryLink
           className={styles.getintouch}
           href="mailto:abhisharjangir@ymail.com?subject=Get In Touch&body=Hello Abhishar,"
         >
           Get In Touch
-        </a>
+        </PrimaryLink>
       </div>
     </Section>
   );

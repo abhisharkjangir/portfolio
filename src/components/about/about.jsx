@@ -1,10 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Section from '../section/section';
 import styles from './about.scss';
 import abhishar from '../../assets/images/abhishar.jpg';
 import Heading from '../heading/heading';
 import Image from '../common/image/image';
+import PrimaryLink from '../common/PrimaryLink/PrimaryLink';
 
 const About = () => {
   const Skills = [
@@ -31,25 +31,25 @@ const About = () => {
           </p>
           <p>
             After my graduation from
-            <a
+            <PrimaryLink
               href="https://bkbiet.ac.in/"
               target="_blank"
               rel="nofollow noopener noreferrer"
             >
               BKBIET, Pilani
-            </a>
+            </PrimaryLink>
             , I started my career as a web designer and today, after 4+ years,
             as a front-end developer, I worked on a wide variety of web apps.
           </p>
           <p>
             Currently, I&lsquo;m working with
-            <a
+            <PrimaryLink
               href="https://www.bedbathandbeyond.com/"
               target="_blank"
               rel="nofollow noopener noreferrer"
             >
               Bed Bath & Beyond
-            </a>
+            </PrimaryLink>
             .
           </p>
           <p>
@@ -62,9 +62,9 @@ const About = () => {
           </ul>
         </div>
         <div className={styles.aboutPic}>
-          <Link to="/" aria-label="Display Picture">
+          <PrimaryLink to="/" aria-label="Display Picture" internal>
             <Image src={abhishar} alt="Abhishar Jangir" />
-          </Link>
+          </PrimaryLink>
         </div>
       </div>
     </Section>

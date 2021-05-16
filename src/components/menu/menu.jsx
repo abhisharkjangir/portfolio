@@ -2,9 +2,9 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 import styles from './menu.scss';
 import { resume } from '../../constants';
+import PrimaryLink from '../common/PrimaryLink/PrimaryLink';
 
 const getMenuStyle = isMenuOpen => {
   return {
@@ -25,7 +25,9 @@ const Menu = ({ isMenuOpen, toggleMenu, links }) => {
           <ol>
             {links.map(({ name, to }) => (
               <li key={name}>
-                <Link to={to}>{name}</Link>
+                <PrimaryLink href={to} internal>
+                  {name}
+                </PrimaryLink>
               </li>
             ))}
           </ol>

@@ -1,18 +1,17 @@
 import React from 'react';
+import PrimaryLink from '../common/PrimaryLink/PrimaryLink';
 import styles from './email.scss';
 
-class Email extends React.PureComponent {
-  render() {
-    return (
-      <div id="email" className={styles.email}>
-        <div>
-          <a href="mailto:abhisharjangir@ymail.com?subject=Get In Touch&body=Hello Abhishar,">
-            abhisharjangir@ymail.com
-          </a>
-        </div>
+const Email = () => {
+  return (
+    <div id="email" className={styles.email}>
+      <div>
+        <PrimaryLink href="mailto:abhisharjangir@ymail.com?subject=Get In Touch&body=Hello Abhishar,">
+          abhisharjangir@ymail.com
+        </PrimaryLink>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default Email;

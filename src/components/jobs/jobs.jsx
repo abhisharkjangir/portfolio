@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Section from '../section/section';
 import styles from './jobs.scss';
 import Heading from '../heading/heading';
+import PrimaryLink from '../common/PrimaryLink/PrimaryLink';
 
 const TabList = [
   {
@@ -63,13 +64,13 @@ const Jobs = () => {
               <span>{title}</span>
               <span className={styles.jobCompany}>
                 <span>&nbsp;@&nbsp;</span>
-                <a
+                <PrimaryLink
                   href={url}
                   target="_blank"
                   rel="nofollow noopener noreferrer"
                 >
                   {company}
-                </a>
+                </PrimaryLink>
               </span>
             </h4>
             <h5 className={styles.jobDetail}>

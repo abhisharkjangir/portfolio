@@ -1,8 +1,8 @@
-/* eslint-disable react/no-danger */
 import React from 'react';
 import Section from '../section/section';
 import styles from './contact.scss';
 import Heading from '../heading/heading';
+import PrimaryLink from '../common/PrimaryLink/PrimaryLink';
 
 const Contact = () => {
   return (
@@ -15,12 +15,12 @@ const Contact = () => {
           my inbox is always open. Whether for a potential project or just to
           say hi, I&lsquo;ll try my best to answer your email!
         </p>
-        <a
+        <PrimaryLink
           href="mailto:abhisharjangir@ymail.com?subject=Get In Touch&body=Hello Abhishar,"
           className={styles.bigButton}
         >
           Say Hello
-        </a>
+        </PrimaryLink>
       </div>
     </Section>
   );

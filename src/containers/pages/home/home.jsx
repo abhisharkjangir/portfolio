@@ -1,11 +1,9 @@
 import React from 'react';
 import HomeComponent from '../../../components/pages/home/home';
 
-class Home extends React.PureComponent {
-  render() {
-    return <HomeComponent {...this.props} />;
-  }
-}
+const Home = props => {
+  return <HomeComponent {...props} />;
+};
 
 Home.propTypes = {};
 

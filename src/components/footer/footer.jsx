@@ -1,9 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import styles from './footer.scss';
 import Icon from '../common/icon/icon';
 import { socialList } from '../../constants';
-
+import PrimaryLink from '../common/PrimaryLink/PrimaryLink';
 class Footer extends React.PureComponent {
   render() {
     const date = new Date();
@@ -14,20 +13,20 @@ class Footer extends React.PureComponent {
           <ul className={styles.list}>
             {socialList.map(({ name, url }) => (
               <li key={name}>
-                <a
+                <PrimaryLink
                   href={url}
                   target="_blank"
                   rel="nofollow noopener noreferrer"
                   aria-label={name}
                 >
                   <Icon name={name} />
-                </a>
+                </PrimaryLink>
               </li>
             ))}
           </ul>
         </div>
         <div className={styles.content}>
-          <Link to="/" aria-label="home">
+          <PrimaryLink href="/" aria-label="home" internal>
             <span>
               Handcrafted with
               <span className={styles.heart}> &#10084; </span>
@@ -39,7 +38,7 @@ class Footer extends React.PureComponent {
                 {date.getFullYear()}
               </span>
             </div>
-          </Link>
+          </PrimaryLink>
         </div>
       </footer>
     );

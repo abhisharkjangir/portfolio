@@ -2,28 +2,25 @@ import React from 'react';
 import styles from './social.scss';
 import { socialList } from '../../constants';
 import Icon from '../common/icon/icon';
+import PrimaryLink from '../common/PrimaryLink/PrimaryLink';
 
-class Social extends React.PureComponent {
-  render() {
-    return (
-      <div id="social" className={styles.social}>
-        <ul>
-          {socialList.map(({ name, url }) => (
-            <li key={name}>
-              <a
-                href={url}
-                target="_blank"
-                rel="nofollow noopener noreferrer"
-                aria-label={name}
-              >
-                <Icon name={name} />
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
-    );
-  }
-}
+const Social = () => (
+  <div id="social" className={styles.social}>
+    <ul>
+      {socialList.map(({ name, url }) => (
+        <li key={name}>
+          <PrimaryLink
+            href={url}
+            target="_blank"
+            rel="nofollow noopener noreferrer"
+            aria-label={name}
+          >
+            <Icon name={name} />
+          </PrimaryLink>
+        </li>
+      ))}
+    </ul>
+  </div>
+);
 
 export default Social;
