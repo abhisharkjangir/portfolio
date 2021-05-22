@@ -1,40 +1,43 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes, { object } from 'prop-types';
 import classnames from 'classnames';
 import styles from './button.scss';
+import PrimaryLink from '../PrimaryLink/PrimaryLink';
+const Button = ({ children, theme, className, href, ...restProps }) => {
+  if (href) {
+    return (
+      <PrimaryLink
+        href={href}
+        {...restProps}
+        className={classnames(styles.anchor, styles[theme], className)}
+      >
+        {children}
+      </PrimaryLink>
+    );
+  }
 
-const Button = ({ id, className, type, label, onClick, disabled, theme }) => {
-  const themeClass = styles[theme];
   return (
     // eslint-disable-next-line react/button-has-type
     <button
-      id={id}
-      disabled={disabled}
-      type={type}
-      value={label}
-      onClick={onClick}
-      className={classnames(styles.button, themeClass, className)}
+      {...restProps}
+      className={classnames(styles.button, styles[theme], className)}
     >
-      {label}
+      {children}
     </button>
   );
 };
 
 Button.propTypes = {
-  type: PropTypes.string,
-  id: PropTypes.string.isRequired,
-  className: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired,
-  label: PropTypes.string.isRequired,
-  disabled: PropTypes.bool,
+  children: object.isRequired,
+  className: PropTypes.string,
   theme: PropTypes.string,
+  href: PropTypes.string,
 };
 
 Button.defaultProps = {
-  disabled: false,
-  type: 'submit',
   theme: 'primary',
+  className: '',
+  href: undefined,
 };
 
 export default Button;

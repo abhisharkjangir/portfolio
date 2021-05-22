@@ -10,14 +10,13 @@
       width: 100%;
       justify-self: center;
       align-self: center;
-      h1,p {
+      h1,
+      p {
         text-align: center;
       }
     }
   }
   .jsonview {
-
-
     background-color: #efefef;
     width: 50%;
     p {
@@ -27,7 +26,7 @@
       padding: 15px;
       margin: 0;
     }
-    ul{
+    ul {
       max-height: calc(100vh - 58px);
       min-height: calc(100vh - 58px);
       overflow-y: scroll;
@@ -50,19 +49,5 @@
     .flex {
       display: flex;
     }
-
-    .button {
-      width: calc(50% - 5px);
-    }
-
-    .searchButton{
-      margin-right: 5px;
-    }
-    .resetButton{
-      margin-left: 5px;
-    }
   }
-
 }
-
-

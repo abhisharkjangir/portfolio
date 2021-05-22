@@ -4,7 +4,11 @@ import { Link } from 'react-router-dom';
 
 const PrimaryLink = ({ children, href, to, internal, ...rest }) => {
   if (internal) {
-    return <Link to={href || to}>{children}</Link>;
+    return (
+      <Link to={href || to} {...rest}>
+        {children}
+      </Link>
+    );
   }
   return (
     <a href={href} {...rest}>

@@ -1,6 +1,5 @@
 /* eslint-disable array-callback-return */
 import React from 'react';
-import classnames from 'classnames';
 import styles from './json.scss';
 import Input from '../../common/Input/input';
 import Button from '../../common/button/button';
@@ -136,20 +135,24 @@ class ISS extends React.PureComponent {
                 placeholder="Enter key to search"
               />
               <Button
-                className={classnames(styles.button, styles.searchButton)}
+                // className={classnames(styles.button, styles.searchButton)}
                 type="submit"
                 onClick={this.clickHandler}
-                label="Search Path"
                 theme="primary"
-              />
+                className="mt-3 w-full"
+              >
+                Search
+              </Button>
 
               <Button
-                className={classnames(styles.button, styles.resetButton)}
+                className="mt-3 w-full"
+                // className={classnames(styles.button, styles.resetButton)}
                 type="submit"
                 theme="secondary"
                 onClick={this.reset}
-                label="Reset"
-              />
+              >
+                Reset
+              </Button>
             </div>
           </div>
         </div>
