@@ -108,7 +108,7 @@ export default ({ clientStats }) => (req, res) => {
       // Create a store (with a memory history) from our current url
       const { store } = createStore(history);
       const saga = store.runSaga(rootSaga);
-      let theme;
+      let theme = 'dark';
       const context = {};
       let actions = [];
       RouteList.some(route => {
@@ -129,12 +129,10 @@ export default ({ clientStats }) => (req, res) => {
       if (Meta[req.url]) {
         store.dispatch(setHelmetInfo(Meta[req.url]));
       }
+
       // Load theme for dark/light page
       if (req.path === '/theme/light') theme = 'light';
       else if (req.path === '/theme/dark') theme = 'dark';
-      else {
-        theme = Math.floor(Math.random() * 10 + 1) % 2 === 0 ? 'dark' : 'light';
-      }
 
       store.dispatch(END);
       try {
