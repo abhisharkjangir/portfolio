@@ -4,7 +4,7 @@
   @extend %flexCenter;
   flex-direction: column;
   padding: 12px;
-  background-color: var(--bg-c-dark-navy);
+  background-color: var(--c-dark-navy);
   color: var(--c-slate);
   text-align: center;
   height: auto;
@@ -61,7 +61,7 @@
 
 @import "../../styles/portfolio/breakpoints";
 
-@media (max-width:$tablet) {
+@media (max-width: $tablet) {
   .socialContainer {
     display: block;
   }

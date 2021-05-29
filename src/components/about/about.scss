@@ -47,7 +47,7 @@
     width: 100%;
     position: relative;
     border-radius: 3px;
-    background-color: var(--bg-c-green);
+    background-color: var(--c-green);
     margin-left: -20px;
     &:hover,
     &:focus {
@@ -97,14 +97,12 @@
 
 @import "../../styles/portfolio/breakpoints";
 @media (max-width: $bigDesktop) {
-
 }
 
 @media (max-width: $desktop) {
-
 }
 
-@media (max-width:$tablet) {
+@media (max-width: $tablet) {
   .aboutFlexContainer {
     display: block;
   }
@@ -118,19 +116,16 @@
 }
 
 @media (max-width: $thone) {
-
 }
 
 @media (max-width: $phablet) {
   .aboutPic {
-    width: 70%!important;
+    width: 70% !important;
   }
 }
 
 @media (max-width: $phone) {
-
 }
 
-@media (max-width:$tiny) {
-
+@media (max-width: $tiny) {
 }

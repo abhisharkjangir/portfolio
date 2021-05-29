@@ -3,58 +3,24 @@
 @tailwind utilities;
 
 .light {
-
-  --bg-c-navy: #F5E6D0;
-  --bg-c-dark-navy: #FDF3E4;
-  --bg-c-light-navy: #E8D5BA;
-  --bg-c-dark-grey: #CCC0A7;
-  --bg-c-slate: #2B2B2B;
-  --bg-c-light-slate: #2B2B2B;
-  --bg-c-lightest-slate: #332909;
-  --bg-c-white: #190E00;
-  --bg-c-green: #9B0025;
-  --bg-c-blue: #8E5000;
-  --bg-c-trans-green: rgba(155, 0, 37,0.07);
-  --bg-c-medium-grey: #D2C6AD;
-  --bg-c-shadow-navy: rgba(253, 243, 228,0.7);
-  --bg-c-grey: #292929;
-
-  --c-navy: #F5E6D0;
-  --c-dark-navy: #FDF3E4;
-  --c-light-navy: #E8D5BA;
-  --c-dark-grey: #CCC0A7;
-  --c-slate: #2B2B2B;
-  --c-light-slate: #2B2B2B;
+  --c-navy: #f5e6d0;
+  --c-dark-navy: #fdf3e4;
+  --c-light-navy: #e8d5ba;
+  --c-dark-grey: #ccc0a7;
+  --c-slate: #2b2b2b;
+  --c-light-slate: #2b2b2b;
   --c-lightest-slate: #332909;
-  --c-white: #190E00;
-  --c-green: #9B0025;
-  --c-blue: #8E5000;
-  --c-trans-green: rgba(155, 0, 37,0.07);
-  --c-medium-grey: #D2C6AD;
-  --c-shadow-navy: rgba(253, 243, 228,0.7);
+  --c-white: #190e00;
+  --c-green: #9b0025;
+  --c-blue: #8e5000;
+  --c-trans-green: rgba(155, 0, 37, 0.07);
+  --c-medium-grey: #d2c6ad;
+  --c-shadow-navy: rgba(253, 243, 228, 0.7);
   --c-grey: #292929;
-  --c-pure-white: #000;
-
   --blend: multiply;
-
 }
 
 .dark {
-  --bg-c-navy: #0a192f;
-  --bg-c-dark-navy: #020c1b;
-  --bg-c-light-navy: #172a45;
-  --bg-c-dark-grey: #333f58;
-  --bg-c-slate: #d4d4d4;
-  --bg-c-light-slate: #d4d4d4;
-  --bg-c-lightest-slate: #ccd6f6;
-  --bg-c-white: #e6f1ff;
-  --bg-c-green: #64ffda;
-  --bg-c-blue: #71afff;
-  --bg-c-trans-green: rgba(100, 255, 218, 0.07);
-  --bg-c-medium-grey: #2d3952;
-  --bg-c-shadow-navy: rgba(2, 12, 27, 0.7);
-  --bg-c-grey: #d6d6d6;
-
   --c-navy: #0a192f;
   --c-dark-navy: #020c1b;
   --c-light-navy: #172a45;
@@ -69,7 +35,6 @@
   --c-medium-grey: #2d3952;
   --c-shadow-navy: rgba(2, 12, 27, 0.7);
   --c-grey: #d6d6d6;
-  --c-pure-white: #ffffff;
   --blend: screen;
 }
 
@@ -243,7 +208,7 @@ body {
   overflow-x: hidden;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  background-color: var(--bg-c-navy);
+  background-color: var(--c-navy);
   color: var(--c-slate);
   line-height: 1.3;
   font-family: var(--font-Calibre);
@@ -262,13 +227,13 @@ body {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: var(--bg-c-navy);
+  background: var(--c-navy);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb,
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--bg-c-green);
+  background: var(--c-green);
   border-radius: 5px;
 }
 

@@ -52,7 +52,7 @@
     position: relative;
     z-index: 2;
     padding: 25px;
-    background-color: var(--bg-c-light-navy);
+    background-color: var(--c-light-navy);
     color: var(--c-light-slate);
     font-size: var(--fs-lg);
     border-radius: 3px;
@@ -107,7 +107,7 @@
     grid-row: 1 / -1;
     position: relative;
     z-index: 1;
-    background-color: var(--bg-c-green);
+    background-color: var(--c-green);
     border-radius: 3px;
     transition: var(--transition);
     &:hover,
@@ -130,7 +130,7 @@
       bottom: 0;
       z-index: 3;
       transition: var(--transition);
-      background-color: var(--bg-c-navy);
+      background-color: var(--c-navy);
       mix-blend-mode: var(--blend);
     }
   }

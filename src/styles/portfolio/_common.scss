@@ -1,4 +1,3 @@
-
 %flex {
   display: flex;
 }
@@ -29,7 +28,7 @@
   &:hover,
   &:focus,
   &:active {
-    background-color: var(--bg-c-trans-green);
+    background-color: var(--c-trans-green);
   }
   &:after {
     display: none !important;
@@ -51,7 +50,7 @@
   &:hover,
   &:focus,
   &:active {
-    background-color: var(--bg-c-trans-green);
+    background-color: var(--c-trans-green);
   }
   &:after {
     display: none !important;
@@ -60,18 +59,18 @@
 
 %link {
   display: inline-block;
-    text-decoration: none;
-    text-decoration-skip-ink: auto;
-    color: inherit;
-    position: relative;
-    transition: var(--transition);
-    cursor: pointer;
-    &:hover,
-    &:active,
-    &:focus {
-      color: var(--c-green);
-      outline: 0;
-    }
+  text-decoration: none;
+  text-decoration-skip-ink: auto;
+  color: inherit;
+  position: relative;
+  transition: var(--transition);
+  cursor: pointer;
+  &:hover,
+  &:active,
+  &:focus {
+    color: var(--c-green);
+    outline: 0;
+  }
 }
 
 %inlineLink {

@@ -4,7 +4,7 @@
   position: fixed;
   top: 0;
   padding: 0px 50px;
-  background-color: var(--bg-c-navy);
+  background-color: var(--c-navy);
   transition: var(--transition);
   z-index: 11;
   filter: none !important;
@@ -62,7 +62,7 @@
       font-size: var(--fs-smish);
       counter-increment: item 1;
       &:before {
-        content: '0' counter(item) '.';
+        content: "0" counter(item) ".";
         text-align: right;
         color: var(--c-green);
         font-size: var(--fs-xs);
@@ -79,7 +79,6 @@
   margin-left: 10px;
   font-size: var(--fs-smish);
 }
-
 
 .hamburger {
   @extend %flexCenter;
@@ -105,7 +104,7 @@
 }
 
 .hamburgerInner {
-  background-color: var(--bg-c-green);
+  background-color: var(--c-green);
   position: absolute;
   width: 30px;
   height: 2px;
@@ -117,9 +116,9 @@
   transition-property: transform;
   &:before,
   &:after {
-    content: '';
+    content: "";
     display: block;
-    background-color: var(--bg-c-green);
+    background-color: var(--c-green);
     position: absolute;
     left: auto;
     right: 0;
@@ -140,7 +139,7 @@
   }
 }
 
-@media (max-width:$tablet) {
+@media (max-width: $tablet) {
   .header {
     padding: 0 25px;
   }

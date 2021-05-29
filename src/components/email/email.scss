@@ -10,12 +10,12 @@
     align-items: center;
     position: relative;
     &:after {
-      content: '';
+      content: "";
       display: block;
       width: 1px;
       height: 90px;
       margin: 0 auto;
-      background-color:  var(--bg-c-light-slate);
+      background-color: var(--c-light-slate);
     }
     a {
       font-family: var(--font-SFMono);
@@ -40,7 +40,7 @@
   }
 }
 
-@media (max-width:$tablet) {
+@media (max-width: $tablet) {
   .email {
     display: none;
   }
