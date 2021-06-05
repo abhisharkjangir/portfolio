@@ -35,7 +35,7 @@
   --fs-xxl: 22px;
   --fs-h3: 32px;
 
-  --highlight: rgba(41, 61, 90, 0.99);
+  --highlight: var(--c-primaryLight);
 }
 
 @font-face {
@@ -211,7 +211,7 @@ body {
 /* Handle */
 ::-webkit-scrollbar-thumb,
 ::-webkit-scrollbar-thumb:hover {
-  background: theme(colors.primary);
+  background: var(--c-primary);
   border-radius: 5px;
 }
 
