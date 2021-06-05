@@ -150,7 +150,7 @@ class Header extends React.PureComponent {
           <div className={styles.links}>
             <ol>
               {Navigation.map(({ name, to, page }) => (
-                <li key={name}>
+                <li key={name} className="text-lg">
                   <PrimaryLink
                     href={() => (typeof window !== 'undefined' ? to : page)}
                     internal={typeof window !== 'undefined'}

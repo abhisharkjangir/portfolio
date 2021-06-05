@@ -59,13 +59,12 @@
     li {
       margin: 0 10px;
       position: relative;
-      font-size: var(--fs-smish);
       counter-increment: item 1;
       &:before {
         content: "0" counter(item) ".";
         text-align: right;
         color: var(--c-primary);
-        font-size: var(--fs-xs);
+        font-size: var(--fs-lg);
       }
       a {
         padding: 12px 10px;
@@ -77,7 +76,7 @@
 .resumeButton {
   @extend %smallButton;
   margin-left: 10px;
-  font-size: var(--fs-smish);
+  font-size: var(--fs-lg);
 }
 
 .hamburger {

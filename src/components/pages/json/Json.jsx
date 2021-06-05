@@ -91,12 +91,16 @@ class ISS extends React.PureComponent {
     return (
       <React.Fragment>
         <p>
-          <b>{`Total ${paths.length} paths found for key "${key}"`}</b>
+          <b>{`Total ${paths.length} paths found for the key "${key}"`}</b>
         </p>
         <ul>
           {paths.length > 0 &&
             paths.map((path, index) => (
-              <li>{`${index + 1}. ${path}: ${this.getValueFromPath(path)}`}</li>
+              <li>
+                {`${index + 1}. Path: ${path} | value:  ${this.getValueFromPath(
+                  path
+                )}`}
+              </li>
             ))}
         </ul>
       </React.Fragment>

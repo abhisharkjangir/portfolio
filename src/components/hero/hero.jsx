@@ -1,4 +1,5 @@
 import React from 'react';
+import classnames from 'classnames';
 import PrimaryLink from '../common/PrimaryLink/PrimaryLink';
 import Section from '../section/section';
 import styles from './hero.scss';
@@ -6,21 +7,21 @@ import styles from './hero.scss';
 const Hero = () => {
   return (
     <Section id="hero" className={styles.section}>
-      <h1 className={styles.overline}>Hi, my name is</h1>
+      <h1 className={styles.overline}>Hi there, my name is</h1>
       <h2 className={styles.title}>Abhishar Jangir.</h2>
-      <h3 className={styles.subtitle}>
+      <h3 className={classnames(styles.subtitle, 'mt-6')}>
         I write code for websites & mobile apps.
       </h3>
-      <div className={styles.description}>
+      <div className={classnames(styles.description, 'mt-6')}>
         <p>
-          I&lsquo;m a Full Stack developer based in Gurugram, India,
-          specializing in developing high-quality websites with latest
-          technologies & best practices.
+          I am a full stack developer based in Gurugram, India, specializing in
+          developing high-quality websites with latest technologies & best
+          practices.
         </p>
       </div>
       <div>
         <PrimaryLink
-          className={styles.getintouch}
+          className={classnames(styles.getintouch, 'mt-6')}
           href="mailto:abhisharjangir@ymail.com?subject=Get In Touch&body=Hello Abhishar,"
         >
           Get In Touch

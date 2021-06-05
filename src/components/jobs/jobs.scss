@@ -20,7 +20,7 @@
         height: 42px;
         padding: 0 20px 2px;
         transition: var(--transition);
-        border-left: 2px solid var(--c-tertiary);
+        border-left: 3px solid var(--c-tertiary);
         text-align: left;
         white-space: nowrap;
         font-family: var(--font-SFMono);
@@ -36,7 +36,8 @@
 }
 .buttonActive {
   color: var(--c-primary) !important;
-  border-left: 2px solid var(--c-primary) !important;
+  border-left: 3px solid var(--c-primary) !important;
+  font-weight: 700;
 }
 .jobContent {
   position: relative;
@@ -54,7 +55,6 @@
     margin: 0;
     width: 100%;
     list-style: none;
-    font-size: var(--fs-lg);
     li {
       position: relative;
       padding-left: 30px;
@@ -65,6 +65,7 @@
         left: 0;
         color: var(--c-primary);
         line-height: var(--fs-xl);
+        margin-top: 3px;
       }
     }
   }

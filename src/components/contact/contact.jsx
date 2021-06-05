@@ -10,7 +10,7 @@ const Contact = () => {
       <div className={styles.contact}>
         <Heading text="What's Next?" center />
         <h4 className={styles.title}>Get In Touch</h4>
-        <p>
+        <p className="text-2xl">
           Although I&lsquo;m not currently looking for freelance opportunities,
           my inbox is always open. Whether for a potential project or just to
           say hi, I&lsquo;ll try my best to answer your email!

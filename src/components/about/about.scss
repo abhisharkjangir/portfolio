@@ -9,6 +9,7 @@
 .aboutContent {
   width: 60%;
   max-width: 480px;
+  font-size: var(--fs-xxl);
   a {
     @extend %inlineLink;
     margin: 0 2.5px;
@@ -23,7 +24,7 @@
       margin-bottom: 10px;
       padding-left: 20px;
       font-family: var(--font-SFMono);
-      font-size: var(--fs-sm);
+      font-size: var(--fs-md);
       color: var(--c-tertiary);
       &:before {
         content: "▹";
@@ -32,6 +33,7 @@
         color: var(--c-primary);
         font-size: var(--fs-sm);
         line-height: 12px;
+        margin-top: 5px;
       }
     }
   }

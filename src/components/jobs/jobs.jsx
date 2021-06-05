@@ -63,7 +63,7 @@ const Jobs = () => {
             <h4 className={styles.jobTitle}>
               <span>{title}</span>
               <span className={styles.jobCompany}>
-                <span>&nbsp;@&nbsp;</span>
+                <span>&nbsp;@</span>
                 <PrimaryLink
                   href={url}
                   target="_blank"
