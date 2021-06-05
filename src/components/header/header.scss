@@ -4,7 +4,7 @@
   position: fixed;
   top: 0;
   padding: 0px 50px;
-  background-color: var(--c-navy);
+  background-color: var(--c-secondary);
   transition: var(--transition);
   z-index: 11;
   filter: none !important;
@@ -16,7 +16,7 @@
     @extend %flexBetween;
     position: relative;
     width: 100%;
-    color: var(--c-light-slate);
+    color: var(--c-tertiaryLight);
     font-family: var(--font-SFMono);
     counter-reset: item 0;
     z-index: 12;
@@ -27,13 +27,13 @@
   @extend %flexCenter;
   a {
     display: block;
-    color: var(--c-green);
+    color: var(--c-primary);
     width: 42px;
     height: 42px;
     &:hover,
     &:focus {
       svg {
-        fill: var(--c-trans-green);
+        fill: var(--c-primaryLight);
       }
     }
     svg {
@@ -64,7 +64,7 @@
       &:before {
         content: "0" counter(item) ".";
         text-align: right;
-        color: var(--c-green);
+        color: var(--c-primary);
         font-size: var(--fs-xs);
       }
       a {
@@ -104,7 +104,7 @@
 }
 
 .hamburgerInner {
-  background-color: var(--c-green);
+  background-color: var(--c-primary);
   position: absolute;
   width: 30px;
   height: 2px;
@@ -118,7 +118,7 @@
   &:after {
     content: "";
     display: block;
-    background-color: var(--c-green);
+    background-color: var(--c-primary);
     position: absolute;
     left: auto;
     right: 0;

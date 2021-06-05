@@ -4,15 +4,15 @@
   @extend %flexCenter;
   flex-direction: column;
   padding: 12px;
-  background-color: var(--c-dark-navy);
-  color: var(--c-slate);
+  background-color: var(--c-secondaryLight);
+  color: var(--c-tertiary);
   text-align: center;
   height: auto;
   min-height: 70px;
 }
 
 .content {
-  color: var(--c-light-slate);
+  color: var(--c-tertiaryLight);
   width: 100%;
   max-width: 300px;
   margin: 13px 0;
@@ -20,7 +20,7 @@
   font-size: var(--fs-xs);
   line-height: 1;
   a {
-    color: var(--c-light-slate);
+    color: var(--c-tertiaryLight);
     div {
       margin-top: 10px;
       & > span {
@@ -39,7 +39,7 @@
 }
 
 .socialContainer {
-  color: var(--c-light-slate);
+  color: var(--c-tertiaryLight);
   width: 100%;
   max-width: 270px;
   margin: 0 auto 10px;

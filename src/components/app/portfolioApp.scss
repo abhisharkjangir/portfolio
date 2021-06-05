@@ -12,7 +12,7 @@ h3,
 h4,
 h5 {
   font-weight: 600;
-  color: var(--c-white);
+  color: var(--c-tertiaryLigher);
   margin: 0 0 10px 0;
 }
 
@@ -37,7 +37,7 @@ a {
   cursor: pointer;
   &:hover,
   &:focus {
-    color: var(--c-green);
+    color: var(--c-primary);
     outline: 0;
   }
 }
@@ -47,7 +47,7 @@ button {
   border-radius: 0;
   &:focus,
   &:active {
-    outline-color: var(--c-green);
+    outline-color: var(--c-primary);
   }
 }
 input,

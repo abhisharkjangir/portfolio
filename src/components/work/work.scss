@@ -36,7 +36,7 @@
   h4 {
     font-size: var(--fs-smish);
     font-weight: normal;
-    color: var(--c-green);
+    color: var(--c-primary);
     font-family: var(--font-SFMono);
     margin-top: 10px;
     padding-top: 0;
@@ -45,15 +45,15 @@
     font-size: 28px;
     font-weight: 600;
     margin: 0 0 20px;
-    color: var(--c-light-slate);
+    color: var(--c-tertiaryLight);
   }
   .description {
     @extend %boxShadow;
     position: relative;
     z-index: 2;
     padding: 25px;
-    background-color: var(--c-light-navy);
-    color: var(--c-light-slate);
+    background-color: var(--c-secondaryLighter);
+    color: var(--c-tertiaryLight);
     font-size: var(--fs-lg);
     border-radius: 3px;
     p {
@@ -72,7 +72,7 @@
     li {
       font-family: var(--font-SFMono);
       font-size: var(--fs-smish);
-      color: var(--c-slate);
+      color: var(--c-tertiary);
       margin-right: 20px;
       margin-bottom: 7px;
       white-space: nowrap;
@@ -87,7 +87,7 @@
     position: relative;
     margin-top: 10px;
     margin-left: -10px;
-    color: var(--c-light-slate);
+    color: var(--c-tertiaryLight);
     a {
       padding: 10px;
       svg {
@@ -107,7 +107,7 @@
     grid-row: 1 / -1;
     position: relative;
     z-index: 1;
-    background-color: var(--c-green);
+    background-color: var(--c-primary);
     border-radius: 3px;
     transition: var(--transition);
     &:hover,
@@ -130,7 +130,7 @@
       bottom: 0;
       z-index: 3;
       transition: var(--transition);
-      background-color: var(--c-navy);
+      background-color: var(--c-secondary);
       mix-blend-mode: var(--blend);
     }
   }
@@ -192,7 +192,7 @@
       z-index: 5;
     }
     h5 {
-      color: var(--c-white);
+      color: var(--c-tertiaryLigher);
     }
 
     .imgContainer {

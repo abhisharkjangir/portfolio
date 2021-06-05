@@ -16,7 +16,7 @@
     margin-right: 10px;
     font-family: var(--font-SFMono);
     font-weight: normal;
-    color: var(--c-green);
+    color: var(--c-primary);
     font-size: var(--fs-xl);
     position: relative;
     bottom: 4px;
@@ -26,7 +26,7 @@
     display: block;
     height: 1px;
     width: 300px;
-    background-color: var(--c-slate);
+    background-color: var(--c-tertiary);
     position: relative;
     top: -5px;
     margin-left: 20px;
@@ -36,7 +36,7 @@
 .headingCenter {
   @extend %heading;
   display: block;
-  color: var(--c-green);
+  color: var(--c-primary);
   font-size: var(--fs-md);
   font-family: var(--font-SFMono);
   font-weight: normal;

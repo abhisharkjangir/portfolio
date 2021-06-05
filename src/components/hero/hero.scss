@@ -2,7 +2,7 @@
 
 // Hero
 .overline {
-  color: var(--c-green);
+  color: var(--c-primary);
   margin: 0 0 20px 3px;
   font-size: var(--fs-md);
   font-family: var(--font-SFMono);
@@ -16,7 +16,7 @@
 .subtitle {
   font-size: 80px;
   line-height: 1.1;
-  color: var(--c-slate);
+  color: var(--c-tertiary);
 }
 .description {
   margin-top: 35px;
@@ -31,23 +31,24 @@
   margin-top: 50px;
 }
 
-
 @import "../../styles/portfolio/breakpoints";
 
 @media (max-width: $desktop) {
   .overline {
     font-size: var(--fs-sm);
   }
-  .title,.subtitle {
+  .title,
+  .subtitle {
     font-size: 70px;
   }
 }
 
-@media (max-width:$tablet) {
+@media (max-width: $tablet) {
   .overline {
     font-size: var(--fs-smish);
   }
-  .title,.subtitle {
+  .title,
+  .subtitle {
     font-size: 60px;
   }
   .section {
@@ -55,13 +56,15 @@
   }
 }
 @media (max-width: $phablet) {
-  .title,.subtitle {
+  .title,
+  .subtitle {
     font-size: 50px;
   }
 }
 
 @media (max-width: $phone) {
-  .title,.subtitle {
+  .title,
+  .subtitle {
     font-size: 40px;
   }
 }

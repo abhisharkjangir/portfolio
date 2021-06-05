@@ -14,9 +14,9 @@
   align-items: center;
 }
 %smallButton {
-  color: var(--c-green);
+  color: var(--c-primary);
   background-color: transparent;
-  border: 1px solid var(--c-green);
+  border: 1px solid var(--c-primary);
   border-radius: 3px;
   padding: 0.75rem 1rem;
   font-size: var(--fs-smish);
@@ -28,7 +28,7 @@
   &:hover,
   &:focus,
   &:active {
-    background-color: var(--c-trans-green);
+    background-color: var(--c-primaryLight);
   }
   &:after {
     display: none !important;
@@ -36,9 +36,9 @@
 }
 
 %bigButton {
-  color: var(--c-green);
+  color: var(--c-primary);
   background-color: transparent;
-  border: 1px solid var(--c-green);
+  border: 1px solid var(--c-primary);
   border-radius: 3px;
   padding: 1.25rem 1.75rem;
   font-size: var(--fs-sm);
@@ -50,7 +50,7 @@
   &:hover,
   &:focus,
   &:active {
-    background-color: var(--c-trans-green);
+    background-color: var(--c-primaryLight);
   }
   &:after {
     display: none !important;
@@ -68,7 +68,7 @@
   &:hover,
   &:active,
   &:focus {
-    color: var(--c-green);
+    color: var(--c-primary);
     outline: 0;
   }
 }
@@ -80,11 +80,11 @@
   position: relative;
   transition: var(--transition);
   cursor: pointer;
-  color: var(--c-green);
+  color: var(--c-primary);
   &:hover,
   &:focus,
   &:active {
-    color: var(--c-green);
+    color: var(--c-primary);
     outline: 0;
     &:after {
       width: 100%;
@@ -97,17 +97,17 @@
     height: 1px;
     position: relative;
     bottom: 0.37em;
-    background-color: var(--c-green);
+    background-color: var(--c-primary);
     transition: var(--transition);
     opacity: 0.5;
   }
 }
 
 %boxShadow {
-  box-shadow: 0 10px 30px -15px var(--c-shadow-navy);
+  box-shadow: 0 10px 30px -15px var(--c-secondaryLightest);
   transition: var(--transition);
   &:hover,
   &:focus {
-    box-shadow: 0 20px 30px -15px var(--c-shadow-navy);
+    box-shadow: 0 20px 30px -15px var(--c-secondaryLightest);
   }
 }

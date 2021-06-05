@@ -20,7 +20,7 @@
         height: 42px;
         padding: 0 20px 2px;
         transition: var(--transition);
-        border-left: 2px solid var(--c-slate);
+        border-left: 2px solid var(--c-tertiary);
         text-align: left;
         white-space: nowrap;
         font-family: var(--font-SFMono);
@@ -28,15 +28,15 @@
         color: var(--bg-c-light-grey);
         &:hover,
         &:focus {
-          background-color: var(--c-light-navy);
+          background-color: var(--c-secondaryLighter);
         }
       }
     }
   }
 }
 .buttonActive {
-  color: var(--c-green) !important;
-  border-left: 2px solid var(--c-green) !important;
+  color: var(--c-primary) !important;
+  border-left: 2px solid var(--c-primary) !important;
 }
 .jobContent {
   position: relative;
@@ -63,7 +63,7 @@
         content: "▹";
         position: absolute;
         left: 0;
-        color: var(--c-green);
+        color: var(--c-primary);
         line-height: var(--fs-xl);
       }
     }
@@ -74,20 +74,20 @@
 }
 
 .jobTitle {
-  color: var(--c-light-slate);
+  color: var(--c-tertiaryLight);
   font-size: var(--fs-xxl);
   font-weight: 500;
   margin-bottom: 5px;
 }
 .jobCompany {
-  color: var(--c-green);
+  color: var(--c-primary);
 }
 .jobDetail {
   font-family: var(--font-SFMono);
   font-size: var(--fs-smish);
   font-weight: normal;
   letter-spacing: 0.5px;
-  color: var(--c-light-slate);
+  color: var(--c-tertiaryLight);
   margin-bottom: 30px;
   svg {
     width: 15px;
@@ -108,7 +108,7 @@
         content: "▹";
         position: absolute;
         left: 0;
-        color: var(--c-green);
+        color: var(--c-primary);
         line-height: var(--fs-xl);
       }
     }
@@ -125,9 +125,9 @@
 
 @media (max-width: $thone) {
   .buttonActive {
-    color: var(--c-green) !important;
+    color: var(--c-primary) !important;
     border-left-width: 0 !important;
-    border-bottom: 2px solid var(--c-green) !important;
+    border-bottom: 2px solid var(--c-primary) !important;
   }
   .jobTabs {
     display: block;
@@ -148,7 +148,7 @@
           padding: 0 15px;
           text-align: center;
           border-left: 0;
-          border-bottom: 2px solid var(--c-slate);
+          border-bottom: 2px solid var(--c-tertiary);
           min-width: 120px;
         }
       }

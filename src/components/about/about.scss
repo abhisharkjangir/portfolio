@@ -24,12 +24,12 @@
       padding-left: 20px;
       font-family: var(--font-SFMono);
       font-size: var(--fs-sm);
-      color: var(--c-slate);
+      color: var(--c-tertiary);
       &:before {
         content: "▹";
         position: absolute;
         left: 0;
-        color: var(--c-green);
+        color: var(--c-primary);
         font-size: var(--fs-sm);
         line-height: 12px;
       }
@@ -47,7 +47,7 @@
     width: 100%;
     position: relative;
     border-radius: 3px;
-    background-color: var(--c-green);
+    background-color: var(--c-primary);
     margin-left: -20px;
     &:hover,
     &:focus {
@@ -76,11 +76,11 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background-color: var(--c-navy);
+      background-color: var(--c-secondary);
       mix-blend-mode: screen;
     }
     &:after {
-      border: 2px solid var(--c-green);
+      border: 2px solid var(--c-primary);
       top: 20px;
       left: 20px;
       z-index: -1;
