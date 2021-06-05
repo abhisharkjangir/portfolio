@@ -17,6 +17,20 @@ module.exports = {
       tertiaryLight: '#d4d4d4',
       tertiaryLigher: '#e6f1ff',
     },
+    /**
+     * Light  theme color varialbles
+     */
+    // light: {
+    //   primary: '#0131d0',
+    //   primaryLight: '#0131d033',
+    //   secondary: '#ffffff',
+    //   secondaryLight: '#f5f5f5',
+    //   secondaryLighter: '#eaeaea',
+    //   secondaryLightest: '#6d6d6d33',
+    //   tertiary: '#6d6d6d',
+    //   tertiaryLight: '#2b2b2b',
+    //   tertiaryLigher: '#190e00',
+    // },
     blend: 'screen',
   },
   variants: {
