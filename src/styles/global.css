@@ -2,40 +2,18 @@
 /* @tailwind components; */
 @tailwind utilities;
 
-.light {
-  --c-navy: #f5e6d0;
-  --c-dark-navy: #fdf3e4;
-  --c-light-navy: #e8d5ba;
-  --c-dark-grey: #ccc0a7;
-  --c-slate: #2b2b2b;
-  --c-light-slate: #2b2b2b;
-  --c-lightest-slate: #332909;
-  --c-white: #190e00;
-  --c-green: #9b0025;
-  --c-blue: #8e5000;
-  --c-trans-green: rgba(155, 0, 37, 0.07);
-  --c-medium-grey: #d2c6ad;
-  --c-shadow-navy: rgba(253, 243, 228, 0.7);
-  --c-grey: #292929;
-  --blend: multiply;
-}
-
 .dark {
-  --c-navy: #0a192f;
-  --c-dark-navy: #020c1b;
-  --c-light-navy: #172a45;
-  --c-dark-grey: #333f58;
-  --c-slate: #d4d4d4;
-  --c-light-slate: #d4d4d4;
-  --c-lightest-slate: #ccd6f6;
-  --c-white: #e6f1ff;
-  --c-green: #64ffda;
-  --c-blue: #71afff;
-  --c-trans-green: rgba(100, 255, 218, 0.07);
-  --c-medium-grey: #2d3952;
-  --c-shadow-navy: rgba(2, 12, 27, 0.7);
-  --c-grey: #d6d6d6;
-  --blend: screen;
+  --c-green: theme(colors.primary);
+  --c-trans-green: theme(colors.primaryLight);
+  --c-navy: theme(colors.secondary);
+  --c-dark-navy: theme(colors.secondaryLight);
+  --c-light-navy: theme(colors.secondaryLighter);
+  --c-shadow-navy: theme(colors.secondaryLightest);
+  --c-slate: theme(colors.tertiary);
+  --c-light-slate: theme(colors.tertiaryLight);
+  --c-white: theme(colors.tertiaryLigher);
+
+  --blend: theme(blend);
 }
 
 :root {
@@ -233,7 +211,7 @@ body {
 /* Handle */
 ::-webkit-scrollbar-thumb,
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--c-green);
+  background: theme(colors.primary);
   border-radius: 5px;
 }
 

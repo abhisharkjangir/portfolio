@@ -20,7 +20,7 @@
         height: 42px;
         padding: 0 20px 2px;
         transition: var(--transition);
-        border-left: 2px solid var(--c-dark-grey);
+        border-left: 2px solid var(--c-slate);
         text-align: left;
         white-space: nowrap;
         font-family: var(--font-SFMono);
@@ -148,7 +148,7 @@
           padding: 0 15px;
           text-align: center;
           border-left: 0;
-          border-bottom: 2px solid var(--c-dark-grey);
+          border-bottom: 2px solid var(--c-slate);
           min-width: 120px;
         }
       }
