@@ -148,6 +148,7 @@ class Page extends React.PureComponent {
           ]}
           meta={this.getMetaTags({ ...rest, ...data }, pathname)}
         />
+        <link rel="canonical" href={`${SITE_URL + pathname}`} />
         {children}
       </div>
     );

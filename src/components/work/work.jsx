@@ -140,7 +140,7 @@ const Work = () => {
                 <Image src={image} className={styles.image} alt={title} />
               </PrimaryLink>
             ) : (
-              <Link to={url} className={styles.imgContainer}>
+              <Link to={url} className={styles.imgContainer} aria-label={title}>
                 <Image src={image} className={styles.image} alt={title} />
               </Link>
             )}
