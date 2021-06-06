@@ -64,7 +64,7 @@
         content: "0" counter(item) ".";
         text-align: right;
         color: var(--c-primary);
-        font-size: var(--fs-lg);
+        font-size: var(--fs-md);
       }
       a {
         padding: 12px 10px;
@@ -76,7 +76,7 @@
 .resumeButton {
   @extend %smallButton;
   margin-left: 10px;
-  font-size: var(--fs-lg);
+  font-size: var(--fs-md);
 }
 
 .hamburger {

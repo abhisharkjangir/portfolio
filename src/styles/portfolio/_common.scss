@@ -16,10 +16,10 @@
 %smallButton {
   color: var(--c-primary);
   background-color: transparent;
-  border: 3px solid var(--c-primary);
+  border: 2px solid var(--c-primary);
   border-radius: 3px;
   padding: 0.75rem 1rem;
-  font-size: var(--fs-smish);
+  font-size: var(--fs-md);
   font-family: var(--font-SFMono);
   line-height: 1;
   text-decoration: none;
@@ -38,10 +38,10 @@
 %bigButton {
   color: var(--c-primary);
   background-color: transparent;
-  border: 3px solid var(--c-primary);
+  border: 2px solid var(--c-primary);
   border-radius: 3px;
   padding: 1.25rem 1.75rem;
-  font-size: var(--fs-lg);
+  font-size: var(--fs-md);
   font-family: var(--font-SFMono);
   line-height: 1;
   text-decoration: none;
