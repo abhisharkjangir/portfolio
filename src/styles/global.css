@@ -36,7 +36,7 @@
   --fs-24: 24px;
   --fs-h3: 32px;
 
-  --highlight: var(--c-primaryLight);
+  --highlight: var(--c-tertiary);
 }
 
 @font-face {
@@ -214,10 +214,4 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--c-primary);
   border-radius: 5px;
-}
-
-/* Selection color  */
-
-::selection {
-  background-color: var(--highlight);
 }
