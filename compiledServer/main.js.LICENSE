@@ -451,7 +451,7 @@
 
 /*! ModuleConcatenation bailout: Cannot concat with ./src/components/common/Input/input.jsx because of ./src/components/pages/components/components.jsx */
 
-/*! ModuleConcatenation bailout: Cannot concat with ./src/components/common/button/button.jsx because of ./src/components/pages/components/components.jsx */
+/*! ModuleConcatenation bailout: Cannot concat with ./src/components/common/button/button.jsx because of ./src/components/pages/notfound/notfound.jsx */
 
 /*! ModuleConcatenation bailout: Cannot concat with ./src/components/common/textarea/textarea.jsx because of ./src/components/pages/components/components.jsx */
 
@@ -979,11 +979,9 @@
 
 /*! ModuleConcatenation bailout: Cannot concat with ./src/components/common/Input/input.jsx because of ./src/components/pages/json/Json.jsx */
 
-/*! ModuleConcatenation bailout: Cannot concat with ./src/components/common/button/button.jsx because of ./src/components/pages/notfound/notfound.jsx */
-
 /*! ModuleConcatenation bailout: Cannot concat with ./src/components/common/icon/icon.jsx (<- Module is referenced from these modules with unsupported syntax: ./src/components/common/icon/icon.async.jsx (referenced with import(), require.resolve)) */
 
-/*! ModuleConcatenation bailout: Cannot concat with ./src/components/common/image/image.jsx because of ./src/components/work/work.jsx */
+/*! ModuleConcatenation bailout: Cannot concat with ./src/components/common/image/image.jsx because of ./src/components/about/about.jsx */
 
 /*! ModuleConcatenation bailout: Cannot concat with ./src/components/common/textarea/textarea.jsx because of ./src/components/pages/json/Json.jsx */
 
@@ -993,7 +991,7 @@
 
 /*! ModuleConcatenation bailout: Cannot concat with ./src/components/footer/footer.jsx (<- Module is referenced from these modules with unsupported syntax: ./src/components/footer/footer.async.jsx (referenced with import(), require.resolve)) */
 
-/*! ModuleConcatenation bailout: Cannot concat with ./src/components/heading/heading.jsx because of ./src/components/contact/contact.jsx */
+/*! ModuleConcatenation bailout: Cannot concat with ./src/components/heading/heading.jsx because of ./src/components/jobs/jobs.jsx */
 
 /*! ModuleConcatenation bailout: Cannot concat with ./src/components/hero/hero.jsx because of ./src/containers/pages/home/home.jsx */
 
@@ -1001,7 +999,7 @@
 
 /*! ModuleConcatenation bailout: Cannot concat with ./src/components/menu/menu.jsx (<- Module is referenced from these modules with unsupported syntax: ./src/components/menu/menu.async.jsx (referenced with import(), require.resolve)) */
 
-/*! ModuleConcatenation bailout: Cannot concat with ./src/components/section/section.jsx because of ./src/components/contact/contact.jsx */
+/*! ModuleConcatenation bailout: Cannot concat with ./src/components/section/section.jsx because of ./src/components/jobs/jobs.jsx */
 
 /*! ModuleConcatenation bailout: Cannot concat with ./src/components/social/social.jsx (<- Module is referenced from these modules with unsupported syntax: ./src/components/social/social.async.jsx (referenced with import(), require.resolve)) */
 
@@ -1291,7 +1289,7 @@
 
 /*! exports provided: injectHTML, default */
 
-/*! ModuleConcatenation bailout: Cannot concat with ./src/components/common/PrimaryLink/PrimaryLink.jsx because of ./src/components/contact/contact.jsx */
+/*! ModuleConcatenation bailout: Cannot concat with ./src/components/common/PrimaryLink/PrimaryLink.jsx because of ./src/components/jobs/jobs.jsx */
 
 /*! ModuleConcatenation bailout: Cannot concat with ./src/components/common/icon/icon.async.jsx (<- Module uses injected variables (__dirname)) */
 
