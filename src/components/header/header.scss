@@ -57,17 +57,22 @@
   ol {
     @extend %flexBetween;
     li {
-      margin: 0 10px;
       position: relative;
-      counter-increment: item 1;
-      &:before {
-        content: "0" counter(item) ".";
-        text-align: right;
-        color: var(--c-primary);
-        font-size: var(--fs-md);
-      }
+
       a {
-        padding: 12px 10px;
+        padding: 10px 15px;
+        counter-increment: item 1;
+        &:active,
+        &:hover {
+          background-color: var(--c-primaryLight);
+          border-radius: 3px;
+        }
+        &:before {
+          content: "0" counter(item) ". ";
+          text-align: right;
+          color: var(--c-primary);
+          font-size: var(--fs-md);
+        }
       }
     }
   }
