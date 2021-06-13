@@ -92,7 +92,8 @@
     "webpack-flush-chunks": "^2.0.3",
     "webpack-hot-middleware": "^2.25.0",
     "webpack-hot-server-middleware": "^0.6.0",
-    "write-file-webpack-plugin": "^4.5.0"
+    "write-file-webpack-plugin": "^4.5.0",
+    "webpack-bundle-analyzer": "^3.6.1"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
@@ -115,8 +116,7 @@
     "react-hot-loader": "^4.9.0",
     "rimraf": "^2.6.3",
     "stylus": "^0.54.5",
-    "travis-github-status": "^1.6.3",
-    "webpack-bundle-analyzer": "^3.6.1"
+    "travis-github-status": "^1.6.3"
   },
   "lint-staged": {
     "linters": {
