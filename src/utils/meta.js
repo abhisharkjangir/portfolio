@@ -1,6 +1,6 @@
 import image from '../assets/images/abhishar.jpg';
 const description =
-  'Abhishar Jangir is a Full Stack Developer based in Gurgaon, IN, who specializes in developing websites.';
+  'Abhishar Jangir is a MERN Stack Developer based in Gurgaon, IN, who specializes in developing websites.';
 
 export default {
   default: {
@@ -11,7 +11,7 @@ export default {
     sep: ' | ',
     siteURL: 'https://abhisharjangir.com',
     keywords:
-      'Abhishar Jangir, Abhishar, Jangir, Front end developer, reactjs developer, web developer, mern developer, javascript developer, abhisharkjangir,abhishar.jangir, Full Stack Developer',
+      'Abhishar Jangir, Abhishar, Jangir, Front end developer, reactjs developer, web developer, mern stack developer, javascript developer, abhisharkjangir,abhishar.jangir, Full Stack Developer',
     facebookAppId: 'XXXXXXXXX',
     updated: new Date().toDateString(),
     published: new Date().toDateString(),
@@ -19,7 +19,7 @@ export default {
   },
   '/': {
     id: 'home',
-    title: 'Full Stack Developer',
+    title: 'MERN Stack Developer',
     description,
   },
   '/home': {

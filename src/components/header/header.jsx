@@ -8,7 +8,7 @@ import Icon from '../common/icon/icon.async';
 import throttle from '../../utils/throttle';
 import isServer from '../../utils/isServer';
 import MenuAsync from '../menu/menu.async';
-import { resume } from '../../constants';
+import resume from '../../assets/resume.pdf';
 import PrimaryLink from '../common/PrimaryLink/PrimaryLink';
 
 const hamBefore = `top 0.1s ease-in 0.25s, opacity 0.1s ease-in`;

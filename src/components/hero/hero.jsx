@@ -14,9 +14,9 @@ const Hero = () => {
       </h3>
       <div className={classnames(styles.description, 'mt-6')}>
         <p>
-          I am a full stack developer based in Gurugram, India, specializing in
-          developing high-quality websites with latest technologies & best
-          practices.
+          I&lsquo;m a MERN stack developer based in Gurugram, India,
+          specializing in developing high-quality websites with latest
+          technologies & best practices.
         </p>
       </div>
       <div>

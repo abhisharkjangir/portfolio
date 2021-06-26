@@ -3,7 +3,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './menu.scss';
-import { resume } from '../../constants';
+import resume from '../../assets/resume.pdf';
 import PrimaryLink from '../common/PrimaryLink/PrimaryLink';
 
 const getMenuStyle = isMenuOpen => {

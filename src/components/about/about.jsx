@@ -5,18 +5,19 @@ import abhishar from '../../assets/images/abhishar.jpg';
 import Heading from '../heading/heading';
 import Image from '../common/image/image';
 import PrimaryLink from '../common/PrimaryLink/PrimaryLink';
+import resume from '../../assets/resume.pdf';
 
 const About = () => {
   const Skills = [
-    'JavaScript (ES6+)',
-    'ReactJS',
-    'React Native',
-    'Redux',
-    'Webpack',
-    'Angular v1',
-    'HTML5 & CSS3',
-    'Bootstrap',
+    'JavaScript ',
     'NodeJS',
+    'React, Redux',
+    'React Native',
+    'NextJS',
+    'TailwindCSS',
+    'Webpack',
+    'AngularJS v1',
+    'Bootstrap',
     'MongoDB',
   ];
   return (
@@ -38,7 +39,7 @@ const About = () => {
             >
               BKBIET, Pilani
             </PrimaryLink>
-            , I started my career as a web designer and today, after 4+ years,
+            , I started my career as a web designer and today, after 5+ years,
             as a front-end developer, I worked on a wide variety of web apps.
           </p>
           <p>
@@ -60,6 +61,13 @@ const About = () => {
               <li key={skill}>{skill}</li>
             ))}
           </ul>
+          <p className="mt-4">
+            Click
+            <PrimaryLink href={resume} download>
+              here
+            </PrimaryLink>
+            to download my resume.
+          </p>
         </div>
         <div className={styles.aboutPic}>
           <PrimaryLink to="/" aria-label="Display Picture" internal>
