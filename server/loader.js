@@ -193,7 +193,7 @@ export default ({ clientStats }) => (req, res) => {
               preloadScripts,
               theme,
             });
-
+            res.setHeader('Cache-Control', 'max-age=86400');
             res.send(html);
           }
         });
