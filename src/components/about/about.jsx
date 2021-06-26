@@ -26,7 +26,7 @@ const About = () => {
       <div className={styles.aboutFlexContainer}>
         <div className={styles.aboutContent}>
           <p>
-            Hello! I&lsquo;m Abhishar, a Full Stack developer based in Gurugram,
+            Hello! I&lsquo;m Abhishar, a MERN Stack developer based in Gurugram,
             India, who is happily writing code for mobile, tablet & desktop
             websites since 2015.
           </p>
@@ -63,7 +63,7 @@ const About = () => {
           </ul>
           <p className="mt-4">
             Click
-            <PrimaryLink href={resume} download>
+            <PrimaryLink href={resume} download="AbhisharJangirResume">
               here
             </PrimaryLink>
             to download my resume.
