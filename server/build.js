@@ -9,7 +9,10 @@ const APIRoutes = require('./routes/index');
 const getServerConfigProd = require('../webpack/server.prod.config');
 const getClientConfigProd = require('../webpack/client.prod.config');
 
-const { publicPath, path } = getClientConfigProd().output;
+const clientConfigProd = getClientConfigProd();
+const {
+  output: { publicPath, path },
+} = clientConfigProd;
 
 const app = express();
 app.use(compression());
@@ -18,7 +21,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use('/a/', APIRoutes);
 
-webpack([getClientConfigProd(), getServerConfigProd()]).run((err, stats) => {
+webpack([clientConfigProd, getServerConfigProd()]).run((err, stats) => {
   if (err) {
     // eslint-disable-next-line no-console
     console.log(':::::::: Error ocurred ::::::::', err);

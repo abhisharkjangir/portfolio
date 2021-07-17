@@ -34,10 +34,13 @@ const done = () =>
 if (DEV) {
   // eslint-disable-next-line global-require
   const getClientConfigDev = require('../webpack/client.dev.config');
+  const clientConfigDev = getClientConfigDev();
+  const {
+    output: { publicPath },
+  } = clientConfigDev;
   // eslint-disable-next-line global-require
   const getServerConfigDev = require('../webpack/server.dev.config');
-  const { publicPath } = getClientConfigDev().output;
-  const compiler = webpack([getClientConfigDev(), getServerConfigDev()]);
+  const compiler = webpack([clientConfigDev, getServerConfigDev()]);
   const clientCompiler = compiler.compilers[0];
   const options = { publicPath, stats: { colors: true } };
   const devMiddleware = webpackDevMiddleware(compiler, options);
@@ -48,10 +51,14 @@ if (DEV) {
 } else {
   // eslint-disable-next-line global-require
   const getClientConfigProd = require('../webpack/client.prod.config');
+  const clientConfigProd = getClientConfigProd();
+  const {
+    output: { publicPath, path },
+  } = clientConfigProd;
   // eslint-disable-next-line global-require
   const getServerConfigProd = require('../webpack/server.prod.config');
-  const { publicPath, path } = getClientConfigProd().output;
-  webpack([getClientConfigProd(), getServerConfigProd()]).run((err, stats) => {
+
+  webpack([clientConfigProd, getServerConfigProd()]).run((err, stats) => {
     if (err) {
       // eslint-disable-next-line no-console
       console.log(':::::::: Error ocurred ::::::::', err);
