@@ -8,15 +8,9 @@ const webpackHotServerMiddleware = require('webpack-hot-server-middleware');
 const bodyParser = require('body-parser');
 const compression = require('compression');
 const cookieParser = require('cookie-parser');
-const getServerConfig = require('../webpack/webpack.server.config');
-const getClientConfig = require('../webpack/webpack.client.config');
 const APIRoutes = require('./routes/index');
-const DEV = process.env.NODE_ENV === 'development';
-const isProduction = process.env.NODE_ENV === 'production';
-const env = isProduction ? 'production' : 'development';
 
-const { publicPath } = getClientConfig(env).output;
-const outputPath = getClientConfig(env).output.path;
+const DEV = process.env.NODE_ENV === 'development';
 const PORT = process.env.PORT || 7000;
 
 const app = express();
@@ -38,10 +32,12 @@ const done = () =>
   });
 
 if (DEV) {
-  const compiler = webpack([
-    getClientConfig('development'),
-    getServerConfig('development'),
-  ]);
+  // eslint-disable-next-line global-require
+  const getClientConfigDev = require('../webpack/client.dev.config');
+  // eslint-disable-next-line global-require
+  const getServerConfigDev = require('../webpack/server.dev.config');
+  const { publicPath } = getClientConfigDev().output;
+  const compiler = webpack([getClientConfigDev(), getServerConfigDev()]);
   const clientCompiler = compiler.compilers[0];
   const options = { publicPath, stats: { colors: true } };
   const devMiddleware = webpackDevMiddleware(compiler, options);
@@ -50,33 +46,36 @@ if (DEV) {
   app.use(webpackHotServerMiddleware(compiler));
   devMiddleware.waitUntilValid(done);
 } else {
-  webpack([getClientConfig('production'), getServerConfig('production')]).run(
-    (err, stats) => {
-      if (err) {
-        // eslint-disable-next-line no-console
-        console.log(':::::::: Error ocurred ::::::::', err);
-        return false;
-      }
-      const clientStats = stats.toJson().children[0];
-
-      fs.writeFile(
-        `${process.cwd()}/build/clientstats.json`,
-        JSON.stringify(clientStats),
-        'utf8',
-        error => {
-          if (error) {
-            // eslint-disable-next-line no-console
-            console.log(error);
-          }
-          // eslint-disable-next-line global-require
-          const serverRender = require('../compiledServer/main.js').default;
-          app.use(publicPath, express.static(outputPath));
-          app.use(serverRender({ clientStats }));
-          done();
-          return false;
-        }
-      );
+  // eslint-disable-next-line global-require
+  const getClientConfigProd = require('../webpack/client.prod.config');
+  // eslint-disable-next-line global-require
+  const getServerConfigProd = require('../webpack/server.prod.config');
+  const { publicPath, path } = getClientConfigProd().output;
+  webpack([getClientConfigProd(), getServerConfigProd()]).run((err, stats) => {
+    if (err) {
+      // eslint-disable-next-line no-console
+      console.log(':::::::: Error ocurred ::::::::', err);
       return false;
     }
-  );
+    const clientStats = stats.toJson().children[0];
+
+    fs.writeFile(
+      `${process.cwd()}/build/clientstats.json`,
+      JSON.stringify(clientStats),
+      'utf8',
+      error => {
+        if (error) {
+          // eslint-disable-next-line no-console
+          console.log(error);
+        }
+        // eslint-disable-next-line global-require
+        const serverRender = require('../compiledServer/main.js').default;
+        app.use(publicPath, express.static(path));
+        app.use(serverRender({ clientStats }));
+        done();
+        return false;
+      }
+    );
+    return false;
+  });
 }
