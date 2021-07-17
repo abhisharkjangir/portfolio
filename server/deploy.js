@@ -7,7 +7,9 @@ const APIRoutes = require('./routes/index');
 const getClientConfigProd = require('../webpack/client.prod.config');
 const clientStats = require('../build/bundlestats.json');
 
-const { publicPath, path } = getClientConfigProd().output;
+const {
+  output: { publicPath, path },
+} = getClientConfigProd();
 const PORT = process.env.PORT || 7000;
 const app = express();
 
