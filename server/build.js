@@ -7,11 +7,9 @@ const compression = require('compression');
 const cookieParser = require('cookie-parser');
 const APIRoutes = require('./routes/index');
 const getServerConfig = require('../webpack/webpack.server.config');
-const getClientConfig = require('../webpack/webpack.client.config');
+const getClientConfig = require('../webpack/client.prod.config');
 
-const env = 'production';
-const { publicPath } = getClientConfig(env).output;
-const outputPath = getClientConfig(env).output.path;
+const { publicPath, path } = getClientConfig().output;
 
 const app = express();
 app.use(compression());
@@ -20,7 +18,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use('/a/', APIRoutes);
 
-webpack([getClientConfig('production'), getServerConfig('production')]).run(
+webpack([getClientConfig(), getServerConfig('production')]).run(
   (err, stats) => {
     if (err) {
       // eslint-disable-next-line no-console
@@ -40,7 +38,7 @@ webpack([getClientConfig('production'), getServerConfig('production')]).run(
         }
         // eslint-disable-next-line global-require
         const serverRender = require('../compiledServer/main.js').default;
-        app.use(publicPath, express.static(outputPath));
+        app.use(publicPath, express.static(path));
         app.use(serverRender({ clientStats }));
         return false;
       }

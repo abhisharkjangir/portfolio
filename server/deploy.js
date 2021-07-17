@@ -4,13 +4,15 @@ const bodyParser = require('body-parser');
 const compression = require('compression');
 const cookieParser = require('cookie-parser');
 const APIRoutes = require('./routes/index');
-const getClientConfig = require('../webpack/webpack.client.config');
+const getClientConfigProd = require('../webpack/client.prod.config');
+const getClientConfigDev = require('../webpack/client.dev.config');
 const clientStats = require('../build/bundlestats.json');
 const isProduction = process.env.NODE_ENV === 'production';
-const env = isProduction ? 'production' : 'development';
 
-const { publicPath } = getClientConfig(env).output;
-const outputPath = getClientConfig(env).output.path;
+const { publicPath, path } = isProduction
+  ? getClientConfigProd().output
+  : getClientConfigDev().output;
+
 const PORT = process.env.PORT || 7000;
 
 const app = express();
@@ -32,6 +34,6 @@ const done = () =>
   });
 // eslint-disable-next-line global-require
 const serverRender = require('../compiledServer/main.js').default;
-app.use(publicPath, express.static(outputPath));
+app.use(publicPath, express.static(path));
 app.use(serverRender({ clientStats }));
 done();

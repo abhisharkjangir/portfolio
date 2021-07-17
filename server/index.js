@@ -9,14 +9,9 @@ const bodyParser = require('body-parser');
 const compression = require('compression');
 const cookieParser = require('cookie-parser');
 const getServerConfig = require('../webpack/webpack.server.config');
-const getClientConfig = require('../webpack/webpack.client.config');
 const APIRoutes = require('./routes/index');
-const DEV = process.env.NODE_ENV === 'development';
-const isProduction = process.env.NODE_ENV === 'production';
-const env = isProduction ? 'production' : 'development';
 
-const { publicPath } = getClientConfig(env).output;
-const outputPath = getClientConfig(env).output.path;
+const DEV = process.env.NODE_ENV === 'development';
 const PORT = process.env.PORT || 7000;
 
 const app = express();
@@ -38,8 +33,11 @@ const done = () =>
   });
 
 if (DEV) {
+  // eslint-disable-next-line global-require
+  const getClientConfigDev = require('../webpack/client.dev.config');
+  const { publicPath } = getClientConfigDev().output;
   const compiler = webpack([
-    getClientConfig('development'),
+    getClientConfigDev(),
     getServerConfig('development'),
   ]);
   const clientCompiler = compiler.compilers[0];
@@ -50,7 +48,10 @@ if (DEV) {
   app.use(webpackHotServerMiddleware(compiler));
   devMiddleware.waitUntilValid(done);
 } else {
-  webpack([getClientConfig('production'), getServerConfig('production')]).run(
+  // eslint-disable-next-line global-require
+  const getClientConfigProd = require('../webpack/client.prod.config');
+  const { publicPath, path } = getClientConfigProd().output;
+  webpack([getClientConfigProd(), getServerConfig('production')]).run(
     (err, stats) => {
       if (err) {
         // eslint-disable-next-line no-console
@@ -70,7 +71,7 @@ if (DEV) {
           }
           // eslint-disable-next-line global-require
           const serverRender = require('../compiledServer/main.js').default;
-          app.use(publicPath, express.static(outputPath));
+          app.use(publicPath, express.static(path));
           app.use(serverRender({ clientStats }));
           done();
           return false;
