@@ -5,17 +5,12 @@ const compression = require('compression');
 const cookieParser = require('cookie-parser');
 const APIRoutes = require('./routes/index');
 const getClientConfigProd = require('../webpack/client.prod.config');
-const getClientConfigDev = require('../webpack/client.dev.config');
 const clientStats = require('../build/bundlestats.json');
-const isProduction = process.env.NODE_ENV === 'production';
 
-const { publicPath, path } = isProduction
-  ? getClientConfigProd().output
-  : getClientConfigDev().output;
-
+const { publicPath, path } = getClientConfigProd().output;
 const PORT = process.env.PORT || 7000;
-
 const app = express();
+
 app.use(compression());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
