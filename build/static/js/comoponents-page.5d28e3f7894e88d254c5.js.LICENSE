@@ -1,0 +1,23 @@
+/***/
+
+/* harmony import */
+
+/*#__PURE__*/
+
+/* harmony default export */
+
+// extracted by extract-css-chunks-webpack-plugin
+
+// eslint-disable-next-line react/button-has-type
+
+/* eslint-disable react/no-danger */
+
+/* harmony export (binding) */
+
+// EXTERNAL MODULE: ./node_modules/react/index.js
+
+// EXTERNAL MODULE: ./src/components/common/button/button.jsx
+
+// EXTERNAL MODULE: ./src/components/footer/footer.jsx
+
+// CONCATENATED MODULE: ./src/components/projects/projects.jsx
