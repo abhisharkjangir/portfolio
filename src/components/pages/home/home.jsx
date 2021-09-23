@@ -4,7 +4,7 @@ import styles from './home.scss';
 import Hero from '../../hero/hero';
 import About from '../../about/about';
 import Jobs from '../../jobs/jobs';
-import Work from '../../work/work';
+// import Work from '../../work/work';
 import Contact from '../../contact/contact';
 
 const Home = () => {
@@ -27,7 +27,7 @@ const Home = () => {
       <Hero />
       <About />
       <Jobs />
-      <Work />
+      {/* <Work /> */}
       <Contact />
     </div>
   );

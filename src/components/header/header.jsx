@@ -18,24 +18,24 @@ const hamAfterActive = `bottom 0.1s ease-out, transform 0.22s cubic-bezier(0.215
 
 const Navigation = [
   {
-    name: 'About',
-    to: '/#about',
-    page: '/about',
+    name: "About",
+    to: "/#about",
+    page: "/about",
   },
   {
-    name: 'Experience',
-    to: '/#experience',
-    page: '/experience',
+    name: "Experience",
+    to: "/#experience",
+    page: "/experience",
   },
+  // {
+  //   name: 'Work',
+  //   to: '/#work',
+  //   page: '/work',
+  // },
   {
-    name: 'Work',
-    to: '/#work',
-    page: '/work',
-  },
-  {
-    name: 'Contact',
-    to: '/#contact',
-    page: '/contact',
+    name: "Contact",
+    to: "/#contact",
+    page: "/contact",
   },
 ];
 
