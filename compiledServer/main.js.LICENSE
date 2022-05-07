@@ -987,7 +987,7 @@
 
 /*! ModuleConcatenation bailout: Cannot concat with ./src/components/footer/footer.jsx (<- Module is referenced from these modules with unsupported syntax: ./src/components/footer/footer.async.jsx (referenced with import(), require.resolve)) */
 
-/*! ModuleConcatenation bailout: Cannot concat with ./src/components/heading/heading.jsx because of ./src/components/jobs/jobs.jsx */
+/*! ModuleConcatenation bailout: Cannot concat with ./src/components/heading/heading.jsx because of ./src/components/about/about.jsx */
 
 /*! ModuleConcatenation bailout: Cannot concat with ./src/components/hero/hero.jsx because of ./src/containers/pages/home/home.jsx */
 
@@ -995,7 +995,7 @@
 
 /*! ModuleConcatenation bailout: Cannot concat with ./src/components/menu/menu.jsx (<- Module is referenced from these modules with unsupported syntax: ./src/components/menu/menu.async.jsx (referenced with import(), require.resolve)) */
 
-/*! ModuleConcatenation bailout: Cannot concat with ./src/components/section/section.jsx because of ./src/components/jobs/jobs.jsx */
+/*! ModuleConcatenation bailout: Cannot concat with ./src/components/section/section.jsx because of ./src/components/about/about.jsx */
 
 /*! ModuleConcatenation bailout: Cannot concat with ./src/components/social/social.jsx (<- Module is referenced from these modules with unsupported syntax: ./src/components/social/social.async.jsx (referenced with import(), require.resolve)) */
 
@@ -1279,7 +1279,7 @@
 
 /*! exports provided: injectHTML, default */
 
-/*! ModuleConcatenation bailout: Cannot concat with ./src/components/common/PrimaryLink/PrimaryLink.jsx because of ./src/components/jobs/jobs.jsx */
+/*! ModuleConcatenation bailout: Cannot concat with ./src/components/common/PrimaryLink/PrimaryLink.jsx because of ./src/components/about/about.jsx */
 
 /*! ModuleConcatenation bailout: Cannot concat with ./src/components/common/icon/icon.async.jsx (<- Module uses injected variables (__dirname)) */
 
