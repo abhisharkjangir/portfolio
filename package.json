@@ -69,8 +69,8 @@
     "postcss-loader": "^4.3.0",
     "postcss-preset-env": "^6.7.0",
     "prop-types": "^15.7.2",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
     "react-helmet": "^5.2.1",
     "react-lazyload": "^2.6.6",
     "react-leaflet": "^2.7.0",
@@ -88,12 +88,12 @@
     "uglifyjs-webpack-plugin": "^2.2.0",
     "url-loader": "^2.3.0",
     "webpack": "4.33.0",
+    "webpack-bundle-analyzer": "^3.6.1",
     "webpack-dev-middleware": "^3.7.0",
     "webpack-flush-chunks": "^2.0.3",
     "webpack-hot-middleware": "^2.25.0",
     "webpack-hot-server-middleware": "^0.6.0",
-    "write-file-webpack-plugin": "^4.5.0",
-    "webpack-bundle-analyzer": "^3.6.1"
+    "write-file-webpack-plugin": "^4.5.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",

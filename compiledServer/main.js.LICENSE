@@ -66,11 +66,11 @@
 
 /*! exports provided: default */
 
+/*#__PURE__*/
+
 /* harmony import */
 
 /*! react */
-
-/*#__PURE__*/
 
 /*! prop-types */
 
@@ -241,12 +241,6 @@
  * look for actions of this type.
  */
 
-/**
- * These actions correspond to the history API.
- * The associated routerMiddleware will capture these events before they get to
- * your reducer and reissue them as the matching function on your history.
- */
-
 /*!**********************************************************!*\
   !*** ./node_modules/connected-react-router/immutable.js ***!
   \**********************************************************/
@@ -364,8 +358,6 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 
 // eslint-disable-next-line no-console
-
-// CONCATENATED MODULE: ./src/containers/pages/iss/selector.js
 
 /*!******************************************************************************!*\
   !*** ./node_modules/connected-react-router/lib/structure/immutable/getIn.js ***!
@@ -646,6 +638,8 @@
 
 /*! react-redux */
 
+// Dispatch onLocationChanged except when we're in time travelling
+
 // Subscribe to store changes to check if we are in time travelling
 
 // Extract store's location
@@ -655,8 +649,6 @@
 // If we do time travelling, the location in store is changed but location in history is not changed
 
 // Update history's location to match store's location
-
-// Dispatch onLocationChanged except when we're in time travelling
 
 // Listen to history changes
 
@@ -764,10 +756,6 @@
     * This reducer will update the state with the most recent location history
     * has transitioned to.
     */
-
-// Don't update the state ref for the first rendering
-
-// to prevent the double-rendering issue on initilization
 
 /*!***********************!*\
   !*** ./src/routes.js ***!
@@ -999,7 +987,7 @@
 
 /*! ModuleConcatenation bailout: Cannot concat with ./src/components/footer/footer.jsx (<- Module is referenced from these modules with unsupported syntax: ./src/components/footer/footer.async.jsx (referenced with import(), require.resolve)) */
 
-/*! ModuleConcatenation bailout: Cannot concat with ./src/components/heading/heading.jsx because of ./src/components/about/about.jsx */
+/*! ModuleConcatenation bailout: Cannot concat with ./src/components/heading/heading.jsx because of ./src/components/jobs/jobs.jsx */
 
 /*! ModuleConcatenation bailout: Cannot concat with ./src/components/hero/hero.jsx because of ./src/containers/pages/home/home.jsx */
 
@@ -1007,7 +995,7 @@
 
 /*! ModuleConcatenation bailout: Cannot concat with ./src/components/menu/menu.jsx (<- Module is referenced from these modules with unsupported syntax: ./src/components/menu/menu.async.jsx (referenced with import(), require.resolve)) */
 
-/*! ModuleConcatenation bailout: Cannot concat with ./src/components/section/section.jsx because of ./src/components/about/about.jsx */
+/*! ModuleConcatenation bailout: Cannot concat with ./src/components/section/section.jsx because of ./src/components/jobs/jobs.jsx */
 
 /*! ModuleConcatenation bailout: Cannot concat with ./src/components/social/social.jsx (<- Module is referenced from these modules with unsupported syntax: ./src/components/social/social.async.jsx (referenced with import(), require.resolve)) */
 
@@ -1020,10 +1008,6 @@
 /*! ModuleConcatenation bailout: Cannot concat with ./src/components/projects/projects.scss (<- Module is not an ECMAScript module) */
 
 /*! ModuleConcatenation bailout: Cannot concat with external "react-router-dom" (<- Module is not an ECMAScript module) */
-
-// EXTERNAL MODULE: ./src/components/common/button/button.jsx
-
-// EXTERNAL MODULE: ./src/components/footer/footer.jsx
 
 // CONCATENATED MODULE: ./src/components/projects/projects.jsx
 
@@ -1058,8 +1042,6 @@
 // 5) for completeness provide the paths even though they were inputs:
 
 // 6) special goodness for dual-file import()
-
-/** HELPERS */
 
 // hide prod sourcemap err
 
@@ -1297,7 +1279,7 @@
 
 /*! exports provided: injectHTML, default */
 
-/*! ModuleConcatenation bailout: Cannot concat with ./src/components/common/PrimaryLink/PrimaryLink.jsx because of ./src/components/about/about.jsx */
+/*! ModuleConcatenation bailout: Cannot concat with ./src/components/common/PrimaryLink/PrimaryLink.jsx because of ./src/components/jobs/jobs.jsx */
 
 /*! ModuleConcatenation bailout: Cannot concat with ./src/components/common/icon/icon.async.jsx (<- Module uses injected variables (__dirname)) */
 
@@ -1373,10 +1355,6 @@
 
 // eslint-disable-next-line complexity
 
-// CONCATENATED MODULE: ./src/components/app/index.js
-
-// EXTERNAL MODULE: ./src/components/header/header.scss
-
 // CONCATENATED MODULE: ./src/components/header/header.jsx
 
 /* eslint-disable react/jsx-closing-tag-location */
@@ -1394,8 +1372,6 @@
 // },
 
 // eslint-disable-next-line react/no-access-state-in-setstate
-
-// CONCATENATED MODULE: ./src/utils/isFullPageRoute.js
 
 // CONCATENATED MODULE: ./src/containers/app/app.jsx
 
@@ -1453,15 +1429,11 @@
 
 // eslint-disable-next-line consistent-return
 
-// Create a history depending on the environment
+// Create a store (with a memory history) from our current url
 
 // Delete it once we have it stored in a variable
 
 // eslint-disable-next-line no-underscore-dangle
-
-// Create the store
-
-// Create a store (with a memory history) from our current url
 
 // Helmet Action to set meta info based on the URL
 
