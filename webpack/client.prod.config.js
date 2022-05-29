@@ -8,6 +8,7 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const WebpackBar = require('webpackbar');
 const paths = require('./paths');
 
 const getOutput = () => ({
@@ -175,6 +176,10 @@ const getResolve = () => {
 
 const getPlugins = () => {
   return [
+    new WebpackBar({
+      name: 'Client | Production:',
+      color: 'green',
+    }),
     new CompressionPlugin(),
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
