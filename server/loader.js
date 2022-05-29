@@ -27,10 +27,7 @@ const inlineResource = (resourcePath, encoding = 'utf8') => {
 
   try {
     resource = fs.readFileSync(
-      path.resolve(
-        process.cwd(),
-        `./${isDev ? 'devBuild' : 'build'}/${resourcePath}`
-      ),
+      path.resolve(process.cwd(), `./public/dist/client/${resourcePath}`),
       encoding
     );
   } catch (e) {
