@@ -1,11 +1,13 @@
 /* eslint-disable jsx-a11y/href-no-hash */
+/* eslint-disable import/extensions */
+/* eslint-disable global-require */
 const express = require('express');
 const bodyParser = require('body-parser');
 const compression = require('compression');
 const cookieParser = require('cookie-parser');
 const APIRoutes = require('./routes/index');
 const getClientConfigProd = require('../webpack/client.prod.config');
-const clientStats = require('../build/bundlestats.json');
+const clientStats = require('../public/dist/client/clientstats.json');
 
 const {
   output: { publicPath, path },
@@ -30,7 +32,7 @@ const done = () =>
     );
   });
 // eslint-disable-next-line global-require
-const serverRender = require('../compiledServer/main.js').default;
+const serverRender = require('../public/dist/server/main.js').default;
 app.use(publicPath, express.static(path));
 app.use(serverRender({ clientStats }));
 done();

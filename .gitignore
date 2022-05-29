@@ -1,7 +1,5 @@
 node_modules
 *.log
-devBuild
-devCompiledServer
 .vscode
 .idea
 .DS_Store
