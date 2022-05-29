@@ -11,7 +11,7 @@ const paths = require('./paths');
 const getOutput = () => ({
   filename: '[name].js',
   chunkFilename: '[name].chunk.js',
-  path: path.resolve(__dirname, '../devBuild'),
+  path: path.resolve(__dirname, '../public/dist/client'),
   publicPath: '/',
 });
 

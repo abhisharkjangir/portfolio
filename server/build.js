@@ -1,4 +1,6 @@
 /* eslint-disable jsx-a11y/href-no-hash */
+/* eslint-disable import/extensions */
+/* eslint-disable global-require */
 const fs = require('fs');
 const express = require('express');
 const webpack = require('webpack');
@@ -30,7 +32,7 @@ webpack([clientConfigProd, getServerConfigProd()]).run((err, stats) => {
   const clientStats = stats.toJson().children[0];
 
   fs.writeFile(
-    `${process.cwd()}/build/clientstats.json`,
+    `${process.cwd()}/public/dist/client/clientstats.json`,
     JSON.stringify(clientStats),
     'utf8',
     error => {
@@ -39,7 +41,7 @@ webpack([clientConfigProd, getServerConfigProd()]).run((err, stats) => {
         console.log(error);
       }
       // eslint-disable-next-line global-require
-      const serverRender = require('../compiledServer/main.js').default;
+      const serverRender = require('../public/dist/server/main.js').default;
       app.use(publicPath, express.static(path));
       app.use(serverRender({ clientStats }));
       return false;

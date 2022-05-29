@@ -11,7 +11,7 @@ const paths = require('./paths');
 const res = p => path.resolve(__dirname, p);
 const nodeModules = res('../node_modules');
 const entry = res('../server/loader.js');
-const devOutput = res('../devCompiledServer');
+const devOutput = res('../public/dist/server');
 
 // if you're specifying externals to leave unbundled, you need to tell Webpack
 // to still bundle `react-universal-component`, `webpack-flush-chunks` and
