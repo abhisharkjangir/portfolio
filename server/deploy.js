@@ -8,11 +8,12 @@ const cookieParser = require('cookie-parser');
 const APIRoutes = require('./routes/index');
 const getClientConfigProd = require('../webpack/client.prod.config');
 const clientStats = require('../public/dist/client/clientstats.json');
+const CONSTANTS = require('./constants/constants');
 
 const {
   output: { publicPath, path },
 } = getClientConfigProd();
-const PORT = process.env.PORT || 7000;
+const PORT = process.env.PORT || CONSTANTS.PORT;
 const app = express();
 
 app.use(compression());
