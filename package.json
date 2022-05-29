@@ -131,5 +131,8 @@
       "pre-commit": "lint-staged",
       "pre-push": "git stash && npm run build && git add . && git commit -m production-build --no-verify"
     }
+  },
+  "engines": {
+    "node": "14.x"
   }
 }
