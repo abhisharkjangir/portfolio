@@ -1,3 +1,5 @@
+const PORT = 8080;
+
 const socialList = [
   {
     name: 'github',
@@ -19,4 +21,5 @@ const socialList = [
 
 module.exports = {
   socialList,
+  PORT,
 };

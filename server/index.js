@@ -11,9 +11,10 @@ const bodyParser = require('body-parser');
 const compression = require('compression');
 const cookieParser = require('cookie-parser');
 const APIRoutes = require('./routes/index');
+const CONSTANTS = require('./constants/constants');
 
 const DEV = process.env.NODE_ENV === 'development';
-const PORT = process.env.PORT || 7000;
+const PORT = process.env.PORT || CONSTANTS.PORT;
 
 const app = express();
 app.use(compression());
