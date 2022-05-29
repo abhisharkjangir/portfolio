@@ -6,6 +6,8 @@ const CopyPlugin = require('copy-webpack-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const WriteFilePlugin = require('write-file-webpack-plugin'); // here so you can see what chunks are built
+const WebpackBar = require('webpackbar');
+
 const paths = require('./paths');
 
 const getOutput = () => ({
@@ -187,6 +189,10 @@ const getResolve = () => {
 
 const getPlugins = () => {
   return [
+    new WebpackBar({
+      name: 'Client | Development:',
+      color: 'green',
+    }),
     new CopyPlugin([
       { from: 'public/manifest.json', to: 'static/js' },
       { from: 'public/robots.txt', to: '' },

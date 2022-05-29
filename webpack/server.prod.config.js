@@ -6,6 +6,8 @@ const webpack = require('webpack');
 const CompressionPlugin = require('compression-webpack-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const WebpackBar = require('webpackbar');
+
 const paths = require('./paths');
 
 const res = p => path.resolve(__dirname, p);
@@ -187,6 +189,10 @@ const getResolve = () => {
 
 const getPlugins = () => {
   return [
+    new WebpackBar({
+      name: 'Server | Production:',
+      color: 'orange',
+    }),
     new CompressionPlugin(),
     new webpack.optimize.ModuleConcatenationPlugin(),
     new webpack.optimize.OccurrenceOrderPlugin(),
