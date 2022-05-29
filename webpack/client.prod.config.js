@@ -143,9 +143,6 @@ const getModule = () => {
             },
           },
           {
-            loader: 'stylus-loader',
-          },
-          {
             loader: 'sass-loader',
           },
           {
@@ -172,7 +169,7 @@ const getModule = () => {
 
 const getResolve = () => {
   return {
-    extensions: ['.js', '.jsx', '.css', '.styl'],
+    extensions: ['.js', '.jsx', '.css'],
   };
 };
 

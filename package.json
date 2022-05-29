@@ -82,7 +82,6 @@
     "sass": "^1.52.1",
     "sass-loader": "7.2.0",
     "style-loader": "^1.2.1",
-    "stylus-loader": "^3.0.2",
     "tailwindcss": "^1.9.6",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "url-loader": "^2.3.0",
@@ -114,7 +113,6 @@
     "react-dev-utils": "^9.0.3",
     "react-hot-loader": "^4.9.0",
     "rimraf": "^2.6.3",
-    "stylus": "^0.54.5",
     "travis-github-status": "^1.6.3"
   },
   "lint-staged": {
