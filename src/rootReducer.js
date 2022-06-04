@@ -1,15 +1,16 @@
-import { combineReducers } from 'redux-immutable';
-import { connectRouter } from 'connected-react-router/immutable';
-import { fromJS } from 'immutable';
+import { combineReducers } from 'redux';
 
 // Helmet
-import { HELMET_STATE_KEY } from './containers/common/helmet/constants';
-import helmetReducer from './containers/common/helmet/reducer';
+import helmetReducer from './components/common/helmet/reducer';
+import { HELMET_STATE_KEY } from './components/common/helmet/constants';
+// SSR
+import ssrReducer from './components/pages/ssr/reducer';
+import { SSR_STATE_KEY } from './components/pages/ssr/constant';
 
-const createRootReducer = history =>
+const createRootReducer = () =>
   combineReducers({
-    router: fromJS(connectRouter(history)),
     [HELMET_STATE_KEY]: helmetReducer,
+    [SSR_STATE_KEY]: ssrReducer,
   });
 
 export default createRootReducer;

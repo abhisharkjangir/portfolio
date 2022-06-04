@@ -3,10 +3,9 @@ import {
   applyMiddleware,
   compose,
 } from 'redux';
-import { routerMiddleware } from 'connected-react-router/immutable';
+import { createPromise } from 'redux-promise-middleware';
 import { createBrowserHistory } from 'history';
-import createSagaMiddleware from 'redux-saga';
-import { fromJS } from 'immutable';
+import thunk from 'redux-thunk';
 import isServer from './utils/isServer';
 import createRootReducer from './rootReducer';
 
@@ -25,10 +24,14 @@ export default his => {
     }
   }
 
-  const sagaMiddleware = createSagaMiddleware();
-  const middleware = [routerMiddleware(history), sagaMiddleware];
+  const middlewares = [
+    thunk,
+    createPromise({
+      promiseTypeSuffixes: ['LOADING', 'SUCCESS', 'ERROR'],
+    }),
+  ];
   const composedEnhancers = compose(
-    applyMiddleware(...middleware),
+    applyMiddleware(...middlewares),
     ...enhancers
   );
 
@@ -45,10 +48,9 @@ export default his => {
   // Create the store
   const store = createStore(
     createRootReducer(history),
-    fromJS(initialState),
+    initialState,
     composedEnhancers
   );
-  store.runSaga = sagaMiddleware.run;
 
   return {
     store,

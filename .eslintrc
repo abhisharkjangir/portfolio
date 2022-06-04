@@ -14,7 +14,6 @@
     "expect": true
   },
   "plugins": [
-    "redux-saga",
     "react",
     "react-hooks",
     "jsx-a11y",
@@ -76,8 +75,6 @@
     "react/jsx-wrap-multilines": 0,
     "react/require-extension": 0,
     "react/self-closing-comp": 0,
-    "redux-saga/no-yield-in-race": 2,
-    "redux-saga/yield-effects": 2,
     "require-yield": 0,
     "import/no-webpack-loader-syntax": 0,
     "prettier/prettier": [1, {
