@@ -84,6 +84,7 @@
     "uglifyjs-webpack-plugin": "^2.2.0",
     "url-loader": "^2.3.0",
     "webpack": "4.46.0",
+    "webpackbar": "^5.0.2",
     "webpack-bundle-analyzer": "^3.6.1",
     "webpack-dev-middleware": "^3.7.0",
     "webpack-flush-chunks": "^2.0.3",
@@ -112,8 +113,7 @@
     "react-dev-utils": "^9.0.3",
     "react-refresh": "^0.13.0",
     "rimraf": "^2.6.3",
-    "travis-github-status": "^1.6.3",
-    "webpackbar": "^5.0.2"
+    "travis-github-status": "^1.6.3"
   },
   "lint-staged": {
     "linters": {
