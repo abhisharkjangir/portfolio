@@ -1,8 +1,4 @@
-const API_ENDPOINTS = {
-  now: 'open-notify/iss-now',
-  people: 'open-notify/astros',
-  pass: 'open-notify/pass', // Specify lat,long in Query Params
-};
+const API_ENDPOINTS = {};
 
 const getApiEndPoint = name => (name && API_ENDPOINTS[name]) || '';
 

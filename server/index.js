@@ -1,6 +1,7 @@
 /* eslint-disable import/extensions */
 /* eslint-disable global-require */
 /* eslint-disable jsx-a11y/href-no-hash */
+
 const fs = require('fs');
 const express = require('express');
 const webpack = require('webpack');
@@ -35,6 +36,9 @@ const done = () =>
   });
 
 if (DEV) {
+  global.$RefreshReg$ = () => {};
+  // @ts-expect-error
+  global.$RefreshSig$ = () => () => {};
   // eslint-disable-next-line global-require
   const getClientConfigDev = require('../webpack/client.dev.config');
   const clientConfigDev = getClientConfigDev();

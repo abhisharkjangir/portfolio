@@ -2,7 +2,7 @@
 import React, { StrictMode } from 'react';
 import { createRoot, hydrateRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
-import { ConnectedRouter } from 'connected-react-router/immutable';
+import { BrowserRouter } from 'react-router-dom';
 import App from './containers/app';
 import createStore from './store';
 import rootSaga from './rootSaga';
@@ -16,17 +16,17 @@ store.runSaga(rootSaga);
 const Application = () => (
   <StrictMode>
     <Provider store={store}>
-      <ConnectedRouter history={history}>
+      <BrowserRouter history={history}>
         <App />
-      </ConnectedRouter>
+      </BrowserRouter>
     </Provider>
   </StrictMode>
 );
 
 // Root Node
 const rootNode = document.getElementById('root');
-const root = createRoot(rootNode);
 if (process.env.NODE_ENV === 'development' && module.hot) {
+  const root = createRoot(rootNode);
   module.hot.accept('./containers/app/index', () => {
     root.render(<Application />);
   });
@@ -37,6 +37,7 @@ if (rootNode.hasChildNodes()) {
   // attaching event listeners after the initial render
   hydrateRoot(rootNode, <Application />);
 } else {
-  // If we're not running on the server, just render like normal
+  const root = createRoot(rootNode);
+  //  If we're not running on the server, just render like normal
   root.render(<Application />);
 }

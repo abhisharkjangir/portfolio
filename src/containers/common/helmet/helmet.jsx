@@ -1,5 +1,5 @@
-import React from 'react';
-import { withRouter } from 'react-router';
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router';
 import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
@@ -25,50 +25,38 @@ const defaultUpdated = Meta.default.updated;
 const defaultPublished = Meta.default.published;
 const defaultContentType = Meta.default.contentType;
 
-class Page extends React.PureComponent {
-  // shouldComponentUpdate(nextProps){
-  //   if(nextProps !== this.props) {
-  //     return true;
-  //   }
-  // }
-  componentDidMount() {
-    const {
-      location: { pathname },
-      setInfo,
-    } = this.props;
+const Page = props => {
+  const location = useLocation();
+  const { children, id, className, setInfo, data, ...rest } = props;
+  const { pathname } = location;
+
+  useEffect(() => {
     if (Meta[pathname]) {
       setInfo(Meta[pathname]);
     }
-  }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
-  componentWillReceiveProps(nextProps) {
-    const newPathname = nextProps.location.pathname;
-    const {
-      location: { pathname },
-      setInfo,
-    } = this.props;
-    if (pathname !== newPathname && Meta[newPathname]) {
-      setInfo(Meta[newPathname]);
+  useEffect(() => {
+    if (Meta[pathname]) {
+      setInfo(Meta[pathname]);
     }
-  }
+  }, [pathname, setInfo]);
 
   // eslint-disable-next-line complexity
-  getMetaTags(
-    {
-      title,
-      description,
-      image,
-      contentType,
-      twitter,
-      noCrawl,
-      published,
-      updated,
-      category,
-      tags,
-      keywords,
-    },
-    pathname
-  ) {
+  const getMetaTags = ({
+    title,
+    description,
+    image,
+    contentType,
+    twitter,
+    noCrawl,
+    published,
+    updated,
+    category,
+    tags,
+    keywords,
+  }) => {
     const theTitle = title
       ? (title + defaultSep + defaultTitle).substring(0, 60)
       : defaultTitle;
@@ -124,36 +112,32 @@ class Page extends React.PureComponent {
     }
 
     return metaTags;
-  }
+  };
 
-  render() {
-    const { children, id, className, location, data, ...rest } = this.props;
-    const { pathname } = location;
-    return (
-      <div id={id} className={className}>
-        <Helmet
-          htmlAttributes={{
-            lang: 'en',
-            itemscope: undefined,
-            itemtype: `http://schema.org/${rest.schema || 'WebPage'}`,
-          }}
-          title={
-            data.title ? data.title + defaultSep + defaultTitle : defaultTitle
-          }
-          link={[
-            {
-              rel: 'canonical',
-              href: SITE_URL + pathname,
-            },
-          ]}
-          meta={this.getMetaTags({ ...rest, ...data }, pathname)}
-        />
-        <link rel="canonical" href={`${SITE_URL + pathname}`} />
-        {children}
-      </div>
-    );
-  }
-}
+  return (
+    <div id={id} className={className}>
+      <Helmet
+        htmlAttributes={{
+          lang: 'en',
+          itemscope: undefined,
+          itemtype: `http://schema.org/${rest.schema || 'WebPage'}`,
+        }}
+        title={
+          data.title ? data.title + defaultSep + defaultTitle : defaultTitle
+        }
+        link={[
+          {
+            rel: 'canonical',
+            href: SITE_URL + pathname,
+          },
+        ]}
+        meta={getMetaTags({ ...rest, ...data })}
+      />
+      <link rel="canonical" href={`${SITE_URL + pathname}`} />
+      {children}
+    </div>
+  );
+};
 
 Page.propTypes = {
   title: PropTypes.string.isRequired,
@@ -183,4 +167,4 @@ const mapDispatchToProps = dispatch => ({
   setInfo: data => dispatch(setHelmetInfo(data)),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Page));
+export default connect(mapStateToProps, mapDispatchToProps)(Page);

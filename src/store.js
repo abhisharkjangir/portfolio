@@ -1,4 +1,8 @@
-import { createStore, applyMiddleware, compose } from 'redux';
+import {
+  legacy_createStore as createStore,
+  applyMiddleware,
+  compose,
+} from 'redux';
 import { routerMiddleware } from 'connected-react-router/immutable';
 import { createBrowserHistory } from 'history';
 import createSagaMiddleware from 'redux-saga';
@@ -8,10 +12,7 @@ import createRootReducer from './rootReducer';
 
 export default his => {
   // Create a history depending on the environment
-  const history = his
-    ? // eslint-disable-next-line no-param-reassign
-      (his.location.search = '?server=true')
-    : createBrowserHistory();
+  const history = his || createBrowserHistory();
 
   const enhancers = [];
 

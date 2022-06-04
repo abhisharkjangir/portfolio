@@ -7,6 +7,7 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const WriteFilePlugin = require('write-file-webpack-plugin'); // here so you can see what chunks are built
 const WebpackBar = require('webpackbar');
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
 const paths = require('./paths');
 
@@ -57,6 +58,18 @@ const getModule = () => {
               limit: '10000',
               name: 'static/assets/[name].[hash:8].[ext]',
             },
+          },
+          {
+            test: /\.[jt]sx?$/,
+            exclude: /node_modules/,
+            use: [
+              {
+                loader: require.resolve('babel-loader'),
+                options: {
+                  plugins: [require.resolve('react-refresh/babel')],
+                },
+              },
+            ],
           },
           {
             test: /\.(js|mjs|jsx|ts|tsx)$/,
@@ -193,6 +206,7 @@ const getPlugins = () => {
       name: 'Client | Development:',
       color: 'green',
     }),
+    new ReactRefreshWebpackPlugin(),
     new CopyPlugin([
       { from: 'public/manifest.json', to: 'static/js' },
       { from: 'public/robots.txt', to: '' },
@@ -223,7 +237,6 @@ const getClientConfig = () => ({
   entry: [
     'babel-polyfill',
     'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000&reload=false&quiet=false&noInfo=false',
-    'react-hot-loader/patch',
     path.resolve(__dirname, '../src/index.js'),
   ],
   output: getOutput(),

@@ -18,14 +18,14 @@ const hamAfterActive = `bottom 0.1s ease-out, transform 0.22s cubic-bezier(0.215
 
 const Navigation = [
   {
-    name: "About",
-    to: "/#about",
-    page: "/about",
+    name: 'About',
+    to: '/#about',
+    page: '/about',
   },
   {
-    name: "Experience",
-    to: "/#experience",
-    page: "/experience",
+    name: 'Experience',
+    to: '/#experience',
+    page: '/experience',
   },
   // {
   //   name: 'Work',
@@ -33,9 +33,9 @@ const Navigation = [
   //   page: '/work',
   // },
   {
-    name: "Contact",
-    to: "/#contact",
-    page: "/contact",
+    name: 'Contact',
+    to: '/#contact',
+    page: '/contact',
   },
 ];
 
@@ -152,7 +152,7 @@ class Header extends React.PureComponent {
               {Navigation.map(({ name, to, page }) => (
                 <li key={name} className="text-base">
                   <PrimaryLink
-                    href={() => (typeof window !== 'undefined' ? to : page)}
+                    href={typeof window !== 'undefined' ? to : page}
                     internal={typeof window !== 'undefined'}
                   >
                     {name}
