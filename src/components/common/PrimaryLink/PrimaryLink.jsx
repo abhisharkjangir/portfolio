@@ -11,7 +11,7 @@ const PrimaryLink = ({ children, href, to, internal, ...rest }) => {
     );
   }
   return (
-    <a href={href} {...rest}>
+    <a href={href || to} {...rest}>
       {children}
     </a>
   );

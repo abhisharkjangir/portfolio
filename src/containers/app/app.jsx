@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import AppComponent from '../../components/app';
 import PortfolioApp from '../../components/app/portfolioApp';
@@ -16,4 +15,4 @@ const App = props => {
   );
 };
 
-export default connect(null, null)(App);
+export default App;

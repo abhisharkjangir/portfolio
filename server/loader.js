@@ -2,13 +2,13 @@
 import fs from 'fs';
 import path from 'path';
 // React requirements
-import React from 'react';
+import React, { StrictMode } from 'react';
 import { matchPath } from 'react-router-dom';
 import { renderToString } from 'react-dom/server';
 import Helmet from 'react-helmet';
 import { Provider } from 'react-redux';
-import createHistory from 'history/createMemoryHistory';
-import { StaticRouter } from 'react-router';
+import { createMemoryHistory } from 'history';
+import { StaticRouter } from 'react-router-dom/server';
 import { flushChunkNames } from 'react-universal-component/server';
 import flushChunks from 'webpack-flush-chunks';
 import { END } from 'redux-saga';
@@ -101,7 +101,9 @@ export default ({ clientStats }) => (req, res) => {
         return res.status(404).end();
       }
 
-      const history = createHistory({ initialEntries: [req.path] });
+      const history = createMemoryHistory({
+        initialEntries: [`${req.path}?ssr=true`],
+      });
       // Create a store (with a memory history) from our current url
       const { store } = createStore(history);
       const saga = store.runSaga(rootSaga);
@@ -109,7 +111,7 @@ export default ({ clientStats }) => (req, res) => {
       const context = {};
       let actions = [];
       RouteList.some(route => {
-        const match = matchPath(req.path, route);
+        const match = matchPath(route, req.path);
         if (match) {
           if (route.fetchRouteData) {
             actions = [...actions, ...route.fetchRouteData];
@@ -135,11 +137,13 @@ export default ({ clientStats }) => (req, res) => {
       try {
         saga.done.then(() => {
           const markup = renderToString(
-            <Provider store={store}>
-              <StaticRouter location={req.url} context={context}>
-                <App />
-              </StaticRouter>
-            </Provider>
+            <StrictMode>
+              <Provider store={store}>
+                <StaticRouter location={req.url} context={context}>
+                  <App />
+                </StaticRouter>
+              </Provider>
+            </StrictMode>
           );
 
           if (context.url) {
