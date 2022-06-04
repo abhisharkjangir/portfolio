@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Routes from '../../routes';
-import Helmet from '../../containers/common/helmet/helmet';
+import Helmet from '../common/helmet/helmet';
 const App = ({ location }) => {
   return (
     <React.Fragment>

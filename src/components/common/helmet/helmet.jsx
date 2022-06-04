@@ -1,12 +1,10 @@
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router';
-import { connect } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
-import { createStructuredSelector } from 'reselect';
 import Meta from '../../../utils/meta';
 import { setHelmetInfo } from './actions';
-import { getHelmetData } from './selectors';
 
 const SITE_URL =
   process.env.NODE_ENV === 'development'
@@ -27,21 +25,19 @@ const defaultContentType = Meta.default.contentType;
 
 const Page = props => {
   const location = useLocation();
-  const { children, id, className, setInfo, data, ...rest } = props;
+  const dispatch = useDispatch();
+  const {
+    helmet: { data = '' },
+  } = useSelector(state => state);
+
+  const { children, id, className, setInfo, ...rest } = props;
   const { pathname } = location;
 
   useEffect(() => {
-    if (Meta[pathname]) {
-      setInfo(Meta[pathname]);
+    if (!data && Meta[pathname]) {
+      dispatch(setHelmetInfo(Meta[pathname]));
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  useEffect(() => {
-    if (Meta[pathname]) {
-      setInfo(Meta[pathname]);
-    }
-  }, [pathname, setInfo]);
+  }, [])
 
   // eslint-disable-next-line complexity
   const getMetaTags = ({
@@ -123,7 +119,7 @@ const Page = props => {
           itemtype: `http://schema.org/${rest.schema || 'WebPage'}`,
         }}
         title={
-          data.title ? data.title + defaultSep + defaultTitle : defaultTitle
+          data?.title ? data.title + defaultSep + defaultTitle : defaultTitle
         }
         link={[
           {
@@ -159,12 +155,5 @@ Page.propTypes = {
   data: PropTypes.object.isRequired,
 };
 
-const mapStateToProps = createStructuredSelector({
-  data: getHelmetData(),
-});
 
-const mapDispatchToProps = dispatch => ({
-  setInfo: data => dispatch(setHelmetInfo(data)),
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(Page);
+export default Page;

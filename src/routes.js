@@ -3,9 +3,10 @@ import React from 'react';
 import universal from 'react-universal-component';
 import { Route, Routes } from 'react-router-dom';
 import universalOptions from './utils/universalOptions';
+import { getSSRData } from './components/pages/ssr/actions';
 
 const Home = universal(
-  import(/* webpackChunkName: "home-page" */ './containers/pages/home/home'),
+  import(/* webpackChunkName: "home-page" */ './components/pages/home/home'),
   universalOptions
 );
 
@@ -45,6 +46,11 @@ const Notfound = universal(
   import(
     /* webpackChunkName: "notfound-page" */ './components/pages/notfound/notfound'
   ),
+  universalOptions
+);
+
+const SSR = universal(
+  import(/* webpackChunkName: "ssr-page" */ './components/pages/ssr/ssr'),
   universalOptions
 );
 
@@ -95,6 +101,11 @@ export const RouteList = [
     exact: true,
   },
   {
+    path: '/ssr',
+    element: SSR,
+    fetchRouteData: [getSSRData],
+  },
+  {
     path: '*',
     element: Notfound,
   },
@@ -107,9 +118,9 @@ const getElement = route => {
 
 export default () => (
   <Routes>
-    {RouteList.map((route, index) => (
+    {RouteList.map(route => (
       // eslint-disable-next-line react/no-array-index-key
-      <Route key={index} {...route} element={getElement(route)} />
+      <Route key={route.path} {...route} element={getElement(route)} />
     ))}
   </Routes>
 );

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Header from '../header/header';
 import Routes from '../../routes';
 import styles from './portfolioApp.scss';
-import Helmet from '../../containers/common/helmet/helmet';
+import Helmet from '../common/helmet/helmet';
 import Social from '../social/social.async';
 import Email from '../email/email.async';
 import Footer from '../footer/footer.async';

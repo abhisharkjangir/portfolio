@@ -11,13 +11,11 @@ import { createMemoryHistory } from 'history';
 import { StaticRouter } from 'react-router-dom/server';
 import { flushChunkNames } from 'react-universal-component/server';
 import flushChunks from 'webpack-flush-chunks';
-import { END } from 'redux-saga';
 
 import createStore from '../src/store';
 import App from '../src/containers/app';
 import { RouteList } from '../src/routes';
-import rootSaga from '../src/rootSaga';
-import { setHelmetInfo } from '../src/containers/common/helmet/actions';
+import { setHelmetInfo } from '../src/components/common/helmet/actions';
 import Meta from '../src/utils/meta';
 
 const isDev = process.env.NODE_ENV === 'development';
@@ -106,7 +104,6 @@ export default ({ clientStats }) => (req, res) => {
       });
       // Create a store (with a memory history) from our current url
       const { store } = createStore(history);
-      const saga = store.runSaga(rootSaga);
       let theme = 'dark';
       const context = {};
       let actions = [];
@@ -120,22 +117,19 @@ export default ({ clientStats }) => (req, res) => {
         return match;
       });
 
-      actions.map(action => {
-        store.dispatch(action());
-        return action;
-      });
+      const promises = actions.map(action => store.dispatch(action()));
+
       // Helmet Action to set meta info based on the URL
       if (Meta[req.url]) {
-        store.dispatch(setHelmetInfo(Meta[req.url]));
+        promises.push(store.dispatch(setHelmetInfo(Meta[req.url])));
       }
 
       // Load theme for dark/light page
       if (req.path === '/theme/light') theme = 'light';
       else if (req.path === '/theme/dark') theme = 'dark';
 
-      store.dispatch(END);
-      try {
-        saga.done.then(() => {
+      return Promise.allSettled(promises)
+        .then(() => {
           const markup = renderToString(
             <StrictMode>
               <Provider store={store}>
@@ -197,11 +191,8 @@ export default ({ clientStats }) => (req, res) => {
             res.setHeader('Cache-Control', 'max-age=86400');
             res.send(html);
           }
-        });
-      } catch (error) {
-        // eslint-disable-next-line no-console
-        console.log('::::: Error :::::', error);
-      }
+        })
+        .catch(error => console.error('::::: Error :::::', error));
     }
   );
 };

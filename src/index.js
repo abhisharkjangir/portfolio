@@ -5,13 +5,9 @@ import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import App from './containers/app';
 import createStore from './store';
-import rootSaga from './rootSaga';
 
 // Create a store and get back itself and its history object
 const { store, history } = createStore();
-
-// Run Saga through store object
-store.runSaga(rootSaga);
 
 const Application = () => (
   <StrictMode>
@@ -27,7 +23,7 @@ const Application = () => (
 const rootNode = document.getElementById('root');
 if (process.env.NODE_ENV === 'development' && module.hot) {
   const root = createRoot(rootNode);
-  module.hot.accept('./containers/app/index', () => {
+  module.hot.accept('./components/app/index', () => {
     root.render(<Application />);
   });
 }
