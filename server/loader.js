@@ -13,7 +13,7 @@ import { flushChunkNames } from 'react-universal-component/server';
 import flushChunks from 'webpack-flush-chunks';
 
 import createStore from '../src/store';
-import App from '../src/containers/app';
+import App from '../src/components/app';
 import { RouteList } from '../src/routes';
 import { setHelmetInfo } from '../src/components/common/helmet/actions';
 import Meta from '../src/utils/meta';

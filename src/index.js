@@ -3,7 +3,7 @@ import React, { StrictMode } from 'react';
 import { createRoot, hydrateRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
-import App from './containers/app';
+import App from './components/app';
 import createStore from './store';
 
 // Create a store and get back itself and its history object
