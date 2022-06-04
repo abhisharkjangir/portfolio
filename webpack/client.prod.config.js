@@ -209,16 +209,18 @@ const getPlugins = () => {
       },
     }),
     new webpack.HashedModuleIdsPlugin(), // not needed for strategy to work (just good practice)
-    new CopyPlugin([
-      { from: 'public/manifest.json', to: 'static/js' },
-      { from: 'public/robots.txt', to: '' },
-      { from: 'public/sitemap.xml', to: '' },
-      { from: 'public/favicon.ico', to: 'static/assets' },
-      { from: 'public/logo512.png', to: 'static/assets' },
-      { from: 'public/logo192.png', to: 'static/assets' },
-      { from: 'public/service-worker.js', to: '' },
-      { from: 'public/asset-manifest.json', to: '' },
-    ]),
+    new CopyPlugin({
+      patterns: [
+        { from: 'public/manifest.json', to: 'static/js' },
+        { from: 'public/robots.txt', to: '' },
+        { from: 'public/sitemap.xml', to: '' },
+        { from: 'public/favicon.ico', to: 'static/assets' },
+        { from: 'public/logo512.png', to: 'static/assets' },
+        { from: 'public/logo192.png', to: 'static/assets' },
+        { from: 'public/service-worker.js', to: '' },
+        { from: 'public/asset-manifest.json', to: '' },
+      ],
+    }),
   ];
 };
 
@@ -239,7 +241,6 @@ const getClientConfig = () => {
       runtimeChunk: false,
       minimizer: [
         new CssMinimizerPlugin({
-          sourceMap: true,
           minimizerOptions: {
             preset: [
               'default',

@@ -228,7 +228,6 @@ const getServerConfig = () => {
       minimize: true,
       minimizer: [
         new CssMinimizerPlugin({
-          sourceMap: true,
           minimizerOptions: {
             preset: [
               'default',
