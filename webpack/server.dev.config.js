@@ -4,8 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const webpack = require('webpack');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const WriteFilePlugin = require('write-file-webpack-plugin'); // here so you can see what chunks are built
+const TerserPlugin = require('terser-webpack-plugin');
 const WebpackBar = require('webpackbar');
 const paths = require('./paths');
 
@@ -66,7 +65,7 @@ const getModule = () => {
             loader: require.resolve('url-loader'),
             options: {
               limit: '10000',
-              name: 'static/assets/[name].[hash:8].[ext]',
+              name: 'static/assets/[name].[fullhash:8].[ext]',
             },
           },
           {
@@ -151,7 +150,7 @@ const getModule = () => {
               /\.json$/,
             ],
             options: {
-              name: 'static/assets/[name].[hash:8].[ext]',
+              name: 'static/assets/[name].[fullhash:8].[ext]',
             },
           },
           // ** STOP ** Are you adding a new loader?
@@ -159,36 +158,33 @@ const getModule = () => {
         ],
       },
       {
-        test: /\.styl|.(scss|sass)$/,
+        test: /\.s(a|c)ss$/,
         exclude: /node_modules/,
         use: [
           {
             loader: 'css-loader',
             options: {
-              modules: true,
-              exportOnlyLocals: true,
-              localIdentName: '[name]-[hash:base64:5]', // To include filename -[name]-[local]-[hash:base64:5]
+              modules: {
+                exportGlobals: true,
+                exportOnlyLocals: true,
+              },
             },
           },
           {
-            loader: 'sass-loader',
+            loader: 'postcss-loader',
           },
           {
-            loader: 'postcss-loader',
+            loader: 'sass-loader',
+            options: {
+              implementation: require.resolve('sass'),
+            },
           },
         ],
       },
       {
         test: /\.css$/,
         exclude: /node_modules/,
-        use: [
-          {
-            loader: 'css-loader',
-          },
-          {
-            loader: 'postcss-loader',
-          },
-        ],
+        use: ['css-loader', 'postcss-loader'],
       },
     ],
   };
@@ -196,17 +192,26 @@ const getModule = () => {
 
 const getResolve = () => {
   return {
-    extensions: ['.js', '.jsx', '.css'],
+    extensions: ['.js', '.jsx', '.css', '.scss', '.sass'],
+    fallback: {
+      fs: false,
+      module: false,
+      dgram: false,
+      http2: false,
+      net: false,
+      tls: false,
+      child_process: false,
+      path: require.resolve('path-browserify'),
+    },
   };
 };
 
 const getPlugins = () => {
   return [
     new WebpackBar({
-      name: 'Client | Development:',
+      name: 'Server | Development:',
       color: 'orange',
     }),
-    new WriteFilePlugin(),
     new webpack.optimize.LimitChunkCountPlugin({
       maxChunks: 1,
     }),
@@ -238,7 +243,6 @@ const getServerConfig = () => {
       minimize: false,
       minimizer: [
         new CssMinimizerPlugin({
-          sourceMap: true,
           minimizerOptions: {
             preset: [
               'default',
@@ -248,16 +252,14 @@ const getServerConfig = () => {
             ],
           },
         }),
-        new UglifyJsPlugin({
-          cache: true,
+        new TerserPlugin({
           parallel: true,
-          sourceMap: true,
           extractComments: 'all',
         }),
       ],
       splitChunks: {
         cacheGroups: {
-          vendor: {
+          defaultVendors: {
             test: /[\\/]node_modules[\\/]/,
             name: 'vendor',
             chunks: 'all',
@@ -265,18 +267,6 @@ const getServerConfig = () => {
           chunks: 'all',
         },
       },
-    },
-    // Some libraries import Node modules but don't use them in the browser.
-    // Tell Webpack to provide empty mocks for them so importing them works.
-    node: {
-      module: 'empty',
-      dgram: 'empty',
-      dns: 'mock',
-      fs: 'empty',
-      http2: 'empty',
-      net: 'empty',
-      tls: 'empty',
-      child_process: 'empty',
     },
     performance: false,
   };

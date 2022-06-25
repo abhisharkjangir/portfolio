@@ -1,57 +1,49 @@
 /* eslint-disable extra-rules/no-commented-out-code */
 import React from 'react';
-import universal from 'react-universal-component';
+// import universal from 'react-universal-component';
+import loadable from '@loadable/component';
 import { Route, Routes } from 'react-router-dom';
-import universalOptions from './utils/universalOptions';
+// import { ReportChunks } from 'react-universal-component';
 import { getSSRData } from './components/pages/ssr/actions';
 
-const Home = universal(
-  import(/* webpackChunkName: "home-page" */ './components/pages/home/home'),
-  universalOptions
+const Home = loadable(() =>
+  import(/* webpackChunkName: "home-page" */ './components/pages/home/home')
 );
 
-const About = universal(
-  import(/* webpackChunkName: "about-page" */ './components/about/about'),
-  universalOptions
+const About = loadable(() =>
+  import(/* webpackChunkName: "about-page" */ './components/about/about')
 );
 
-const Experience = universal(
-  import(/* webpackChunkName: "experience-page" */ './components/jobs/jobs'),
-  universalOptions
+const Experience = loadable(() =>
+  import(/* webpackChunkName: "experience-page" */ './components/jobs/jobs')
 );
 
-const Work = universal(
-  import(/* webpackChunkName: "work-page" */ './components/work/work'),
-  universalOptions
+const Work = loadable(() =>
+  import(/* webpackChunkName: "work-page" */ './components/work/work')
 );
 
-const Contact = universal(
-  import(/* webpackChunkName: "contact-page" */ './components/contact/contact'),
-  universalOptions
+const Contact = loadable(() =>
+  import(/* webpackChunkName: "contact-page" */ './components/contact/contact')
 );
 
-const Json = universal(
-  import(/* webpackChunkName: "json-page" */ './components/pages/json/Json'),
-  universalOptions
+const Json = loadable(() =>
+  import(/* webpackChunkName: "json-page" */ './components/pages/json/Json')
 );
 
-const Comoponents = universal(
+const Comoponents = loadable(() =>
   import(
     /* webpackChunkName: "comoponents-page" */ './components/pages/components/components'
-  ),
-  universalOptions
+  )
 );
 
-const Notfound = universal(
+const Notfound = loadable(() =>
   import(
     /* webpackChunkName: "notfound-page" */ './components/pages/notfound/notfound'
-  ),
-  universalOptions
+  )
 );
 
-const SSR = universal(
-  import(/* webpackChunkName: "ssr-page" */ './components/pages/ssr/ssr'),
-  universalOptions
+const SSR = loadable(() =>
+  import(/* webpackChunkName: "ssr-page" */ './components/pages/ssr/ssr')
 );
 
 export const RouteList = [
@@ -113,7 +105,11 @@ export const RouteList = [
 
 const getElement = route => {
   const Element = route.element;
-  return <Element />;
+  return (
+    // <React.Suspense fallback={null}>
+    <Element />
+    // </React.Suspense>
+  );
 };
 
 export default () => (

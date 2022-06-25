@@ -1,16 +1,14 @@
 /* eslint-disable jsx-a11y/href-no-hash */
 const path = require('path');
 const webpack = require('webpack');
-const ExtractCssChunks = require('extract-css-chunks-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const WriteFilePlugin = require('write-file-webpack-plugin'); // here so you can see what chunks are built
+const TerserPlugin = require('terser-webpack-plugin');
 const WebpackBar = require('webpackbar');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
-
+const LoadablePlugin = require('@loadable/webpack-plugin');
 const paths = require('./paths');
-
 const getOutput = () => ({
   filename: '[name].js',
   chunkFilename: '[name].chunk.js',
@@ -151,7 +149,7 @@ const getModule = () => {
               /\.json$/,
             ],
             options: {
-              name: 'static/assets/[name].[hash:8].[ext]',
+              name: 'static/assets/[name].[fullhash:8].[ext]',
             },
           },
           // ** STOP ** Are you adding a new loader?
@@ -159,36 +157,28 @@ const getModule = () => {
         ],
       },
       {
-        test: /\.styl|.(scss|sass)$/,
+        test: /\.s(a|c)ss$/,
         use: [
-          'style-loader',
+          MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
             options: {
               modules: true,
-              localIdentName: '[name]-[hash:base64:5]', // To include filename -[name]-[local]-[hash:base64:5]
             },
           },
+          'postcss-loader',
           {
             loader: 'sass-loader',
-          },
-          {
-            loader: 'postcss-loader',
+            options: {
+              implementation: require.resolve('sass'),
+            },
           },
         ],
       },
       {
         test: /\.css$/,
         exclude: /node_modules/,
-        use: [
-          'style-loader',
-          {
-            loader: 'css-loader',
-          },
-          {
-            loader: 'postcss-loader',
-          },
-        ],
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
       },
     ],
   };
@@ -196,7 +186,18 @@ const getModule = () => {
 
 const getResolve = () => {
   return {
-    extensions: ['.js', '.jsx', '.css'],
+    extensions: ['.js', '.jsx', '.css', '.scss', '.sass'],
+    fallback: {
+      fs: false,
+      module: false,
+      dgram: false,
+      dns: 'mock',
+      http2: false,
+      net: false,
+      tls: false,
+      child_process: false,
+      path: require.resolve('path-browserify'),
+    },
   };
 };
 
@@ -207,6 +208,9 @@ const getPlugins = () => {
       color: 'green',
     }),
     new ReactRefreshWebpackPlugin(),
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
+    }),
     new CopyPlugin({
       patterns: [
         { from: 'public/manifest.json', to: 'static/js' },
@@ -219,11 +223,8 @@ const getPlugins = () => {
         { from: 'public/asset-manifest.json', to: '' },
       ],
     }),
-    new WriteFilePlugin(),
-    new ExtractCssChunks(),
-    new webpack.NamedModulesPlugin(),
+    new LoadablePlugin(),
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoEmitOnErrorsPlugin(),
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify('development'),
@@ -252,7 +253,6 @@ const getClientConfig = () => ({
     runtimeChunk: false,
     minimizer: [
       new CssMinimizerPlugin({
-        sourceMap: true,
         minimizerOptions: {
           preset: [
             'default',
@@ -262,16 +262,14 @@ const getClientConfig = () => ({
           ],
         },
       }),
-      new UglifyJsPlugin({
-        cache: true,
+      new TerserPlugin({
         parallel: true,
-        sourceMap: true,
         extractComments: 'all',
       }),
     ],
     splitChunks: {
       cacheGroups: {
-        vendor: {
+        defaultVendors: {
           test: /[\\/]node_modules[\\/]/,
           name: 'vendor',
           chunks: 'all',
@@ -279,18 +277,7 @@ const getClientConfig = () => ({
         chunks: 'all',
       },
     },
-  },
-  // Some libraries import Node modules but don't use them in the browser.
-  // Tell Webpack to provide empty mocks for them so importing them works.
-  node: {
-    module: 'empty',
-    dgram: 'empty',
-    dns: 'mock',
-    fs: 'empty',
-    http2: 'empty',
-    net: 'empty',
-    tls: 'empty',
-    child_process: 'empty',
+    emitOnErrors: true,
   },
   performance: false,
 });
