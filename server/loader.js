@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable jsx-a11y/href-no-hash */
 import fs from 'fs';
 import path from 'path';

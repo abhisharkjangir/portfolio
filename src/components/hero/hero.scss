@@ -1,4 +1,4 @@
-@import "../../styles/portfolio/common";
+@import '../../styles/portfolio/common';
 
 // Hero
 .overline {
@@ -30,7 +30,7 @@
   @extend %bigButton;
 }
 
-@import "../../styles/portfolio/breakpoints";
+@import '../../styles/portfolio/breakpoints';
 
 @media (max-width: $desktop) {
   .overline {

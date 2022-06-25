@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const Codepen = () => (
   <svg
@@ -16,6 +16,6 @@ const Codepen = () => (
   V20.83l4.463-2.991l4.805,3.159L17.354,27.215z M27.954,17.927l-3.168-2.082l3.168-2.125V17.927z"
     />
   </svg>
-);
+)
 
-export default Codepen;
+export default Codepen

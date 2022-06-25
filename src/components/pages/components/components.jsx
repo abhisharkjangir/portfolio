@@ -1,22 +1,22 @@
-import React from 'react';
-import styles from './components.scss';
-import Hero from '../../hero/hero';
-import About from '../../about/about';
-import Jobs from '../../jobs/jobs';
-import Work from '../../work/work';
-import Contact from '../../contact/contact';
-import Email from '../../email/email';
-import Heading from '../../common/heading/heading';
-import Button from '../../common/button/button';
-import Image from '../../common/image/image';
-import Input from '../../common/Input/input';
-import Textarea from '../../common/textarea/textarea';
-import SimpleIcon from '../../common/simpleicon/simpleicon';
-import Footer from '../../footer/footer';
-import SectionHeading from '../../heading/heading';
-import Menu from '../../menu/menu';
-import Projects from '../../projects/projects';
-import Social from '../../social/social';
+import React from 'react'
+import styles from './components.scss'
+import Hero from '../../hero/hero'
+import About from '../../about/about'
+import Jobs from '../../jobs/jobs'
+import Work from '../../work/work'
+import Contact from '../../contact/contact'
+import Email from '../../email/email'
+import Heading from '../../common/heading/heading'
+import Button from '../../common/button/button'
+import Image from '../../common/image/image'
+import Input from '../../common/Input/input'
+import Textarea from '../../common/textarea/textarea'
+import SimpleIcon from '../../common/simpleicon/simpleicon'
+import Footer from '../../footer/footer'
+import SectionHeading from '../../heading/heading'
+import Menu from '../../menu/menu'
+import Projects from '../../projects/projects'
+import Social from '../../social/social'
 // import Header from '../../header/header';
 // import Icon from '../../common/icon/icon';
 
@@ -30,8 +30,8 @@ const ComponentWrapper = ({ name, description, children }) => {
       {description || null}
       {children}
     </div>
-  );
-};
+  )
+}
 
 const Components = () => {
   return (
@@ -135,7 +135,7 @@ const Components = () => {
         <Work />
       </ComponentWrapper>
     </div>
-  );
-};
+  )
+}
 
-export default Components;
+export default Components

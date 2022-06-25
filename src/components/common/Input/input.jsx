@@ -1,8 +1,8 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React from 'react';
-import PropTypes from 'prop-types';
-import classnames from 'classnames';
-import styles from './input.scss';
+import React from 'react'
+import PropTypes from 'prop-types'
+import classnames from 'classnames'
+import styles from './input.scss'
 const Input = ({
   name,
   value,
@@ -11,7 +11,7 @@ const Input = ({
   onChange,
   className = '',
   onFocus,
-  onBlur,
+  onBlur
 }) => {
   return (
     <React.Fragment>
@@ -26,8 +26,8 @@ const Input = ({
         onBlur={onBlur}
       />
     </React.Fragment>
-  );
-};
+  )
+}
 
 Input.propTypes = {
   id: PropTypes.string.isRequired,
@@ -37,12 +37,12 @@ Input.propTypes = {
   className: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
   onFocus: PropTypes.func,
-  onBlur: PropTypes.func,
-};
+  onBlur: PropTypes.func
+}
 
 Input.defaultProps = {
   onFocus: () => {},
-  onBlur: () => {},
-};
+  onBlur: () => {}
+}
 
-export default Input;
+export default Input

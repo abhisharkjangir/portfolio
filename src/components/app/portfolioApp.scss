@@ -74,7 +74,7 @@ ol {
   list-style: none;
 }
 
-@import "../../styles/portfolio/breakpoints";
+@import '../../styles/portfolio/breakpoints';
 
 @media (max-width: $desktop) {
   .main {

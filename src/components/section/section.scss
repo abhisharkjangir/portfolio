@@ -8,9 +8,9 @@
   position: relative;
 }
 
-@import "../../styles/portfolio/breakpoints";
+@import '../../styles/portfolio/breakpoints';
 
-@media (max-width:$tablet) {
+@media (max-width: $tablet) {
   .section {
     padding: 100px 0;
   }

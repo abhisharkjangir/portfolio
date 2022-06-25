@@ -10,7 +10,7 @@
     align-items: center;
     position: relative;
     &:after {
-      content: "";
+      content: '';
       display: block;
       width: 1px;
       height: 90px;
@@ -32,7 +32,7 @@
   }
 }
 
-@import "../../styles/portfolio/breakpoints";
+@import '../../styles/portfolio/breakpoints';
 
 @media (max-width: $desktop) {
   .email {

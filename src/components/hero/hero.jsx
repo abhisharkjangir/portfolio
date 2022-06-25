@@ -1,8 +1,8 @@
-import React from 'react';
-import classnames from 'classnames';
-import PrimaryLink from '../common/PrimaryLink/PrimaryLink';
-import Section from '../section/section';
-import styles from './hero.scss';
+import React from 'react'
+import classnames from 'classnames'
+import PrimaryLink from '../common/PrimaryLink/PrimaryLink'
+import Section from '../section/section'
+import styles from './hero.scss'
 
 const Hero = () => {
   return (
@@ -28,7 +28,7 @@ const Hero = () => {
         </PrimaryLink>
       </div>
     </Section>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero

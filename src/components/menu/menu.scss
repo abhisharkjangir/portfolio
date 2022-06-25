@@ -1,4 +1,4 @@
-@import "../../styles/portfolio/common";
+@import '../../styles/portfolio/common';
 
 .menu {
   position: fixed;
@@ -42,7 +42,7 @@
       counter-increment: item 1;
       &:before {
         display: block;
-        content: "0" counter(item) ".";
+        content: '0' counter(item) '.';
         color: var(--c-primary);
         font-size: var(--fs-sm);
         margin-bottom: 5px;
@@ -64,7 +64,7 @@
   font-size: var(--fs-lg);
 }
 
-@import "../../styles/portfolio/breakpoints";
+@import '../../styles/portfolio/breakpoints';
 
 @media (max-width: $tablet) {
   .menu {

@@ -1,4 +1,4 @@
-@import "../../styles/portfolio/common";
+@import '../../styles/portfolio/common';
 
 // Jobs
 .jobTabs {
@@ -60,7 +60,7 @@
       padding-left: 30px;
       margin-bottom: 10px;
       &:before {
-        content: "▹";
+        content: '▹';
         position: absolute;
         left: 0;
         color: var(--c-primary);
@@ -106,7 +106,7 @@
       padding-left: 30px;
       margin-bottom: 10px;
       &:before {
-        content: "▹";
+        content: '▹';
         position: absolute;
         left: 0;
         color: var(--c-primary);
@@ -116,7 +116,7 @@
   }
 }
 
-@import "../../styles/portfolio/breakpoints";
+@import '../../styles/portfolio/breakpoints';
 
 @media (max-width: $tablet) {
   .jobContent {

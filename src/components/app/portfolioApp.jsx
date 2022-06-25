@@ -1,12 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Header from '../header/header';
-import Routes from '../../routes';
-import styles from './portfolioApp.scss';
-import Helmet from '../common/helmet/helmet';
-import Social from '../social/social.async';
-import Email from '../email/email.async';
-import Footer from '../footer/footer.async';
+import React from 'react'
+import PropTypes from 'prop-types'
+import Header from '../header/header'
+import Routes from '../../routes'
+import styles from './portfolioApp.scss'
+import Helmet from '../common/helmet/helmet'
+import Social from '../social/social.async'
+import Email from '../email/email.async'
+import Footer from '../footer/footer.async'
 
 const PortfolioApp = ({ location }) => {
   return (
@@ -20,13 +20,13 @@ const PortfolioApp = ({ location }) => {
       <Email />
       <Footer />
     </>
-  );
-};
+  )
+}
 
 PortfolioApp.propTypes = {
-  location: PropTypes.object.isRequired,
-};
+  location: PropTypes.object.isRequired
+}
 
-PortfolioApp.defaultProps = {};
+PortfolioApp.defaultProps = {}
 
-export default PortfolioApp;
+export default PortfolioApp

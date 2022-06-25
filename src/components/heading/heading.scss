@@ -1,4 +1,4 @@
-@import "../../styles/portfolio/common";
+@import '../../styles/portfolio/common';
 
 // Heading
 .heading,
@@ -12,7 +12,7 @@
   font-size: 32px;
   &:before {
     counter-increment: section;
-    content: "0" counter(section) ".";
+    content: '0' counter(section) '.';
     margin-right: 10px;
     font-family: var(--font-SFMono);
     font-weight: normal;
@@ -22,7 +22,7 @@
     bottom: 4px;
   }
   &:after {
-    content: "";
+    content: '';
     display: block;
     height: 1px;
     width: 300px;
@@ -52,7 +52,7 @@
   }
 }
 
-@import "../../styles/portfolio/breakpoints";
+@import '../../styles/portfolio/breakpoints';
 
 @media (max-width: $desktop) {
   .heading {
