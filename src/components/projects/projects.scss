@@ -1,4 +1,4 @@
-@import "../../styles/portfolio/common";
+@import '../../styles/portfolio/common';
 // Projects
 .Project {
   h4 {
@@ -123,7 +123,7 @@
   }
 }
 
-@import "../../styles/portfolio/breakpoints";
+@import '../../styles/portfolio/breakpoints';
 
 @media (max-width: $desktop) {
   .Project {

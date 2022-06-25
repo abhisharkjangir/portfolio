@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const Instagram = () => (
   <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 512 512">
@@ -19,6 +19,6 @@ const Instagram = () => (
       </g>
     </g>
   </svg>
-);
+)
 
-export default Instagram;
+export default Instagram

@@ -1,4 +1,4 @@
-@import "../../../styles/portfolio/common";
+@import '../../../styles/portfolio/common';
 
 .notfound {
   text-align: center;
@@ -6,7 +6,7 @@
   margin: 0 auto 100px;
 
   h3::before {
-    content: "";
+    content: '';
     margin: 0;
   }
   .title {

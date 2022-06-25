@@ -1,8 +1,8 @@
-import React from 'react';
-import Section from '../section/section';
-import styles from './contact.scss';
-import Heading from '../heading/heading';
-import PrimaryLink from '../common/PrimaryLink/PrimaryLink';
+import React from 'react'
+import Section from '../section/section'
+import styles from './contact.scss'
+import Heading from '../heading/heading'
+import PrimaryLink from '../common/PrimaryLink/PrimaryLink'
 
 const Contact = () => {
   return (
@@ -23,7 +23,7 @@ const Contact = () => {
         </PrimaryLink>
       </div>
     </Section>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Contact

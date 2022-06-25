@@ -1,4 +1,4 @@
-@import "../../styles/portfolio/common";
+@import '../../styles/portfolio/common';
 
 // About
 .aboutFlexContainer {
@@ -27,7 +27,7 @@
       font-size: var(--fs-md);
       color: var(--c-tertiary);
       &:before {
-        content: "▹";
+        content: '▹';
         position: absolute;
         left: 0;
         color: var(--c-primary);
@@ -65,7 +65,7 @@
     }
     &:before,
     &:after {
-      content: "";
+      content: '';
       display: block;
       position: absolute;
       width: 100%;
@@ -97,7 +97,7 @@
   }
 }
 
-@import "../../styles/portfolio/breakpoints";
+@import '../../styles/portfolio/breakpoints';
 @media (max-width: $bigDesktop) {
 }
 

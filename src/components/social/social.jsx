@@ -1,8 +1,8 @@
-import React from 'react';
-import styles from './social.scss';
-import { socialList } from '../../constants';
-import Icon from '../common/icon/icon';
-import PrimaryLink from '../common/PrimaryLink/PrimaryLink';
+import React from 'react'
+import styles from './social.scss'
+import { socialList } from '../../constants'
+import Icon from '../common/icon/icon'
+import PrimaryLink from '../common/PrimaryLink/PrimaryLink'
 
 const Social = () => (
   <div id="social" className={styles.social}>
@@ -21,6 +21,6 @@ const Social = () => (
       ))}
     </ul>
   </div>
-);
+)
 
-export default Social;
+export default Social

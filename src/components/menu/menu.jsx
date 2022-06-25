@@ -1,17 +1,17 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
-import React from 'react';
-import PropTypes from 'prop-types';
-import styles from './menu.scss';
-import resume from '../../assets/resume.pdf';
-import PrimaryLink from '../common/PrimaryLink/PrimaryLink';
+import React from 'react'
+import PropTypes from 'prop-types'
+import styles from './menu.scss'
+import resume from '../../assets/resume.pdf'
+import PrimaryLink from '../common/PrimaryLink/PrimaryLink'
 
 const getMenuStyle = isMenuOpen => {
   return {
     transform: `translateX(${isMenuOpen ? '0' : '100'}vw)`,
-    visibility: `${isMenuOpen ? 'visible' : 'hidden'}`,
-  };
-};
+    visibility: `${isMenuOpen ? 'visible' : 'hidden'}`
+  }
+}
 
 const Menu = ({ isMenuOpen, toggleMenu, links }) => {
   return (
@@ -37,13 +37,13 @@ const Menu = ({ isMenuOpen, toggleMenu, links }) => {
         </div>
       </aside>
     </div>
-  );
-};
+  )
+}
 
 Menu.propTypes = {
   isMenuOpen: PropTypes.bool.isRequired,
   toggleMenu: PropTypes.func.isRequired,
-  links: PropTypes.array.isRequired,
-};
+  links: PropTypes.array.isRequired
+}
 
-export default Menu;
+export default Menu

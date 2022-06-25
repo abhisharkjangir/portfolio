@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const Folder = () => (
   <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 60 60">
@@ -12,6 +12,6 @@ const Folder = () => (
           c0.066-0.245,0.291-0.417,0.545-0.417H54h3.49c0.38,0,0.477,0.546,0.502,0.819L47.869,52.083z"
     />
   </svg>
-);
+)
 
-export default Folder;
+export default Folder

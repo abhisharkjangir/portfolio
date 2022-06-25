@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Routes from '../../routes';
-import Helmet from '../common/helmet/helmet';
+import React from 'react'
+import PropTypes from 'prop-types'
+import Routes from '../../routes'
+import Helmet from '../common/helmet/helmet'
 const App = ({ location }) => {
   return (
     <React.Fragment>
@@ -10,13 +10,13 @@ const App = ({ location }) => {
       </main>
       <Helmet />
     </React.Fragment>
-  );
-};
+  )
+}
 
 App.propTypes = {
-  location: PropTypes.object.isRequired,
-};
+  location: PropTypes.object.isRequired
+}
 
-App.defaultProps = {};
+App.defaultProps = {}
 
-export default App;
+export default App

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const Linkedin = () => (
   <svg
@@ -16,6 +16,6 @@ const Linkedin = () => (
            M5.477,420.56h92.184v-277.32H5.477V420.56z"
     />
   </svg>
-);
+)
 
-export default Linkedin;
+export default Linkedin

@@ -1,9 +1,9 @@
 /* eslint-disable react/no-danger */
-import React, { useState } from 'react';
-import Section from '../section/section';
-import styles from './jobs.scss';
-import Heading from '../heading/heading';
-import PrimaryLink from '../common/PrimaryLink/PrimaryLink';
+import React, { useState } from 'react'
+import Section from '../section/section'
+import styles from './jobs.scss'
+import Heading from '../heading/heading'
+import PrimaryLink from '../common/PrimaryLink/PrimaryLink'
 
 const TabList = [
   {
@@ -18,7 +18,7 @@ const TabList = [
         <li>Created several A/B tests on websites</li>
         <li>Built several reusable components in React.</li>
         <li>Mentored 20+ Freshers in React and Redux.</li>
-      </ul>`,
+      </ul>`
   },
   {
     company: 'Chimes Group',
@@ -31,7 +31,7 @@ const TabList = [
         <li>Built injectable PipeTrak GIS component based app in React, Redux, Leaflet, ESRI Maps.</li>
         <li>Built GEO Transformer in NodeJS to transform different types of JSON in GeoJSON.</li>
         <li>Worked on Dauble & Dauble Business websites in AngularJS from scratch.</li>
-      </ul>`,
+      </ul>`
   },
   {
     company: 'Medzin',
@@ -41,13 +41,13 @@ const TabList = [
     html: `<ul>
         <li>Worked on development of Company’s website & dashboard in AngularJS v1.</li>
         <li>Designed Mobile App Screens for Medzin mobile app.</li>
-      </ul>`,
-  },
-];
+      </ul>`
+  }
+]
 
 const Jobs = () => {
-  const [selectedTab, selectTab] = useState(1);
-  const { title, company, url, range, html } = TabList[selectedTab - 1];
+  const [selectedTab, selectTab] = useState(1)
+  const { title, company, url, range, html } = TabList[selectedTab - 1]
 
   return (
     <Section
@@ -94,7 +94,7 @@ const Jobs = () => {
         </div>
       </div>
     </Section>
-  );
-};
+  )
+}
 
-export default Jobs;
+export default Jobs

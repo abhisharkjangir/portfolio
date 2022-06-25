@@ -1,4 +1,4 @@
-@import "../../styles/portfolio/common";
+@import '../../styles/portfolio/common';
 .header {
   @extend %flexBetween;
   position: fixed;
@@ -68,7 +68,7 @@
           border-radius: 3px;
         }
         &:before {
-          content: "0" counter(item) ". ";
+          content: '0' counter(item) '. ';
           text-align: right;
           color: var(--c-primary);
           font-size: var(--fs-md);
@@ -120,7 +120,7 @@
   transition-property: transform;
   &:before,
   &:after {
-    content: "";
+    content: '';
     display: block;
     background-color: var(--c-primary);
     position: absolute;
@@ -135,7 +135,7 @@
   }
 }
 
-@import "../../styles/portfolio/breakpoints";
+@import '../../styles/portfolio/breakpoints';
 
 @media (max-width: $desktop) {
   .header {
