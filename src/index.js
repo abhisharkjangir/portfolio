@@ -1,8 +1,9 @@
 /* eslint-disable no-unused-vars */
 import React, { StrictMode } from 'react';
-import { createRoot, hydrateRoot } from 'react-dom/client';
+import { hydrate, render } from 'react-dom';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
+import { loadableReady } from '@loadable/component';
 import App from './components/app';
 import createStore from './store';
 
@@ -19,21 +20,22 @@ const Application = () => (
   </StrictMode>
 );
 
-// Root Node
 const rootNode = document.getElementById('root');
+
 if (process.env.NODE_ENV === 'development' && module.hot) {
-  const root = createRoot(rootNode);
   module.hot.accept('./components/app/index', () => {
-    root.render(<Application />);
+    render(<Application />, rootNode);
   });
 }
 
-if (rootNode.hasChildNodes()) {
-  // If it's an SSR, we use hydrate to get fast page loads by just
-  // attaching event listeners after the initial render
-  hydrateRoot(rootNode, <Application />);
-} else {
-  const root = createRoot(rootNode);
-  //  If we're not running on the server, just render like normal
-  root.render(<Application />);
-}
+loadableReady(() => {
+  if (rootNode.hasChildNodes()) {
+    // If it's an SSR, we use hydrate to get fast page loads by just
+    // attaching event listeners after the initial render
+    hydrate(<Application />, rootNode);
+  } else {
+    // const root = createRoot(rootNode);
+    //  If we're not running on the server, just render like normal
+    render(<Application />, rootNode);
+  }
+});

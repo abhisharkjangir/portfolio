@@ -5,7 +5,7 @@ const path = require('path');
 const webpack = require('webpack');
 const CompressionPlugin = require('compression-webpack-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const WebpackBar = require('webpackbar');
 
 const paths = require('./paths');
@@ -146,22 +146,25 @@ const getModule = () => {
         ],
       },
       {
-        test: /\.styl|.(scss|sass)$/,
-        exclude: /node_modules/,
+        test: /\.s(a|c)ss$/,
         use: [
           {
             loader: 'css-loader',
             options: {
-              modules: true,
-              exportOnlyLocals: true,
-              localIdentName: '[name]-[hash:base64:5]', // To include filename -[name]-[local]-[hash:base64:5]
+              modules: {
+                exportGlobals: true,
+                exportOnlyLocals: true,
+              },
             },
           },
           {
-            loader: 'sass-loader',
+            loader: 'postcss-loader',
           },
           {
-            loader: 'postcss-loader',
+            loader: 'sass-loader',
+            options: {
+              implementation: require.resolve('sass'),
+            },
           },
         ],
       },
@@ -183,7 +186,18 @@ const getModule = () => {
 
 const getResolve = () => {
   return {
-    extensions: ['.js', '.jsx', '.css'],
+    extensions: ['.js', '.jsx', '.css', '.scss', '.sass'],
+    fallback: {
+      fs: false,
+      module: false,
+      dgram: false,
+      dns: 'mock',
+      http2: false,
+      net: false,
+      tls: false,
+      child_process: false,
+      path: require.resolve('path-browserify'),
+    },
   };
 };
 
@@ -195,7 +209,6 @@ const getPlugins = () => {
     }),
     new CompressionPlugin(),
     new webpack.optimize.ModuleConcatenationPlugin(),
-    new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.optimize.LimitChunkCountPlugin({
       maxChunks: 1,
     }),
@@ -204,7 +217,6 @@ const getPlugins = () => {
         NODE_ENV: JSON.stringify('production'),
       },
     }),
-    new webpack.HashedModuleIdsPlugin(),
   ];
 };
 
@@ -221,7 +233,7 @@ const getServerConfig = () => {
       libraryTarget: 'commonjs2',
     },
     module: getModule(),
-    mode: 'development', // Keep development for now for production as well
+    mode: 'production', // Keep development for now for production as well
     resolve: getResolve(),
     plugins: getPlugins(),
     optimization: {
@@ -237,16 +249,16 @@ const getServerConfig = () => {
             ],
           },
         }),
-        new UglifyJsPlugin({
-          cache: true,
+        new TerserPlugin({
+          // cache: true,
           parallel: true,
-          sourceMap: true,
+          // sourceMap: true,
           extractComments: 'all',
         }),
       ],
       splitChunks: {
         cacheGroups: {
-          vendor: {
+          defaultVendors: {
             test: /[\\/]node_modules[\\/]/,
             name: 'vendor',
             chunks: 'all',
@@ -254,18 +266,6 @@ const getServerConfig = () => {
           chunks: 'all',
         },
       },
-    },
-    // Some libraries import Node modules but don't use them in the browser.
-    // Tell Webpack to provide empty mocks for them so importing them works.
-    node: {
-      module: 'empty',
-      dgram: 'empty',
-      dns: 'mock',
-      fs: 'empty',
-      http2: 'empty',
-      net: 'empty',
-      tls: 'empty',
-      child_process: 'empty',
     },
     performance: false,
   };

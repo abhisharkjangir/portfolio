@@ -9,8 +9,7 @@ import Helmet from 'react-helmet';
 import { Provider } from 'react-redux';
 import { createMemoryHistory } from 'history';
 import { StaticRouter } from 'react-router-dom/server';
-import { flushChunkNames } from 'react-universal-component/server';
-import flushChunks from 'webpack-flush-chunks';
+import { ChunkExtractor, ChunkExtractorManager } from '@loadable/server';
 
 import createStore from '../src/store';
 import App from '../src/components/app';
@@ -19,20 +18,6 @@ import { setHelmetInfo } from '../src/components/common/helmet/actions';
 import Meta from '../src/utils/meta';
 
 const isDev = process.env.NODE_ENV === 'development';
-
-const inlineResource = (resourcePath, encoding = 'utf8') => {
-  let resource = '';
-
-  try {
-    resource = fs.readFileSync(
-      path.resolve(process.cwd(), `./public/dist/client/${resourcePath}`),
-      encoding
-    );
-  } catch (e) {
-    console.log('Error loading:', resourcePath, e.stack); // eslint-disable-line no-console
-  }
-  return resource;
-};
 
 const googleAnalyticsScripts = !isDev
   ? `
@@ -70,10 +55,7 @@ export const injectHTML = (
   data = data.replace('<body>', `<body class="${theme}">`);
   data = data.replace('<html>', `<html ${html}>`);
   data = data.replace(/<title>.*?<\/title>/g, title);
-  data = data.replace(
-    '</head>',
-    `${meta}${preloadScripts}<style>${style}</style></head>`
-  );
+  data = data.replace('</head>', `${meta}${preloadScripts}${style}</head>`);
   data = data.replace(
     '<div id="root"></div>',
     `<div id="root">${body}</div><script>window.__PRELOADED_STATE__ = ${state}</script>`
@@ -106,6 +88,7 @@ export default ({ clientStats }) => (req, res) => {
       const { store } = createStore(history);
       let theme = 'dark';
       const context = {};
+      const extractor = new ChunkExtractor({ stats: clientStats });
       let actions = [];
       RouteList.some(route => {
         const match = matchPath(route, req.path);
@@ -129,15 +112,17 @@ export default ({ clientStats }) => (req, res) => {
       else if (req.path === '/theme/dark') theme = 'dark';
 
       return Promise.allSettled(promises)
-        .then(() => {
+        .then(async () => {
           const markup = renderToString(
-            <StrictMode>
-              <Provider store={store}>
-                <StaticRouter location={req.url} context={context}>
-                  <App />
-                </StaticRouter>
-              </Provider>
-            </StrictMode>
+            <ChunkExtractorManager extractor={extractor}>
+              <StrictMode>
+                <Provider store={store}>
+                  <StaticRouter location={req.url} context={context}>
+                    <App />
+                  </StaticRouter>
+                </Provider>
+              </StrictMode>
+            </ChunkExtractorManager>
           );
 
           if (context.url) {
@@ -150,40 +135,23 @@ export default ({ clientStats }) => (req, res) => {
             // Otherwise, we carry on...
             // We need to tell Helmet to compute the right meta tags, title, and such
             const helmet = Helmet.renderStatic();
-            const chunkNames = flushChunkNames();
-            const { js, stylesheets, scripts } = flushChunks(clientStats, {
-              chunkNames,
-            });
-
-            // Find Js chunks for preloading... ex: main, vendors
-
-            let preloadScripts = '';
-            scripts.map(script => {
-              if (script.includes('main') || script.includes('vendor')) {
-                preloadScripts += `<link rel="preload" href="/${script}" as="script">`;
-              }
-              return script;
-            });
-
-            let inlineCss = '';
-            stylesheets.map(ss => {
-              inlineCss += inlineResource(ss);
-              return ss;
-            });
-
             const state = JSON.stringify(store.getState()).replace(
               /</g,
               '\\u003c'
             );
-
+            const preloadScripts = extractor
+              .getLinkTags()
+              ?.split('\n')
+              ?.filter(link => link?.includes('as="script"'))
+              ?.join('');
             // Pass all this nonsense into our HTML formatting function above
             const html = injectHTML(htmlFileData, {
               html: helmet.htmlAttributes.toString(),
               title: helmet.title.toString(),
               meta: helmet.meta.toString(),
               body: markup,
-              scripts: js,
-              style: inlineCss.replace(/\n|\t/g, ''), // Minify ,
+              scripts: extractor.getScriptTags(),
+              style: await extractor.getInlineStyleTags(),
               state,
               preloadScripts,
               theme,

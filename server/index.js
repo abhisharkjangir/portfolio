@@ -49,7 +49,7 @@ if (DEV) {
   const getServerConfigDev = require('../webpack/server.dev.config');
   const compiler = webpack([clientConfigDev, getServerConfigDev()]);
   const clientCompiler = compiler.compilers[0];
-  const options = { publicPath, stats: { colors: true } };
+  const options = { publicPath, stats: { colors: true }, writeToDisk: true };
   const devMiddleware = webpackDevMiddleware(compiler, options);
   app.use(devMiddleware);
   app.use(webpackHotMiddleware(clientCompiler));
