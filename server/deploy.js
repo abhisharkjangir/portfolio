@@ -1,18 +1,16 @@
-/* eslint-disable jsx-a11y/href-no-hash */
-/* eslint-disable import/extensions */
-/* eslint-disable global-require */
 const express = require('express');
 const bodyParser = require('body-parser');
 const compression = require('compression');
 const cookieParser = require('cookie-parser');
 const APIRoutes = require('./routes/index');
-const getClientConfigProd = require('../webpack/client.prod.config');
+const webpackConfig = require('../webpack/webpack.config');
+// eslint-disable-next-line import/no-unresolved
 const clientStats = require('../public/dist/client/clientstats.json');
 const CONSTANTS = require('./constants/constants');
 
 const {
   output: { publicPath, path },
-} = getClientConfigProd();
+} = webpackConfig('production', 'client');
 const PORT = process.env.PORT || CONSTANTS.PORT;
 const app = express();
 
@@ -33,6 +31,7 @@ const done = () =>
     );
   });
 // eslint-disable-next-line global-require
+// eslint-disable-next-line import/no-unresolved
 const serverRender = require('../public/dist/server/main.js').default;
 app.use(publicPath, express.static(path));
 app.use(serverRender({ clientStats }));
