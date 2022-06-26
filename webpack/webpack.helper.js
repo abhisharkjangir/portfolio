@@ -519,9 +519,7 @@ const webpackHelper = {
     externals: () => {
       const externals = fs
         .readdirSync(res('../node_modules'))
-        .filter(
-          x => !/\.bin|react-universal-component|webpack-flush-chunks/.test(x)
-        )
+        .filter(x => !/\.bin/.test(x))
         .reduce((external, mod) => {
           const etrnls = external;
           etrnls[mod] = `commonjs ${mod}`;
