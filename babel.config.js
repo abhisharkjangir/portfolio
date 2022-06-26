@@ -4,7 +4,6 @@ module.exports = api => {
     presets: ['@babel/preset-env', '@babel/preset-react'],
     plugins: [
       '@babel/plugin-syntax-dynamic-import',
-      'universal-import',
       '@loadable/babel-plugin',
       '@babel/plugin-syntax-import-meta',
       '@babel/plugin-proposal-class-properties',

@@ -1,9 +1,8 @@
 /* eslint-disable extra-rules/no-commented-out-code */
 import React from 'react';
-// import universal from 'react-universal-component';
 import loadable from '@loadable/component';
 import { Route, Routes } from 'react-router-dom';
-// import { ReportChunks } from 'react-universal-component';
+
 import { getSSRData } from './components/pages/ssr/actions';
 
 const Home = loadable(() =>
