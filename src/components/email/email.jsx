@@ -1,8 +1,8 @@
-import React from 'react'
-import PrimaryLink from '../common/PrimaryLink/PrimaryLink'
-import styles from './email.scss'
+import React from 'react';
+import PrimaryLink from '../common/PrimaryLink/PrimaryLink';
+import styles from './email.scss';
 
-const Email = () => {
+function Email() {
   return (
     <div id="email" className={styles.email}>
       <div>
@@ -11,7 +11,7 @@ const Email = () => {
         </PrimaryLink>
       </div>
     </div>
-  )
+  );
 }
 
-export default Email
+export default Email;

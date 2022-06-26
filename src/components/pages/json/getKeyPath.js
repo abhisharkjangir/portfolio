@@ -12,35 +12,31 @@ function removeStr(str, keyToFind) {
 const flatObject = {};
 let paths = [];
 const flattenObject = (obj, keyName = '', isArray = false) => {
-  try {
-    if (obj)
-      Object.keys(obj).forEach(key => {
-        let newKey;
-        if (isArray) {
-          if (keyName === '') newKey = key;
-          else newKey = `${keyName}[${key}]`;
-        } else if (keyName === '') newKey = key;
-        else newKey = `${keyName}${seprator}${key}`;
-        if (Array.isArray(obj[key])) {
-          flattenObject(obj[key], newKey, true);
-        } else if (typeof obj[key] === 'object') {
-          flattenObject(obj[key], newKey);
-        } else {
-          paths.push(newKey);
-          flatObject[newKey] = obj[key];
-        }
-      });
-  } catch (err) {
-    throw err;
-  }
+  if (obj)
+    Object.keys(obj).forEach((key) => {
+      let newKey;
+      if (isArray) {
+        if (keyName === '') newKey = key;
+        else newKey = `${keyName}[${key}]`;
+      } else if (keyName === '') newKey = key;
+      else newKey = `${keyName}${seprator}${key}`;
+      if (Array.isArray(obj[key])) {
+        flattenObject(obj[key], newKey, true);
+      } else if (typeof obj[key] === 'object') {
+        flattenObject(obj[key], newKey);
+      } else {
+        paths.push(newKey);
+        flatObject[newKey] = obj[key];
+      }
+    });
 };
 
 const getKeyPath = (root, keyToFind) => {
   const orig = new Set();
   flattenObject(root);
-  paths = paths.filter(path => path.split(seprator).includes(keyToFind));
+  paths = paths.filter((path) => path.split(seprator).includes(keyToFind));
 
-  paths.map(path => {
+  paths.map((path) => {
     if (path.split(seprator)[path.split(seprator).length - 1] === keyToFind) {
       orig.add(path);
     } else {

@@ -1,5 +1,5 @@
 {
-  "parser": "babel-eslint",
+  "parser": "@babel/eslint-parser",
   "extends": [
     "airbnb",
     "prettier"
@@ -38,13 +38,16 @@
     "no-undef": "error",
     "extra-rules/no-commented-out-code": "error",
     "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn",
+    "react-hooks/exhaustive-deps": 0,
+    "react/jsx-props-no-spreading": 0,
     "arrow-body-style": 0,
     "import/imports-first": 0,
     "import/newline-after-import": 0,
     "import/no-dynamic-require": 0,
     "import/no-extraneous-dependencies": 0,
     "import/no-named-as-default": 0,
+    "default-param-last": 0,
+    "no-unsafe-optional-chaining": 0,
     "import/no-unresolved": 2,
     "import/prefer-default-export": 0,
     "jsx-a11y/aria-props": 2,
@@ -56,6 +59,7 @@
     "jsx-a11y/role-supports-aria-props": 2,
     "newline-per-chained-call": 0,
     "no-confusing-arrow": 0,
+    "import/no-import-module-exports": 0,
     "no-console": 1,
     "no-use-before-define": 0,
     "prefer-template": 2,
@@ -82,12 +86,5 @@
       "trailingComma": "es5"
     }],
     "linebreak-style": 0
-  },
-  "settings": {
-    "import/resolver": {
-      "webpack": {
-        "config": "./internals/webpack/webpack.client.config.js"
-      }
-    }
   }
 }

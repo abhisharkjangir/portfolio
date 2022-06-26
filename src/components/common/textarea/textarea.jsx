@@ -1,9 +1,9 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React from 'react'
-import PropTypes from 'prop-types'
-import classnames from 'classnames'
-import styles from './textarea.scss'
-const Textarea = ({
+import React from 'react';
+import PropTypes from 'prop-types';
+import classnames from 'classnames';
+import styles from './textarea.scss';
+function Textarea({
   name,
   value,
   placeholder,
@@ -11,8 +11,8 @@ const Textarea = ({
   onChange,
   className = '',
   onFocus,
-  onBlur
-}) => {
+  onBlur,
+}) {
   return (
     <textarea
       id={id}
@@ -24,7 +24,7 @@ const Textarea = ({
       onFocus={onFocus}
       onBlur={onBlur}
     />
-  )
+  );
 }
 
 Textarea.propTypes = {
@@ -35,12 +35,12 @@ Textarea.propTypes = {
   className: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
   onFocus: PropTypes.func,
-  onBlur: PropTypes.func
-}
+  onBlur: PropTypes.func,
+};
 
 Textarea.defaultProps = {
   onFocus: () => {},
-  onBlur: () => {}
-}
+  onBlur: () => {},
+};
 
-export default Textarea
+export default Textarea;
