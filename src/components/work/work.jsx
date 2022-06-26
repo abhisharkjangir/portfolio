@@ -1,17 +1,17 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import Section from '../section/section'
-import styles from './work.scss'
-import Heading from '../heading/heading'
-import Icon from '../common/icon/icon'
-import wordbook from '../../assets/images/wordbook.png'
-import nasa from '../../assets/images/nasa.png'
-import iss from '../../assets/images/iss.png'
-import json from '../../assets/images/json.png'
-import Image from '../common/image/image'
-import PrimaryLink from '../common/PrimaryLink/PrimaryLink'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Section from '../section/section';
+import styles from './work.scss';
+import Heading from '../heading/heading';
+import Icon from '../common/icon/icon';
+import wordbook from '../../assets/images/wordbook.png';
+import nasa from '../../assets/images/nasa.png';
+import iss from '../../assets/images/iss.png';
+import json from '../../assets/images/json.png';
+import Image from '../common/image/image';
+import PrimaryLink from '../common/PrimaryLink/PrimaryLink';
 
-const Work = () => {
+function Work() {
   const projects = [
     {
       title: 'International Space Station',
@@ -25,10 +25,10 @@ const Work = () => {
       links: [
         {
           url: '/app/international-space-station',
-          iconName: 'external'
-        }
+          iconName: 'external',
+        },
       ],
-      rel: ''
+      rel: '',
     },
 
     {
@@ -43,10 +43,10 @@ const Work = () => {
       links: [
         {
           url: '/app/json-key-path-finder',
-          iconName: 'external'
-        }
+          iconName: 'external',
+        },
       ],
-      rel: ''
+      rel: '',
     },
     {
       title: 'Nasa Explorer',
@@ -56,13 +56,13 @@ const Work = () => {
       links: [
         {
           url: 'https://nasa.abhisharjangir.com',
-          iconName: 'external'
-        }
+          iconName: 'external',
+        },
       ],
       image: nasa,
       type: 'Featured Project',
       url: 'https://nasa.abhisharjangir.com',
-      rel: 'nofollow noopener noreferrer'
+      rel: 'nofollow noopener noreferrer',
     },
     {
       title: 'Word Book',
@@ -72,15 +72,15 @@ const Work = () => {
       links: [
         {
           url: 'https://wordbook.abhisharjangir.com',
-          iconName: 'external'
-        }
+          iconName: 'external',
+        },
       ],
       image: wordbook,
       type: 'Featured Project',
       url: 'https://wordbook.abhisharjangir.com',
-      rel: 'nofollow noopener noreferrer'
-    }
-  ]
+      rel: 'nofollow noopener noreferrer',
+    },
+  ];
 
   return (
     <Section id="work">
@@ -95,7 +95,7 @@ const Work = () => {
           tech,
           url,
           rel,
-          internal
+          internal,
         }) => (
           <div className={styles.work}>
             <div className={styles.content}>
@@ -103,30 +103,28 @@ const Work = () => {
               <h5>{title}</h5>
               <div className={styles.description}>{description}</div>
               <ul className={styles.list}>
-                {tech.map(t => (
+                {tech.map((t) => (
                   <li key={t}>{t}</li>
                 ))}
               </ul>
               <div className={styles.link}>
                 {links &&
-                  links.map(({ linkurl, iconName }) => (
-                    <React.Fragment>
-                      {!internal ? (
-                        <PrimaryLink
-                          href={linkurl}
-                          target="_blank"
-                          rel={rel}
-                          aria-label={title}
-                        >
-                          <Icon name={iconName} />
-                        </PrimaryLink>
-                      ) : (
-                        <Link to={linkurl}>
-                          <Icon name={iconName} />
-                        </Link>
-                      )}
-                    </React.Fragment>
-                  ))}
+                  links.map(({ linkurl, iconName }) =>
+                    !internal ? (
+                      <PrimaryLink
+                        href={linkurl}
+                        target="_blank"
+                        rel={rel}
+                        aria-label={title}
+                      >
+                        <Icon name={iconName} />
+                      </PrimaryLink>
+                    ) : (
+                      <Link to={linkurl}>
+                        <Icon name={iconName} />
+                      </Link>
+                    )
+                  )}
               </div>
             </div>
             {!internal ? (
@@ -148,7 +146,7 @@ const Work = () => {
         )
       )}
     </Section>
-  )
+  );
 }
 
-export default Work
+export default Work;

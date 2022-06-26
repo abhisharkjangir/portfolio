@@ -1,4 +1,4 @@
-const isFullPageRoute = location => {
+const isFullPageRoute = (location) => {
   return location && location.pathname.startsWith('/app/');
 };
 

@@ -9,7 +9,7 @@ import thunk from 'redux-thunk';
 import isServer from './utils/isServer';
 import createRootReducer from './rootReducer';
 
-export default his => {
+export default (his) => {
   // Create a history depending on the environment
   const history = his || createBrowserHistory();
 

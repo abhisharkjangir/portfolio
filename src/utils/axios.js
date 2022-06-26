@@ -3,12 +3,12 @@ import qs from 'query-string';
 import ENV from '../config';
 
 const AUTH_FAILED = 'Authentication failed!';
-const Axios = baseURL => {
+const Axios = (baseURL) => {
   // AXIOS CONFIGRATION
   const config = {
     baseURL: baseURL || ENV.BASE_URL,
     // timeout : 5000,
-    paramsSerializer: queryParams => {
+    paramsSerializer: (queryParams) => {
       return qs.stringify(queryParams);
     },
   };
@@ -18,19 +18,19 @@ const Axios = baseURL => {
 
   // REQUEST INTERCEPTOR
   axiosInstance.interceptors.request.use(
-    configration => {
+    (configration) => {
       // Add Headers in Request Here
       // For Example config.headers['token'] =  getAuthToken();
       return configration;
     },
-    error => {
+    (error) => {
       return Promise.reject(error);
     }
   );
 
   // RESPONSE INTERCEPTOR
   axiosInstance.interceptors.response.use(
-    response => {
+    (response) => {
       if (response.data.success) {
         // Handle Response Code here
       }
@@ -40,7 +40,7 @@ const Axios = baseURL => {
       }
       return response;
     },
-    error => {
+    (error) => {
       return Promise.reject(error);
     }
   );

@@ -8,11 +8,12 @@ const CopyPlugin = require('copy-webpack-plugin');
 const LoadablePlugin = require('@loadable/webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const paths = require('./paths');
 
-const res = p => path.resolve(__dirname, p);
+const res = (p) => path.resolve(__dirname, p);
 
 const webpackHelper = {
   common: {
@@ -98,11 +99,16 @@ const webpackHelper = {
       }
       return [
         ...plugins,
+        new ESLintPlugin({
+          extensions: ['js', 'jsx'],
+          fix: true,
+          outputReport: true,
+        }),
         new ReactRefreshWebpackPlugin(),
         new webpack.HotModuleReplacementPlugin(),
       ];
     },
-    module: (isProduction = false) => {
+    module: () => {
       const rules = [
         {
           oneOf: [
@@ -245,29 +251,7 @@ const webpackHelper = {
           ],
         },
       ];
-
-      if (isProduction) {
-        return { rules };
-      }
-
-      const devOnlyRules = [
-        {
-          test: /\.(js|mjs|jsx|ts|tsx)$/,
-          enforce: 'pre',
-          use: [
-            {
-              options: {
-                formatter: require.resolve('react-dev-utils/eslintFormatter'),
-                eslintPath: require.resolve('eslint'),
-                resolvePluginsRelativeTo: __dirname,
-              },
-              loader: require.resolve('eslint-loader'),
-            },
-          ],
-          include: paths.appSrc,
-        },
-      ];
-      return { rules: [...devOnlyRules, ...rules] };
+      return { rules };
     },
     optimization: (isProduction = false) => {
       return {
@@ -345,9 +329,16 @@ const webpackHelper = {
           new webpack.optimize.ModuleConcatenationPlugin(),
         ];
       }
-      return plugins;
+      return [
+        ...plugins,
+        new ESLintPlugin({
+          extensions: ['js', 'jsx'],
+          fix: true,
+          outputReport: true,
+        }),
+      ];
     },
-    module: (isProduction = false) => {
+    module: () => {
       const rules = [
         {
           oneOf: [
@@ -461,29 +452,7 @@ const webpackHelper = {
           use: ['css-loader', 'postcss-loader'],
         },
       ];
-
-      if (isProduction) {
-        return { rules };
-      }
-
-      const devOnlyRules = [
-        {
-          test: /\.(js|mjs|jsx|ts|tsx)$/,
-          enforce: 'pre',
-          use: [
-            {
-              options: {
-                formatter: require.resolve('react-dev-utils/eslintFormatter'),
-                eslintPath: require.resolve('eslint'),
-                resolvePluginsRelativeTo: __dirname,
-              },
-              loader: require.resolve('eslint-loader'),
-            },
-          ],
-          include: paths.appSrc,
-        },
-      ];
-      return { rules: [...devOnlyRules, ...rules] };
+      return { rules };
     },
     optimization: (isProduction = false) => {
       return {
@@ -519,7 +488,7 @@ const webpackHelper = {
     externals: () => {
       const externals = fs
         .readdirSync(res('../node_modules'))
-        .filter(x => !/\.bin/.test(x))
+        .filter((x) => !/\.bin/.test(x))
         .reduce((external, mod) => {
           const etrnls = external;
           etrnls[mod] = `commonjs ${mod}`;

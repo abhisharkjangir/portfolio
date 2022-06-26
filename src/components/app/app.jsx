@@ -1,22 +1,22 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Routes from '../../routes'
-import Helmet from '../common/helmet/helmet'
-const App = ({ location }) => {
+import React from 'react';
+import PropTypes from 'prop-types';
+import AppRoutes from '../../routes';
+import Helmet from '../common/helmet/helmet';
+function App({ location }) {
   return (
-    <React.Fragment>
+    <>
       <main id="main-content">
-        <Routes location={location} />
+        <AppRoutes location={location} />
       </main>
       <Helmet />
-    </React.Fragment>
-  )
+    </>
+  );
 }
 
 App.propTypes = {
-  location: PropTypes.object.isRequired
-}
+  location: PropTypes.object.isRequired,
+};
 
-App.defaultProps = {}
+App.defaultProps = {};
 
-export default App
+export default App;

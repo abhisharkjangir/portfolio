@@ -1,11 +1,11 @@
-import React from 'react'
-import styles from './footer.scss'
-import Icon from '../common/icon/icon'
-import { socialList } from '../../constants'
-import PrimaryLink from '../common/PrimaryLink/PrimaryLink'
+import React from 'react';
+import styles from './footer.scss';
+import Icon from '../common/icon/icon';
+import { socialList } from '../../constants';
+import PrimaryLink from '../common/PrimaryLink/PrimaryLink';
 class Footer extends React.PureComponent {
   render() {
-    const date = new Date()
+    const date = new Date();
 
     return (
       <footer id="Footer" className={styles.footer}>
@@ -41,8 +41,8 @@ class Footer extends React.PureComponent {
           </PrimaryLink>
         </div>
       </footer>
-    )
+    );
   }
 }
 
-export default Footer
+export default Footer;

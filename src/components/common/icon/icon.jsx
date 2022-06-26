@@ -1,47 +1,47 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import GitHub from './github'
-import Linkedin from './linkedin'
-import Instagram from './instagram'
-import Twitter from './twitter'
-import Codepen from './codepen'
-import Logo from './logo'
-import External from './external'
-import Folder from './folder'
-import Location from './location'
-import Fork from './fork'
+import React from 'react';
+import PropTypes from 'prop-types';
+import GitHub from './github';
+import Linkedin from './linkedin';
+import Instagram from './instagram';
+import Twitter from './twitter';
+import Codepen from './codepen';
+import Logo from './logo';
+import External from './external';
+import Folder from './folder';
+import Location from './location';
+import Fork from './fork';
 
 // eslint-disable-next-line complexity
-const Icon = ({ name }) => {
+function Icon({ name }) {
   switch (name) {
     case 'fork':
-      return <Fork />
+      return <Fork />;
     case 'logo':
-      return <Logo />
+      return <Logo />;
     case 'github':
-      return <GitHub />
+      return <GitHub />;
     case 'linkedin':
-      return <Linkedin />
+      return <Linkedin />;
     case 'instagram':
-      return <Instagram />
+      return <Instagram />;
     case 'twitter':
-      return <Twitter />
+      return <Twitter />;
     case 'codepen':
-      return <Codepen />
+      return <Codepen />;
     case 'external':
-      return <External />
+      return <External />;
     case 'location':
-      return <Location />
+      return <Location />;
     case 'folder':
-      return <Folder />
+      return <Folder />;
 
     default:
-      return <GitHub />
+      return <GitHub />;
   }
 }
 
 Icon.propTypes = {
-  name: PropTypes.string.isRequired
-}
+  name: PropTypes.string.isRequired,
+};
 
-export default Icon
+export default Icon;

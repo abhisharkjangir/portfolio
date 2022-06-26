@@ -1,11 +1,11 @@
 /* eslint-disable react/no-danger */
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import Section from '../section/section'
-import styles from './projects.scss'
-import Icon from '../common/icon/icon'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import Section from '../section/section';
+import styles from './projects.scss';
+import Icon from '../common/icon/icon';
 
-const Projects = () => {
+function Projects() {
   const List = [
     {
       name: 'React Go',
@@ -20,18 +20,18 @@ const Projects = () => {
         'pwa',
         'react-universal-component',
         'server-side-rendering',
-        'seo-friendly'
+        'seo-friendly',
       ],
       links: [
         {
           iconName: 'github',
-          url: 'https://github.com/abhisharkjangir/reactgo'
+          url: 'https://github.com/abhisharkjangir/reactgo',
         },
         {
           iconName: 'external',
-          url: 'https://reactgo.abhisharjangir.com'
-        }
-      ]
+          url: 'https://reactgo.abhisharjangir.com',
+        },
+      ],
     },
     {
       name: 'Portfolio',
@@ -41,13 +41,13 @@ const Projects = () => {
       links: [
         {
           iconName: 'github',
-          url: 'https://github.com/abhisharkjangir/portfolio'
+          url: 'https://github.com/abhisharkjangir/portfolio',
         },
         {
           iconName: 'external',
-          url: 'https://abhisharjangir.com'
-        }
-      ]
+          url: 'https://abhisharjangir.com',
+        },
+      ],
     },
     {
       name: 'Online Image Editor',
@@ -56,18 +56,18 @@ const Projects = () => {
       links: [
         {
           iconName: 'github',
-          url: 'https://github.com/abhisharkjangir/react-aviary'
+          url: 'https://github.com/abhisharkjangir/react-aviary',
         },
         {
           iconName: 'external',
-          url: 'https://ie.abhisharjangir.com'
-        }
-      ]
-    }
-  ]
-  const preSetVal = List.length > 6 ? 6 : List.length
-  const [count, toggleShow] = useState(preSetVal)
-  const sliceValue = count === preSetVal ? preSetVal : List.length
+          url: 'https://ie.abhisharjangir.com',
+        },
+      ],
+    },
+  ];
+  const preSetVal = List.length > 6 ? 6 : List.length;
+  const [count, toggleShow] = useState(preSetVal);
+  const sliceValue = count === preSetVal ? preSetVal : List.length;
   return (
     <Section
       id="projects"
@@ -110,7 +110,7 @@ const Projects = () => {
                       {description}
                     </div>
                     <ul className={styles.techList}>
-                      {tech.map(t => (
+                      {tech.map((t) => (
                         <li key={t}>{t}</li>
                       ))}
                     </ul>
@@ -131,7 +131,7 @@ const Projects = () => {
         )}
       </div>
     </Section>
-  )
+  );
 }
 
-export default Projects
+export default Projects;

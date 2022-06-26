@@ -1,31 +1,31 @@
 /* eslint-disable react/jsx-closing-tag-location */
 /* eslint-disable jsx-a11y/interactive-supports-focus */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import React from 'react'
-import { Helmet } from 'react-helmet'
-import styles from './header.scss'
-import Icon from '../common/icon/icon.async'
-import throttle from '../../utils/throttle'
-import isServer from '../../utils/isServer'
-import MenuAsync from '../menu/menu.async'
-import resume from '../../assets/resume.pdf'
-import PrimaryLink from '../common/PrimaryLink/PrimaryLink'
+import React from 'react';
+import { Helmet } from 'react-helmet';
+import styles from './header.scss';
+import Icon from '../common/icon/icon.async';
+import throttle from '../../utils/throttle';
+import isServer from '../../utils/isServer';
+import MenuAsync from '../menu/menu.async';
+import resume from '../../assets/resume.pdf';
+import PrimaryLink from '../common/PrimaryLink/PrimaryLink';
 
-const hamBefore = `top 0.1s ease-in 0.25s, opacity 0.1s ease-in`
-const hamBeforeActive = `top 0.1s ease-out, opacity 0.1s ease-out 0.12s`
-const hamAfter = `bottom 0.1s ease-in 0.25s, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19)`
-const hamAfterActive = `bottom 0.1s ease-out, transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s`
+const hamBefore = `top 0.1s ease-in 0.25s, opacity 0.1s ease-in`;
+const hamBeforeActive = `top 0.1s ease-out, opacity 0.1s ease-out 0.12s`;
+const hamAfter = `bottom 0.1s ease-in 0.25s, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19)`;
+const hamAfterActive = `bottom 0.1s ease-out, transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s`;
 
 const Navigation = [
   {
     name: 'About',
     to: '/#about',
-    page: '/about'
+    page: '/about',
   },
   {
     name: 'Experience',
     to: '/#experience',
-    page: '/experience'
+    page: '/experience',
   },
   // {
   //   name: 'Work',
@@ -35,59 +35,60 @@ const Navigation = [
   {
     name: 'Contact',
     to: '/#contact',
-    page: '/contact'
-  }
-]
+    page: '/contact',
+  },
+];
 
 class Header extends React.PureComponent {
   constructor() {
-    super()
+    super();
     this.state = {
       scrollDirection: 'none',
       lastScrollTop: 0,
-      isMenuOpen: false
-    }
+      isMenuOpen: false,
+    };
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', () => throttle(this.handleScroll()))
+    window.addEventListener('scroll', () => throttle(this.handleScroll()));
   }
 
   // eslint-disable-next-line react/no-access-state-in-setstate
   toggleMenu = () => {
-    const { isMenuOpen } = this.state
-    this.setState({ isMenuOpen: !isMenuOpen })
-  }
+    const { isMenuOpen } = this.state;
+    this.setState({ isMenuOpen: !isMenuOpen });
+  };
 
   handleScroll = () => {
-    if (isServer) return
-    const DELTA = 5
-    const { scrollDirection, lastScrollTop, isMenuOpen } = this.state
-    const { scrollY, innerHeight } = window
-    if (Math.abs(lastScrollTop - scrollY) <= DELTA || isMenuOpen) return
+    if (isServer) return;
+    const DELTA = 5;
+    const { scrollDirection, lastScrollTop, isMenuOpen } = this.state;
+    const { scrollY, innerHeight } = window;
+    if (Math.abs(lastScrollTop - scrollY) <= DELTA || isMenuOpen) return;
     if (scrollY < DELTA) {
-      this.setState({ scrollDirection: 'none' })
+      this.setState({ scrollDirection: 'none' });
     } else if (scrollY > lastScrollTop && scrollY > 100) {
-      if (scrollDirection !== 'down') this.setState({ scrollDirection: 'down' })
+      if (scrollDirection !== 'down')
+        this.setState({ scrollDirection: 'down' });
     } else if (scrollY + innerHeight < document.body.scrollHeight) {
-      if (scrollDirection !== 'up') this.setState({ scrollDirection: 'up' })
+      if (scrollDirection !== 'up') this.setState({ scrollDirection: 'up' });
     }
-    this.setState({ lastScrollTop: scrollY })
-  }
+    this.setState({ lastScrollTop: scrollY });
+  };
 
   getHeaderStyle = () => {
-    const { scrollDirection } = this.state
+    const { scrollDirection } = this.state;
     return {
       height: scrollDirection === 'none' ? '100px' : '70px',
       boxShadow:
         scrollDirection === 'up' ? `0 10px 30px -10px #020c1bb3` : 'none',
-      transform: `translateY(${scrollDirection === 'down' ? '-70px' : '0px'})`
-    }
-  }
+      transform: `translateY(${scrollDirection === 'down' ? '-70px' : '0px'})`,
+    };
+  };
 
   // eslint-disable-next-line complexity
   getHamburgerStyle = () => {
-    const { isMenuOpen } = this.state
+    const { isMenuOpen } = this.state;
     return (
       <Helmet>
         <style>
@@ -114,11 +115,11 @@ class Header extends React.PureComponent {
           `}
         </style>
       </Helmet>
-    )
-  }
+    );
+  };
 
   render() {
-    const { isMenuOpen } = this.state
+    const { isMenuOpen } = this.state;
 
     return (
       <header
@@ -172,8 +173,8 @@ class Header extends React.PureComponent {
           />
         )}
       </header>
-    )
+    );
   }
 }
 
-export default Header
+export default Header;

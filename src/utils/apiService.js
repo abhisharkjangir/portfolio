@@ -6,10 +6,10 @@ const apiService = ({ method = 'GET', url, data, appendUrl = '' }) => {
   url = getApiEndPoint(url) + appendUrl;
   return new Promise((resolve, reject) => {
     axios({ url, method, data })
-      .then(response => {
+      .then((response) => {
         resolve({ ...response });
       })
-      .catch(err => {
+      .catch((err) => {
         reject(err);
       });
   });

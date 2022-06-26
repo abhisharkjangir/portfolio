@@ -1,9 +1,9 @@
-import React from 'react'
-import PropTypes, { object } from 'prop-types'
-import classnames from 'classnames'
-import styles from './button.scss'
-import PrimaryLink from '../PrimaryLink/PrimaryLink'
-const Button = ({ children, theme, className, href, ...restProps }) => {
+import React from 'react';
+import PropTypes, { object } from 'prop-types';
+import classnames from 'classnames';
+import styles from './button.scss';
+import PrimaryLink from '../PrimaryLink/PrimaryLink';
+function Button({ children, theme, className, href, ...restProps }) {
   if (href) {
     return (
       <PrimaryLink
@@ -13,7 +13,7 @@ const Button = ({ children, theme, className, href, ...restProps }) => {
       >
         {children}
       </PrimaryLink>
-    )
+    );
   }
 
   return (
@@ -24,20 +24,20 @@ const Button = ({ children, theme, className, href, ...restProps }) => {
     >
       {children}
     </button>
-  )
+  );
 }
 
 Button.propTypes = {
   children: object.isRequired,
   className: PropTypes.string,
   theme: PropTypes.string,
-  href: PropTypes.string
-}
+  href: PropTypes.string,
+};
 
 Button.defaultProps = {
   theme: 'primary',
   className: '',
-  href: undefined
-}
+  href: undefined,
+};
 
-export default Button
+export default Button;

@@ -102,7 +102,7 @@ export const RouteList = [
   },
 ];
 
-const getElement = route => {
+const getElement = (route) => {
   const Element = route.element;
   return (
     // <React.Suspense fallback={null}>
@@ -111,11 +111,15 @@ const getElement = route => {
   );
 };
 
-export default () => (
-  <Routes>
-    {RouteList.map(route => (
-      // eslint-disable-next-line react/no-array-index-key
-      <Route key={route.path} {...route} element={getElement(route)} />
-    ))}
-  </Routes>
-);
+function AppRoutes() {
+  return (
+    <Routes>
+      {RouteList.map((route) => (
+        // eslint-disable-next-line react/no-array-index-key
+        <Route key={route.path} {...route} element={getElement(route)} />
+      ))}
+    </Routes>
+  );
+}
+
+export default AppRoutes;

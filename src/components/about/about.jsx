@@ -1,13 +1,13 @@
-import React from 'react'
-import Section from '../section/section'
-import styles from './about.scss'
-import abhishar from '../../assets/images/abhishar.jpg'
-import Heading from '../heading/heading'
-import Image from '../common/image/image'
-import PrimaryLink from '../common/PrimaryLink/PrimaryLink'
-import resume from '../../assets/resume.pdf'
+import React from 'react';
+import Section from '../section/section';
+import styles from './about.scss';
+import abhishar from '../../assets/images/abhishar.jpg';
+import Heading from '../heading/heading';
+import Image from '../common/image/image';
+import PrimaryLink from '../common/PrimaryLink/PrimaryLink';
+import resume from '../../assets/resume.pdf';
 
-const About = () => {
+function About() {
   const Skills = [
     'JavaScript ',
     'NodeJS',
@@ -18,8 +18,8 @@ const About = () => {
     'Webpack',
     'AngularJS v1',
     'Bootstrap',
-    'MongoDB'
-  ]
+    'MongoDB',
+  ];
   return (
     <Section id="about" style={{ position: 'relative' }}>
       <Heading text="About Me" />
@@ -57,7 +57,7 @@ const About = () => {
             Here are a few technologies I&lsquo;ve been working with recently:
           </p>
           <ul>
-            {Skills.map(skill => (
+            {Skills.map((skill) => (
               <li key={skill}>{skill}</li>
             ))}
           </ul>
@@ -76,7 +76,7 @@ const About = () => {
         </div>
       </div>
     </Section>
-  )
+  );
 }
 
-export default About
+export default About;

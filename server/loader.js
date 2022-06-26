@@ -1,5 +1,4 @@
 /* eslint-disable no-console */
-/* eslint-disable jsx-a11y/href-no-hash */
 import fs from 'fs';
 import path from 'path';
 // React requirements
@@ -67,101 +66,102 @@ export const injectHTML = (
 };
 
 // LOADER
-export default ({ clientStats }) => (req, res) => {
-  fs.readFile(
-    path.resolve(process.cwd(), './public/index.html'),
-    'utf8',
-    // eslint-disable-next-line consistent-return
-    (err, htmlFileData) => {
-      if (err) {
-        // eslint-disable-next-line no-console
-        console.error(
-          '::::::: Error while reading index.html file from /public',
-          err
-        );
-        return res.status(404).end();
-      }
-
-      const history = createMemoryHistory({
-        initialEntries: [`${req.path}?ssr=true`],
-      });
-      // Create a store (with a memory history) from our current url
-      const { store } = createStore(history);
-      let theme = 'dark';
-      const context = {};
-      const extractor = new ChunkExtractor({ stats: clientStats });
-      let actions = [];
-      RouteList.some(route => {
-        const match = matchPath(route, req.path);
-        if (match) {
-          if (route.fetchRouteData) {
-            actions = [...actions, ...route.fetchRouteData];
-          }
-        }
-        return match;
-      });
-
-      const promises = actions.map(action => store.dispatch(action()));
-
-      // Helmet Action to set meta info based on the URL
-      if (Meta[req.url]) {
-        promises.push(store.dispatch(setHelmetInfo(Meta[req.url])));
-      }
-
-      // Load theme for dark/light page
-      if (req.path === '/theme/light') theme = 'light';
-      else if (req.path === '/theme/dark') theme = 'dark';
-
-      return Promise.allSettled(promises)
-        .then(async () => {
-          const markup = renderToString(
-            <ChunkExtractorManager extractor={extractor}>
-              <StrictMode>
-                <Provider store={store}>
-                  <StaticRouter location={req.url} context={context}>
-                    <App />
-                  </StaticRouter>
-                </Provider>
-              </StrictMode>
-            </ChunkExtractorManager>
+export default ({ clientStats }) =>
+  (req, res) => {
+    fs.readFile(
+      path.resolve(process.cwd(), './public/index.html'),
+      'utf8',
+      // eslint-disable-next-line consistent-return
+      (err, htmlFileData) => {
+        if (err) {
+          // eslint-disable-next-line no-console
+          console.error(
+            '::::::: Error while reading index.html file from /public',
+            err
           );
+          return res.status(404).end();
+        }
 
-          if (context.url) {
-            // If context has a url property, then we need to handle a redirection in Redux Router
-            res.writeHead(302, {
-              Location: context.url,
-            });
-            res.end();
-          } else {
-            // Otherwise, we carry on...
-            // We need to tell Helmet to compute the right meta tags, title, and such
-            const helmet = Helmet.renderStatic();
-            const state = JSON.stringify(store.getState()).replace(
-              /</g,
-              '\\u003c'
-            );
-            const preloadScripts = extractor
-              .getLinkTags()
-              ?.split('\n')
-              ?.filter(link => link?.includes('as="script"'))
-              ?.join('');
-            // Pass all this nonsense into our HTML formatting function above
-            const html = injectHTML(htmlFileData, {
-              html: helmet.htmlAttributes.toString(),
-              title: helmet.title.toString(),
-              meta: helmet.meta.toString(),
-              body: markup,
-              scripts: extractor.getScriptTags(),
-              style: extractor.getStyleTags(),
-              state,
-              preloadScripts,
-              theme,
-            });
-            res.setHeader('Cache-Control', 'max-age=86400');
-            res.send(html);
+        const history = createMemoryHistory({
+          initialEntries: [`${req.path}?ssr=true`],
+        });
+        // Create a store (with a memory history) from our current url
+        const { store } = createStore(history);
+        let theme = 'dark';
+        const context = {};
+        const extractor = new ChunkExtractor({ stats: clientStats });
+        let actions = [];
+        RouteList.some((route) => {
+          const match = matchPath(route, req.path);
+          if (match) {
+            if (route.fetchRouteData) {
+              actions = [...actions, ...route.fetchRouteData];
+            }
           }
-        })
-        .catch(error => console.error('::::: Error :::::', error));
-    }
-  );
-};
+          return match;
+        });
+
+        const promises = actions.map((action) => store.dispatch(action()));
+
+        // Helmet Action to set meta info based on the URL
+        if (Meta[req.url]) {
+          promises.push(store.dispatch(setHelmetInfo(Meta[req.url])));
+        }
+
+        // Load theme for dark/light page
+        if (req.path === '/theme/light') theme = 'light';
+        else if (req.path === '/theme/dark') theme = 'dark';
+
+        return Promise.allSettled(promises)
+          .then(async () => {
+            const markup = renderToString(
+              <ChunkExtractorManager extractor={extractor}>
+                <StrictMode>
+                  <Provider store={store}>
+                    <StaticRouter location={req.url} context={context}>
+                      <App />
+                    </StaticRouter>
+                  </Provider>
+                </StrictMode>
+              </ChunkExtractorManager>
+            );
+
+            if (context.url) {
+              // If context has a url property, then we need to handle a redirection in Redux Router
+              res.writeHead(302, {
+                Location: context.url,
+              });
+              res.end();
+            } else {
+              // Otherwise, we carry on...
+              // We need to tell Helmet to compute the right meta tags, title, and such
+              const helmet = Helmet.renderStatic();
+              const state = JSON.stringify(store.getState()).replace(
+                /</g,
+                '\\u003c'
+              );
+              const preloadScripts = extractor
+                .getLinkTags()
+                ?.split('\n')
+                ?.filter((link) => link?.includes('as="script"'))
+                ?.join('');
+              // Pass all this nonsense into our HTML formatting function above
+              const html = injectHTML(htmlFileData, {
+                html: helmet.htmlAttributes.toString(),
+                title: helmet.title.toString(),
+                meta: helmet.meta.toString(),
+                body: markup,
+                scripts: extractor.getScriptTags(),
+                style: extractor.getStyleTags(),
+                state,
+                preloadScripts,
+                theme,
+              });
+              res.setHeader('Cache-Control', 'max-age=86400');
+              res.send(html);
+            }
+          })
+          .catch((error) => console.error('::::: Error :::::', error));
+      }
+    );
+  };

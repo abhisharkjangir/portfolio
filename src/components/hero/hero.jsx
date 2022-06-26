@@ -1,10 +1,10 @@
-import React from 'react'
-import classnames from 'classnames'
-import PrimaryLink from '../common/PrimaryLink/PrimaryLink'
-import Section from '../section/section'
-import styles from './hero.scss'
+import React from 'react';
+import classnames from 'classnames';
+import PrimaryLink from '../common/PrimaryLink/PrimaryLink';
+import Section from '../section/section';
+import styles from './hero.scss';
 
-const Hero = () => {
+function Hero() {
   return (
     <Section id="hero" className={styles.section}>
       <h1 className={styles.overline}>Hi there, my name is</h1>
@@ -28,7 +28,7 @@ const Hero = () => {
         </PrimaryLink>
       </div>
     </Section>
-  )
+  );
 }
 
-export default Hero
+export default Hero;

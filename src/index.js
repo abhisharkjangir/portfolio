@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React, { StrictMode } from 'react';
 import { hydrate, render } from 'react-dom';
 import { Provider } from 'react-redux';
@@ -10,15 +9,17 @@ import createStore from './store';
 // Create a store and get back itself and its history object
 const { store, history } = createStore();
 
-const Application = () => (
-  <StrictMode>
-    <Provider store={store}>
-      <BrowserRouter history={history}>
-        <App />
-      </BrowserRouter>
-    </Provider>
-  </StrictMode>
-);
+function Application() {
+  return (
+    <StrictMode>
+      <Provider store={store}>
+        <BrowserRouter history={history}>
+          <App />
+        </BrowserRouter>
+      </Provider>
+    </StrictMode>
+  );
+}
 
 const rootNode = document.getElementById('root');
 

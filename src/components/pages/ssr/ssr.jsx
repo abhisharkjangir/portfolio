@@ -1,20 +1,20 @@
-import React from 'react'
-import { useSelector } from 'react-redux'
-import styles from './ssr.scss'
-import Heading from '../../heading/heading'
-import Section from '../../section/section'
-import Image from '../../common/image/image'
+import React from 'react';
+import { useSelector } from 'react-redux';
+import styles from './ssr.scss';
+import Heading from '../../heading/heading';
+import Section from '../../section/section';
+import Image from '../../common/image/image';
 
-const SSR = () => {
-  const { ssr } = useSelector(state => state)
-  if (!ssr.isSuccess) return null
+function SSR() {
+  const { ssr } = useSelector((state) => state);
+  if (!ssr.isSuccess) return null;
   const {
-    data: { results }
-  } = ssr || {}
+    data: { results },
+  } = ssr || {};
   const {
     name: { title, first, last },
-    picture: { large }
-  } = results?.[0]
+    picture: { large },
+  } = results?.[0];
 
   return (
     <Section>
@@ -23,7 +23,7 @@ const SSR = () => {
         <Heading text={`${title} ${first} ${last}`} center />
       </div>
     </Section>
-  )
+  );
 }
 
-export default SSR
+export default SSR;
