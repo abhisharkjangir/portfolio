@@ -6,7 +6,7 @@ import path from 'path';
 import React, { StrictMode } from 'react';
 import { matchPath } from 'react-router-dom';
 import { renderToString } from 'react-dom/server';
-import Helmet from 'react-helmet';
+import { Helmet } from 'react-helmet';
 import { Provider } from 'react-redux';
 import { createMemoryHistory } from 'history';
 import { StaticRouter } from 'react-router-dom/server';
