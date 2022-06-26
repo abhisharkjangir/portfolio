@@ -13,7 +13,7 @@ const webpackConfig = (env, type) => {
     resolve: webpackHelper.common.resolve(),
     plugins: webpackHelper[type].plugins(isProduction),
     optimization: webpackHelper[type].optimization(isProduction),
-    performance: isProduction || false,
+    performance: false,
   };
 };
 module.exports = webpackConfig;
