@@ -152,7 +152,7 @@ export default ({ clientStats }) => (req, res) => {
               meta: helmet.meta.toString(),
               body: markup,
               scripts: extractor.getScriptTags(),
-              style: await extractor.getInlineStyleTags(),
+              style: extractor.getStyleTags(),
               state,
               preloadScripts,
               theme,

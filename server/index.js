@@ -1,7 +1,3 @@
-/* eslint-disable import/extensions */
-/* eslint-disable global-require */
-/* eslint-disable jsx-a11y/href-no-hash */
-
 const fs = require('fs');
 const express = require('express');
 const webpack = require('webpack');
@@ -13,6 +9,7 @@ const compression = require('compression');
 const cookieParser = require('cookie-parser');
 const APIRoutes = require('./routes/index');
 const CONSTANTS = require('./constants/constants');
+const webpackConfig = require('../webpack/webpack.config');
 
 const DEV = process.env.NODE_ENV === 'development';
 const PORT = process.env.PORT || CONSTANTS.PORT;
@@ -40,14 +37,16 @@ if (DEV) {
   // @ts-expect-error
   global.$RefreshSig$ = () => () => {};
   // eslint-disable-next-line global-require
-  const getClientConfigDev = require('../webpack/client.dev.config');
-  const clientConfigDev = getClientConfigDev();
+
+  const clientConfigDev = webpackConfig(process.env.NODE_ENV, 'client');
   const {
     output: { publicPath },
   } = clientConfigDev;
   // eslint-disable-next-line global-require
-  const getServerConfigDev = require('../webpack/server.dev.config');
-  const compiler = webpack([clientConfigDev, getServerConfigDev()]);
+  const compiler = webpack([
+    clientConfigDev,
+    webpackConfig(process.env.NODE_ENV, 'server'),
+  ]);
   const clientCompiler = compiler.compilers[0];
   const options = { publicPath, stats: { colors: true }, writeToDisk: true };
   const devMiddleware = webpackDevMiddleware(compiler, options);
@@ -57,15 +56,16 @@ if (DEV) {
   devMiddleware.waitUntilValid(done);
 } else {
   // eslint-disable-next-line global-require
-  const getClientConfigProd = require('../webpack/client.prod.config');
-  const clientConfigProd = getClientConfigProd();
+  const clientConfigProd = webpackConfig(process.env.NODE_ENV, 'client');
   const {
     output: { publicPath, path },
   } = clientConfigProd;
   // eslint-disable-next-line global-require
-  const getServerConfigProd = require('../webpack/server.prod.config');
 
-  webpack([clientConfigProd, getServerConfigProd()]).run((err, stats) => {
+  webpack([
+    clientConfigProd,
+    webpackConfig(process.env.NODE_ENV, 'server'),
+  ]).run((err, stats) => {
     if (err) {
       // eslint-disable-next-line no-console
       console.log(':::::::: Error ocurred ::::::::', err);
@@ -82,6 +82,7 @@ if (DEV) {
           // eslint-disable-next-line no-console
           console.log(error);
         }
+        // eslint-disable-next-line import/no-unresolved
         const serverRender = require('../public/dist/server/main.js').default;
         app.use(publicPath, express.static(path));
         app.use(serverRender({ clientStats }));
