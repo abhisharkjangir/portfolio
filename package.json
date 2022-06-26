@@ -41,6 +41,7 @@
     "@loadable/component": "^5.15.2",
     "@loadable/server": "^5.15.2",
     "@loadable/webpack-plugin": "^5.15.2",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.7",
     "autoprefixer": "^10.2.5",
     "axios": "^0.19.0",
     "babel-loader": "^8.0.6",
@@ -101,7 +102,6 @@
     "webpackbar": "^5.0.2"
   },
   "devDependencies": {
-    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.7",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
