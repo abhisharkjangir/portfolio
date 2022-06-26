@@ -103,24 +103,6 @@ const webpackHelper = {
       ];
     },
     module: (isProduction = false) => {
-      const devOnlyRules = [
-        {
-          test: /\.(js|mjs|jsx|ts|tsx)$/,
-          enforce: 'pre',
-          use: [
-            {
-              options: {
-                formatter: require.resolve('react-dev-utils/eslintFormatter'),
-                eslintPath: require.resolve('eslint'),
-                resolvePluginsRelativeTo: __dirname,
-              },
-              loader: require.resolve('eslint-loader'),
-            },
-          ],
-          include: paths.appSrc,
-        },
-      ];
-
       const rules = [
         {
           oneOf: [
@@ -263,7 +245,29 @@ const webpackHelper = {
           ],
         },
       ];
-      return isProduction ? { rules } : { rules: [...devOnlyRules, ...rules] };
+
+      if (isProduction) {
+        return { rules };
+      }
+
+      const devOnlyRules = [
+        {
+          test: /\.(js|mjs|jsx|ts|tsx)$/,
+          enforce: 'pre',
+          use: [
+            {
+              options: {
+                formatter: require.resolve('react-dev-utils/eslintFormatter'),
+                eslintPath: require.resolve('eslint'),
+                resolvePluginsRelativeTo: __dirname,
+              },
+              loader: require.resolve('eslint-loader'),
+            },
+          ],
+          include: paths.appSrc,
+        },
+      ];
+      return { rules: [...devOnlyRules, ...rules] };
     },
     optimization: (isProduction = false) => {
       return {
@@ -344,23 +348,6 @@ const webpackHelper = {
       return plugins;
     },
     module: (isProduction = false) => {
-      const devOnlyRules = [
-        {
-          test: /\.(js|mjs|jsx|ts|tsx)$/,
-          enforce: 'pre',
-          use: [
-            {
-              options: {
-                formatter: require.resolve('react-dev-utils/eslintFormatter'),
-                eslintPath: require.resolve('eslint'),
-                resolvePluginsRelativeTo: __dirname,
-              },
-              loader: require.resolve('eslint-loader'),
-            },
-          ],
-          include: paths.appSrc,
-        },
-      ];
       const rules = [
         {
           oneOf: [
@@ -474,7 +461,29 @@ const webpackHelper = {
           use: ['css-loader', 'postcss-loader'],
         },
       ];
-      return isProduction ? { rules } : { rules: [...devOnlyRules, ...rules] };
+
+      if (isProduction) {
+        return { rules };
+      }
+
+      const devOnlyRules = [
+        {
+          test: /\.(js|mjs|jsx|ts|tsx)$/,
+          enforce: 'pre',
+          use: [
+            {
+              options: {
+                formatter: require.resolve('react-dev-utils/eslintFormatter'),
+                eslintPath: require.resolve('eslint'),
+                resolvePluginsRelativeTo: __dirname,
+              },
+              loader: require.resolve('eslint-loader'),
+            },
+          ],
+          include: paths.appSrc,
+        },
+      ];
+      return { rules: [...devOnlyRules, ...rules] };
     },
     optimization: (isProduction = false) => {
       return {
