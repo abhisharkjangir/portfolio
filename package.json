@@ -12,7 +12,7 @@
     "start:local": "npm run clean && cross-env NODE_ENV=development node server/index.js",
     "start": "npm run deploy",
     "start:prod": "npm run clean && cross-env NODE_ENV=production node server/index.js",
-    "build": "npm run clean && cross-env NODE_ENV=production node server/build.js --trace-deprication",
+    "build": "npm run clean && cross-env NODE_ENV=production node server/build.js",
     "deploy": "cross-env NODE_ENV=production node server/deploy.js",
     "format": "prettier --single-quote --semi=false --write '{src,server,webpack}/**/*.{jsx,js,scss,css}' && eslint --fix src server webpack",
     "clean": "rimraf public/dist",
