@@ -4,7 +4,7 @@ import path from 'path';
 // React requirements
 import React, { StrictMode } from 'react';
 import { matchPath } from 'react-router-dom';
-import { renderToString } from 'react-dom/server';
+import { renderToNodeStream } from 'react-dom/server';
 import { Helmet } from 'react-helmet';
 import { Provider } from 'react-redux';
 import { createMemoryHistory } from 'history';
@@ -55,19 +55,18 @@ export const injectHTML = (
   data = data.replace('<body>', `<body class="${theme}">`);
   data = data.replace('<html>', `<html ${html}>`);
   data = data.replace(/<title>.*?<\/title>/g, title);
-  data = data.replace('</head>', `${meta}${preloadScripts}${style}</head>`);
   data = data.replace(
-    '<div id="root"></div>',
-    `<div id="root">${body}</div><script>window.__PRELOADED_STATE__ = ${state}</script>`
+    '</head>',
+    `${meta}${preloadScripts}${style}<script>window.__PRELOADED_STATE__ = ${state}</script></head>`
   );
+  data = data.replace(`<div id="root"></div>`, `<div id="root">${body}</div>`);
   data = data.replace('</body>', `${scripts}${googleAnalyticsScripts}</body>`);
 
   return data;
 };
 
-// LOADER
-export default ({ clientStats }) =>
-  (req, res) => {
+const readHtmlFileData = (res) => {
+  return new Promise((resolve) => {
     fs.readFile(
       path.resolve(process.cwd(), './public/index.html'),
       'utf8',
@@ -76,65 +75,61 @@ export default ({ clientStats }) =>
         if (err) {
           // eslint-disable-next-line no-console
           console.error(
-            '::::::: Error while reading index.html file from /public',
+            '::::::: Error while reading index.html file from /public :::::::',
             err
           );
           return res.status(404).end();
         }
+        resolve(htmlFileData);
+      }
+    );
+  });
+};
 
-        const history = createMemoryHistory({
-          initialEntries: [`${req.path}?ssr=true`],
-        });
-        // Create a store (with a memory history) from our current url
-        const { store } = createStore(history);
-        let theme = 'dark';
-        const context = {};
-        const extractor = new ChunkExtractor({ stats: clientStats });
-        let actions = [];
-        RouteList.some((route) => {
-          const match = matchPath(route, req.path);
-          if (match) {
-            if (route.fetchRouteData) {
-              actions = [...actions, ...route.fetchRouteData];
-            }
+let htmlFileData;
+// LOADER
+export default ({ clientStats }) =>
+  (req, res) => {
+    (async () => {
+      const history = createMemoryHistory({
+        initialEntries: [`${req.path} ? ssr = true`],
+      });
+      const { store } = createStore(history);
+      let theme = 'dark';
+      const context = {};
+      const extractor = new ChunkExtractor({ stats: clientStats });
+      let actions = [];
+      RouteList.some((route) => {
+        const match = matchPath(route, req.path);
+        if (match) {
+          if (route.fetchRouteData) {
+            actions = [...actions, ...route.fetchRouteData];
           }
-          return match;
-        });
-
-        const promises = actions.map((action) => store.dispatch(action()));
-
-        // Helmet Action to set meta info based on the URL
-        if (Meta[req.url]) {
-          promises.push(store.dispatch(setHelmetInfo(Meta[req.url])));
         }
+        return match;
+      });
 
-        // Load theme for dark/light page
-        if (req.path === '/theme/light') theme = 'light';
-        else if (req.path === '/theme/dark') theme = 'dark';
+      const promises = actions.map((action) => store.dispatch(action()));
 
-        return Promise.allSettled(promises)
-          .then(async () => {
-            const markup = renderToString(
-              <ChunkExtractorManager extractor={extractor}>
-                <StrictMode>
-                  <Provider store={store}>
-                    <StaticRouter location={req.url} context={context}>
-                      <App />
-                    </StaticRouter>
-                  </Provider>
-                </StrictMode>
-              </ChunkExtractorManager>
-            );
+      // Helmet Action to set meta info based on the URL
+      if (Meta[req.url]) {
+        promises.push(store.dispatch(setHelmetInfo(Meta[req.url])));
+      }
 
-            if (context.url) {
-              // If context has a url property, then we need to handle a redirection in Redux Router
-              res.writeHead(302, {
-                Location: context.url,
-              });
-              res.end();
-            } else {
-              // Otherwise, we carry on...
-              // We need to tell Helmet to compute the right meta tags, title, and such
+      // Load theme for dark/light page
+      if (req.path === '/theme/light') theme = 'light';
+      else if (req.path === '/theme/dark') theme = 'dark';
+
+      return Promise.allSettled(promises)
+        .then(async () => {
+          if (context.url) {
+            // If context has a url property, then we need to handle a redirection in Redux Router
+            res.writeHead(302, {
+              Location: context.url,
+            });
+            res.end();
+          } else {
+            try {
               const helmet = Helmet.renderStatic();
               const state = JSON.stringify(store.getState()).replace(
                 /</g,
@@ -145,7 +140,12 @@ export default ({ clientStats }) =>
                 ?.split('\n')
                 ?.filter((link) => link?.includes('as="script"'))
                 ?.join('');
-              // Pass all this nonsense into our HTML formatting function above
+
+              if (!htmlFileData) {
+                htmlFileData = await readHtmlFileData(res);
+              }
+              const markup = '';
+              // eslint-disable-next-line no-unused-vars
               const html = injectHTML(htmlFileData, {
                 html: helmet.htmlAttributes.toString(),
                 title: helmet.title.toString(),
@@ -157,11 +157,30 @@ export default ({ clientStats }) =>
                 preloadScripts,
                 theme,
               });
-              res.setHeader('Cache-Control', 'max-age=86400');
-              res.send(html);
+
+              const [part0, part1] = html.split('[partition]');
+              res.write(part0);
+              const stream = renderToNodeStream(
+                <ChunkExtractorManager extractor={extractor}>
+                  <StrictMode>
+                    <Provider store={store}>
+                      <StaticRouter location={req.url} context={context}>
+                        <App />
+                      </StaticRouter>
+                    </Provider>
+                  </StrictMode>
+                </ChunkExtractorManager>
+              );
+              stream.pipe(res, { end: false });
+              stream.on('end', () => {
+                res.write(part1);
+                res.end();
+              });
+            } catch (error) {
+              console.error('::::: Error :::::', error);
             }
-          })
-          .catch((error) => console.error('::::: Error :::::', error));
-      }
-    );
+          }
+        })
+        .catch((error) => console.error('::::: Error :::::', error));
+    })();
   };

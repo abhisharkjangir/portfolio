@@ -501,11 +501,7 @@ const webpackHelper = {
     entry: (isProduction = false) => {
       return isProduction
         ? ['babel-polyfill', res('../server/loader.js')]
-        : [
-            'babel-polyfill',
-            'regenerator-runtime/runtime.js',
-            res('../server/loader.js'),
-          ];
+        : ['regenerator-runtime/runtime.js', res('../server/loader.js')];
     },
   },
 };
