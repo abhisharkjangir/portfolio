@@ -1,4 +1,4 @@
-const timeSince = d => {
+const timeSince = (d) => {
   const date = new Date(d);
 
   const seconds = Math.floor((new Date() - date) / 1000);

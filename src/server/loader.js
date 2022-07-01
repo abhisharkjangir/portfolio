@@ -11,11 +11,11 @@ import { createMemoryHistory } from 'history';
 import { StaticRouter } from 'react-router-dom/server';
 import { ChunkExtractor, ChunkExtractorManager } from '@loadable/server';
 
-import createStore from '../src/store';
-import App from '../src/components/app';
-import { RouteList } from '../src/routes';
-import { setHelmetInfo } from '../src/components/common/helmet/actions';
-import Meta from '../src/utils/meta';
+import createStore from '../client/store';
+import App from '../client/components/app';
+import { RouteList } from '../client/routes';
+import { setHelmetInfo } from '../client/components/common/helmet/actions';
+import Meta from '../client/utils/meta';
 
 const isDev = process.env.NODE_ENV === 'development';
 

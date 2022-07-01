@@ -2,18 +2,18 @@
   "name": "portfolio",
   "description": "Portfolio web app",
   "version": "1.0.0",
-  "main": "server/index.js",
+  "main": "src/server/index.js",
   "author": "Abhishar Jangir <abhisharjangir@ymail.com>",
   "contributors": [
     "Abhishar Jangir"
   ],
   "license": "MIT",
   "scripts": {
-    "start:local": "npm run clean && cross-env NODE_ENV=development node server/index.js",
+    "start:local": "npm run clean && cross-env NODE_ENV=development node src/server/index.js",
     "start": "npm run deploy",
-    "start:prod": "npm run clean && cross-env NODE_ENV=production node server/index.js",
-    "build": "npm run clean && cross-env NODE_ENV=production node server/build.js",
-    "deploy": "cross-env NODE_ENV=production node server/deploy.js",
+    "start:prod": "npm run clean && cross-env NODE_ENV=production node src/server/index.js",
+    "build": "npm run clean && cross-env NODE_ENV=production node src/server/build.js",
+    "deploy": "cross-env NODE_ENV=production node src/server/deploy.js",
     "format": "prettier --single-quote --semi=false --write '{src,server,webpack}/**/*.{jsx,js,scss,css}' && eslint --fix src server webpack",
     "clean": "rimraf public/dist",
     "cm": "git-cz"
