@@ -3,9 +3,9 @@ const bodyParser = require('body-parser');
 const compression = require('compression');
 const cookieParser = require('cookie-parser');
 const APIRoutes = require('./routes/index');
-const webpackConfig = require('../webpack/webpack.config');
+const webpackConfig = require('../../webpack/webpack.config');
 // eslint-disable-next-line import/no-unresolved
-const clientStats = require('../public/dist/client/clientstats.json');
+const clientStats = require('../../public/dist/client/clientstats.json');
 const CONSTANTS = require('./constants/constants');
 
 const {
@@ -32,7 +32,8 @@ const done = () =>
   });
 // eslint-disable-next-line global-require
 // eslint-disable-next-line import/no-unresolved
-const serverRender = require('../public/dist/server/main.js').default;
+// eslint-disable-next-line import/extensions
+const serverRender = require('../../public/dist/server/main.js').default;
 app.use(publicPath, express.static(path));
 app.use(serverRender({ clientStats }));
 done();

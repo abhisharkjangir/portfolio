@@ -1,3 +1,5 @@
+/* eslint-disable import/extensions */
+/* eslint-disable global-require */
 const fs = require('fs');
 const express = require('express');
 const webpack = require('webpack');
@@ -5,7 +7,7 @@ const bodyParser = require('body-parser');
 const compression = require('compression');
 const cookieParser = require('cookie-parser');
 const APIRoutes = require('./routes/index');
-const webpackConfig = require('../webpack/webpack.config');
+const webpackConfig = require('../../webpack/webpack.config');
 
 const clientConfigProd = webpackConfig('production', 'client');
 const {
@@ -32,14 +34,16 @@ webpack([clientConfigProd, webpackConfig('production', 'server')]).run(
       `${process.cwd()}/public/dist/client/clientstats.json`,
       JSON.stringify(clientStats),
       'utf8',
-      error => {
+      (error) => {
         if (error) {
           // eslint-disable-next-line no-console
           console.log(error);
         }
         // eslint-disable-next-line global-require
         // eslint-disable-next-line import/no-unresolved
-        const serverRender = require('../public/dist/server/main.js').default;
+        // eslint-disable-next-line global-require
+        const serverRender =
+          require('../../public/dist/server/main.js').default;
         app.use(publicPath, express.static(path));
         app.use(serverRender({ clientStats }));
         return false;

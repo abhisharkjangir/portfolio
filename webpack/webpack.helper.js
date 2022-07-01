@@ -31,6 +31,10 @@ const webpackHelper = {
           child_process: false,
           path: require.resolve('path-browserify'),
         },
+        alias: {
+          '@webpack': res('/webpack'),
+          '@client': res('/src/client'),
+        },
       };
     },
   },
@@ -288,11 +292,11 @@ const webpackHelper = {
     },
     entry: (isProduction = false) => {
       return isProduction
-        ? ['babel-polyfill', res('../src/index.js')]
+        ? ['babel-polyfill', res('../src/client/index.js')]
         : [
             'babel-polyfill',
             'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000&reload=false&quiet=false&noInfo=false',
-            res('../src/index.js'),
+            res('../src/client/index.js'),
           ];
     },
   },
@@ -500,11 +504,11 @@ const webpackHelper = {
     },
     entry: (isProduction = false) => {
       return isProduction
-        ? ['babel-polyfill', res('../server/loader.js')]
+        ? ['babel-polyfill', res('../src/server/loader.js')]
         : [
             'babel-polyfill',
             'regenerator-runtime/runtime.js',
-            res('../server/loader.js'),
+            res('../src/server/loader.js'),
           ];
     },
   },
