@@ -19,6 +19,21 @@ import Meta from '../client/utils/meta';
 
 const isDev = process.env.NODE_ENV === 'development';
 
+const getRouteActions = (route, req, actions = [], parentPath = '') => {
+  const fullPath = (parentPath !== '/' ? parentPath : '') + (route.path || '');
+  if (route) {
+    const match = matchPath({ ...route, path: fullPath }, req.path);
+    if (match && route.fetchRouteData) {
+      route.fetchRouteData.forEach((action) => actions.push(action));
+    }
+    if (route.childRoutes) {
+      route.childRoutes.forEach((childRoute) =>
+        getRouteActions(childRoute, req, actions, fullPath)
+      );
+    }
+  }
+};
+
 const googleAnalyticsScripts = !isDev
   ? `
 <script>
@@ -87,28 +102,13 @@ export default ({ clientStats }) =>
         });
         // Create a store (with a memory history) from our current url
         const { store } = createStore(history);
-        let theme = 'dark';
         const context = {};
         const extractor = new ChunkExtractor({ stats: clientStats });
-        let actions = [];
 
-        const iterateNestedRoutes = (route, parentPath = '') => {
-          const fullPath =
-            (parentPath !== '/' ? parentPath : '') + (route.path || '');
-          if (route) {
-            const match = matchPath({ ...route, path: fullPath }, req.path);
-            if (match && route.fetchRouteData) {
-              actions = [...actions, ...route.fetchRouteData];
-            }
-            if (route.childRoutes) {
-              route.childRoutes.forEach((childRoute) =>
-                iterateNestedRoutes(childRoute, fullPath)
-              );
-            }
-          }
-        };
-
-        RouteList.forEach((route) => iterateNestedRoutes(route));
+        const actions = RouteList.reduce((routeActions, route) => {
+          getRouteActions(route, req, routeActions);
+          return routeActions;
+        }, []);
 
         const promises = actions.map((action) => store.dispatch(action()));
 
@@ -116,10 +116,6 @@ export default ({ clientStats }) =>
         if (Meta[req.url]) {
           promises.push(store.dispatch(setHelmetInfo(Meta[req.url])));
         }
-
-        // Load theme for dark/light page
-        if (req.path === '/test/theme/light') theme = 'light';
-        else if (req.path === '/test/theme/dark') theme = 'dark';
 
         return Promise.allSettled(promises)
           .then(async () => {
@@ -164,7 +160,7 @@ export default ({ clientStats }) =>
                 style: extractor.getStyleTags(),
                 state,
                 preloadScripts,
-                theme,
+                theme: req.path === '/test/theme/light' ? 'light' : 'dark',
               });
               res.setHeader('Cache-Control', 'max-age=86400');
               res.send(html);
