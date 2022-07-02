@@ -1,48 +1,54 @@
 /* eslint-disable extra-rules/no-commented-out-code */
 import React from 'react';
 import loadable from '@loadable/component';
-import { getSSRData } from './components/pages/ssr/actions';
-import PortfolioApp from './components/app/portfolioApp';
-import StandAloneApp from './components/app/standAloneApp';
+import { getSSRData } from './modules/portfolio/pages/ssr/actions';
+import PortfolioApp from './modules/portfolio/portfolio';
+import StandAloneApp from './modules/standAloneApp/standAloneApp';
 
 const Home = loadable(() =>
-  import(/* webpackChunkName: "home-page" */ './components/pages/home/home')
+  import(
+    /* webpackChunkName: "home-page" */ './modules/portfolio/pages/home/home'
+  )
 );
 
 const About = loadable(() =>
-  import(/* webpackChunkName: "about-page" */ './components/about/about')
+  import(
+    /* webpackChunkName: "about-page" */ './modules/portfolio/components/about/about'
+  )
 );
 
 const Experience = loadable(() =>
-  import(/* webpackChunkName: "experience-page" */ './components/jobs/jobs')
+  import(
+    /* webpackChunkName: "experience-page" */ './modules/portfolio/components/jobs/jobs'
+  )
 );
 
 const Work = loadable(() =>
-  import(/* webpackChunkName: "work-page" */ './components/work/work')
+  import(
+    /* webpackChunkName: "work-page" */ './modules/portfolio/components/work/work'
+  )
 );
 
 const Contact = loadable(() =>
-  import(/* webpackChunkName: "contact-page" */ './components/contact/contact')
+  import(
+    /* webpackChunkName: "contact-page" */ './modules/portfolio/components/contact/contact'
+  )
 );
 
 const Json = loadable(() =>
-  import(/* webpackChunkName: "json-page" */ './components/pages/json/Json')
-);
-
-const Comoponents = loadable(() =>
   import(
-    /* webpackChunkName: "comoponents-page" */ './components/pages/components/components'
+    /* webpackChunkName: "json-page" */ './modules/standAloneApp/json/Json'
   )
 );
 
 const Notfound = loadable(() =>
   import(
-    /* webpackChunkName: "notfound-page" */ './components/pages/notfound/notfound'
+    /* webpackChunkName: "notfound-page" */ './modules/portfolio/pages/notfound/notfound'
   )
 );
 
 const SSR = loadable(() =>
-  import(/* webpackChunkName: "ssr-page" */ './components/pages/ssr/ssr')
+  import(/* webpackChunkName: "ssr-page" */ './modules/portfolio/pages/ssr/ssr')
 );
 
 const portfolio = {
@@ -98,10 +104,6 @@ const test = {
     {
       path: '/theme/:theme',
       element: <Home />,
-    },
-    {
-      path: '/components',
-      element: <Comoponents />,
     },
     {
       path: '*',
