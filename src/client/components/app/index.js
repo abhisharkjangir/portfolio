@@ -1,18 +1,11 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
-import AppComponent from './app';
-import PortfolioApp from './portfolioApp';
-import isFullPageRoute from '../../utils/isFullPageRoute';
+import { Routes } from 'react-router-dom';
 import '../../styles/global.css';
+import RouteList from '../../routes';
+import getNestedRoutes from '../../utils/getNestedRoutes';
 
-function App(props) {
-  const location = useLocation();
-  const isPortfolioApp = !isFullPageRoute(location);
-  return isPortfolioApp ? (
-    <PortfolioApp {...props} location={location} />
-  ) : (
-    <AppComponent {...props} location={location} />
-  );
+function App() {
+  return <Routes>{RouteList.map((route) => getNestedRoutes(route))}</Routes>;
 }
 
 export default App;

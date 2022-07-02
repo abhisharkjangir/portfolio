@@ -47,15 +47,6 @@ export default {
     title: 'Experience',
     description,
   },
-  '/app/international-space-station': {
-    pathname: '/app/international-space-station',
-    id: 'iss',
-    title: 'International Space Station',
-    keywords:
-      'International Space Station, iss, iss current location, iss location, iss astros, location of iss, space station, space station location',
-    description:
-      'Live location of international space station, astros in space station and pass through infomation based on location.',
-  },
   '/app/json-key-path-finder': {
     pathname: '/app/json-key-path-finder',
     id: 'json',

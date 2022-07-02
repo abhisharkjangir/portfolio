@@ -3,7 +3,7 @@ import styles from './components.scss';
 import Hero from '../../hero/hero';
 import About from '../../about/about';
 import Jobs from '../../jobs/jobs';
-import Work from '../../work/work';
+// import Work from '../../work/work';
 import Contact from '../../contact/contact';
 import Email from '../../email/email';
 import Heading from '../../common/heading/heading';
@@ -131,9 +131,9 @@ function Components() {
         <About />
       </ComponentWrapper>
 
-      <ComponentWrapper name="Work">
+      {/* <ComponentWrapper name="Work">
         <Work />
-      </ComponentWrapper>
+      </ComponentWrapper> */}
     </div>
   );
 }
