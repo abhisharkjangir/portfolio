@@ -1,19 +1,18 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { Outlet } from 'react-router-dom';
 import Header from '../header/header';
-import AppRoutes from '../../routes';
 import styles from './portfolioApp.scss';
 import Helmet from '../common/helmet/helmet';
 import Social from '../social/social.async';
 import Email from '../email/email.async';
 import Footer from '../footer/footer.async';
 
-function PortfolioApp({ location }) {
+function PortfolioApp() {
   return (
     <>
       <Header />
       <main id="main-content" className={styles.main}>
-        <AppRoutes location={location} />
+        <Outlet />
       </main>
       <Helmet />
       <Social />
@@ -23,9 +22,7 @@ function PortfolioApp({ location }) {
   );
 }
 
-PortfolioApp.propTypes = {
-  location: PropTypes.object.isRequired,
-};
+PortfolioApp.propTypes = {};
 
 PortfolioApp.defaultProps = {};
 

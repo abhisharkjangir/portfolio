@@ -13,7 +13,7 @@ import { ChunkExtractor, ChunkExtractorManager } from '@loadable/server';
 
 import createStore from '../client/store';
 import App from '../client/components/app';
-import { RouteList } from '../client/routes';
+import RouteList from '../client/routes';
 import { setHelmetInfo } from '../client/components/common/helmet/actions';
 import Meta from '../client/utils/meta';
 
@@ -91,15 +91,24 @@ export default ({ clientStats }) =>
         const context = {};
         const extractor = new ChunkExtractor({ stats: clientStats });
         let actions = [];
-        RouteList.some((route) => {
-          const match = matchPath(route, req.path);
-          if (match) {
-            if (route.fetchRouteData) {
+
+        const iterateNestedRoutes = (route, parentPath = '') => {
+          const fullPath =
+            (parentPath !== '/' ? parentPath : '') + (route.path || '');
+          if (route) {
+            const match = matchPath({ ...route, path: fullPath }, req.path);
+            if (match && route.fetchRouteData) {
               actions = [...actions, ...route.fetchRouteData];
             }
+            if (route.childRoutes) {
+              route.childRoutes.forEach((childRoute) =>
+                iterateNestedRoutes(childRoute, fullPath)
+              );
+            }
           }
-          return match;
-        });
+        };
+
+        RouteList.forEach((route) => iterateNestedRoutes(route));
 
         const promises = actions.map((action) => store.dispatch(action()));
 
@@ -109,8 +118,8 @@ export default ({ clientStats }) =>
         }
 
         // Load theme for dark/light page
-        if (req.path === '/theme/light') theme = 'light';
-        else if (req.path === '/theme/dark') theme = 'dark';
+        if (req.path === '/test/theme/light') theme = 'light';
+        else if (req.path === '/test/theme/dark') theme = 'dark';
 
         return Promise.allSettled(promises)
           .then(async () => {
