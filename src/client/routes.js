@@ -1,9 +1,9 @@
 /* eslint-disable extra-rules/no-commented-out-code */
 import React from 'react';
 import loadable from '@loadable/component';
-import { Route, Routes } from 'react-router-dom';
-
 import { getSSRData } from './components/pages/ssr/actions';
+import PortfolioApp from './components/app/portfolioApp';
+import StandAloneApp from './components/app/standAloneApp';
 
 const Home = loadable(() =>
   import(/* webpackChunkName: "home-page" */ './components/pages/home/home')
@@ -45,81 +45,86 @@ const SSR = loadable(() =>
   import(/* webpackChunkName: "ssr-page" */ './components/pages/ssr/ssr')
 );
 
-export const RouteList = [
-  {
-    path: '/',
-    element: Home,
-    exact: true,
-  },
-  {
-    path: '/home',
-    element: Home,
-    exact: true,
-  },
-  {
-    path: '/about',
-    element: About,
-    exact: true,
-  },
-  {
-    path: '/theme/:theme',
-    element: Home,
-    exact: true,
-  },
-  {
-    path: '/experience',
-    element: Experience,
-    exact: true,
-  },
-  {
-    path: '/work',
-    element: Work,
-    exact: true,
-  },
-  {
-    path: '/contact',
-    element: Contact,
-    exact: true,
-  },
-  {
-    path: '/app/json-key-path-finder',
-    element: Json,
-    exact: true,
-  },
-  {
-    path: '/components',
-    element: Comoponents,
-    exact: true,
-  },
-  {
-    path: '/ssr',
-    element: SSR,
-    fetchRouteData: [getSSRData],
-  },
-  {
-    path: '*',
-    element: Notfound,
-  },
-];
-
-const getElement = (route) => {
-  const Element = route.element;
-  return (
-    // <React.Suspense fallback={null}>
-    <Element />
-    // </React.Suspense>
-  );
+const portfolio = {
+  path: '/',
+  element: <PortfolioApp />,
+  childRoutes: [
+    {
+      element: <Home />,
+      index: true,
+    },
+    {
+      path: '/home',
+      element: <Home />,
+      index: true,
+    },
+    {
+      path: '/about',
+      element: <About />,
+    },
+    {
+      path: '/experience',
+      element: <Experience />,
+    },
+    {
+      path: '/work',
+      element: <Work />,
+    },
+    {
+      path: '/contact',
+      element: <Contact />,
+    },
+    {
+      path: '*',
+      element: <Notfound />,
+    },
+  ],
 };
 
-function AppRoutes() {
-  return (
-    <Routes>
-      {RouteList.map((route) => (
-        // eslint-disable-next-line react/no-array-index-key
-        <Route key={route.path} {...route} element={getElement(route)} />
-      ))}
-    </Routes>
-  );
-}
+const test = {
+  path: '/test',
+  element: <PortfolioApp />,
+  childRoutes: [
+    {
+      index: true,
+      element: <SSR />,
+      fetchRouteData: [getSSRData],
+    },
+    {
+      path: '/ssr',
+      element: <SSR />,
+      fetchRouteData: [getSSRData],
+    },
+    {
+      path: '/theme/:theme',
+      element: <Home />,
+    },
+    {
+      path: '/components',
+      element: <Comoponents />,
+    },
+    {
+      path: '*',
+      element: <Notfound />,
+    },
+  ],
+};
 
-export default AppRoutes;
+const app = {
+  path: '/app',
+  element: <StandAloneApp />,
+  childRoutes: [
+    {
+      element: <Json />,
+      index: true,
+    },
+    {
+      path: '/json-key-path-finder',
+      element: <Json />,
+    },
+  ],
+};
+
+const RouteList = [portfolio, test, app];
+
+export default RouteList;
