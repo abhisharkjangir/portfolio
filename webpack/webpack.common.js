@@ -143,9 +143,11 @@ const loaders = {
       ],
     };
     if (!isServer) {
-      config.use[0].options.modules = true;
+      config.use[0].options.modules = {};
       config.use.unshift(MiniCssExtractPlugin.loader);
     }
+    config.use[isServer ? 0 : 1].options.modules.localIdentName =
+      '[name]_[local]_[hash:base64:5]';
     return config;
   },
   cssLoader: (isServer) => {
