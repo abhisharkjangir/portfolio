@@ -77,8 +77,15 @@ export default ({ clientStats }) =>
             if (!htmlFileData) {
               htmlFileData = await readHtmlFileData(res);
             }
-
-            const cssString = await extractor.getCssString();
+            let cssString;
+            try {
+              cssString = await extractor.getCssString();
+            } catch (error) {
+              console.error(
+                '::::: Error during getCssString funtion :::::',
+                error
+              );
+            }
 
             const html = injectHTML(htmlFileData, {
               html: helmet.htmlAttributes.toString(),
@@ -86,7 +93,9 @@ export default ({ clientStats }) =>
               meta: helmet.meta.toString(),
               body: markup,
               scripts: extractor.getScriptTags(),
-              style: `<style>${cssString}</style>`, // extractor.getStyleTags(),
+              style: cssString
+                ? `<style>${cssString}</style>`
+                : extractor.getStyleTags(),
               state,
               preloadScripts,
               theme: req.path === '/test/theme/light' ? 'light' : 'dark',
