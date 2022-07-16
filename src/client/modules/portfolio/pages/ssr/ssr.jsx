@@ -1,9 +1,9 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import Image from '@components/common/image/image';
 import styles from './ssr.scss';
 import Heading from '../../components/heading/heading';
 import Section from '../../components/section/section';
-import Image from '../../../../components/common/image/image';
 
 function SSR() {
   const { ssr } = useSelector((state) => state);

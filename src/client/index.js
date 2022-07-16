@@ -3,8 +3,8 @@ import { hydrate, render } from 'react-dom';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import { loadableReady } from '@loadable/component';
-import App from './components/app/app';
-import createStore from './store';
+import App from '@components/app/app';
+import createStore from '@client/store';
 
 // Create a store and get back itself and its history object
 const { store, history } = createStore();

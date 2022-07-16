@@ -1,6 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
-import PrimaryLink from '../../../../components/common/PrimaryLink/PrimaryLink';
+import PrimaryLink from '@components/common/PrimaryLink/PrimaryLink';
 import Section from '../section/section';
 import styles from './hero.scss';
 

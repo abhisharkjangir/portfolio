@@ -1,11 +1,11 @@
 import React from 'react';
-import Section from '../section/section';
-import styles from './about.scss';
-import abhishar from '../../../../assets/images/abhishar.jpg';
+import abhishar from '@assets/images/abhishar.jpg';
+import Image from '@components/common/image/image';
+import PrimaryLink from '@components/common/PrimaryLink/PrimaryLink';
+import resume from '@assets/resume.pdf';
 import Heading from '../heading/heading';
-import Image from '../../../../components/common/image/image';
-import PrimaryLink from '../../../../components/common/PrimaryLink/PrimaryLink';
-import resume from '../../../../assets/resume.pdf';
+import styles from './about.scss';
+import Section from '../section/section';
 
 function About() {
   const Skills = [

@@ -1,8 +1,8 @@
 import React from 'react';
+import Button from '@components/common/button/button';
 import styles from './notfound.scss';
 import Section from '../../components/section/section';
 import Heading from '../../components/heading/heading';
-import Button from '../../../../components/common/button/button';
 
 class NotFound extends React.PureComponent {
   render() {

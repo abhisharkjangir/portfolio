@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-module.exports = api => {
+module.exports = (api) => {
   const config = {
     presets: ['@babel/preset-env', '@babel/preset-react'],
     plugins: [
@@ -8,8 +8,8 @@ module.exports = api => {
       [
         '@babel/plugin-proposal-decorators',
         {
-          legacy: true
-        }
+          legacy: true,
+        },
       ],
       '@babel/plugin-proposal-function-sent',
       '@babel/plugin-proposal-numeric-separator',
@@ -19,17 +19,32 @@ module.exports = api => {
       [
         '@babel/plugin-proposal-pipeline-operator',
         {
-          proposal: 'minimal'
-        }
+          proposal: 'minimal',
+        },
       ],
       '@babel/plugin-proposal-do-expressions',
-      '@babel/plugin-proposal-function-bind'
+      '@babel/plugin-proposal-function-bind',
+      [
+        'module-resolver',
+        {
+          root: ['./'],
+          alias: {
+            '@client': './src/client',
+            '@server': './src/server',
+            '@utils': './src/client/utils',
+            '@webpack': './webpack',
+            '@components': './src/client/components',
+            '@modules': './src/client/modules',
+            '@assets': './src/client/assets',
+          },
+        },
+      ],
     ],
     env: {
       development: {
-        plugins: ['react-refresh/babel']
-      }
-    }
+        plugins: ['react-refresh/babel'],
+      },
+    },
   }
   api.cache(true)
   return config
