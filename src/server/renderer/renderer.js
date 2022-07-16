@@ -12,7 +12,12 @@ import App from '@components/app/app';
 import RouteList from '@client/routes';
 import { setHelmetInfo } from '@components/common/helmet/actions';
 import Meta from '@utils/meta';
-import { getRouteActions, injectHTML, readHtmlFileData } from './renderHelper';
+import {
+  getInlineCss,
+  getRouteActions,
+  injectHTML,
+  readHtmlFileData,
+} from './renderHelper';
 
 let htmlFileData;
 // LOADER
@@ -77,25 +82,14 @@ export default ({ clientStats }) =>
             if (!htmlFileData) {
               htmlFileData = await readHtmlFileData(res);
             }
-            let cssString;
-            try {
-              cssString = await extractor.getCssString();
-            } catch (error) {
-              console.error(
-                '::::: Error during getCssString funtion :::::',
-                error
-              );
-            }
-
+            const styleElements = await extractor.getStyleElements();
             const html = injectHTML(htmlFileData, {
               html: helmet.htmlAttributes.toString(),
               title: helmet.title.toString(),
               meta: helmet.meta.toString(),
               body: markup,
               scripts: extractor.getScriptTags(),
-              style: cssString
-                ? `<style>${cssString}</style>`
-                : extractor.getStyleTags(),
+              style: `<style>${getInlineCss(styleElements)}</style>`,
               state,
               preloadScripts,
               theme: req.path === '/test/theme/light' ? 'light' : 'dark',
