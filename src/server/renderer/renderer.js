@@ -78,13 +78,15 @@ export default ({ clientStats }) =>
               htmlFileData = await readHtmlFileData(res);
             }
 
+            const cssString = await extractor.getCssString();
+
             const html = injectHTML(htmlFileData, {
               html: helmet.htmlAttributes.toString(),
               title: helmet.title.toString(),
               meta: helmet.meta.toString(),
               body: markup,
               scripts: extractor.getScriptTags(),
-              style: extractor.getStyleTags(),
+              style: `<style>${cssString}</style>`, // extractor.getStyleTags(),
               state,
               preloadScripts,
               theme: req.path === '/test/theme/light' ? 'light' : 'dark',
