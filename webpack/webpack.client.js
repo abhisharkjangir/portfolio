@@ -97,7 +97,7 @@ const client = {
   optimization: (isProduction = false) => {
     return {
       minimize: isProduction,
-      runtimeChunk: false,
+      runtimeChunk: 'single',
       minimizer: [cssMinimizerPlugin(), terserPlugin()],
       splitChunks: splitChunksConfig(),
       emitOnErrors: true,
