@@ -211,8 +211,13 @@ const resolve = () => {
       path: require.resolve('path-browserify'),
     },
     alias: {
-      '@webpack': pathResolve('/webpack'),
-      '@client': pathResolve('/src/client'),
+      '@client': resolveApp('src/client'),
+      '@server': resolveApp('src/server'),
+      '@utils': resolveApp('src/client/utils'),
+      '@webpack': resolveApp('webpack'),
+      '@components': resolveApp('src/client/components'),
+      '@modules': resolveApp('src/client/modules'),
+      '@assets': resolveApp('src/client/assets'),
     },
   };
 };

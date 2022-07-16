@@ -1,9 +1,9 @@
 /* eslint-disable array-callback-return */
 import React from 'react';
+import Input from '@components/common/Input/input';
+import Button from '@components/common/button/button';
+import Textarea from '@components/common/textarea/textarea';
 import styles from './json.scss';
-import Input from '../../../components/common/Input/input';
-import Button from '../../../components/common/button/button';
-import Textarea from '../../../components/common/textarea/textarea';
 import getKeyPath from './getKeyPath';
 
 class JSON extends React.PureComponent {

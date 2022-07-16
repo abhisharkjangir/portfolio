@@ -1,8 +1,8 @@
 import React from 'react';
+import PrimaryLink from '@components/common/PrimaryLink/PrimaryLink';
 import Section from '../section/section';
 import styles from './contact.scss';
 import Heading from '../heading/heading';
-import PrimaryLink from '../../../../components/common/PrimaryLink/PrimaryLink';
 
 function Contact() {
   return (

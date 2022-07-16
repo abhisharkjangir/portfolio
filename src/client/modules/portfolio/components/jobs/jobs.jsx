@@ -1,9 +1,9 @@
 /* eslint-disable react/no-danger */
 import React, { useState } from 'react';
+import PrimaryLink from '@components/common/PrimaryLink/PrimaryLink';
 import Section from '../section/section';
 import styles from './jobs.scss';
 import Heading from '../heading/heading';
-import PrimaryLink from '../../../../components/common/PrimaryLink/PrimaryLink';
 
 const TabList = [
   {
