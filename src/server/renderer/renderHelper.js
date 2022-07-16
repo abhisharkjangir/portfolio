@@ -77,3 +77,19 @@ export const readHtmlFileData = (res) => {
     );
   });
 };
+
+export const getInlineCss = (styleElements) => {
+  const cssPaths = styleElements.map((se) => se.props.href);
+  let inlineStyle = '';
+  cssPaths.forEach((cssPath) => {
+    const cssFilePath = path.resolve(
+      process.cwd(),
+      path.join('./public/dist/client/', cssPath)
+    );
+    const cssContent =
+      fs.existsSync(cssFilePath) && fs.readFileSync(cssFilePath, 'utf8');
+    if (cssContent) inlineStyle += cssContent;
+    console.log(cssContent);
+  });
+  return inlineStyle;
+};
