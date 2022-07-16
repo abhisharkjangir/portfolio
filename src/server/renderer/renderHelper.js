@@ -89,7 +89,6 @@ export const getInlineCss = (styleElements) => {
     const cssContent =
       fs.existsSync(cssFilePath) && fs.readFileSync(cssFilePath, 'utf8');
     if (cssContent) inlineStyle += cssContent;
-    console.log(cssContent);
   });
   return inlineStyle;
 };
