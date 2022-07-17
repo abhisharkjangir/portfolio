@@ -86,7 +86,7 @@ const loaders = {
     },
   },
   babelLoaderPresetReactEnv: {
-    test: /\.(js|mjs)$/,
+    test: /\.(js|mjs|ts)$/,
     exclude: /@babel(?:\/|\\{1,2})runtime/,
     loader: require.resolve('babel-loader'),
     options: {
@@ -198,7 +198,7 @@ const splitChunksConfig = () => {
 
 const resolve = () => {
   return {
-    extensions: ['.js', '.jsx', '.css', '.scss', '.sass'],
+    extensions: ['.js', '.jsx', '.css', '.scss', '.sass', '.ts', '.tsx'],
     fallback: {
       fs: false,
       module: false,

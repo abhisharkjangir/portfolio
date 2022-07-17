@@ -1,9 +1,9 @@
 /* eslint-disable react/no-danger */
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Icon from '@components/common/icon/icon';
 import Section from '../section/section';
 import styles from './projects.scss';
-import Icon from '../../../../components/common/icon/icon';
 
 function Projects() {
   const List = [

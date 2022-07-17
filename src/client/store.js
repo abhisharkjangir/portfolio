@@ -6,7 +6,7 @@ import {
 import { createPromise } from 'redux-promise-middleware';
 import { createBrowserHistory } from 'history';
 import thunk from 'redux-thunk';
-import isServer from './utils/isServer';
+import isServer from '@utils/isServer';
 import createRootReducer from './rootReducer';
 
 export default (his) => {

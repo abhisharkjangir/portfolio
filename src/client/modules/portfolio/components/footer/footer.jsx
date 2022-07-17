@@ -1,8 +1,8 @@
 import React from 'react';
+import Icon from '@components/common/icon/icon';
+import PrimaryLink from '@components/common/PrimaryLink/PrimaryLink';
+import { socialList } from '@client/constants';
 import styles from './footer.scss';
-import Icon from '../../../../components/common/icon/icon';
-import { socialList } from '../../../../constants';
-import PrimaryLink from '../../../../components/common/PrimaryLink/PrimaryLink';
 class Footer extends React.PureComponent {
   render() {
     const date = new Date();

@@ -2,9 +2,9 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import React from 'react';
 import PropTypes from 'prop-types';
+import resume from '@assets/resume.pdf';
+import PrimaryLink from '@components/common/PrimaryLink/PrimaryLink';
 import styles from './menu.scss';
-import resume from '../../../../assets/resume.pdf';
-import PrimaryLink from '../../../../components/common/PrimaryLink/PrimaryLink';
 
 const getMenuStyle = (isMenuOpen) => {
   return {

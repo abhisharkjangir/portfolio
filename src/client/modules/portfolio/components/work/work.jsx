@@ -1,15 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Section from '../section/section';
-import styles from './work.scss';
+import Icon from '@components/common/icon/icon';
+import wordbook from '@assets/images/wordbook.png';
+import nasa from '@assets/images/nasa.png';
+import iss from '@assets/images/iss.png';
+import json from '@assets/images/json.png';
+import Image from '@components/common/image/image';
+import PrimaryLink from '@components/common/PrimaryLink/PrimaryLink';
 import Heading from '../heading/heading';
-import Icon from '../../../../components/common/icon/icon';
-import wordbook from '../../../../assets/images/wordbook.png';
-import nasa from '../../../../assets/images/nasa.png';
-import iss from '../../../../assets/images/iss.png';
-import json from '../../../../assets/images/json.png';
-import Image from '../../../../components/common/image/image';
-import PrimaryLink from '../../../../components/common/PrimaryLink/PrimaryLink';
+import styles from './work.scss';
+import Section from '../section/section';
 
 function Work() {
   const projects = [

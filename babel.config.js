@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 module.exports = (api) => {
   const config = {
-    presets: ['@babel/preset-env', '@babel/preset-react'],
+    presets: ['@babel/preset-env', '@babel/preset-react', '@babel/typescript'],
     plugins: [
       '@babel/plugin-syntax-dynamic-import',
       '@loadable/babel-plugin',

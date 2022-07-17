@@ -3,7 +3,7 @@ import { useLocation } from 'react-router';
 import { useDispatch, useSelector } from 'react-redux';
 import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
-import Meta from '../../../utils/meta';
+import Meta from '@utils/meta';
 import { setHelmetInfo } from './actions';
 
 const SITE_URL =
