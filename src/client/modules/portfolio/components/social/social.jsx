@@ -1,8 +1,8 @@
 import React from 'react';
+import Icon from '@components/common/icon/icon';
+import PrimaryLink from '@components/common/PrimaryLink/PrimaryLink';
+import { socialList } from '@client/constants';
 import styles from './social.scss';
-import { socialList } from '../../../../constants';
-import Icon from '../../../../components/common/icon/icon';
-import PrimaryLink from '../../../../components/common/PrimaryLink/PrimaryLink';
 
 function Social() {
   return (

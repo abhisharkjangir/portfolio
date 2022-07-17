@@ -3,13 +3,13 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import styles from './header.scss';
-import Icon from '../../../../components/common/icon/icon.async';
-import throttle from '../../../../utils/throttle';
-import isServer from '../../../../utils/isServer';
+import Icon from '@components/common/icon/icon.async';
+import throttle from '@utils/throttle';
+import isServer from '@utils/isServer';
+import resume from '@assets/resume.pdf';
+import PrimaryLink from '@components/common/PrimaryLink/PrimaryLink';
 import MenuAsync from '../menu/menu.async';
-import resume from '../../../../assets/resume.pdf';
-import PrimaryLink from '../../../../components/common/PrimaryLink/PrimaryLink';
+import styles from './header.scss';
 
 const hamBefore = `top 0.1s ease-in 0.25s, opacity 0.1s ease-in`;
 const hamBeforeActive = `top 0.1s ease-out, opacity 0.1s ease-out 0.12s`;

@@ -1,4 +1,4 @@
-import image from '../assets/images/abhishar.jpg';
+import image from '@assets/images/abhishar.jpg';
 const description =
   'Abhishar Jangir is a MERN Stack Developer based in Gurgaon, IN, who specializes in developing websites.';
 
