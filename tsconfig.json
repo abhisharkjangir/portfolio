@@ -52,6 +52,7 @@
     "dist"
   ],
   "include": [
-    "src"
+    "src",
+    "./jest-setup.ts"
   ]
 }

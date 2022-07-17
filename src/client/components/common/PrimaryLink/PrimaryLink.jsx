@@ -1,5 +1,5 @@
 import React from 'react';
-import { string, object, bool } from 'prop-types';
+import { string, bool, element, oneOfType } from 'prop-types';
 import { Link } from 'react-router-dom';
 
 function PrimaryLink({ children, href, to, internal, ...rest }) {
@@ -18,7 +18,7 @@ function PrimaryLink({ children, href, to, internal, ...rest }) {
 }
 
 PrimaryLink.propTypes = {
-  children: object.isRequired,
+  children: oneOfType([element, string]).isRequired,
   href: string,
   to: string,
   internal: bool,

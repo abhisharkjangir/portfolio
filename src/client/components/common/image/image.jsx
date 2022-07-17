@@ -22,13 +22,14 @@ Image.propTypes = {
   lazy: PropTypes.bool,
   src: PropTypes.string.isRequired,
   alt: PropTypes.string,
-  className: PropTypes.string.isRequired,
+  className: PropTypes.string,
   lazyloadOptions: PropTypes.object,
 };
 
 Image.defaultProps = {
   lazy: true,
   alt: '',
+  className: '',
   lazyloadOptions: {
     offset: 100,
     placeholder: <Placeholder />,

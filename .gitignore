@@ -6,3 +6,4 @@ node_modules
 .history
 public/dist
 *.d.ts
+coverage
