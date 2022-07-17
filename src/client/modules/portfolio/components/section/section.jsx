@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes, { oneOfType } from 'prop-types';
 import styles from './section.scss';
 
 function Section({ children, style, id, className }) {
@@ -17,9 +17,9 @@ function Section({ children, style, id, className }) {
 }
 
 Section.propTypes = {
-  children: PropTypes.object.isRequired,
+  children: oneOfType([PropTypes.object, PropTypes.array]).isRequired,
   style: PropTypes.object,
-  id: PropTypes.object,
+  id: PropTypes.string,
   className: PropTypes.string,
 };
 
