@@ -1,0 +1,28 @@
+import server from './webpack.server';
+import client from './webpack.client';
+import { Configuration } from 'webpack';
+
+const config = {
+  server,
+  client,
+};
+
+const webpackConfig = (env, type): Configuration => {
+  const isProduction = env === 'production';
+  return {
+    name: type,
+    target: type === 'client' ? 'web' : 'node',
+    devtool: 'source-map',
+    entry: config[type].entry(isProduction),
+    output: config[type].output(isProduction),
+    stats: 'verbose',
+    mode: isProduction ? 'production' : 'development',
+    module: config[type].module(isProduction),
+    resolve: config[type].resolve(),
+    plugins: config[type].plugins(isProduction),
+    optimization: config[type].optimization(isProduction),
+    performance: false,
+  };
+};
+
+export default webpackConfig;

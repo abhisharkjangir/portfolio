@@ -10,20 +10,17 @@
     "lib": [
       "dom",
       "dom.iterable",
-      "esnext"
+      "esnext",
     ],
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
     "noImplicitAny": false, // Remove once we have most of the project converted to typescript
     "forceConsistentCasingInFileNames": true,
-    "module": "esnext",
+    "module": "CommonJS",
     "resolveJsonModule": true,
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
-      "@app/*": [
-        "src/*"
-      ],
       "@client/*": [
         "src/client/*"
       ],
@@ -35,9 +32,6 @@
       ],
       "@webpack/*": [
         "webpack/*"
-      ],
-      "@components/*": [
-        "src/client/components/*"
       ],
       "@modules/*": [
         "src/client/modules/*"

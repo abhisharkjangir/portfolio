@@ -9,12 +9,12 @@
   ],
   "license": "MIT",
   "scripts": {
-    "start:local": "npm run clean && cross-env NODE_ENV=development node src/server/index.js",
+    "start:local": "npm run clean && cross-env NODE_ENV=development ts-node src/server/index.ts",
     "start": "npm run deploy",
-    "start:prod": "npm run clean && cross-env NODE_ENV=production node src/server/index.js",
-    "build": "npm run clean && cross-env NODE_ENV=production node src/server/build.js",
-    "deploy": "cross-env NODE_ENV=production node src/server/deploy.js",
-    "format": "prettier --single-quote --semi=false --write '{src,server,webpack}/**/*.{jsx,js,scss,css}' && eslint --fix src server webpack",
+    "start:prod": "npm run clean && cross-env NODE_ENV=production ts-node src/server/index.ts",
+    "build": "npm run clean && cross-env NODE_ENV=production ts-node src/server/build.ts",
+    "deploy": "cross-env NODE_ENV=production ts-node src/server/deploy.ts",
+    "format": "prettier --single-quote --semi=false --write '{src,server,webpack}/**/*.{jsx,js,tsx,ts,scss,css}' && eslint --fix src server webpack",
     "clean": "rimraf public/dist",
     "cm": "git-cz",
     "test": "jest",
@@ -80,6 +80,7 @@
     "tailwind": "^4.0.0",
     "tailwindcss": "^3.1.4",
     "terser-webpack-plugin": "^5.3.3",
+     "ts-node": "^10.9.1",
     "url-loader": "^4.1.1",
     "webpack": "^5.73.0",
     "webpack-bundle-analyzer": "^4.5.0",
@@ -102,6 +103,7 @@
     "@types/react-lazyload": "^3.2.0",
     "@types/react-redux": "^7.1.24",
     "@types/react-router-dom": "^5.3.3",
+    "@types/webpack": "^5.28.0",
     "babel-plugin-module-resolver": "^4.1.0",
     "eslint": "^8.18.0",
     "eslint-config-airbnb": "^19.0.4",
@@ -141,6 +143,6 @@
     }
   },
   "engines": {
-    "node": "16.x"
+    "node": "16.10.0"
   }
 }
