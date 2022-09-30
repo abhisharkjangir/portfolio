@@ -2,10 +2,9 @@ import React from 'react';
 import { Outlet } from 'react-router-dom';
 import Header from './components/header/header';
 // Load Required CSS parts
-import '../../styles/tailwind.css';
-import '../../styles/fontCalibre.css';
-import '../../styles/fontSfMono.css';
-import '../../styles/common.css';
+import '@styles/tailwind.css';
+import './styles/fontCalibre.css';
+import './styles/fontSfMono.css';
 import './styles/module.css';
 
 import styles from './styles/portfolio.scss';

@@ -7,10 +7,10 @@ import { createMemoryHistory } from 'history';
 import { StaticRouter } from 'react-router-dom/server';
 import { ChunkExtractor, ChunkExtractorManager } from '@loadable/server';
 
-import createStore from '@client/store';
-import App from '@components/app/app';
-import RouteList from '@client/routes';
-import { setHelmetInfo } from '@components/common/helmet/actions';
+import createStore from '@redux/store';
+import App from '@shared/app/app';
+import RouteList from '@routes/routes';
+import { setHelmetInfo } from '@shared/helmet/actions';
 import Meta from '@utils/meta';
 import {
   getInlineCss,

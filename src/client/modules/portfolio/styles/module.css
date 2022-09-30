@@ -1,15 +1,15 @@
 .dark {
-    --c-primary: theme(colors.primary);
-    --c-primaryLight: theme(colors.primaryLight);
-    --c-secondary: theme(colors.secondary);
-    --c-secondaryLight: theme(colors.secondaryLight);
-    --c-secondaryLighter: theme(colors.secondaryLighter);
-    --c-secondaryLightest: theme(colors.secondaryLightest);
-    --c-tertiary: theme(colors.tertiary);
-    --c-tertiaryLight: theme(colors.tertiaryLight);
-    --c-tertiaryLigher: theme(colors.tertiaryLigher);
+    --c-primary: #fece2f;
+        --c-primaryLight: #fece2f33;
+        --c-secondary: #000000;
+        --c-secondaryLight: #0a0a0a;
+        --c-secondaryLighter: #151515;
+        --c-secondaryLightest: #92929233;
+        --c-tertiary: #929292;
+        --c-tertiaryLight: #d4d4d4;
+        --c-tertiaryLigher: #e6f1ff;
 
-    --blend: theme(blend);
+    --blend: screen;
 }
 
 :root {
@@ -35,6 +35,17 @@
     --highlight: var(--c-tertiary);
 }
 
+html {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
 body {
     margin: 0;
     width: 100%;

@@ -29,13 +29,17 @@ module.exports = (api) => {
         {
           root: ['./'],
           alias: {
-            '@client': './src/client',
+            // '@client': './src/client',
             '@server': './src/server',
             '@utils': './src/client/utils',
             '@webpack': './webpack',
             '@components': './src/client/components',
             '@modules': './src/client/modules',
             '@assets': './src/client/assets',
+            '@shared': './src/client/shared',
+            '@routes': './src/client/routes',
+            '@redux': './src/client/redux',
+            '@styles': './src/client/styles',
           },
         },
       ],

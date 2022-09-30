@@ -1,5 +1,5 @@
 import React from 'react';
-import PrimaryLink from '@components/common/PrimaryLink/PrimaryLink';
+import PrimaryLink from '@shared/PrimaryLink/PrimaryLink';
 import styles from './email.scss';
 
 function Email() {

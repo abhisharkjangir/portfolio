@@ -3,11 +3,11 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import Icon from '@components/common/icon/icon.async';
+import Icon from '@shared/icon/icon.async';
 import throttle from '@utils/throttle';
 import isServer from '@utils/isServer';
 import resume from '@assets/resume.pdf';
-import PrimaryLink from '@components/common/PrimaryLink/PrimaryLink';
+import PrimaryLink from '@shared/PrimaryLink/PrimaryLink';
 import MenuAsync from '../menu/menu.async';
 import styles from './header.scss';
 

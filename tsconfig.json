@@ -24,9 +24,9 @@
       "@app/*": [
         "src/*"
       ],
-      "@client/*": [
-        "src/client/*"
-      ],
+      // "@client/*": [
+      //   "src/client/*"
+      // ],
       "@server/*": [
         "src/server/*"
       ],
@@ -44,6 +44,15 @@
       ],
       "@assets/*": [
         "src/client/assets/*"
+      ],
+      "@shared/*": [
+        "src/client/shared/*"
+      ],
+      "@routes/*": [
+        "src/client/routes/*"
+      ],
+      "@redux/*": [
+        "src/client/redux/*"
       ],
     },
   },

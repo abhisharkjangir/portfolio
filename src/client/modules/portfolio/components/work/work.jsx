@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Icon from '@components/common/icon/icon';
+import Icon from '@shared/icon/icon';
 import wordbook from '@assets/images/wordbook.png';
 import nasa from '@assets/images/nasa.png';
 import iss from '@assets/images/iss.png';
 import json from '@assets/images/json.png';
-import Image from '@components/common/image/image';
-import PrimaryLink from '@components/common/PrimaryLink/PrimaryLink';
+import Image from '@shared/image/image';
+import PrimaryLink from '@shared/PrimaryLink/PrimaryLink';
 import Heading from '../heading/heading';
 import styles from './work.scss';
 import Section from '../section/section';

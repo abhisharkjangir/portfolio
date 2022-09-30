@@ -1,5 +1,5 @@
 import React from 'react';
-import PrimaryLink from '@components/common/PrimaryLink/PrimaryLink';
+import PrimaryLink from '@shared/PrimaryLink/PrimaryLink';
 import Section from '../section/section';
 import styles from './contact.scss';
 import Heading from '../heading/heading';

@@ -1,7 +1,7 @@
 import React from 'react';
-import Icon from '@components/common/icon/icon';
-import PrimaryLink from '@components/common/PrimaryLink/PrimaryLink';
-import { socialList } from '@client/constants';
+import Icon from '@shared/icon/icon';
+import PrimaryLink from '@shared/PrimaryLink/PrimaryLink';
+import { socialList } from '../../constants';
 import styles from './footer.scss';
 class Footer extends React.PureComponent {
   render() {
