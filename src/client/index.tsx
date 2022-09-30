@@ -3,7 +3,7 @@ import { hydrate, render } from 'react-dom';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import { loadableReady } from '@loadable/component';
-import App from '@shared/app/app';
+import App from '@shared/App/App';
 import createStore from '@redux/store';
 
 // Create a store and get back itself and its history object
@@ -24,7 +24,7 @@ function Application() {
 const rootNode = document.getElementById('root');
 
 if (process.env.NODE_ENV === 'development' && module.hot) {
-  module.hot.accept('./shared/app/app', () => {
+  module.hot.accept('./shared/App/App', () => {
     render(<Application />, rootNode);
   });
 }

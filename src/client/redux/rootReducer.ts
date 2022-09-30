@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
 
 // Helmet
-import helmetReducer from '@shared/helmet/reducer';
-import { HELMET_STATE_KEY } from '@shared/helmet/constants';
+import helmetReducer from '@shared/Helmet/reducer';
+import { HELMET_STATE_KEY } from '@shared/Helmet/constants';
 
 const createRootReducer = () =>
   combineReducers({

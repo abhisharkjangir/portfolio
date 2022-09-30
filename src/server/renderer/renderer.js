@@ -8,9 +8,9 @@ import { StaticRouter } from 'react-router-dom/server';
 import { ChunkExtractor, ChunkExtractorManager } from '@loadable/server';
 
 import createStore from '@redux/store';
-import App from '@shared/app/app';
+import App from '@shared/App/App';
 import RouteList from '@routes/routes';
-import { setHelmetInfo } from '@shared/helmet/actions';
+import { setHelmetInfo } from '@shared/Helmet/actions';
 import Meta from '@utils/meta';
 import {
   getInlineCss,
